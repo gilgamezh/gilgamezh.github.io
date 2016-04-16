@@ -8,3 +8,5 @@
 .. type: text
 
 .. media:: https://www.flickr.com/photos/bolche/9647227089/
+
+**En la reserva ecologica de CABA**
