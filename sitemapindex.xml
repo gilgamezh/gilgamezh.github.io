@@ -59,7 +59,7 @@
  </sitemap>
  <sitemap>
   <loc>http://gilgamezh.me/categories/flickr.xml</loc>
-  <lastmod>2016-04-16T19:00:00Z</lastmod>
+  <lastmod>2016-04-16T19:15:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://gilgamezh.me/categories/food.xml</loc>
@@ -71,7 +71,7 @@
  </sitemap>
  <sitemap>
   <loc>http://gilgamezh.me/categories/fotos.xml</loc>
-  <lastmod>2016-04-16T19:00:00Z</lastmod>
+  <lastmod>2016-04-16T19:15:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://gilgamezh.me/categories/fsf.xml</loc>
@@ -175,7 +175,7 @@
  </sitemap>
  <sitemap>
   <loc>http://gilgamezh.me/categories/personal.xml</loc>
-  <lastmod>2016-04-16T19:00:00Z</lastmod>
+  <lastmod>2016-04-16T19:15:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://gilgamezh.me/categories/php-fmp.xml</loc>
@@ -335,7 +335,7 @@
  </sitemap>
  <sitemap>
   <loc>http://gilgamezh.me/en/categories/flickr.xml</loc>
-  <lastmod>2016-04-16T19:00:00Z</lastmod>
+  <lastmod>2016-04-16T19:15:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://gilgamezh.me/en/categories/food.xml</loc>
@@ -347,7 +347,7 @@
  </sitemap>
  <sitemap>
   <loc>http://gilgamezh.me/en/categories/fotos.xml</loc>
-  <lastmod>2016-04-16T19:00:00Z</lastmod>
+  <lastmod>2016-04-16T19:15:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://gilgamezh.me/en/categories/fsf.xml</loc>
@@ -451,7 +451,7 @@
  </sitemap>
  <sitemap>
   <loc>http://gilgamezh.me/en/categories/personal.xml</loc>
-  <lastmod>2016-04-16T19:00:00Z</lastmod>
+  <lastmod>2016-04-16T19:15:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://gilgamezh.me/en/categories/php-fmp.xml</loc>
@@ -567,6 +567,6 @@
  </sitemap>
  <sitemap>
   <loc>http://gilgamezh.me/sitemap.xml</loc>
-  <lastmod>2016-04-16T19:10:00Z</lastmod>
+  <lastmod>2016-04-16T19:15:00Z</lastmod>
  </sitemap>
 </sitemapindex>
