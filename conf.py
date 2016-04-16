@@ -21,7 +21,7 @@ BLOG_AUTHOR = "GiLgAmEzH"  # (translatable)
 BLOG_TITLE = "No Todo Es Mec\u00e1nico"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link
-SITE_URL = "http://gilgamezh.me/blog/"
+SITE_URL = "http://gilgamezh.me/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "http://gilgamezh.me/"
@@ -396,6 +396,7 @@ REDIRECTIONS = []
 # in a `nikola deploy` command as you like.
 DEPLOY_COMMANDS = {
     'default': [
+        "github_deploy"
         "rdiff-backup --remote-schema 'ssh -C %s rdiff-backup --server' output terminus::/DataVolume/backup_nico/blog",
     ]
 }
