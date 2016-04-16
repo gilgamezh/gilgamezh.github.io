@@ -396,7 +396,6 @@ REDIRECTIONS = []
 # in a `nikola deploy` command as you like.
 DEPLOY_COMMANDS = {
     'default': [
-        "github_deploy"
         "rdiff-backup --remote-schema 'ssh -C %s rdiff-backup --server' output terminus::/DataVolume/backup_nico/blog",
     ]
 }
