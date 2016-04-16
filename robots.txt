@@ -1,2 +1,4 @@
-Sitemap: http://gilgamezh.me/blog/sitemapindex.xml
+Sitemap: http://gilgamezh.me/sitemapindex.xml
 
+User-Agent: *
+Host: gilgamezh.me

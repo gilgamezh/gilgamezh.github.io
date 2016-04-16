@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>No Todo Es Mecánico (tutoriales)</title><link>http://gilgamezh.me/blog/</link><description></description><atom:link type="application/rss+xml" href="http://gilgamezh.me/blog/en/categories/tutoriales.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sat, 31 Oct 2015 14:14:17 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Archlinux mueve todos los binarios a /usr/bin. Cómo actualizar?</title><link>http://gilgamezh.me/blog/en/posts/archlinux-mueve-todos-los-binarios-a-usrbin-como-actualizar.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Hace ya bastantes días que cualquier que intente actualizar su Archlinux se
+<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (tutoriales)</title><link>http://gilgamezh.me/</link><description></description><atom:link rel="self" type="application/rss+xml" href="http://gilgamezh.me/en/categories/tutoriales.xml"></atom:link><language>en</language><lastBuildDate>Sat, 16 Apr 2016 19:00:29 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Archlinux mueve todos los binarios a /usr/bin. Cómo actualizar?</title><link>http://gilgamezh.me/en/posts/archlinux-mueve-todos-los-binarios-a-usrbin-como-actualizar.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Hace ya bastantes días que cualquier que intente actualizar su Archlinux se
 va a encontrar con  un error de este tipo:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;
 error: failed to commit transaction (conflicting files)
@@ -17,41 +17,41 @@ to put those files in /usr/bin. The list of packages that are not in a
 repo that need to be fixed can be generated using:&lt;/p&gt;
 &lt;p&gt;$ pacman -Qqo /bin /sbin /usr/sbin | pacman -Qm -&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;pre class="code bash"&gt;&lt;a name="rest_code_30eae5b5278b48c09344d593c5a61f2b-1"&gt;&lt;/a&gt;gilgamezh ~ &lt;span class="nv"&gt;$ &lt;/span&gt;pacman -Qqo /bin /sbin /usr/sbin &lt;span class="p"&gt;|&lt;/span&gt; pacman -Qm -
-&lt;a name="rest_code_30eae5b5278b48c09344d593c5a61f2b-2"&gt;&lt;/a&gt;foo2zjs 20121110-1
-&lt;a name="rest_code_30eae5b5278b48c09344d593c5a61f2b-3"&gt;&lt;/a&gt;grub 0.97-21
-&lt;a name="rest_code_30eae5b5278b48c09344d593c5a61f2b-4"&gt;&lt;/a&gt;foo2zjs 20121110-1
-&lt;a name="rest_code_30eae5b5278b48c09344d593c5a61f2b-5"&gt;&lt;/a&gt;grub 0.97-21
+&lt;pre class="code bash"&gt;&lt;a name="rest_code_80c622daecad4c7d8fb6332542fc3436-1"&gt;&lt;/a&gt;gilgamezh ~ $ pacman -Qqo /bin /sbin /usr/sbin &lt;span class="p"&gt;|&lt;/span&gt; pacman -Qm -
+&lt;a name="rest_code_80c622daecad4c7d8fb6332542fc3436-2"&gt;&lt;/a&gt;foo2zjs 20121110-1
+&lt;a name="rest_code_80c622daecad4c7d8fb6332542fc3436-3"&gt;&lt;/a&gt;grub 0.97-21
+&lt;a name="rest_code_80c622daecad4c7d8fb6332542fc3436-4"&gt;&lt;/a&gt;foo2zjs 20121110-1
+&lt;a name="rest_code_80c622daecad4c7d8fb6332542fc3436-5"&gt;&lt;/a&gt;grub 0.97-21
 &lt;/pre&gt;&lt;p&gt;Encontre estos 2 paquetes, foo2zjs lo uso para mi impresora
 (hp laserjet 1005p) y bueno grub... tendré que actualizar a Grub2.&lt;/p&gt;
 &lt;p&gt;Siguiendo los pasos de la wiki de arch:&lt;/p&gt;
-&lt;pre class="code bash"&gt;&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-1"&gt;&lt;/a&gt;gilgamezh ~ &lt;span class="nv"&gt;$ &lt;/span&gt;sudo pacman -S grub-bios
-&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-2"&gt;&lt;/a&gt;&lt;span class="o"&gt;[&lt;/span&gt;sudo&lt;span class="o"&gt;]&lt;/span&gt; password &lt;span class="k"&gt;for&lt;/span&gt; gilgamezh:
-&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-3"&gt;&lt;/a&gt;resolviendo dependencias...
-&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-4"&gt;&lt;/a&gt;verificando conflictos...
-&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-5"&gt;&lt;/a&gt;:: grub-common y grub están en conflicto. ¿Quitar grub? &lt;span class="o"&gt;[&lt;/span&gt;s/N&lt;span class="o"&gt;]&lt;/span&gt; s
-&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-6"&gt;&lt;/a&gt;
-&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-7"&gt;&lt;/a&gt;Paquetes &lt;span class="o"&gt;(&lt;/span&gt;3&lt;span class="o"&gt;)&lt;/span&gt;: grub-0.97-21 &lt;span class="o"&gt;[&lt;/span&gt;quitando&lt;span class="o"&gt;]&lt;/span&gt;  grub-common-2.00-2  grub-bios-2.00-2
-&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-8"&gt;&lt;/a&gt;
-&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-9"&gt;&lt;/a&gt;Tamaño Total de Descarga:  4,32 MiB
-&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-10"&gt;&lt;/a&gt;Tamaño Total Instalado:    15,08 MiB
-&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-11"&gt;&lt;/a&gt;Tamaño neto a actualizar:  13,04 MiB
-&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-12"&gt;&lt;/a&gt;
-&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-13"&gt;&lt;/a&gt;:: ¿Continuar con la instalación? &lt;span class="o"&gt;[&lt;/span&gt;S/n&lt;span class="o"&gt;]&lt;/span&gt; s
-&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-14"&gt;&lt;/a&gt;:: Recuperando paquetes ...
-&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-15"&gt;&lt;/a&gt;
-&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-16"&gt;&lt;/a&gt;
-&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-17"&gt;&lt;/a&gt;&lt;span class="c"&gt;# modprobe dm-mod&lt;/span&gt;
-&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-18"&gt;&lt;/a&gt;&lt;span class="c"&gt;# grub-install --target=i386-pc --recheck --debug --force /dev/sdaX&lt;/span&gt;
-&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-19"&gt;&lt;/a&gt;&lt;span class="c"&gt;# chattr -i /boot/grub/i386-pc/core.img&lt;/span&gt;
-&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-20"&gt;&lt;/a&gt;&lt;span class="c"&gt;# chattr +i /boot/grub/i386-pc/core.img&lt;/span&gt;
+&lt;pre class="code bash"&gt;&lt;a name="rest_code_79e8d558be98414dae8e90daaf7c792c-1"&gt;&lt;/a&gt;gilgamezh ~ $ sudo pacman -S grub-bios
+&lt;a name="rest_code_79e8d558be98414dae8e90daaf7c792c-2"&gt;&lt;/a&gt;&lt;span class="o"&gt;[&lt;/span&gt;sudo&lt;span class="o"&gt;]&lt;/span&gt; password &lt;span class="k"&gt;for&lt;/span&gt; gilgamezh:
+&lt;a name="rest_code_79e8d558be98414dae8e90daaf7c792c-3"&gt;&lt;/a&gt;resolviendo dependencias...
+&lt;a name="rest_code_79e8d558be98414dae8e90daaf7c792c-4"&gt;&lt;/a&gt;verificando conflictos...
+&lt;a name="rest_code_79e8d558be98414dae8e90daaf7c792c-5"&gt;&lt;/a&gt;:: grub-common y grub están en conflicto. ¿Quitar grub? &lt;span class="o"&gt;[&lt;/span&gt;s/N&lt;span class="o"&gt;]&lt;/span&gt; s
+&lt;a name="rest_code_79e8d558be98414dae8e90daaf7c792c-6"&gt;&lt;/a&gt;
+&lt;a name="rest_code_79e8d558be98414dae8e90daaf7c792c-7"&gt;&lt;/a&gt;Paquetes &lt;span class="o"&gt;(&lt;/span&gt;3&lt;span class="o"&gt;)&lt;/span&gt;: grub-0.97-21 &lt;span class="o"&gt;[&lt;/span&gt;quitando&lt;span class="o"&gt;]&lt;/span&gt;  grub-common-2.00-2  grub-bios-2.00-2
+&lt;a name="rest_code_79e8d558be98414dae8e90daaf7c792c-8"&gt;&lt;/a&gt;
+&lt;a name="rest_code_79e8d558be98414dae8e90daaf7c792c-9"&gt;&lt;/a&gt;Tamaño Total de Descarga:  4,32 MiB
+&lt;a name="rest_code_79e8d558be98414dae8e90daaf7c792c-10"&gt;&lt;/a&gt;Tamaño Total Instalado:    15,08 MiB
+&lt;a name="rest_code_79e8d558be98414dae8e90daaf7c792c-11"&gt;&lt;/a&gt;Tamaño neto a actualizar:  13,04 MiB
+&lt;a name="rest_code_79e8d558be98414dae8e90daaf7c792c-12"&gt;&lt;/a&gt;
+&lt;a name="rest_code_79e8d558be98414dae8e90daaf7c792c-13"&gt;&lt;/a&gt;:: ¿Continuar con la instalación? &lt;span class="o"&gt;[&lt;/span&gt;S/n&lt;span class="o"&gt;]&lt;/span&gt; s
+&lt;a name="rest_code_79e8d558be98414dae8e90daaf7c792c-14"&gt;&lt;/a&gt;:: Recuperando paquetes ...
+&lt;a name="rest_code_79e8d558be98414dae8e90daaf7c792c-15"&gt;&lt;/a&gt;
+&lt;a name="rest_code_79e8d558be98414dae8e90daaf7c792c-16"&gt;&lt;/a&gt;
+&lt;a name="rest_code_79e8d558be98414dae8e90daaf7c792c-17"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# modprobe dm-mod&lt;/span&gt;
+&lt;a name="rest_code_79e8d558be98414dae8e90daaf7c792c-18"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# grub-install --target=i386-pc --recheck --debug --force /dev/sdaX&lt;/span&gt;
+&lt;a name="rest_code_79e8d558be98414dae8e90daaf7c792c-19"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# chattr -i /boot/grub/i386-pc/core.img&lt;/span&gt;
+&lt;a name="rest_code_79e8d558be98414dae8e90daaf7c792c-20"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# chattr +i /boot/grub/i386-pc/core.img&lt;/span&gt;
 &lt;/pre&gt;&lt;p&gt;&lt;strong&gt;OJO: /boot/grub/menu.lst se guarda como .pacnew hay que renombrarlo!&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Después:&lt;/p&gt;
-&lt;pre class="code bash"&gt;&lt;a name="rest_code_61b60aaad44c4ccab4421c0fb49d8fde-1"&gt;&lt;/a&gt;gilgamezh ~ &lt;span class="nv"&gt;$ &lt;/span&gt;sudo grub-mkconfig -o /boot/grub/grub.cfg
-&lt;a name="rest_code_61b60aaad44c4ccab4421c0fb49d8fde-2"&gt;&lt;/a&gt;Generando grub.cfg...
-&lt;a name="rest_code_61b60aaad44c4ccab4421c0fb49d8fde-3"&gt;&lt;/a&gt;Encontrada imagen de linux: /boot/vmlinuz-linux
-&lt;a name="rest_code_61b60aaad44c4ccab4421c0fb49d8fde-4"&gt;&lt;/a&gt;Encontrada imagen de memoria inicial: /boot/initramfs-linux.img
-&lt;a name="rest_code_61b60aaad44c4ccab4421c0fb49d8fde-5"&gt;&lt;/a&gt;hecho
+&lt;pre class="code bash"&gt;&lt;a name="rest_code_1c5e51d2729644f79b90836802266b4a-1"&gt;&lt;/a&gt;gilgamezh ~ $ sudo grub-mkconfig -o /boot/grub/grub.cfg
+&lt;a name="rest_code_1c5e51d2729644f79b90836802266b4a-2"&gt;&lt;/a&gt;Generando grub.cfg...
+&lt;a name="rest_code_1c5e51d2729644f79b90836802266b4a-3"&gt;&lt;/a&gt;Encontrada imagen de linux: /boot/vmlinuz-linux
+&lt;a name="rest_code_1c5e51d2729644f79b90836802266b4a-4"&gt;&lt;/a&gt;Encontrada imagen de memoria inicial: /boot/initramfs-linux.img
+&lt;a name="rest_code_1c5e51d2729644f79b90836802266b4a-5"&gt;&lt;/a&gt;hecho
 &lt;/pre&gt;&lt;p&gt;(restart y con suerte todo funca bien)&lt;/p&gt;
 &lt;p&gt;Siguiendo con la migración a /usr/bin&lt;/p&gt;
 &lt;blockquote&gt;
@@ -66,7 +66,7 @@ $ paclist &amp;lt;repo&amp;gt; | awk ' { print $1 } ' | pacman -Ql - | grep ' /s
 &lt;/blockquote&gt;
 &lt;p&gt;En mi caso no tuve resultados de este find.
 Después ejecute:&lt;/p&gt;
-&lt;pre class="code bash"&gt;&lt;a name="rest_code_9c49ecae642d48709ad2bf96fa5134c5-1"&gt;&lt;/a&gt;&lt;span class="c"&gt;# pacman -Syu --ignore filesystem,bash&lt;/span&gt;
-&lt;a name="rest_code_9c49ecae642d48709ad2bf96fa5134c5-2"&gt;&lt;/a&gt;&lt;span class="c"&gt;# pacman -S bash&lt;/span&gt;
-&lt;a name="rest_code_9c49ecae642d48709ad2bf96fa5134c5-3"&gt;&lt;/a&gt;&lt;span class="c"&gt;# pacman -Su&lt;/span&gt;
-&lt;/pre&gt;&lt;p&gt;Actualizó como 500 megas y todo 10 puntos :)&lt;/p&gt;&lt;/div&gt;</description><guid>http://gilgamezh.me/blog/en/posts/archlinux-mueve-todos-los-binarios-a-usrbin-como-actualizar.html</guid><pubDate>Sat, 24 Aug 2013 20:32:23 GMT</pubDate></item></channel></rss>
+&lt;pre class="code bash"&gt;&lt;a name="rest_code_cd86cfda2b1a4757bcce5c6a87aae904-1"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# pacman -Syu --ignore filesystem,bash&lt;/span&gt;
+&lt;a name="rest_code_cd86cfda2b1a4757bcce5c6a87aae904-2"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# pacman -S bash&lt;/span&gt;
+&lt;a name="rest_code_cd86cfda2b1a4757bcce5c6a87aae904-3"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# pacman -Su&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;Actualizó como 500 megas y todo 10 puntos :)&lt;/p&gt;&lt;/div&gt;</description><guid>http://gilgamezh.me/en/posts/archlinux-mueve-todos-los-binarios-a-usrbin-como-actualizar.html</guid><pubDate>Sat, 24 Aug 2013 20:32:23 GMT</pubDate></item></channel></rss>
