@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>No Todo Es Mecánico (FSF)</title><link>http://gilgamezh.me/blog/</link><description></description><atom:link type="application/rss+xml" href="http://gilgamezh.me/blog/categories/fsf.xml" rel="self"></atom:link><language>es</language><lastBuildDate>Sat, 31 Oct 2015 14:14:18 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>30 años de GNU</title><link>http://gilgamezh.me/blog/posts/30-anos-de-gnu.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Hace treinta años Richard Stallman (RMS) lanzó el proyecto GNU.
+Gracias por eso :D&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;"Considero que la regla de oro requiere que si a mi me gusta un programa
+debo compartirlo con otros a quienes les gusta también. No puedo, en mi
+sano juicio firmar un acuerdo de licencia software o de no divulgación.&lt;/p&gt;
+&lt;p&gt;De tal modo que puedo seguir usando computadoras sin violar mis principios,
+he decidido juntar un cuerpo suficiente de software libre de tal modo
+que pueda proseguir sin la necesidad de software que no sea libre."&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;img alt="https://static.fsf.org/nosvn/misc/GNU_30th_badge.png" src="https://static.fsf.org/nosvn/misc/GNU_30th_badge.png"&gt;&lt;/div&gt;</description><category>FOSS</category><category>FSF</category><category>GNU</category><category>GNU/Linux</category><category>rms</category><guid>http://gilgamezh.me/blog/posts/30-anos-de-gnu.html</guid><pubDate>Sat, 28 Sep 2013 12:23:41 GMT</pubDate></item></channel></rss>

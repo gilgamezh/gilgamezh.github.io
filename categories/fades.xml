@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>No Todo Es Mecánico (fades)</title><link>http://gilgamezh.me/blog/</link><description></description><atom:link type="application/rss+xml" href="http://gilgamezh.me/blog/categories/fades.xml" rel="self"></atom:link><language>es</language><lastBuildDate>Sat, 31 Oct 2015 14:14:17 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Fades 2.0</title><link>http://gilgamezh.me/blog/posts/fades-20.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Fueron (creo) unas 2 semanas desde que salió el release 1.0 de Fades las que
+demoramos en sacar el 2.0 :). El ritmo estuvo muy bueno y sobre todo largas
+charlas de qué camino tomar.
+Cuándo salió la 1.0 Robert Collins &lt;a class="reference external" href="https://twitter.com/gilgamezh/status/571377065053851648"&gt;nos hizo algunos comentarios sobre xattr&lt;/a&gt;
+, y después de una &lt;a class="reference external" href="https://github.com/PyAr/fades/issues/29"&gt;linda charla via IRC&lt;/a&gt;
+fades empezó a hacer honor a la primer palabra de su sigla para mutar a una
+caché de virtualenvs en lugar de tener uno por cada script.
+De paso se arreglaron varios errores y se mejoraron muchas cosas.&lt;/p&gt;
+&lt;p&gt;¿Qué hay de nuevo en esta release?&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Tiene un cache para virtualenvs creados en el sistema; mejora
+la reutilización y velocidad.&lt;/li&gt;
+&lt;li&gt;Como resultado del feature anterior, ya no guarda metadata por
+script (&lt;em&gt;en&lt;/em&gt; el script).&lt;/li&gt;
+&lt;li&gt;Permite indicar el nombre del projecto si es diferente al del
+módulo (ej: "import bs4 # fades.pypi beautifulsoup4 == 3.5")&lt;/li&gt;
+&lt;li&gt;Soporta requerimientos complejos de versión: (ej: "&amp;lt;2.6,&amp;gt;1.3,!=1.9")&lt;/li&gt;
+&lt;li&gt;Maneja paquetes a los que pip les cambia el nombre&lt;/li&gt;
+&lt;li&gt;Otros cambios y correcciones menores.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Mas info: &lt;a class="reference external" href="https://github.com/PyAr/fades/releases/tag/2.0"&gt;https://github.com/PyAr/fades/releases/tag/2.0&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>fades</category><category>proyectos</category><category>PyAr</category><category>python</category><category>virtualenv</category><guid>http://gilgamezh.me/blog/posts/fades-20.html</guid><pubDate>Sat, 28 Feb 2015 15:25:16 GMT</pubDate></item></channel></rss>

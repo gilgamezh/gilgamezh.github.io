@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>No Todo Es Mecánico (link)</title><link>http://gilgamezh.me/blog/</link><description></description><atom:link type="application/rss+xml" href="http://gilgamezh.me/blog/categories/link.xml" rel="self"></atom:link><language>es</language><lastBuildDate>Sat, 31 Oct 2015 14:14:18 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Los 10 mandamientos de Log</title><link>http://gilgamezh.me/blog/posts/los-10-mandamientos-de-log.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Creo que este articulo es un ABC para cualquiera que se proponga hacer logs
+con seriedad.&lt;/p&gt;
+&lt;img alt="/images/lindolog.png" src="http://gilgamezh.me/blog/images/lindolog.png"&gt;
+&lt;p&gt;Lo tome como referencia para varios casos y sirvió muchisimo como guia.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;The 10 Commandments of Logging&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Welcome on my blog for this new Year. After writing an answer to a thread
+regarding monitoring and log monitoring on the Paris devops mailing list,
+I thought back about a blog post project I had in mind for a long time.&lt;/p&gt;
+&lt;p&gt;I wrote this blog post while wearing my Ops hat and this is mostly
+addressed to developers.&lt;/p&gt;
+&lt;p&gt;Knowing how and what to log is, to me, one of the hardest task a software
+engineer will have to solve. Mostly because this task is akin to
+divination. It’s very hard to know what information you’ll need during
+troubleshooting... That’s the reason I hope those 10 commandments will help
+you enhance your application logging for the great benefits of the
+ops engineers :)&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.masterzen.fr/2013/01/13/the-10-commandments-of-logging/"&gt;http://www.masterzen.fr/2013/01/13/the-10-commandments-of-logging/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/div&gt;</description><category>devops</category><category>link</category><guid>http://gilgamezh.me/blog/posts/los-10-mandamientos-de-log.html</guid><pubDate>Tue, 18 Jun 2013 13:29:13 GMT</pubDate></item></channel></rss>

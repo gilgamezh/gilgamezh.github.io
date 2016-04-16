@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<base href="http://gilgamezh.me/blog/en/posts/howto-stresstest-a-website-with-apache-benchmark.html">
+<meta name="description" content="Un pequeño How To para usar Apache Benchmark">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HowTo (stress)test a website with Apache Benchmark | No Todo Es Mecánico</title>
+<link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/rst.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/code.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/colorbox.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/theme.css" rel="stylesheet" type="text/css">
+<meta content="#5670d4" name="theme-color">
+<link rel="alternate" type="application/rss+xml" title="RSS (en)" href="../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (es)" href="../../rss.xml">
+<link rel="canonical" href="http://gilgamezh.me/blog/en/posts/howto-stresstest-a-website-with-apache-benchmark.html">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="description" itemprop="description" content="Un pequeño How To para usar Apache Benchmark">
+<meta name="author" content="GiLgAmEzH">
+<link rel="prev" href="como-usar-un-tunel-ssh-como-proxy-para-http.html" title="Cómo usar un tunel SSH como proxy para HTTP" type="text/html">
+<link rel="next" href="regalo-estos-libros.html" title="Regalo estos libros" type="text/html">
+<meta property="og:site_name" content="No Todo Es Mecánico">
+<meta property="og:title" content="HowTo (stress)test a website with Apache Benchmark">
+<meta property="og:url" content="http://gilgamezh.me/blog/en/posts/howto-stresstest-a-website-with-apache-benchmark.html">
+<meta property="og:description" content="Un pequeño How To para usar Apache Benchmark">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2015-10-31T11:18:22-03:00">
+<meta property="article:tag" content="devops">
+<meta property="article:tag" content="metrics">
+<meta property="article:tag" content="webservers">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@gilgamezh">
+<meta name="twitter:creator" content="@gilgamezh">
+<link rel="alternate" hreflang="es" href="../../posts/howto-stresstest-a-website-with-apache-benchmark.html">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://gilgamezh.me/blog/en/">
+                <img src="../../images/gilgamezh.png" alt="No Todo Es Mecánico" id="logo"><span id="blog-title">No Todo Es Mecánico</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../archive.html">Archive</a>
+                </li>
+<li>
+<a href="../categories/index.html">Tags</a>
+                </li>
+<li>
+<a href="../rss.xml">RSS feed</a>
+                </li>
+<li>
+<a href="../stories/resume.html">Resume</a>
+                </li>
+<li>
+<a href="http://www.flickr.com/photos/bolche/">Pics</a>
+                </li>
+<li>
+<a href="../../random/">Random</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+            </li>
+<li><a href="http://gilgamezh.me/blog/" rel="alternate" hreflang="es">Español</a></li>
+
+                
+                    
+    <li>
+    <a href="howto-stresstest-a-website-with-apache-benchmark.rst" id="sourcelink">Source</a>
+    </li>
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="#" class="u-url">HowTo (stress)test a website with Apache Benchmark</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                    GiLgAmEzH
+            </span></p>
+            <p class="dateline"><a href="#" rel="bookmark"><time class="published dt-published" datetime="2015-10-31T11:18:22-03:00" itemprop="datePublished" title="2015-10-31 11:18">2015-10-31 11:18</time></a></p>
+                <p class="commentline">
+        
+    <a href="howto-stresstest-a-website-with-apache-benchmark.html#disqus_thread" data-disqus-identifier="cache/posts/howto-stresstest-a-website-with-apache-benchmark.html">Comments</a>
+
+
+            
+        </p>
+<p class="sourceline"><a href="howto-stresstest-a-website-with-apache-benchmark.rst" id="sourcelink">Source</a></p>
+
+                <meta name="description" itemprop="description" content="Un pequeño How To para usar Apache Benchmark">
+</div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>Hoy por la mañana @reydelhumo queria probar un sitio que tiene en una raspy, yo
+le recomendé que use <cite>ab</cite> para hacer algunas pruebas básicas de load.</p>
+<p>Usar <cite>ab</cite> es muy simple, pero es mucho más lindo poder hacer gráficos de los
+resultados, así que aproveché el momento para armar este post.</p>
+<p>El objetivo es poder hacer varios tests contra una URL usando diferentes valores
+de concurrencia/cantidad de requests y gráficar la salida.</p>
+<p>Primero hay que ejecutar las pruebas con <cite>ab</cite>:</p>
+<pre class="literal-block">
+ab -c 3 -n 100 -v 2 -g out1.tsv -H "Accept-Encoding: gzip,deflate"  http://python.org.ar/
+</pre>
+<!-- TEASER_END -->
+<p>Esa configuración significa:</p>
+<ul class="simple">
+<li>
+<cite>-c 3</cite>:  concurrencia 3</li>
+<li>
+<cite>-n 15</cite>:  15 request</li>
+<li>
+<cite>-v 2</cite>: verbose (muestra los headers)</li>
+<li>
+<cite>-g out1.tsv</cite>: salida para gnuplot</li>
+<li>
+<cite>-H -H "Accept-Encoding: gzip,deflate"</cite> Hacer requests con gzip (igual que cualquier browser)</li>
+</ul>
+<p>La idea es repetir N veces la prueba con los mismos parametros renombrando outN.tsv.</p>
+<p>Yo ejecuté tres pruebas:</p>
+<pre class="literal-block">
+/tmp  ll out*.tsv
+-rw-r--r-- 1 gilgamezh users 4934 Oct 31 11:26 out1.tsv
+-rw-r--r-- 1 gilgamezh users 4930 Oct 31 11:26 out2.tsv
+-rw-r--r-- 1 gilgamezh users 4936 Oct 31 11:27 out3.tsv
+</pre>
+<p>Cada una nos da una resumen con una salida, pero mucho mejor ver un gráfico.
+Con gnuplot es muy simple.</p>
+<p>Yo uso un template que edito cada vez:</p>
+<pre class="literal-block">
+# output as png image
+set terminal png
+
+# save file to "benchmark.png"
+set output "benchmark_python.org.ar.png"
+
+# graph title
+set title "Benchmark en python.org.ar"
+
+# aspect ratio for image size
+set size 1,1
+
+# enable grid on y-axis
+set grid y
+
+# x-axis label
+set xlabel "Request"
+
+# y-axis label
+set ylabel "Response Time (ms)"
+
+# plot data from bench1.tsv,bench2.tsv and bench3.tsv using column 10 with smooth sbezier lines
+plot "out1.tsv" using 10 smooth sbezier with lines title "Benchmark 1:", \
+     "out2.tsv" using 10 smooth sbezier with lines title "Benchmark 2:", \
+     "out3.tsv" using 10 smooth sbezier with lines title "Benchmark 3:"
+</pre>
+<p>Es un poco precario porque hay que editarlo a mano con el nombre de los .tsv.
+Algún día me voy a tomar el tiempo de automatizar todo. ;)</p>
+<p>lo guardo como <cite>gnuplot.template</cite> y ejecuto:</p>
+<pre class="literal-block">
+gnuplot gnuplot.template
+</pre>
+<p>Y listo! tenemos nuestro gráfico.
+(sí hay que tener gnuplot instalado. en Arch el paquete se llama <cite>python-gnuplot</cite>)</p>
+<img alt="/images/benchmark_python.org.ar.png" src="../../images/benchmark_python.org.ar.png"><p>Por ejemplo la conclusión de esta prueba es que python.org.ar necesita un caché de frontend :)</p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../categories/devops.html" rel="tag">devops</a></li>
+            <li><a class="tag p-category" href="../categories/metrics.html" rel="tag">metrics</a></li>
+            <li><a class="tag p-category" href="../categories/webservers.html" rel="tag">webservers</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="como-usar-un-tunel-ssh-como-proxy-para-http.html" rel="prev" title="Cómo usar un tunel SSH como proxy para HTTP">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="regalo-estos-libros.html" rel="next" title="Regalo estos libros">Next post</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="notodoesmecnico",
+            disqus_url="http://gilgamezh.me/blog/en/posts/howto-stresstest-a-website-with-apache-benchmark.html",
+        disqus_title="HowTo (stress)test a website with Apache Benchmark",
+        disqus_identifier="cache/posts/howto-stresstest-a-website-with-apache-benchmark.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="notodoesmecnico";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2016         <a href="mailto:mail@gilgamezh.me">GiLgAmEzH</a> - My Fingerprint: <a href="public.key">0712 8EB2 C626 08C5 69E1  8949 6DDF 6FA3 5EB9 26AB</a>  Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
+<img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a>
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../../assets/js/jquery.min.js"></script><script src="../../assets/js/bootstrap.min.js"></script><script src="../../assets/js/moment-with-locales.min.js"></script><script src="../../assets/js/fancydates.js"></script><script src="../../assets/js/jquery.colorbox-min.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("en");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates --><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3147526-9', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

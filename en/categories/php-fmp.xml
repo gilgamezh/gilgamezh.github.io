@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>No Todo Es Mecánico (php-fmp)</title><link>http://gilgamezh.me/blog/</link><description></description><atom:link type="application/rss+xml" href="http://gilgamezh.me/blog/en/categories/php-fmp.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sat, 31 Oct 2015 14:14:17 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Instalar y configurar LAMP en Centos 6 PHP-FPM</title><link>http://gilgamezh.me/blog/en/posts/instalar-y-configurar-lamp-en-centos-6-php-fpm.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Hace poquito tiempo estuve configurando un webserver desde cero así que
+aprovecho para armar una guia "paso a paso" de cómo instalar un Centos con
+LAMP (Linux,Apache,MySQL,PHP|Perl??|Python:) con algunas caracteristicas
+que me gusta usar. Me queda registro de la instalación y de paso comparto
+el how to.&lt;/p&gt;
+&lt;img alt="/images/lamp.png" src="http://gilgamezh.me/blog/images/lamp.png"&gt;
+&lt;p&gt;En primer lugar dejo nota de algo que no quiero olvidarme. El servidor
+que instale era un IBM x3250 M4. Este server tiene el firmware UEFI y me hizo
+renegar bastante con 2 cosas  unas cuantas horas. Creo que el último server
+físico que había instalado fue en el 2011. Estar con poco entrenamiento
+seguro que me trajo estos problemas :D.&lt;/p&gt;
+&lt;p&gt;La configuración del RAID no está en el BIOS sino que hay que dejar que el
+equipo este a punto de arrancar e ingresar a una herramienta especifica con
+ctrl+h. Esto es realmente feo, porque si entras a la config del BIOS te
+deja seleccionar RAID y al próximo restart tenés un menú "storage" que lo
+único que te detecta es la lectora DVD.
+Ahora el problema: El cd "minimal" de Centos &lt;a class="reference external" href="http://bugs.centos.org/view.php?id=6321"&gt;tiene un error con UEFI&lt;/a&gt;.
+Por lo tanto no bootea (desde CD con un pendrive fue imposible directamente).
+Para solucionarlo utilice el workaround del primer comentario.&lt;/p&gt;
+&lt;blockquote&gt;
+"it, I just edited the grub menu item at boot, to load the kernel
+from /isolinux instead of /images/pxeboot."&lt;/blockquote&gt;
+&lt;p&gt;SALVADOR!&lt;/p&gt;
+&lt;div class="section" id="instalar-apache-mysql-y-php"&gt;
+&lt;h2&gt;Instalar apache, mysql y PHP&lt;/h2&gt;
+&lt;p&gt;(usando el repo 'remi' que tiene versiones un poco más nuevas que el oficial.)&lt;/p&gt;
+&lt;pre class="code bash"&gt;&lt;a name="rest_code_0ef0bdaeaac443c088fc3d2764c9d48f-1"&gt;&lt;/a&gt;yum --enablerepo&lt;span class="o"&gt;=&lt;/span&gt;remi install httpd mysql mysql-server php php-common
+&lt;a name="rest_code_0ef0bdaeaac443c088fc3d2764c9d48f-2"&gt;&lt;/a&gt;yum --enablerepo&lt;span class="o"&gt;=&lt;/span&gt;remi install php-mysql php-gd php-mbstring php-mcrypt php-xml php-pecl-apc php-cli php-pear php-pdo
+&lt;/pre&gt;&lt;pre class="code bash"&gt;&lt;a name="rest_code_32cff6b052514a4db247c0c0ff3cb70c-1"&gt;&lt;/a&gt;/usr/bin/mysqladmin -u root password &lt;span class="s1"&gt;'algocomplejo'&lt;/span&gt;
+&lt;a name="rest_code_32cff6b052514a4db247c0c0ff3cb70c-2"&gt;&lt;/a&gt;/usr/bin/mysql_secure_installation
+&lt;/pre&gt;&lt;p&gt;Marcar los 2 servicios para que levanten al inicio&lt;/p&gt;
+&lt;pre class="code bash"&gt;&lt;a name="rest_code_d57b143827d34856ad5334f1b3f95ea9-1"&gt;&lt;/a&gt;chkconfig --levels &lt;span class="m"&gt;235&lt;/span&gt; httpd on
+&lt;a name="rest_code_d57b143827d34856ad5334f1b3f95ea9-2"&gt;&lt;/a&gt;chkconfig --levels &lt;span class="m"&gt;235&lt;/span&gt; mysqld on
+&lt;/pre&gt;&lt;p&gt;Con esto ya tenemos todo funcionando. Para mejor performance voy a cambiar el manejador de php por PHP-FPM. Detalles en &lt;a class="reference external" href="http://php-fpm.org/"&gt;http://php-fpm.org/&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code bash"&gt;&lt;a name="rest_code_02ee2b1d88a4456295e1df7a066a7ef6-1"&gt;&lt;/a&gt;yum --enablerepo&lt;span class="o"&gt;=&lt;/span&gt;remi install php-fpm
+&lt;a name="rest_code_02ee2b1d88a4456295e1df7a066a7ef6-2"&gt;&lt;/a&gt;chkconfig --levels &lt;span class="m"&gt;235&lt;/span&gt; php-fpm on
+&lt;/pre&gt;&lt;p&gt;Editar /etc/php-fpm.d/www.conf&lt;/p&gt;
+&lt;pre class="code bash"&gt;&lt;a name="rest_code_b48fb48fb65f4e8bb4f9a934ea7daebd-1"&gt;&lt;/a&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="nv"&gt;listen&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; 127.0.0.1:9000
+&lt;a name="rest_code_b48fb48fb65f4e8bb4f9a934ea7daebd-2"&gt;&lt;/a&gt;&lt;span class="nv"&gt;listen&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; /tmp/php5-fpm.sock
+&lt;a name="rest_code_b48fb48fb65f4e8bb4f9a934ea7daebd-3"&gt;&lt;/a&gt;pm.status_path &lt;span class="o"&gt;=&lt;/span&gt; /status
+&lt;a name="rest_code_b48fb48fb65f4e8bb4f9a934ea7daebd-4"&gt;&lt;/a&gt;ping.path &lt;span class="o"&gt;=&lt;/span&gt; /ping
+&lt;/pre&gt;&lt;p&gt;Luego hay que Instalar mod_fastcgi&lt;/p&gt;
+&lt;pre class="code bash"&gt;&lt;a name="rest_code_b1242a0ef5e041cda2d8af3e1ebd263c-1"&gt;&lt;/a&gt;yum --enablerepo&lt;span class="o"&gt;=&lt;/span&gt;remi install mod_fastcgi
+&lt;/pre&gt;&lt;p&gt;Deshabilitar mod_php&lt;/p&gt;
+&lt;pre class="code bash"&gt;&lt;a name="rest_code_a26fdcd15c4c42898eefbb691050e85a-1"&gt;&lt;/a&gt;mv /etc/httpd/conf.d/php.conf php.conf.disable
+&lt;/pre&gt;&lt;p&gt;Para la config que sigue abajo hay que crear el directorio "/usr/lib/cgi-bin/".
+Editar el archivo /etc/httpd/conf.d/fastcgi.conf para que quede de la siguiente manera:&lt;/p&gt;
+&lt;pre class="code bash"&gt;&lt;a name="rest_code_4b355ebb9284433d9c119dbc78689e83-1"&gt;&lt;/a&gt;&amp;lt;IfModule mod_fastcgi.c&amp;gt;
+&lt;a name="rest_code_4b355ebb9284433d9c119dbc78689e83-2"&gt;&lt;/a&gt;      DirectoryIndex index.php index.html index.shtml index.cgi
+&lt;a name="rest_code_4b355ebb9284433d9c119dbc78689e83-3"&gt;&lt;/a&gt;      AddHandler php5-fcgi .php
+&lt;a name="rest_code_4b355ebb9284433d9c119dbc78689e83-4"&gt;&lt;/a&gt;      Action php5-fcgi /php5-fcgi
+&lt;a name="rest_code_4b355ebb9284433d9c119dbc78689e83-5"&gt;&lt;/a&gt;      Alias /php5-fcgi /usr/lib/cgi-bin/php5-fcgi
+&lt;a name="rest_code_4b355ebb9284433d9c119dbc78689e83-6"&gt;&lt;/a&gt;      FastCgiExternalServer /usr/lib/cgi-bin/php5-fcgi -socket /tmp/php5-fpm.sock -pass-header Authorization
+&lt;a name="rest_code_4b355ebb9284433d9c119dbc78689e83-7"&gt;&lt;/a&gt;
+&lt;a name="rest_code_4b355ebb9284433d9c119dbc78689e83-8"&gt;&lt;/a&gt;      &lt;span class="c"&gt;# For monitoring status with e.g. Munin&lt;/span&gt;
+&lt;a name="rest_code_4b355ebb9284433d9c119dbc78689e83-9"&gt;&lt;/a&gt;      &amp;lt;LocationMatch &lt;span class="s2"&gt;"/(ping|status)"&lt;/span&gt;&amp;gt;
+&lt;a name="rest_code_4b355ebb9284433d9c119dbc78689e83-10"&gt;&lt;/a&gt;              SetHandler php5-fcgi-virt
+&lt;a name="rest_code_4b355ebb9284433d9c119dbc78689e83-11"&gt;&lt;/a&gt;              Action php5-fcgi-virt /php5-fcgi virtual
+&lt;a name="rest_code_4b355ebb9284433d9c119dbc78689e83-12"&gt;&lt;/a&gt;      &amp;lt;/LocationMatch&amp;gt;
+&lt;a name="rest_code_4b355ebb9284433d9c119dbc78689e83-13"&gt;&lt;/a&gt; &amp;lt;/IfModule&amp;gt;
+&lt;/pre&gt;&lt;p&gt;Done!
+Faltaría configurar los vhosts, etc pero eso es standard.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><guid>http://gilgamezh.me/blog/en/posts/instalar-y-configurar-lamp-en-centos-6-php-fpm.html</guid><pubDate>Sun, 17 Nov 2013 21:06:00 GMT</pubDate></item></channel></rss>

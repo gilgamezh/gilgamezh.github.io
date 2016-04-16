@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>No Todo Es Mecánico (PyAr)</title><link>http://gilgamezh.me/blog/</link><description></description><atom:link type="application/rss+xml" href="http://gilgamezh.me/blog/categories/pyar.xml" rel="self"></atom:link><language>es</language><lastBuildDate>Sat, 31 Oct 2015 14:14:17 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Tu propio cliente de Torrent streaming en Python</title><link>http://gilgamezh.me/blog/posts/tu-propio-cliente-de-torrent-streaming-en-python.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Con @felipelerena estamos laburando en &lt;a class="reference external" href="https://github.com/touchandgo-devs/touchandgo"&gt;Touchandgo&lt;/a&gt;,
+si te gusta mirar series online, no tenés que dejar de probarlo!&lt;/p&gt;
+&lt;p&gt;Con la experiencia inicial de Touchandgo armamos una charla para la PyConAr 2014.
+&lt;a class="reference external" href="http://bit.ly/pyconar"&gt;Slides&lt;/a&gt;&lt;/p&gt;
+&lt;iframe width="425" height="344" src="//www.youtube.com/embed/oMl1UiF_2Ss?rel=0&amp;amp;hd=1&amp;amp;wmode=transparent"&gt;&lt;/iframe&gt;&lt;p&gt;PD: Sí, me estoy poniendo al día lentamente con el blog! :D&lt;/p&gt;&lt;/div&gt;</description><category>/me</category><category>PyAr</category><category>pyconar</category><category>python</category><category>torrent</category><category>touchandgo</category><guid>http://gilgamezh.me/blog/posts/tu-propio-cliente-de-torrent-streaming-en-python.html</guid><pubDate>Mon, 09 Mar 2015 13:44:28 GMT</pubDate></item><item><title>Fades 2.0</title><link>http://gilgamezh.me/blog/posts/fades-20.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Fueron (creo) unas 2 semanas desde que salió el release 1.0 de Fades las que
+demoramos en sacar el 2.0 :). El ritmo estuvo muy bueno y sobre todo largas
+charlas de qué camino tomar.
+Cuándo salió la 1.0 Robert Collins &lt;a class="reference external" href="https://twitter.com/gilgamezh/status/571377065053851648"&gt;nos hizo algunos comentarios sobre xattr&lt;/a&gt;
+, y después de una &lt;a class="reference external" href="https://github.com/PyAr/fades/issues/29"&gt;linda charla via IRC&lt;/a&gt;
+fades empezó a hacer honor a la primer palabra de su sigla para mutar a una
+caché de virtualenvs en lugar de tener uno por cada script.
+De paso se arreglaron varios errores y se mejoraron muchas cosas.&lt;/p&gt;
+&lt;p&gt;¿Qué hay de nuevo en esta release?&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Tiene un cache para virtualenvs creados en el sistema; mejora
+la reutilización y velocidad.&lt;/li&gt;
+&lt;li&gt;Como resultado del feature anterior, ya no guarda metadata por
+script (&lt;em&gt;en&lt;/em&gt; el script).&lt;/li&gt;
+&lt;li&gt;Permite indicar el nombre del projecto si es diferente al del
+módulo (ej: "import bs4 # fades.pypi beautifulsoup4 == 3.5")&lt;/li&gt;
+&lt;li&gt;Soporta requerimientos complejos de versión: (ej: "&amp;lt;2.6,&amp;gt;1.3,!=1.9")&lt;/li&gt;
+&lt;li&gt;Maneja paquetes a los que pip les cambia el nombre&lt;/li&gt;
+&lt;li&gt;Otros cambios y correcciones menores.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Mas info: &lt;a class="reference external" href="https://github.com/PyAr/fades/releases/tag/2.0"&gt;https://github.com/PyAr/fades/releases/tag/2.0&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>fades</category><category>proyectos</category><category>PyAr</category><category>python</category><category>virtualenv</category><guid>http://gilgamezh.me/blog/posts/fades-20.html</guid><pubDate>Sat, 28 Feb 2015 15:25:16 GMT</pubDate></item><item><title>fades: FAst DEpendencies for Scripts</title><link>http://gilgamezh.me/blog/posts/fades-fast-dependencies-for-scripts.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;En el viaje a PyConAr 2014 fui y volví en auto con Facu Batista. En esas horas
+charlamos sin para un minuto, y entre cosa y cosa se nos ocurrió un proyectito
+muy divertido que dimos a llamar &lt;strong&gt;fades&lt;/strong&gt;.
+Hace unas semanas hicimos el release 1.0. así que acá la gacetilla :)&lt;/p&gt;
+&lt;p&gt;Hola a todas y todos,&lt;/p&gt;
+&lt;p&gt;Estamos contentos de anunciar la liberación de fades 1.0.
+fades (en inglés: FAst DEpendencies for Scripts) es un sistema que
+maneja automáticamente los virtualenvs en los casos simples que
+uno normalmente encuentra al escribir scripts o programas pequeños.&lt;/p&gt;
+&lt;p&gt;Crea automáticamente un nuevo virtualenv (o reusa uno creado previamente
+para ese script), instalando o actualizando las dependencias necesarias,
+y ejecutando el script dentro de ese virtualenv.&lt;/p&gt;
+&lt;p&gt;Todo lo que necesitás hacer es ejecutar el script con fades (en lugar de
+Python) y también marcar las dependencias necesarias. Más detalles acá:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/PyAr/fades/"&gt;https://github.com/PyAr/fades/&lt;/a&gt;&lt;/p&gt;
+&lt;div class="section" id="para-obtenerlo"&gt;
+&lt;h2&gt;Para obtenerlo:&lt;/h2&gt;
+&lt;!-- TEASER_END --&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;Para debian/ubuntu hay un .deb acá:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://taniquetil.com.ar/fades/fades-1.0.deb"&gt;http://taniquetil.com.ar/fades/fades-1.0.deb&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Instalarlo en Arch es muy simple:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="literal-block"&gt;
+yaourt -S fades
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Podés usar pip si querés:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="literal-block"&gt;
+pip3 install fades
+&lt;/pre&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Siempre podés usar el tarball multiplataforma e instalarlo de la manera clásica:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="literal-block"&gt;
+wget http://taniquetil.com.ar/fades/fades-1.0.tar.gz
+tar -xf fades-1.0.tar.gz
+cd fades-1.0
+sudo ./setup.py install
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="ayuda-preguntas"&gt;
+&lt;h2&gt;Ayuda / preguntas:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;Podés hacer cualquier pregunta o mandar una recomendación o pedido en la lista de correo:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://listas.python.org.ar/mailman/listinfo/fades"&gt;http://listas.python.org.ar/mailman/listinfo/fades&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;También podés abrir un issue acá (por favor hacelo si encontrás algún problema!):&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/PyAr/fades/issues/new"&gt;https://github.com/PyAr/fades/issues/new&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Desde ya, muchas gracias por tu tiempo!&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>proyectos</category><category>PyAr</category><category>python</category><category>virtualenv</category><guid>http://gilgamezh.me/blog/posts/fades-fast-dependencies-for-scripts.html</guid><pubDate>Sun, 22 Feb 2015 20:14:05 GMT</pubDate></item></channel></rss>

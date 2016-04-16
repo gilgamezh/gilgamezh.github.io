@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>No Todo Es Mecánico (nikola)</title><link>http://gilgamezh.me/blog/</link><description></description><atom:link type="application/rss+xml" href="http://gilgamezh.me/blog/en/categories/nikola.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sat, 31 Oct 2015 14:14:17 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Migrando el blog a Nikola</title><link>http://gilgamezh.me/blog/en/posts/migrando-el-blog-a-nikola.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Hace mucho tiempo que vengo dando vueltas y dejando para más adelante migrar
+mi blog a &lt;a class="reference external" href="http://getnikola.com/"&gt;Nikola&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Nikola es un generador de sitios/blogs estáticos. Funciona con Python y aprovecho
+para dar las gracias a &lt;a class="reference external" href="http://ralsina.me"&gt;ralsina&lt;/a&gt; y a toda la comunidad
+que trabajó en esta herramienta tan linda :D&lt;/p&gt;
+&lt;p&gt;Por qué Nikola? &lt;a class="reference external" href="http://getnikola.com/handbook.html#why-static"&gt;Eso se responde desde la doc de Nikola&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Mi excusa para no migrar era que tenía ganas de armar algo para automatizar
+la migración desde Drupal. La verdad que nunca tuve el tiempo,
+encontré otras cosas en las que trabajar, y finalmente tengo ganas de poder
+blogear con Nikola.&lt;/p&gt;
+&lt;p&gt;El sitio es un Nikola con todo por default y no le dediqué horas a que sea &lt;em&gt;lindo&lt;/em&gt;.
+Por lo que los posts &lt;em&gt;migrados&lt;/em&gt; van a tener bastantes cosas rotas.&lt;/p&gt;
+&lt;p&gt;Como estoy dedicandome bastante a mejorar mi Ingles voy a intentar mantener
+una versión en este idioma. Correcciones y consejos bienvenidos! :)&lt;/p&gt;
+&lt;p&gt;Con el paso del tiempo lo voy a ir tuneando un poco :)&lt;/p&gt;
+&lt;p&gt;Así que hoy queda productivo! :D&lt;/p&gt;
+&lt;p&gt;Ramen!&lt;/p&gt;&lt;/div&gt;</description><guid>http://gilgamezh.me/blog/en/posts/migrando-el-blog-a-nikola.html</guid><pubDate>Sun, 22 Feb 2015 20:04:05 GMT</pubDate></item></channel></rss>

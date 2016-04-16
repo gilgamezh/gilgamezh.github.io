@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>No Todo Es Mecánico (google)</title><link>http://gilgamezh.me/blog/</link><description></description><atom:link type="application/rss+xml" href="http://gilgamezh.me/blog/en/categories/google.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sat, 31 Oct 2015 14:14:17 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Copiar archivos a un celular con Android 4 desde linux</title><link>http://gilgamezh.me/blog/en/posts/copiar-archivos-a-un-celular-con-android-4-desde-linux.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;img alt="/images/evil-google.jpg" src="http://gilgamezh.me/blog/images/evil-google.jpg"&gt;
+&lt;p&gt;Hace unos días cambie mi celu por uno con Android 4. Hace unos minutos lo
+conecte a la compu para copiarle música y me entero de que no se puede montar
+como hice hasta hoy con cualquier otro android.
+Resulta que los muchachos de Google decidieron migrar a un protocolo MTP...&lt;/p&gt;
+&lt;p&gt;En fin después de unas buenas $&amp;amp;$^&amp;amp;@#^$&amp;amp;#PUTAMADREGOOGLEYLADETUHERMANA$^%^&amp;amp;$###$%%
+hice busqueda rápida en la wiki de Arch --&amp;gt; &lt;a class="reference external" href="https://wiki.archlinux.org/index.php/Mtp"&gt;https://wiki.archlinux.org/index.php/Mtp&lt;/a&gt;
+y encontré jmtpfs que funcionó perfecto. (mtpfs no andaba bien)&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://research.jacquette.com/jmtpfs-exchanging-files-between-android-devices-and-linux/"&gt;http://research.jacquette.com/jmtpfs-exchanging-files-between-android-devices-and-linux/&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>http://gilgamezh.me/blog/en/posts/copiar-archivos-a-un-celular-con-android-4-desde-linux.html</guid><pubDate>Thu, 31 Oct 2013 03:38:10 GMT</pubDate></item><item><title>JwPlayer Realtime analytics using Google Analytics</title><link>http://gilgamezh.me/blog/en/posts/jwplayer-realtime-analytics-using-google-analytics.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Un excelente tutorial de cómo medir tráfico de jwplayer con google analytics
+en tiempo real. Aplausos para @supermasita&lt;/p&gt;
+&lt;img alt="/images/jw_analitycs.png" src="http://gilgamezh.me/blog/images/jw_analitycs.png"&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/supermasita/docs/blob/master/jwplayer/realtime_analytics_using_google_analytics.md"&gt;https://github.com/supermasita/docs/blob/master/jwplayer/realtime_analytics_using_google_analytics.md&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>http://gilgamezh.me/blog/en/posts/jwplayer-realtime-analytics-using-google-analytics.html</guid><pubDate>Fri, 16 Aug 2013 17:25:24 GMT</pubDate></item><item><title>La parte de Google Glass (anteojos Google) de la que nadie habla</title><link>http://gilgamezh.me/blog/en/posts/la-parte-de-google-glass-anteojos-google-de-la-que-nadie-habla.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;img alt="/images/black_mirror.jpg" src="http://gilgamezh.me/blog/images/black_mirror.jpg"&gt;
+&lt;p&gt;Hace poco me pasaron &lt;a class="reference external" href="http://creativegood.com/uncategorized/anteojos-google/"&gt;este articulo&lt;/a&gt;
+sobre Google glass y me pareció muy bueno.
+Una linda manera de arrancar el debate&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Solo piensa: si un millón de Google Glasses salen al mundo y empiezan a
+guardar audios y videos del mundo que los rodea, el alcance de Google
+search, de repente se hace más y más grande, y esa búsqueda indexada
+te incluye a vos.&lt;/p&gt;
+&lt;p&gt;Te describo la imágen. En 10 años, alguien, alguna empresa, u
+organización, tiene interés en vos, quieres saber si alguna vez
+dijiste algo que les puede parecer ofensivo, o amenazador, o simplemente
+incluye la mención de una palabra o frase que encuentren interesante.
+Una simple búsqueda en la nube de Google, sea iniciada por una búsqueda
+pública, o una federal, o algo intermedio, instantáneamente puede traer
+documentación de cada palabra que alguna vez hayas dicho al alcance del
+oído de los anteojos Google Glass.&lt;/p&gt;
+&lt;p&gt;Esta es la discusión que deberíamos tener de Google Glass. La comunidad
+tecnológíca, por todo los derechos, debería estar liderando esta discusión.
+Aun así, muchos techies todavía están hablando de cuan cool quedarían
+usando eso anteojos&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;!-- TEASER_END: click to read the rest of the article --&gt;
+&lt;p&gt;Primero, &lt;a class="reference external" href="http://tn.com.ar/tecnologia/probamos-el-google-glass-en-primera-persona_398268"&gt;de muestra sobra un botón&lt;/a&gt;.
+Siguiendo con los links en varias charlas con diferentes personas terminamos
+comparandolo con blackMirror y creo que es el mejor ejemplo de para dónde vamos.&lt;/p&gt;
+&lt;p&gt;Video via --&amp;gt;  &lt;a class="reference external" href="http://kottke.org/13/02/google-glass-black-mirror"&gt;http://kottke.org/13/02/google-glass-black-mirror&lt;/a&gt;&lt;/p&gt;
+&lt;iframe width="425" height="344" src="//www.youtube.com/embed/CDi7btsfVYM?rel=0&amp;amp;hd=1&amp;amp;wmode=transparent"&gt;&lt;/iframe&gt;&lt;p&gt;Y otro muy bueno:&lt;/p&gt;
+&lt;iframe src="//player.vimeo.com/video/8569187" width="281" height="500" frameborder="0" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowFullScreen"&gt;
+&lt;/iframe&gt;&lt;/div&gt;</description><guid>http://gilgamezh.me/blog/en/posts/la-parte-de-google-glass-anteojos-google-de-la-que-nadie-habla.html</guid><pubDate>Fri, 05 Jul 2013 23:31:20 GMT</pubDate></item></channel></rss>

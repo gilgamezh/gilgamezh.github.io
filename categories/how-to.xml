@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>No Todo Es Mecánico (how-to)</title><link>http://gilgamezh.me/blog/</link><description></description><atom:link type="application/rss+xml" href="http://gilgamezh.me/blog/categories/how-to.xml" rel="self"></atom:link><language>es</language><lastBuildDate>Sat, 31 Oct 2015 14:14:18 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Compilar versión vieja de PHP para Archlinux</title><link>http://gilgamezh.me/blog/posts/compilar-version-vieja-de-php-para-archlinux.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Archlinux siempre tiene la versión más nueva de todo, eso tiene muchas cosas
+positivas.
+Algo que suele pasar es que tenemos que usar algo que está productivo y que
+tiene una versión &lt;em&gt;mucho&lt;/em&gt; más vieja que la instalada.
+Hace poco tuve que laburar con un Drupal que estaba usando PHP 5.3 y no me
+quedó otra que compilarlo.
+Así que acá dejo los pasos de cómo hacerlo (básicamente la linea del configure).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;Descargar el source en /usr/local/src.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Hacer un symlink en /usr/include/freetype2/freetype/freetype.h -&amp;gt; ../freetype.h
+(sin esto da un error porque no encuentra freetype.h)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Ejecutar configure, make y make install:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+./configure --enable-mbstring --with-mysql --with-mysqli --with-zlib \
+--with-png-dir=/usr --with-jpeg-dir=/usr \
+--with-freetype-dir=/usr/include/freetype2/ --with-curl --with-gettext \
+--with-pdo-mysql --with-pdo-sqlite --with-bz2 \
+--prefix=/usr/local/php-5.3.29 --with-libdir=lib64 --with-gd \
+--with-libdir=lib64 --enable-cgi --enable-sockets --with-mcrypt \
+--with-xpm-dir=/usr
+
+make
+make install
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Hacer un symlink de /usr/local/php-5.3.29 a /usr/local/php&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Copiar el php.ini que tengamos a /usr/local/php/lib&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Si usamos Apache en httpd.conf hay que hacer un &lt;em&gt;Include&lt;/em&gt; de
+/etc/httpd/conf/extra/httpd-fastcgid.conf&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>archlinux</category><category>how-to</category><category>PHP</category><guid>http://gilgamezh.me/blog/posts/compilar-version-vieja-de-php-para-archlinux.html</guid><pubDate>Sat, 28 Feb 2015 15:17:52 GMT</pubDate></item><item><title>How to install Fisa-vim-cofig in Archlinux</title><link>http://gilgamezh.me/blog/posts/how-to-install-fisa-vim-cofig-in-archlinux.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;img alt="/images/fisa-dev-config.png" src="http://gilgamezh.me/blog/images/fisa-dev-config.png"&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/fisadev/fisa-vim-config/"&gt;Fisa-vim-config&lt;/a&gt;
+es una excelente configuración para Vim que recopila muchos
+plugins y los pone a funcionar de una manera muy simple.
+Esta desarrollada por @fisadev. Agradecimientos para él por permitir
+tener un vim con esteroides muy útil para developers n00bs como yo :).&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+&lt;p&gt;No pude hacerlo funcionar en  mi Archlinux de una sola vez. Primero que
+nada encontre que Vim en arch no está compilado con Python, por lo que hay
+que instalar gVim (que reemplaza el vim por default por uno compilado con python.&lt;/p&gt;
+&lt;p&gt;Luego de instalar gVim seguía sin funcionar, lo abandone hasta que ayer
+leí una mail en la lista de pyar con un problema similar al mio y la solución
+era tan simple!! Resulta que gVim está compilado con python-2.7 y en Arch
+python3 es el default. Por lo tanto hay que utilizar pip2 para instalar
+todas las dependencias!!
+(acá el hilo con la consulta de Matuvarela &lt;a class="reference external" href="http://listas.python.org.ar/pipermail/pyar/2014-March/028366.html"&gt;http://listas.python.org.ar/pipermail/pyar/2014-March/028366.html&lt;/a&gt; )&lt;/p&gt;
+&lt;p&gt;En resumen, si querés tener fisa-vim-dev funcionando en Arch tenes que usar
+gvim en lugar de vim, pip2 en lugar de pip y tener en cuenta que el paquete
+exuberant-ctags es extra/xtags.
+Lo único que cambia es este punto de la guia de instalación en el repo oficial.&lt;/p&gt;
+&lt;p&gt;Dependencies:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+sudo pacman -Sy gvim ctags git python2-pip
+sudo pip2 install dbgp vim-debug pep8 flake8 pyflakes isort
+&lt;/pre&gt;&lt;/div&gt;</description><category>how-to</category><category>python</category><category>vim</category><guid>http://gilgamezh.me/blog/posts/how-to-install-fisa-vim-cofig-in-archlinux.html</guid><pubDate>Sat, 15 Mar 2014 18:22:44 GMT</pubDate></item></channel></rss>

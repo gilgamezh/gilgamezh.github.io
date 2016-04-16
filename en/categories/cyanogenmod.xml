@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>No Todo Es Mecánico (cyanogenmod)</title><link>http://gilgamezh.me/blog/</link><description></description><atom:link type="application/rss+xml" href="http://gilgamezh.me/blog/en/categories/cyanogenmod.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sat, 31 Oct 2015 14:14:18 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>How to flash Samsung galaxy s3 Mini in Linux #heimdall #cyanogenmod</title><link>http://gilgamezh.me/blog/en/posts/how-to-flash-samsung-galaxy-s3-mini-in-linux-heimdall-cyanogenmod.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;img alt="/images/cyanogenmod-logo.jpg" src="http://gilgamezh.me/blog/images/cyanogenmod-logo.jpg"&gt;
+&lt;p&gt;Con los pasos detallados en el link pude instalar ClockworkMod Recovery y
+flashear  mi celu con Cyanogenmod. Anda joya :D&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://paguilar.org/?p=329"&gt;Cyanogenmod in a Samsung Galaxy S3 mini using Linux&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Update, también se puede instalar TWRP Recovery.
+Hay que bajarlo de &lt;a class="reference external" href="http://novafusion.pl/downloads/"&gt;http://novafusion.pl/downloads/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Descomprimirlo y luego ejecutar:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+heimdall flash --Kernel2 recovery.img
+&lt;/pre&gt;&lt;/div&gt;</description><guid>http://gilgamezh.me/blog/en/posts/how-to-flash-samsung-galaxy-s3-mini-in-linux-heimdall-cyanogenmod.html</guid><pubDate>Sat, 13 Dec 2014 14:59:49 GMT</pubDate></item></channel></rss>

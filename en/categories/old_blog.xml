@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>No Todo Es Mecánico (old_blog)</title><link>http://gilgamezh.me/blog/</link><description></description><atom:link type="application/rss+xml" href="http://gilgamezh.me/blog/en/categories/old_blog.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sat, 31 Oct 2015 14:14:19 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Receta de Apple Crumble + Timelapse con Mencoder</title><link>http://gilgamezh.me/blog/en/posts/receta-de-apple-crumble-%2B-timelapse-con-mencoder.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Copiada de acá pero es tal cual lo hace mi flia.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://recetasamericanas.com/2012/01/19/crujiente-de-manzana-apple-crisp"&gt;http://recetasamericanas.com/2012/01/19/crujiente-de-manzana-apple-crisp&lt;/a&gt;&lt;/p&gt;
+&lt;div class="section" id="ingredientes"&gt;
+&lt;h2&gt;Ingredientes:&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;6 manzanas grandes&lt;/li&gt;
+&lt;li&gt;200 g (1 taza) de azúcar&lt;/li&gt;
+&lt;li&gt;90 g (3/4 taza) de harina&lt;/li&gt;
+&lt;li&gt;180 g (1/3 taza) manteca (a temperatura de ambiente)&lt;/li&gt;
+&lt;li&gt;60 ml (1/4 taza) de agua&lt;/li&gt;
+&lt;li&gt;5 ml (1 cucharita) de canela&lt;/li&gt;
+&lt;li&gt;2,5 ml (1/2 cucharita) de sal&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;!-- TEASER_END --&gt;
+&lt;/div&gt;
+&lt;div class="section" id="receta"&gt;
+&lt;h2&gt;Receta:&lt;/h2&gt;
+&lt;p&gt;Precalienta el horno a 180°C (350°F) Pela las manzanas y córtalas en trozos medianos. Unos 10 trozos por manzana es lo normal. (Si son trozos demasiado pequeños pierden textura y se convierte en puré… y son demasiado grandes quedan duros y secos.) Coloca los trozos en una bandeja del horno (20×20). Verte la agua encima de una manera uniforme, seguida por la canela y la sal. En un bol pequeño mezcla la harina y azúcar. Añade la mantequilla y  machaca con un tenedor hasta que quedé más o menos hecho una pasta pero con muchas migas también. Distribuye la mezcla por encima de las manzanas. Hornea por unos 40 minutos, hasta que las manzanas se estén caramelizando y esté totalmente dorada encima.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="de-paso-saque-fotos-mientras-lo-hice-y-despues-arme-un-timelapse-con-mencoder"&gt;
+&lt;h2&gt;De paso saque fotos mientras lo hice y después arme un timelapse con Mencoder.&lt;/h2&gt;
+&lt;p&gt;Pasos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;enviar a un archivo los nombres de todas las imágenes:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+ls -1tr &amp;gt; files.txt
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Encodear con Mencoder:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+mencoder -nosound -ovc lavc -lavcopts vcodec=mpeg4 -o test_4fps.avi \
+-mf type=jpeg:fps=4 mf://@files.txt
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(use 4FPS para 50 imágenes, esto lo hice a ojo)&lt;/p&gt;
+&lt;object type="application/x-shockwave-flash" width="500" height="331" data="https://www.flickr.com/apps/video/stewart.swf?v=1535363810" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"&gt; &lt;param name="flashvars" value="intl_lang=es-us&amp;amp;photo_secret=5eb9deb903&amp;amp;photo_id=9063385970&amp;amp;flickr_show_info_box=true"&gt; &lt;param name="movie" value="https://www.flickr.com/apps/video/stewart.swf?v=1535363810"&gt; &lt;param name="bgcolor" value="#000000"&gt; &lt;param name="allowFullScreen" value="true"&gt;&lt;embed type="application/x-shockwave-flash" src="https://www.flickr.com/apps/video/stewart.swf?v=1535363810" bgcolor="#000000" allowfullscreen="true" flashvars="intl_lang=es-us&amp;amp;photo_secret=5eb9deb903&amp;amp;photo_id=9063385970&amp;amp;flickr_show_info_box=true" height="331" width="500"&gt;&lt;/embed&gt;&lt;/object&gt;&lt;/div&gt;&lt;/div&gt;</description><guid>http://gilgamezh.me/blog/en/posts/receta-de-apple-crumble-%2B-timelapse-con-mencoder.html</guid><pubDate>Mon, 17 Jun 2013 00:35:01 GMT</pubDate></item></channel></rss>

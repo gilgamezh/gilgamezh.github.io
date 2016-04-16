@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>No Todo Es Mecánico (PEP8)</title><link>http://gilgamezh.me/blog/</link><description></description><atom:link type="application/rss+xml" href="http://gilgamezh.me/blog/en/categories/pep8.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sat, 31 Oct 2015 14:14:18 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Incognitosis y la PEP8</title><link>http://gilgamezh.me/blog/en/posts/incognitosis-y-la-pep8.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Hace un tiempo trabajando con &lt;a class="reference external" href="https://github.com/PyAr/fades"&gt;fades&lt;/a&gt; Facu me propuso
+"estirar" el "Maximum Line Length" para probar si resultaba un poco más cómodo.
+A mi me pareció perfecto ya que entiendo que deben quedar muy pocas terminales de 80
+columnas.
+Eso sí antes de dar un paso adelante confirmamos con la &lt;a class="reference external" href="https://www.python.org/dev/peps/pep-0008/#maximum-line-length"&gt;PEP8&lt;/a&gt;
+que se puede llevar hasta 100 caracteres, sin romper esta santa ¿ley?.&lt;/p&gt;
+&lt;blockquote&gt;
+Some teams strongly prefer a longer line length. For code maintained
+exclusively or primarily by a team that can reach agreement on this issue,
+it is okay to increase the nominal line length from 80 to 100 characters
+(effectively increasing the maximum length to 99 characters), provided
+that comments and docstrings are still wrapped at 72 characters.&lt;/blockquote&gt;
+&lt;p&gt;Así que ahí fuimos. Como yo tengo una linea que me marca ese límite esto fue lo
+que cambié en mi .vimrc&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+function! ConditionalLoad()
+highlight ColorColumn guibg=PaleTurquoise1
+if getcwd() =~ $HOME . "/code/fades/*"
+    set colorcolumn=99
+else
+    set colorcolumn=80
+endif
+endfunction
+autocmd BufRead *.py call ConditionalLoad()
+autocmd BufRead *.rst call ConditionalLoad()
+&lt;/pre&gt;
+&lt;p&gt;El código de esa función es de Facundo.&lt;/p&gt;
+&lt;p&gt;El punto del cual tomé especial nota es que para los comentarios y docstrings
+la PEP8 recomienda mantenerse dentro de los 72 caracteres&lt;/p&gt;
+&lt;blockquote&gt;
+that comments and docstrings are still wrapped at 72 characters.&lt;/blockquote&gt;
+&lt;p&gt;Hoy hice click en mi RSS sobre una nota de Incognitosis (a quién normalmente
+leo por RSS) y me llamó la atención el hermoso diseño del blog.
+Así que dejé &lt;a class="reference external" href="http://www.javipas.com/2015/03/13/usb-c-futuro-estandar/comment-page-1/#comment-87318"&gt;un comentario&lt;/a&gt;.
+Apenas termine de escribir el comentario me acordé de los 72 chars y fui a comprobarlo&lt;/p&gt;
+&lt;img alt="/images/javipass_pep8.png" src="http://gilgamezh.me/blog/images/javipass_pep8.png"&gt;
+&lt;p&gt;Efectivamente la causa de que el blog de Javi Pastor sea tan cómodo para la
+lectura es su respeto por la PEP8!!&lt;/p&gt;
+&lt;p&gt;Ya que estamos les recomiendo que no dejen de prestarle un ojo a &lt;a class="reference external" href="http://www.javipas.com"&gt;Incognitosis&lt;/a&gt;,
+es una de los pocos blogs que llevo años leyendo.&lt;/p&gt;&lt;/div&gt;</description><guid>http://gilgamezh.me/blog/en/posts/incognitosis-y-la-pep8.html</guid><pubDate>Sat, 14 Mar 2015 13:22:44 GMT</pubDate></item></channel></rss>

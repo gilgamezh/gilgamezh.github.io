@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>No Todo Es Mecánico (tmux)</title><link>http://gilgamezh.me/blog/</link><description></description><atom:link type="application/rss+xml" href="http://gilgamezh.me/blog/en/categories/tmux.xml" rel="self"></atom:link><language>en</language><lastBuildDate>Sat, 31 Oct 2015 14:14:18 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Tmux tip</title><link>http://gilgamezh.me/blog/en/posts/tmux-tip.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Hace poco tiempo que tmux es mi "manejador" (?) de terminales por defecto
+junto con tmuxp. Tmuxp me permite tener templates (un yaml) para diferentes
+proyectos/tareas. ( es muy muy útil cuando ante alguna situación de emergencia
+tenés que levantar ssh contra 10 servidores diferentes).&lt;/p&gt;
+&lt;img alt="/images/tmux.png" src="http://gilgamezh.me/blog/images/tmux.png"&gt;
+&lt;p&gt;En mi día a día utilizo mucho software que corre en la consola. Los 2 que más
+utilizo son irssi y vim. Hacer funcionar tmux,irssi y vim juntos
+(cada uno con sus plugins) me costó bastante, así que comparto un tip con el
+que resolví algunos problemas entre ellos.&lt;/p&gt;
+&lt;p&gt;Los problemas que tenía eran los siguientes:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;tmux no funciona con 256 colores con la configuración standard.&lt;/li&gt;
+&lt;li&gt;Vim se ve muy feo sin 256 colores.&lt;/li&gt;
+&lt;li&gt;Cuando seteaba TERM=xterm-256color irssi dejaba de funcionar bien (no funciona el "auto-scroll" con las lineas nuevas)&lt;/li&gt;
+&lt;li&gt;Al conectarme a algún servidor por ssh vi/vim se quejaban de mi variable $TERM. (E558: Terminal entry not found in terminfo 'screen-256color' not known. Available builtin terminals are:.... )&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;La solución es muy simple, pero creo que vale la pena el tip porque tuve
+que probar varias configuraciones diferentes.&lt;/p&gt;
+&lt;p&gt;En mi .zshrc (es lo mismo para .bashrc) puse:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+# for tmux colors
+export TERM=screen-256color
+# and it is to avoid remote host problems with $TERM
+alias ssh='TERM=xterm ssh'
+&lt;/pre&gt;
+&lt;p&gt;En .tmux.conf únicamente esto:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+# set 256 colors
+set -g default-terminal "screen-256color"
+set -g terminal-overrides 'xterm:colors=256'
+&lt;/pre&gt;&lt;/div&gt;</description><guid>http://gilgamezh.me/blog/en/posts/tmux-tip.html</guid><pubDate>Sat, 24 May 2014 15:19:26 GMT</pubDate></item></channel></rss>

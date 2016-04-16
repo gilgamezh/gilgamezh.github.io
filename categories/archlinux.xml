@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>No Todo Es Mecánico (archlinux)</title><link>http://gilgamezh.me/blog/</link><description></description><atom:link type="application/rss+xml" href="http://gilgamezh.me/blog/categories/archlinux.xml" rel="self"></atom:link><language>es</language><lastBuildDate>Sat, 31 Oct 2015 14:14:19 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Compilar versión vieja de PHP para Archlinux</title><link>http://gilgamezh.me/blog/posts/compilar-version-vieja-de-php-para-archlinux.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Archlinux siempre tiene la versión más nueva de todo, eso tiene muchas cosas
+positivas.
+Algo que suele pasar es que tenemos que usar algo que está productivo y que
+tiene una versión &lt;em&gt;mucho&lt;/em&gt; más vieja que la instalada.
+Hace poco tuve que laburar con un Drupal que estaba usando PHP 5.3 y no me
+quedó otra que compilarlo.
+Así que acá dejo los pasos de cómo hacerlo (básicamente la linea del configure).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;Descargar el source en /usr/local/src.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Hacer un symlink en /usr/include/freetype2/freetype/freetype.h -&amp;gt; ../freetype.h
+(sin esto da un error porque no encuentra freetype.h)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Ejecutar configure, make y make install:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+./configure --enable-mbstring --with-mysql --with-mysqli --with-zlib \
+--with-png-dir=/usr --with-jpeg-dir=/usr \
+--with-freetype-dir=/usr/include/freetype2/ --with-curl --with-gettext \
+--with-pdo-mysql --with-pdo-sqlite --with-bz2 \
+--prefix=/usr/local/php-5.3.29 --with-libdir=lib64 --with-gd \
+--with-libdir=lib64 --enable-cgi --enable-sockets --with-mcrypt \
+--with-xpm-dir=/usr
+
+make
+make install
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Hacer un symlink de /usr/local/php-5.3.29 a /usr/local/php&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Copiar el php.ini que tengamos a /usr/local/php/lib&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Si usamos Apache en httpd.conf hay que hacer un &lt;em&gt;Include&lt;/em&gt; de
+/etc/httpd/conf/extra/httpd-fastcgid.conf&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>archlinux</category><category>how-to</category><category>PHP</category><guid>http://gilgamezh.me/blog/posts/compilar-version-vieja-de-php-para-archlinux.html</guid><pubDate>Sat, 28 Feb 2015 15:17:52 GMT</pubDate></item><item><title>Tip para XBMC/Kodi en Archlinux | ARM</title><link>http://gilgamezh.me/blog/posts/tip-para-xbmckodi-en-archlinux-arm.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;img alt="/images/raspy_kodi.jpg" src="http://gilgamezh.me/blog/images/raspy_kodi.jpg"&gt;
+&lt;p&gt;Hace rato que en la raspy deje de usar XBIAN porque le estaban agregando
+muchas cosas "automagicas" que no me interesaban.
+Así que instale un Archlinux ARM y le puse XBMC. Anda de lujo, pero hay
+que meter un par de detalles en el config.txt de la raspy para que funcione "lindo"
+Ayer cambie la SD por una clase10 de 16GB y como tuve que reinstalar
+aprovecho para compartir las cosas que le cambio.&lt;/p&gt;
+&lt;p&gt;Básicamente hay que instalarlo con un &lt;em&gt;pacman -S xbmc&lt;/em&gt; y después hay que
+editar el archivo que está en /boot/config.txt y poner lo de abajo:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+#My overclocking
+arm_freq=950
+core_freq=450
+sdram_freq=450
+over_voltage=6
+
+# Tuning to XBMC Video
+gpu_mem_512=128
+gpu_mem_256=100
+
+#Witout this the Youtube addon for XBMC/Kodi doesn't work
+start_x=1
+&lt;/pre&gt;&lt;/div&gt;</description><category>archlinux</category><category>archlinux arm</category><category>kodi</category><category>raspberry</category><category>xbmc</category><guid>http://gilgamezh.me/blog/posts/tip-para-xbmckodi-en-archlinux-arm.html</guid><pubDate>Sun, 26 Oct 2014 18:29:13 GMT</pubDate></item><item><title>Copiar archivos a un celular con Android 4 desde linux</title><link>http://gilgamezh.me/blog/posts/copiar-archivos-a-un-celular-con-android-4-desde-linux.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;img alt="/images/evil-google.jpg" src="http://gilgamezh.me/blog/images/evil-google.jpg"&gt;
+&lt;p&gt;Hace unos días cambie mi celu por uno con Android 4. Hace unos minutos lo
+conecte a la compu para copiarle música y me entero de que no se puede montar
+como hice hasta hoy con cualquier otro android.
+Resulta que los muchachos de Google decidieron migrar a un protocolo MTP...&lt;/p&gt;
+&lt;p&gt;En fin después de unas buenas $&amp;amp;$^&amp;amp;@#^$&amp;amp;#PUTAMADREGOOGLEYLADETUHERMANA$^%^&amp;amp;$###$%%
+hice busqueda rápida en la wiki de Arch --&amp;gt; &lt;a class="reference external" href="https://wiki.archlinux.org/index.php/Mtp"&gt;https://wiki.archlinux.org/index.php/Mtp&lt;/a&gt;
+y encontré jmtpfs que funcionó perfecto. (mtpfs no andaba bien)&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://research.jacquette.com/jmtpfs-exchanging-files-between-android-devices-and-linux/"&gt;http://research.jacquette.com/jmtpfs-exchanging-files-between-android-devices-and-linux/&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>android</category><category>archlinux</category><category>google</category><category>linux</category><category>MTP</category><guid>http://gilgamezh.me/blog/posts/copiar-archivos-a-un-celular-con-android-4-desde-linux.html</guid><pubDate>Thu, 31 Oct 2013 03:38:10 GMT</pubDate></item><item><title>Archlinux mueve todos los binarios a /usr/bin. Cómo actualizar?</title><link>http://gilgamezh.me/blog/posts/archlinux-mueve-todos-los-binarios-a-usrbin-como-actualizar.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Hace ya bastantes días que cualquier que intente actualizar su Archlinux se
+va a encontrar con  un error de este tipo:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+error: failed to commit transaction (conflicting files)
+filesystem: /bin exists in filesystem
+&lt;/pre&gt;
+&lt;p&gt;Si son precavidos y están suscriptos a las listas de correo de Arch se
+enteraron con tiempo, de cualquier manera los pasos a seguir están detallados
+acá :&lt;a class="reference external" href="https://www.archlinux.org/news/binaries-move-to-usrbin-requiring-update-intervention/"&gt;https://www.archlinux.org/news/binaries-move-to-usrbin-requiring-update-intervention/&lt;/a&gt;&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+&lt;p&gt;Aprovecho que hoy tengo un rato para actualizar mi noteb y copio mi
+experiencia por si a alguien le sirve:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1) Fix any non-official packages with files in /bin, /sbin or /usr/sbin
+to put those files in /usr/bin. The list of packages that are not in a
+repo that need to be fixed can be generated using:&lt;/p&gt;
+&lt;p&gt;$ pacman -Qqo /bin /sbin /usr/sbin | pacman -Qm -&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class="code bash"&gt;&lt;a name="rest_code_30eae5b5278b48c09344d593c5a61f2b-1"&gt;&lt;/a&gt;gilgamezh ~ &lt;span class="nv"&gt;$ &lt;/span&gt;pacman -Qqo /bin /sbin /usr/sbin &lt;span class="p"&gt;|&lt;/span&gt; pacman -Qm -
+&lt;a name="rest_code_30eae5b5278b48c09344d593c5a61f2b-2"&gt;&lt;/a&gt;foo2zjs 20121110-1
+&lt;a name="rest_code_30eae5b5278b48c09344d593c5a61f2b-3"&gt;&lt;/a&gt;grub 0.97-21
+&lt;a name="rest_code_30eae5b5278b48c09344d593c5a61f2b-4"&gt;&lt;/a&gt;foo2zjs 20121110-1
+&lt;a name="rest_code_30eae5b5278b48c09344d593c5a61f2b-5"&gt;&lt;/a&gt;grub 0.97-21
+&lt;/pre&gt;&lt;p&gt;Encontre estos 2 paquetes, foo2zjs lo uso para mi impresora
+(hp laserjet 1005p) y bueno grub... tendré que actualizar a Grub2.&lt;/p&gt;
+&lt;p&gt;Siguiendo los pasos de la wiki de arch:&lt;/p&gt;
+&lt;pre class="code bash"&gt;&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-1"&gt;&lt;/a&gt;gilgamezh ~ &lt;span class="nv"&gt;$ &lt;/span&gt;sudo pacman -S grub-bios
+&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-2"&gt;&lt;/a&gt;&lt;span class="o"&gt;[&lt;/span&gt;sudo&lt;span class="o"&gt;]&lt;/span&gt; password &lt;span class="k"&gt;for&lt;/span&gt; gilgamezh:
+&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-3"&gt;&lt;/a&gt;resolviendo dependencias...
+&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-4"&gt;&lt;/a&gt;verificando conflictos...
+&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-5"&gt;&lt;/a&gt;:: grub-common y grub están en conflicto. ¿Quitar grub? &lt;span class="o"&gt;[&lt;/span&gt;s/N&lt;span class="o"&gt;]&lt;/span&gt; s
+&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-6"&gt;&lt;/a&gt;
+&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-7"&gt;&lt;/a&gt;Paquetes &lt;span class="o"&gt;(&lt;/span&gt;3&lt;span class="o"&gt;)&lt;/span&gt;: grub-0.97-21 &lt;span class="o"&gt;[&lt;/span&gt;quitando&lt;span class="o"&gt;]&lt;/span&gt;  grub-common-2.00-2  grub-bios-2.00-2
+&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-8"&gt;&lt;/a&gt;
+&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-9"&gt;&lt;/a&gt;Tamaño Total de Descarga:  4,32 MiB
+&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-10"&gt;&lt;/a&gt;Tamaño Total Instalado:    15,08 MiB
+&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-11"&gt;&lt;/a&gt;Tamaño neto a actualizar:  13,04 MiB
+&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-12"&gt;&lt;/a&gt;
+&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-13"&gt;&lt;/a&gt;:: ¿Continuar con la instalación? &lt;span class="o"&gt;[&lt;/span&gt;S/n&lt;span class="o"&gt;]&lt;/span&gt; s
+&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-14"&gt;&lt;/a&gt;:: Recuperando paquetes ...
+&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-15"&gt;&lt;/a&gt;
+&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-16"&gt;&lt;/a&gt;
+&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-17"&gt;&lt;/a&gt;&lt;span class="c"&gt;# modprobe dm-mod&lt;/span&gt;
+&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-18"&gt;&lt;/a&gt;&lt;span class="c"&gt;# grub-install --target=i386-pc --recheck --debug --force /dev/sdaX&lt;/span&gt;
+&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-19"&gt;&lt;/a&gt;&lt;span class="c"&gt;# chattr -i /boot/grub/i386-pc/core.img&lt;/span&gt;
+&lt;a name="rest_code_833a79b8d77b4ef8bf7f9db6970749bc-20"&gt;&lt;/a&gt;&lt;span class="c"&gt;# chattr +i /boot/grub/i386-pc/core.img&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;OJO: /boot/grub/menu.lst se guarda como .pacnew hay que renombrarlo!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Después:&lt;/p&gt;
+&lt;pre class="code bash"&gt;&lt;a name="rest_code_61b60aaad44c4ccab4421c0fb49d8fde-1"&gt;&lt;/a&gt;gilgamezh ~ &lt;span class="nv"&gt;$ &lt;/span&gt;sudo grub-mkconfig -o /boot/grub/grub.cfg
+&lt;a name="rest_code_61b60aaad44c4ccab4421c0fb49d8fde-2"&gt;&lt;/a&gt;Generando grub.cfg...
+&lt;a name="rest_code_61b60aaad44c4ccab4421c0fb49d8fde-3"&gt;&lt;/a&gt;Encontrada imagen de linux: /boot/vmlinuz-linux
+&lt;a name="rest_code_61b60aaad44c4ccab4421c0fb49d8fde-4"&gt;&lt;/a&gt;Encontrada imagen de memoria inicial: /boot/initramfs-linux.img
+&lt;a name="rest_code_61b60aaad44c4ccab4421c0fb49d8fde-5"&gt;&lt;/a&gt;hecho
+&lt;/pre&gt;&lt;p&gt;(restart y con suerte todo funca bien)&lt;/p&gt;
+&lt;p&gt;Siguiendo con la migración a /usr/bin&lt;/p&gt;
+&lt;blockquote&gt;
+Also check packages installed from non-official repos using:
+$ paclist &amp;lt;repo&amp;gt; | awk ' { print $1 } ' | pacman -Ql - | grep ' /s?bin/| /usr/sbin/' ' } '&lt;/blockquote&gt;
+&lt;p&gt;Yo no uso repositorios "non-official"&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol class="arabic simple" start="3"&gt;
+&lt;li&gt;If you have files in /bin, /sbin or /usr/sbin that are unowned by any package, you need to move them. Find a list using:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;$ find /bin /sbin /usr/sbin -exec pacman -Qo -- {} + &amp;gt;/dev/null&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;En mi caso no tuve resultados de este find.
+Después ejecute:&lt;/p&gt;
+&lt;pre class="code bash"&gt;&lt;a name="rest_code_9c49ecae642d48709ad2bf96fa5134c5-1"&gt;&lt;/a&gt;&lt;span class="c"&gt;# pacman -Syu --ignore filesystem,bash&lt;/span&gt;
+&lt;a name="rest_code_9c49ecae642d48709ad2bf96fa5134c5-2"&gt;&lt;/a&gt;&lt;span class="c"&gt;# pacman -S bash&lt;/span&gt;
+&lt;a name="rest_code_9c49ecae642d48709ad2bf96fa5134c5-3"&gt;&lt;/a&gt;&lt;span class="c"&gt;# pacman -Su&lt;/span&gt;
+&lt;/pre&gt;&lt;p&gt;Actualizó como 500 megas y todo 10 puntos :)&lt;/p&gt;&lt;/div&gt;</description><category>archlinux</category><category>tutoriales</category><guid>http://gilgamezh.me/blog/posts/archlinux-mueve-todos-los-binarios-a-usrbin-como-actualizar.html</guid><pubDate>Sat, 24 Aug 2013 20:32:23 GMT</pubDate></item></channel></rss>

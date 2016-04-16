@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<title>Redirecting...</title>
+<meta name="robots" content="noindex">
+</head>
+<body>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+function choose(choices) {
+    var index = Math.floor(Math.random() * choices.length);
+    return choices[index];
+}
+
+function random_post() {
+    $.getJSON('/assets/js/posts.json', function(data){
+        window.location.href = choose(data);
+    });
+}
+random_post();
+</script>
+</body>
