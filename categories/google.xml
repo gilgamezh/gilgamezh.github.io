@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (google)</title><link>http://gilgamezh.me/</link><description></description><atom:link rel="self" type="application/rss+xml" href="http://gilgamezh.me/categories/google.xml"></atom:link><language>es</language><lastBuildDate>Sat, 16 Apr 2016 19:00:29 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Copiar archivos a un celular con Android 4 desde linux</title><link>http://gilgamezh.me/posts/copiar-archivos-a-un-celular-con-android-4-desde-linux.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;img alt="/images/evil-google.jpg" src="http://gilgamezh.me/images/evil-google.jpg"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Publicaciones sobre google)</title><link>http://gilgamezh.me/</link><description></description><atom:link href="http://gilgamezh.me/categories/google.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><lastBuildDate>Sun, 09 Apr 2017 19:14:30 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Copiar archivos a un celular con Android 4 desde linux</title><link>http://gilgamezh.me/posts/copiar-archivos-a-un-celular-con-android-4-desde-linux.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;img alt="/images/evil-google.jpg" src="http://gilgamezh.me/images/evil-google.jpg"&gt;
 &lt;p&gt;Hace unos días cambie mi celu por uno con Android 4. Hace unos minutos lo
 conecte a la compu para copiarle música y me entero de que no se puede montar
 como hice hasta hoy con cualquier otro android.
@@ -37,6 +37,10 @@ usando eso anteojos&lt;/p&gt;
 Siguiendo con los links en varias charlas con diferentes personas terminamos
 comparandolo con blackMirror y creo que es el mejor ejemplo de para dónde vamos.&lt;/p&gt;
 &lt;p&gt;Video via --&amp;gt;  &lt;a class="reference external" href="http://kottke.org/13/02/google-glass-black-mirror"&gt;http://kottke.org/13/02/google-glass-black-mirror&lt;/a&gt;&lt;/p&gt;
-&lt;iframe width="425" height="344" src="https://www.youtube.com/embed/CDi7btsfVYM?rel=0&amp;amp;hd=1&amp;amp;wmode=transparent"&gt;&lt;/iframe&gt;&lt;p&gt;Y otro muy bueno:&lt;/p&gt;
+&lt;div class="youtube-video"&gt;
+&lt;iframe width="425" height="344" src="https://www.youtube.com/embed/CDi7btsfVYM?rel=0&amp;amp;hd=1&amp;amp;wmode=transparent"&gt;&lt;/iframe&gt;
+&lt;/div&gt;&lt;p&gt;Y otro muy bueno:&lt;/p&gt;
+&lt;div class="vimeo-video"&gt;
 &lt;iframe src="https://player.vimeo.com/video/8569187" width="1280" height="720" frameborder="0" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowFullScreen"&gt;
-&lt;/iframe&gt;&lt;/div&gt;</description><category>blackmirror</category><category>evil</category><category>google</category><guid>http://gilgamezh.me/posts/la-parte-de-google-glass-anteojos-google-de-la-que-nadie-habla.html</guid><pubDate>Fri, 05 Jul 2013 23:31:20 GMT</pubDate></item></channel></rss>
+&lt;/iframe&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>blackmirror</category><category>evil</category><category>google</category><guid>http://gilgamezh.me/posts/la-parte-de-google-glass-anteojos-google-de-la-que-nadie-habla.html</guid><pubDate>Fri, 05 Jul 2013 23:31:20 GMT</pubDate></item></channel></rss>

@@ -2,7 +2,6 @@
 <html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="es">
 <head>
 <meta charset="utf-8">
-<base href="http://gilgamezh.me/index.html">
 <meta name="description" content="Blog personal de Nicolás Demarchi.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>No Todo Es Mecánico</title>
@@ -11,12 +10,13 @@
 <link href="assets/css/code.css" rel="stylesheet" type="text/css">
 <link href="assets/css/colorbox.css" rel="stylesheet" type="text/css">
 <link href="assets/css/theme.css" rel="stylesheet" type="text/css">
-<meta content="#5670d4" name="theme-color">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS (en)" href="en/rss.xml">
 <link rel="alternate" type="application/rss+xml" title="RSS (es)" href="rss.xml">
 <link rel="canonical" href="http://gilgamezh.me/index.html">
 <link rel="next" href="index-4.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/regalo-estos-libros.html" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/postgres-non-durable-options-docker-container.html" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Ir al contenido principal</a>
@@ -27,7 +27,7 @@
 <!-- This keeps the margins nice -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
+            <span class="sr-only">Mostrar navegación</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -82,9 +82,80 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/regalo-estos-libros.html" class="u-url">Regalo estos libros</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/postgres-non-durable-options-docker-container.html" class="u-url">Postgres non-durable options Docker container.</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                GiLgAmEzH
+            </span></p>
+            <p class="dateline"><a href="posts/postgres-non-durable-options-docker-container.html" rel="bookmark"><time class="published dt-published" datetime="2017-04-09T15:55:48-03:00" title="2017-04-09 15:55">2017-04-09 15:55</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/postgres-non-durable-options-docker-container.html#disqus_thread" data-disqus-identifier="cache/posts/postgres-non-durable-options-docker-container.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p>Some weeks ago I was at <a class="reference external" href="http://www.python.org.ar/wiki/PyCamp/2017/">Pycamp</a> whit LeCoVi
+working on the Pyar website (check the link PyCamp is the best event ever!) and
+I showed him my configuration to speed-up django tests.
+Some days ago he asked me for the config. I think that it'is better to share it
+in my blog, so here I'm.</p>
+<p>When you work with a framework like Django, to develop it with the same database
+that you run in production is a really good idea.
+It's really easy using <cite>docker-compose</cite>. And to speed up your tests you can
+configure postgres with its <a class="reference external" href="https://www.postgresql.org/docs/current/static/non-durability.html">non-durable options</a>.</p>
+<p>Here my recipe to do it.</p>
+<p>I'm using the <a class="reference external" href="https://hub.docker.com/_/postgres/">oficial Postgres Docker image</a>
+adding only some scripts:</p>
+<pre class="literal-block">
+FROM postgres:9.4.4
+MAINTAINER gilgamezh &lt;spam@gilgamezh.me&gt;
+
+COPY docker-entrypoint_db.sh /
+COPY non_durable.sh /
+ENTRYPOINT ["/docker-entrypoint_db.sh"]
+</pre>
+<p>Here the content of docker-entrypoint_db.sh. I'm using an environment variable
+to enable or disable the non_durable settings:</p>
+<pre class="literal-block">
+#!/bin/bash
+
+if [ -v POSTGRES_NON_DURABLE_SETTINGS ]; then
+    cp /non_durable.sh /docker-entrypoint-initdb.d/
+fi
+
+# run the default img entrypoint
+/bin/sh /docker-entrypoint.sh postgres
+</pre>
+<p>And here the script to change the Postgres configuration:</p>
+<pre class="literal-block">
+#!/bin/bash
+
+# setting non-durable options
+# https://www.postgresql.org/docs/current/static/non-durability.html
+echo "Configuring postgres non-durable options."
+# no need to flush data to disk.
+echo "fsync = off" &gt;&gt; /var/lib/postgresql/data/postgresql.conf
+# no need to force WAL writes to disk on every commit.
+echo "synchronous_commit = off" &gt;&gt; /var/lib/postgresql/data/postgresql.conf
+# no need to guard against partial page writes.
+echo "full_page_writes = off" &gt;&gt; /var/lib/postgresql/data/postgresql.conf
+</pre>
+<p>Then in my docker-compose.yml file I'm setting the <cite>POSTGRES_NON_DURABLE_SETTINGS</cite>
+variable:</p>
+<pre class="literal-block">
+environment:
+  - POSTGRES_PASSWORD=xxxx
+  - POSTGRES_NON_DURABLE_SETTINGS=1
+</pre>
+<p>With these changes my tests are running a lot faster. 🚀🚀🚀</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/regalo-estos-libros.html" class="u-url">Regalo estos libros</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 GiLgAmEzH
             </span></p>
             <p class="dateline"><a href="posts/regalo-estos-libros.html" rel="bookmark"><time class="published dt-published" datetime="2016-01-10T18:58:51-03:00" title="2016-01-10 18:58">2016-01-10 18:58</time></a></p>
@@ -130,7 +201,7 @@ Si te interesa alguno escribime a mail at gilgamezh.me.</p>
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/howto-stresstest-a-website-with-apache-benchmark.html" class="u-url">HowTo (stress)test a website with Apache Benchmark</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 GiLgAmEzH
             </span></p>
             <p class="dateline"><a href="posts/howto-stresstest-a-website-with-apache-benchmark.html" rel="bookmark"><time class="published dt-published" datetime="2015-10-31T11:18:22-03:00" title="2015-10-31 11:18">2015-10-31 11:18</time></a></p>
@@ -158,7 +229,7 @@ ab -c 3 -n 100 -v 2 -g out1.tsv -H "Accept-Encoding: gzip,deflate"  http://pytho
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/como-usar-un-tunel-ssh-como-proxy-para-http.html" class="u-url">Cómo usar un tunel SSH como proxy para HTTP</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 GiLgAmEzH
             </span></p>
             <p class="dateline"><a href="posts/como-usar-un-tunel-ssh-como-proxy-para-http.html" rel="bookmark"><time class="published dt-published" datetime="2015-06-01T21:17:59-03:00" title="2015-06-01 21:17">2015-06-01 21:17</time></a></p>
@@ -211,7 +282,7 @@ ingresar a <a class="reference external" href="http://ifconfig.me">http://ifconf
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/incognitosis-y-la-pep8.html" class="u-url">Incognitosis y la PEP8</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 GiLgAmEzH
             </span></p>
             <p class="dateline"><a href="posts/incognitosis-y-la-pep8.html" rel="bookmark"><time class="published dt-published" datetime="2015-03-14T10:22:44-03:00" title="2015-03-14 10:22">2015-03-14 10:22</time></a></p>
@@ -267,7 +338,7 @@ es una de los pocos blogs que llevo años leyendo.</p>
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/tu-propio-cliente-de-torrent-streaming-en-python.html" class="u-url">Tu propio cliente de Torrent streaming en Python</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 GiLgAmEzH
             </span></p>
             <p class="dateline"><a href="posts/tu-propio-cliente-de-torrent-streaming-en-python.html" rel="bookmark"><time class="published dt-published" datetime="2015-03-09T10:44:28-03:00" title="2015-03-09 10:44">2015-03-09 10:44</time></a></p>
@@ -284,12 +355,15 @@ es una de los pocos blogs que llevo años leyendo.</p>
 si te gusta mirar series online, no tenés que dejar de probarlo!</p>
 <p>Con la experiencia inicial de Touchandgo armamos una charla para la PyConAr 2014.
 <a class="reference external" href="http://bit.ly/pyconar">Slides</a></p>
-<iframe width="425" height="344" src="https://www.youtube.com/embed/oMl1UiF_2Ss?rel=0&amp;hd=1&amp;wmode=transparent"></iframe><p>PD: Sí, me estoy poniendo al día lentamente con el blog! :D</p>
+<div class="youtube-video">
+<iframe width="425" height="344" src="https://www.youtube.com/embed/oMl1UiF_2Ss?rel=0&amp;hd=1&amp;wmode=transparent"></iframe>
+</div>
+<p>PD: Sí, me estoy poniendo al día lentamente con el blog! :D</p>
 </div>
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/dia-internacional-de-la-mujer-trabajadora.html" class="u-url">Día internacional de la Mujer Trabajadora</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 GiLgAmEzH
             </span></p>
             <p class="dateline"><a href="posts/dia-internacional-de-la-mujer-trabajadora.html" rel="bookmark"><time class="published dt-published" datetime="2015-03-08T10:21:49-03:00" title="2015-03-08 10:21">2015-03-08 10:21</time></a></p>
@@ -307,8 +381,11 @@ no es el día de las Legrand, las thatcher, las Alfano, etc.
 Es un buen momento también para recordar que no es únicamente una cuestión de
 género.</p>
 <p>Feliz día!</p>
+<div class="soundcloud-player">
 <iframe width="600" height="160" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http://api.soundcloud.com/tracks/106599387">
-</iframe><div class="section" id="si-dios-fuera-una-mujer">
+</iframe>
+</div>
+<div class="section" id="si-dios-fuera-una-mujer">
 <h2>Si Dios fuera una mujer</h2>
 <pre class="literal-block">
 ¿Y si Dios fuera mujer?
@@ -351,7 +428,7 @@ prodigiosa blasfemia.
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/fades-20.html" class="u-url">Fades 2.0</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 GiLgAmEzH
             </span></p>
             <p class="dateline"><a href="posts/fades-20.html" rel="bookmark"><time class="published dt-published" datetime="2015-02-28T12:25:16-03:00" title="2015-02-28 12:25">2015-02-28 12:25</time></a></p>
@@ -389,7 +466,7 @@ módulo (ej: "import bs4 # fades.pypi beautifulsoup4 == 3.5")</li>
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/compilar-version-vieja-de-php-para-archlinux.html" class="u-url">Compilar versión vieja de PHP para Archlinux</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 GiLgAmEzH
             </span></p>
             <p class="dateline"><a href="posts/compilar-version-vieja-de-php-para-archlinux.html" rel="bookmark"><time class="published dt-published" datetime="2015-02-28T12:17:52-03:00" title="2015-02-28 12:17">2015-02-28 12:17</time></a></p>
@@ -447,7 +524,7 @@ make install
     </div>
     </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/hp-pavilion-dv5-1251nr.html" class="u-url">HP Pavilion dv5 1251nr</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 GiLgAmEzH
             </span></p>
             <p class="dateline"><a href="posts/hp-pavilion-dv5-1251nr.html" rel="bookmark"><time class="published dt-published" datetime="2015-02-28T12:14:01-03:00" title="2015-02-28 12:14">2015-02-28 12:14</time></a></p>
@@ -470,42 +547,6 @@ en la maquina (tenia un windows vista). Arranqué con el Live CD,
 elimine toda partición e instalé. :)</p>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/fades-fast-dependencies-for-scripts.html" class="u-url">fades: FAst DEpendencies for Scripts</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                GiLgAmEzH
-            </span></p>
-            <p class="dateline"><a href="posts/fades-fast-dependencies-for-scripts.html" rel="bookmark"><time class="published dt-published" datetime="2015-02-22T17:14:05-03:00" title="2015-02-22 17:14">2015-02-22 17:14</time></a></p>
-                <p class="commentline">
-        
-    <a href="posts/fades-fast-dependencies-for-scripts.html#disqus_thread" data-disqus-identifier="cache/posts/fades-fast-dependencies-for-scripts.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <div>
-<p>En el viaje a PyConAr 2014 fui y volví en auto con Facu Batista. En esas horas
-charlamos sin para un minuto, y entre cosa y cosa se nos ocurrió un proyectito
-muy divertido que dimos a llamar <strong>fades</strong>.
-Hace unas semanas hicimos el release 1.0. así que acá la gacetilla :)</p>
-<p>Hola a todas y todos,</p>
-<p>Estamos contentos de anunciar la liberación de fades 1.0.
-fades (en inglés: FAst DEpendencies for Scripts) es un sistema que
-maneja automáticamente los virtualenvs en los casos simples que
-uno normalmente encuentra al escribir scripts o programas pequeños.</p>
-<p>Crea automáticamente un nuevo virtualenv (o reusa uno creado previamente
-para ese script), instalando o actualizando las dependencias necesarias,
-y ejecutando el script dentro de ese virtualenv.</p>
-<p>Todo lo que necesitás hacer es ejecutar el script con fades (en lugar de
-Python) y también marcar las dependencias necesarias. Más detalles acá:</p>
-<p><a class="reference external" href="https://github.com/PyAr/fades/">https://github.com/PyAr/fades/</a></p>
-<div class="section" id="para-obtenerlo">
-<h2>Para obtenerlo:</h2>
-<p class="more"><a href="posts/fades-fast-dependencies-for-scripts.html">Leer más…</a></p>
-</div>
-</div>
-    </div>
     </article>
 </div>
 
@@ -518,7 +559,7 @@ Python) y también marcar las dependencias necesarias. Más detalles acá:</p>
         <!--End of body content-->
 
         <footer id="footer">
-            Contents © 2016         <a href="mailto:mail@gilgamezh.me">GiLgAmEzH</a> - My Fingerprint: <a href="public.key">0712 8EB2 C626 08C5 69E1  8949 6DDF 6FA3 5EB9 26AB</a>  Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2017         <a href="mailto:mail@gilgamezh.me">GiLgAmEzH</a> - My Fingerprint: <a href="public.key">0712 8EB2 C626 08C5 69E1  8949 6DDF 6FA3 5EB9 26AB</a>  Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
 <img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a>
             

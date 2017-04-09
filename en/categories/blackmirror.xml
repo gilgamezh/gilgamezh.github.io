@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (blackmirror)</title><link>http://gilgamezh.me/</link><description></description><atom:link rel="self" type="application/rss+xml" href="http://gilgamezh.me/en/categories/blackmirror.xml"></atom:link><language>en</language><lastBuildDate>Sat, 16 Apr 2016 19:00:29 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>La parte de Google Glass (anteojos Google) de la que nadie habla</title><link>http://gilgamezh.me/en/posts/la-parte-de-google-glass-anteojos-google-de-la-que-nadie-habla.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;img alt="/images/black_mirror.jpg" src="http://gilgamezh.me/images/black_mirror.jpg"&gt;
+<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Posts about blackmirror)</title><link>http://gilgamezh.me/</link><description></description><atom:link href="http://gilgamezh.me/en/categories/blackmirror.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sun, 09 Apr 2017 19:14:30 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>La parte de Google Glass (anteojos Google) de la que nadie habla</title><link>http://gilgamezh.me/en/posts/la-parte-de-google-glass-anteojos-google-de-la-que-nadie-habla.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;img alt="/images/black_mirror.jpg" src="http://gilgamezh.me/images/black_mirror.jpg"&gt;
 &lt;p&gt;Hace poco me pasaron &lt;a class="reference external" href="http://creativegood.com/uncategorized/anteojos-google/"&gt;este articulo&lt;/a&gt;
 sobre Google glass y me pareció muy bueno.
 Una linda manera de arrancar el debate&lt;/p&gt;
@@ -26,6 +26,10 @@ usando eso anteojos&lt;/p&gt;
 Siguiendo con los links en varias charlas con diferentes personas terminamos
 comparandolo con blackMirror y creo que es el mejor ejemplo de para dónde vamos.&lt;/p&gt;
 &lt;p&gt;Video via --&amp;gt;  &lt;a class="reference external" href="http://kottke.org/13/02/google-glass-black-mirror"&gt;http://kottke.org/13/02/google-glass-black-mirror&lt;/a&gt;&lt;/p&gt;
-&lt;iframe width="425" height="344" src="https://www.youtube.com/embed/CDi7btsfVYM?rel=0&amp;amp;hd=1&amp;amp;wmode=transparent"&gt;&lt;/iframe&gt;&lt;p&gt;Y otro muy bueno:&lt;/p&gt;
+&lt;div class="youtube-video"&gt;
+&lt;iframe width="425" height="344" src="https://www.youtube.com/embed/CDi7btsfVYM?rel=0&amp;amp;hd=1&amp;amp;wmode=transparent"&gt;&lt;/iframe&gt;
+&lt;/div&gt;&lt;p&gt;Y otro muy bueno:&lt;/p&gt;
+&lt;div class="vimeo-video"&gt;
 &lt;iframe src="https://player.vimeo.com/video/8569187" width="1280" height="720" frameborder="0" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowFullScreen"&gt;
-&lt;/iframe&gt;&lt;/div&gt;</description><guid>http://gilgamezh.me/en/posts/la-parte-de-google-glass-anteojos-google-de-la-que-nadie-habla.html</guid><pubDate>Fri, 05 Jul 2013 23:31:20 GMT</pubDate></item></channel></rss>
+&lt;/iframe&gt;
+&lt;/div&gt;&lt;/div&gt;</description><guid>http://gilgamezh.me/en/posts/la-parte-de-google-glass-anteojos-google-de-la-que-nadie-habla.html</guid><pubDate>Fri, 05 Jul 2013 23:31:20 GMT</pubDate></item></channel></rss>

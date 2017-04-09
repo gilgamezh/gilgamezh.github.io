@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Posts about postgres)</title><link>http://gilgamezh.me/</link><description></description><atom:link href="http://gilgamezh.me/en/categories/postgres.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sun, 09 Apr 2017 19:30:45 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Postgres non-durable options Docker container.</title><link>http://gilgamezh.me/en/posts/postgres-non-durable-options-docker-container.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Some weeks ago I was at &lt;a class="reference external" href="http://www.python.org.ar/wiki/PyCamp/2017/"&gt;Pycamp&lt;/a&gt; whit LeCoVi
+working on the Pyar website (check the link PyCamp is the best event ever!) and
+I showed him my configuration to speed-up django tests.
+Some days ago he asked me for the config. I think that it'is better to share it
+in my blog, so here I'm.&lt;/p&gt;
+&lt;p&gt;When you work with a framework like Django, to develop it with the same database
+that you run in production is a really good idea.
+It's really easy using &lt;cite&gt;docker-compose&lt;/cite&gt;. And to speed up your tests you can
+configure postgres with its &lt;a class="reference external" href="https://www.postgresql.org/docs/current/static/non-durability.html"&gt;non-durable options&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here my recipe to do it.&lt;/p&gt;
+&lt;p&gt;I'm using the &lt;a class="reference external" href="https://hub.docker.com/_/postgres/"&gt;oficial Postgres Docker image&lt;/a&gt;
+adding only some scripts:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+FROM postgres:9.4.4
+MAINTAINER gilgamezh &amp;lt;spam@gilgamezh.me&amp;gt;
+
+COPY docker-entrypoint_db.sh /
+COPY non_durable.sh /
+ENTRYPOINT ["/docker-entrypoint_db.sh"]
+&lt;/pre&gt;
+&lt;p&gt;Here the content of docker-entrypoint_db.sh. I'm using an environment variable
+to enable or disable the non_durable settings:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+#!/bin/bash
+
+if [ -v POSTGRES_NON_DURABLE_SETTINGS ]; then
+    cp /non_durable.sh /docker-entrypoint-initdb.d/
+fi
+
+# run the default img entrypoint
+/bin/sh /docker-entrypoint.sh postgres
+&lt;/pre&gt;
+&lt;p&gt;And here the script to change the Postgres configuration:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+#!/bin/bash
+
+# setting non-durable options
+# https://www.postgresql.org/docs/current/static/non-durability.html
+echo "Configuring postgres non-durable options."
+# no need to flush data to disk.
+echo "fsync = off" &amp;gt;&amp;gt; /var/lib/postgresql/data/postgresql.conf
+# no need to force WAL writes to disk on every commit.
+echo "synchronous_commit = off" &amp;gt;&amp;gt; /var/lib/postgresql/data/postgresql.conf
+# no need to guard against partial page writes.
+echo "full_page_writes = off" &amp;gt;&amp;gt; /var/lib/postgresql/data/postgresql.conf
+&lt;/pre&gt;
+&lt;p&gt;Then in my docker-compose.yml file I'm setting the &lt;cite&gt;POSTGRES_NON_DURABLE_SETTINGS&lt;/cite&gt;
+variable:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+environment:
+  - POSTGRES_PASSWORD=xxxx
+  - POSTGRES_NON_DURABLE_SETTINGS=1
+&lt;/pre&gt;
+&lt;p&gt;With these changes my tests are running a lot faster. 🚀🚀🚀&lt;/p&gt;&lt;/div&gt;</description><guid>http://gilgamezh.me/en/posts/postgres-non-durable-options-docker-container.html</guid><pubDate>Sun, 09 Apr 2017 18:55:48 GMT</pubDate></item></channel></rss>

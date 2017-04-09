@@ -1,5 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico</title><link>http://gilgamezh.me/</link><description>Blog personal de Nicolás Demarchi.</description><atom:link rel="self" type="application/rss+xml" href="http://gilgamezh.me/rss.xml"></atom:link><language>es</language><lastBuildDate>Sat, 16 Apr 2016 19:00:29 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Regalo estos libros</title><link>http://gilgamezh.me/posts/regalo-estos-libros.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Hoy me puse a ordenar/tirar papeles. Esta vez le tocó a mis cosas de estudio.
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico</title><link>http://gilgamezh.me/</link><description>Blog personal de Nicolás Demarchi.</description><atom:link href="http://gilgamezh.me/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><lastBuildDate>Sun, 09 Apr 2017 19:30:45 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Postgres non-durable options Docker container.</title><link>http://gilgamezh.me/posts/postgres-non-durable-options-docker-container.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Some weeks ago I was at &lt;a class="reference external" href="http://www.python.org.ar/wiki/PyCamp/2017/"&gt;Pycamp&lt;/a&gt; whit LeCoVi
+working on the Pyar website (check the link PyCamp is the best event ever!) and
+I showed him my configuration to speed-up django tests.
+Some days ago he asked me for the config. I think that it'is better to share it
+in my blog, so here I'm.&lt;/p&gt;
+&lt;p&gt;When you work with a framework like Django, to develop it with the same database
+that you run in production is a really good idea.
+It's really easy using &lt;cite&gt;docker-compose&lt;/cite&gt;. And to speed up your tests you can
+configure postgres with its &lt;a class="reference external" href="https://www.postgresql.org/docs/current/static/non-durability.html"&gt;non-durable options&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Here my recipe to do it.&lt;/p&gt;
+&lt;p&gt;I'm using the &lt;a class="reference external" href="https://hub.docker.com/_/postgres/"&gt;oficial Postgres Docker image&lt;/a&gt;
+adding only some scripts:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+FROM postgres:9.4.4
+MAINTAINER gilgamezh &amp;lt;spam@gilgamezh.me&amp;gt;
+
+COPY docker-entrypoint_db.sh /
+COPY non_durable.sh /
+ENTRYPOINT ["/docker-entrypoint_db.sh"]
+&lt;/pre&gt;
+&lt;p&gt;Here the content of docker-entrypoint_db.sh. I'm using an environment variable
+to enable or disable the non_durable settings:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+#!/bin/bash
+
+if [ -v POSTGRES_NON_DURABLE_SETTINGS ]; then
+    cp /non_durable.sh /docker-entrypoint-initdb.d/
+fi
+
+# run the default img entrypoint
+/bin/sh /docker-entrypoint.sh postgres
+&lt;/pre&gt;
+&lt;p&gt;And here the script to change the Postgres configuration:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+#!/bin/bash
+
+# setting non-durable options
+# https://www.postgresql.org/docs/current/static/non-durability.html
+echo "Configuring postgres non-durable options."
+# no need to flush data to disk.
+echo "fsync = off" &amp;gt;&amp;gt; /var/lib/postgresql/data/postgresql.conf
+# no need to force WAL writes to disk on every commit.
+echo "synchronous_commit = off" &amp;gt;&amp;gt; /var/lib/postgresql/data/postgresql.conf
+# no need to guard against partial page writes.
+echo "full_page_writes = off" &amp;gt;&amp;gt; /var/lib/postgresql/data/postgresql.conf
+&lt;/pre&gt;
+&lt;p&gt;Then in my docker-compose.yml file I'm setting the &lt;cite&gt;POSTGRES_NON_DURABLE_SETTINGS&lt;/cite&gt;
+variable:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+environment:
+  - POSTGRES_PASSWORD=xxxx
+  - POSTGRES_NON_DURABLE_SETTINGS=1
+&lt;/pre&gt;
+&lt;p&gt;With these changes my tests are running a lot faster. 🚀🚀🚀&lt;/p&gt;&lt;/div&gt;</description><category>docker</category><category>how-to</category><category>postgres</category><guid>http://gilgamezh.me/posts/postgres-non-durable-options-docker-container.html</guid><pubDate>Sun, 09 Apr 2017 18:55:48 GMT</pubDate></item><item><title>Regalo estos libros</title><link>http://gilgamezh.me/posts/regalo-estos-libros.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Hoy me puse a ordenar/tirar papeles. Esta vez le tocó a mis cosas de estudio.
 Tiré un montón de libros, tuve que darle rosca de lo lindo a la destructora de papel,
 me divertí con diagramas de diseño, apuntes y cosas viejas y tengo un montón de libros para regalar.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;OJO leer bien, son casi todos impresos en laser o fotocopias&lt;/strong&gt;&lt;/p&gt;
@@ -172,13 +225,17 @@ es una de los pocos blogs que llevo años leyendo.&lt;/p&gt;&lt;/div&gt;</descri
 si te gusta mirar series online, no tenés que dejar de probarlo!&lt;/p&gt;
 &lt;p&gt;Con la experiencia inicial de Touchandgo armamos una charla para la PyConAr 2014.
 &lt;a class="reference external" href="http://bit.ly/pyconar"&gt;Slides&lt;/a&gt;&lt;/p&gt;
-&lt;iframe width="425" height="344" src="https://www.youtube.com/embed/oMl1UiF_2Ss?rel=0&amp;amp;hd=1&amp;amp;wmode=transparent"&gt;&lt;/iframe&gt;&lt;p&gt;PD: Sí, me estoy poniendo al día lentamente con el blog! :D&lt;/p&gt;&lt;/div&gt;</description><category>/me</category><category>PyAr</category><category>pyconar</category><category>python</category><category>torrent</category><category>touchandgo</category><guid>http://gilgamezh.me/posts/tu-propio-cliente-de-torrent-streaming-en-python.html</guid><pubDate>Mon, 09 Mar 2015 13:44:28 GMT</pubDate></item><item><title>Día internacional de la Mujer Trabajadora</title><link>http://gilgamezh.me/posts/dia-internacional-de-la-mujer-trabajadora.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;El 8 de marzo se festeja justamente lo que dice el titulo de este post.
+&lt;div class="youtube-video"&gt;
+&lt;iframe width="425" height="344" src="https://www.youtube.com/embed/oMl1UiF_2Ss?rel=0&amp;amp;hd=1&amp;amp;wmode=transparent"&gt;&lt;/iframe&gt;
+&lt;/div&gt;&lt;p&gt;PD: Sí, me estoy poniendo al día lentamente con el blog! :D&lt;/p&gt;&lt;/div&gt;</description><category>/me</category><category>PyAr</category><category>pyconar</category><category>python</category><category>torrent</category><category>touchandgo</category><guid>http://gilgamezh.me/posts/tu-propio-cliente-de-torrent-streaming-en-python.html</guid><pubDate>Mon, 09 Mar 2015 13:44:28 GMT</pubDate></item><item><title>Día internacional de la Mujer Trabajadora</title><link>http://gilgamezh.me/posts/dia-internacional-de-la-mujer-trabajadora.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;El 8 de marzo se festeja justamente lo que dice el titulo de este post.
 no es el día de las Legrand, las thatcher, las Alfano, etc.
 Es un buen momento también para recordar que no es únicamente una cuestión de
 género.&lt;/p&gt;
 &lt;p&gt;Feliz día!&lt;/p&gt;
+&lt;div class="soundcloud-player"&gt;
 &lt;iframe width="600" height="160" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http://api.soundcloud.com/tracks/106599387"&gt;
-&lt;/iframe&gt;&lt;div class="section" id="si-dios-fuera-una-mujer"&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;&lt;div class="section" id="si-dios-fuera-una-mujer"&gt;
 &lt;h2&gt;Si Dios fuera una mujer&lt;/h2&gt;
 &lt;pre class="literal-block"&gt;
 ¿Y si Dios fuera mujer?
@@ -278,65 +335,4 @@ hoy la busqué y la pongo acá para no perderla.&lt;/p&gt;
 &lt;img alt="/images/paviliondv5.jpg" src="http://gilgamezh.me/images/paviliondv5.jpg"&gt;
 &lt;p&gt;El CD de Ubuntu está ahí porque no dejé que windows arranque ni una sola vez
 en la maquina (tenia un windows vista). Arranqué con el Live CD,
-elimine toda partición e instalé. :)&lt;/p&gt;&lt;/div&gt;</description><category>/me</category><guid>http://gilgamezh.me/posts/hp-pavilion-dv5-1251nr.html</guid><pubDate>Sat, 28 Feb 2015 15:14:01 GMT</pubDate></item><item><title>fades: FAst DEpendencies for Scripts</title><link>http://gilgamezh.me/posts/fades-fast-dependencies-for-scripts.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;En el viaje a PyConAr 2014 fui y volví en auto con Facu Batista. En esas horas
-charlamos sin para un minuto, y entre cosa y cosa se nos ocurrió un proyectito
-muy divertido que dimos a llamar &lt;strong&gt;fades&lt;/strong&gt;.
-Hace unas semanas hicimos el release 1.0. así que acá la gacetilla :)&lt;/p&gt;
-&lt;p&gt;Hola a todas y todos,&lt;/p&gt;
-&lt;p&gt;Estamos contentos de anunciar la liberación de fades 1.0.
-fades (en inglés: FAst DEpendencies for Scripts) es un sistema que
-maneja automáticamente los virtualenvs en los casos simples que
-uno normalmente encuentra al escribir scripts o programas pequeños.&lt;/p&gt;
-&lt;p&gt;Crea automáticamente un nuevo virtualenv (o reusa uno creado previamente
-para ese script), instalando o actualizando las dependencias necesarias,
-y ejecutando el script dentro de ese virtualenv.&lt;/p&gt;
-&lt;p&gt;Todo lo que necesitás hacer es ejecutar el script con fades (en lugar de
-Python) y también marcar las dependencias necesarias. Más detalles acá:&lt;/p&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://github.com/PyAr/fades/"&gt;https://github.com/PyAr/fades/&lt;/a&gt;&lt;/p&gt;
-&lt;div class="section" id="para-obtenerlo"&gt;
-&lt;h2&gt;Para obtenerlo:&lt;/h2&gt;
-&lt;!-- TEASER_END --&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;Para debian/ubuntu hay un .deb acá:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a class="reference external" href="http://taniquetil.com.ar/fades/fades-1.0.deb"&gt;http://taniquetil.com.ar/fades/fades-1.0.deb&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Instalarlo en Arch es muy simple:&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class="literal-block"&gt;
-yaourt -S fades
-&lt;/pre&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Podés usar pip si querés:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class="literal-block"&gt;
-pip3 install fades
-&lt;/pre&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;Siempre podés usar el tarball multiplataforma e instalarlo de la manera clásica:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class="literal-block"&gt;
-wget http://taniquetil.com.ar/fades/fades-1.0.tar.gz
-tar -xf fades-1.0.tar.gz
-cd fades-1.0
-sudo ./setup.py install
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class="section" id="ayuda-preguntas"&gt;
-&lt;h2&gt;Ayuda / preguntas:&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;Podés hacer cualquier pregunta o mandar una recomendación o pedido en la lista de correo:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a class="reference external" href="http://listas.python.org.ar/mailman/listinfo/fades"&gt;http://listas.python.org.ar/mailman/listinfo/fades&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;También podés abrir un issue acá (por favor hacelo si encontrás algún problema!):&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://github.com/PyAr/fades/issues/new"&gt;https://github.com/PyAr/fades/issues/new&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Desde ya, muchas gracias por tu tiempo!&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>proyectos</category><category>PyAr</category><category>python</category><category>virtualenv</category><guid>http://gilgamezh.me/posts/fades-fast-dependencies-for-scripts.html</guid><pubDate>Sun, 22 Feb 2015 20:14:05 GMT</pubDate></item></channel></rss>
+elimine toda partición e instalé. :)&lt;/p&gt;&lt;/div&gt;</description><category>/me</category><guid>http://gilgamezh.me/posts/hp-pavilion-dv5-1251nr.html</guid><pubDate>Sat, 28 Feb 2015 15:14:01 GMT</pubDate></item></channel></rss>
