@@ -7,41 +7,24 @@
 .. description: 
 .. type: text
 
-Actualmente trabajo en el equipo de Operaciones de CMD -Compañía de Medios Digitales-
-administrando aplicaciones web y sistemas internos relacionados a e-commerce.
-Participo en todo el ciclo de vida de los productos colaborando en el 
-diseño de la arquitectura, deploy, performance, monitoreo y soporte de los mismos.
 
-Me enfoco principalmente en alta disponibilidad, automatización de procesos y el
-trabajo en equipo junto con Developers, QA y los responsables del negocio.
-
-Al mismo tiempo realizo trabajos como Freelance. Desde el 2010 estoy 
-desarrollando sitios webs para pequeñas empresas junto con Emilce Pugliese 
-en algo que dimos a llamar Colirio&Cafe. 
-
-Emilce es diseñadora y mi rol es el de "sistemas" dentro del equipo. 
-Trabajamos principalmente con Drupal.
-
-Desde fines de 2013 estoy administrando el Cluster Fenix del Grupo de Astrofísica Numerica, IAFE.
-
-Soy una persona muy apasionada, me gusta mucho trabajar con y en proyectos 
-de Software Libre. La plataforma GNU/Linux es de mi preferencia aunque 
-tengo mucha experiencia en entornos Wintel.
+Soy un programador autodidacta, estudiante truncado de sistemas. Trabajo con computadoras hace mas de 15 años 
+ocupé diferntes puestos principalmente como Sysadmin/SysOps y actualmente trabajo en Satellogic[0] como Python Developer.
 
 En toda mi carrera laboral siempre fui muy proactivo y eso se puede ver 
 reflejado en el crecimiento que pude tener en cada lugar donde trabajé.
+Más info en mi perfil de linkedin: http://ar.linkedin.com/in/nicolasdemarchi/
 
-Actualmente estoy muy interesado en la cultura DevOps, "infrastructure as code" 
-y el desarrollo en Python.
+Soy usuario y promotor de Software Libre. Formo parte de Python Argentina[1], de la Asociación Civil PyAr, 
+organizador del BsAs Python Meetup[2] y (en algunos ratos) SysAdmin de Pyar. 
+Soy uno de los creadores de Fades[3]. Junto con @facubatista.
 
-Siempre que me es posible participo de eventos, install fests y en 
-comunidades de Software Libre. Hoy en día Python Argentina [0] se lleva 
-casi todo el tiempo que dedico a eso.
+Disfruto mucho sacar fotos[4], viajar y acampar. (mejor si eso pasa todo al mismo tiempo)
 
-Me gusta mucho sacar fotos [1], juego al Voley [2] y estoy estudiando Ingles.
+Casi siempre es posible encontrarme en Freenode como gilgamezh.
 
-[0] http://python.org.ar/
-[1] http://www.flickr.com/photos/bolche/
-[2] https://twitter.com/MaxivoleyCI
-
-Más en mi perfil de linkedin: http://ar.linkedin.com/in/nicolasdemarchi/
+[0] http://www.satellogic.com/
+[1] http://python.org.ar/
+[2] https://www.meetup.com/Buenos-Aires-Python-Meetup/
+[3] https://github.com/PyAr/fades
+[4] http://www.flickr.com/photos/bolche/
