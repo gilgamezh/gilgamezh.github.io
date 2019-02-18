@@ -38,7 +38,7 @@ What's new in this release?
 - Improved logs, PyPI urls, documentation, multiplatform support, and several other small fixes/enhancements
 
 
-Nicolás and I want to say a big thank you to the following collaborators
+We want to say a big thank you to the following collaborators
 that helped to improve and enhance fades in different ways for this
 version (in alphabetical order):
 

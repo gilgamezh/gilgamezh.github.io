@@ -347,7 +347,7 @@
  </sitemap>
  <sitemap>
   <loc>http://gilgamezh.me/en/categories/fades.xml</loc>
-  <lastmod>2019-02-18T14:00:00Z</lastmod>
+  <lastmod>2019-02-18T14:14:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://gilgamezh.me/en/categories/flickr.xml</loc>
@@ -503,7 +503,7 @@
  </sitemap>
  <sitemap>
   <loc>http://gilgamezh.me/en/categories/python.xml</loc>
-  <lastmod>2019-02-18T14:00:00Z</lastmod>
+  <lastmod>2019-02-18T14:14:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://gilgamezh.me/en/categories/raspberry.xml</loc>
@@ -559,7 +559,7 @@
  </sitemap>
  <sitemap>
   <loc>http://gilgamezh.me/en/categories/virtualenvs.xml</loc>
-  <lastmod>2019-02-18T14:00:00Z</lastmod>
+  <lastmod>2019-02-18T14:14:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://gilgamezh.me/en/categories/web.xml</loc>
@@ -583,7 +583,7 @@
  </sitemap>
  <sitemap>
   <loc>http://gilgamezh.me/en/rss.xml</loc>
-  <lastmod>2019-02-18T14:00:00Z</lastmod>
+  <lastmod>2019-02-18T14:14:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://gilgamezh.me/rss.xml</loc>
@@ -591,6 +591,6 @@
  </sitemap>
  <sitemap>
   <loc>http://gilgamezh.me/sitemap.xml</loc>
-  <lastmod>2019-02-18T14:00:00Z</lastmod>
+  <lastmod>2019-02-18T14:14:00Z</lastmod>
  </sitemap>
 </sitemapindex>
