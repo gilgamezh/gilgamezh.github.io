@@ -1,5 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Posts about fades)</title><link>http://gilgamezh.me/</link><description></description><atom:link href="http://gilgamezh.me/en/categories/fades.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sun, 09 Apr 2017 19:14:28 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Fades 2.0</title><link>http://gilgamezh.me/en/posts/fades-20.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Fueron (creo) unas 2 semanas desde que salió el release 1.0 de Fades las que
+<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Posts about fades)</title><link>http://gilgamezh.me/</link><description></description><atom:link href="http://gilgamezh.me/en/categories/fades.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Mon, 18 Feb 2019 14:02:15 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>fades8.1_released</title><link>http://gilgamezh.me/en/posts/fades81_released/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;We're glad to announce the release of fades 8.1.&lt;/p&gt;
+&lt;p&gt;fades is a system that automatically handles the virtualenvs in the
+cases normally found when writing scripts and simple programs, and
+even helps to administer big projects.&lt;/p&gt;
+&lt;p&gt;It will automagically create a new virtualenv (or reuse a previous
+created one), installing the necessary dependencies, and execute
+your script inside that virtualenv.&lt;/p&gt;
+&lt;p&gt;You only need to execute the script with fades (instead of Python) and
+also mark the required dependencies. More details here:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;a class="reference external" href="http://fades.rtfd.org/"&gt;http://fades.rtfd.org/&lt;/a&gt;&lt;/blockquote&gt;
+&lt;p&gt;What's new in this release?&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Automatically execute scripts from the web, supporting most common pastebins&lt;/li&gt;
+&lt;li&gt;Multiple (and missing) requirement.txt file support, which can now be nested&lt;/li&gt;
+&lt;li&gt;Avoid checking package availability if no PyPI dependencies indicated&lt;/li&gt;
+&lt;li&gt;Add an option to show the virtualenv path in the system&lt;/li&gt;
+&lt;li&gt;Better error/help on missing indicated script or executable from dependency&lt;/li&gt;
+&lt;li&gt;Improved logs, PyPI urls, documentation, multiplatform support, and several other small fixes/enhancements&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Nicolás and I want to say a big thank you to the following collaborators
+that helped to improve and enhance fades in different ways for this
+version (in alphabetical order):&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Andrés Delfino - &lt;a class="reference external" href="https://github.com/andresdelfino"&gt;https://github.com/andresdelfino&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Iñaki Malerba - &lt;a class="reference external" href="https://github.com/inakimalerba"&gt;https://github.com/inakimalerba&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Martin Alderete - &lt;a class="reference external" href="https://github.com/malderete"&gt;https://github.com/malderete&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;To install and enjoy fades...&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;If you are in Ubuntu or Debian, you can easily install like this (but probably won't get &lt;em&gt;latest&lt;/em&gt; fades:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+sudo apt-get install fades
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;For not latest debian/ubuntu you have a .deb here (with its Debian source file):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+http://ftp.debian.org/debian/pool/main/f/fades/fades_8.1-1_all.deb
+http://ftp.debian.org/debian/pool/main/f/fades/fades_8.1-1.dsc
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Install it in Arch is very simple:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+yaourt -S fades
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;In any Linux if you have the Snap system:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+snap install fades
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Using pip if you want:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+pip3 install fades
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;You can always get the multiplatform tarball and install it in the old fashion way:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+wget http://ftp.debian.org/debian/pool/main/f/fades/fades_8.1.orig.tar.gz
+tar -xf fades_*.tar.gz
+cd fades-*
+sudo ./setup.py install
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Help / questions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;You can ask any question or send any recommendation or request
+in the Telegram group:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://t.me/fadesmagic"&gt;https://t.me/fadesmagic&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;...or to the mailing list...&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://listas.python.org.ar/mailman/listinfo/fades"&gt;http://listas.python.org.ar/mailman/listinfo/fades&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;...or in the #fades IRC channel (in Freenode).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Also, you can open an issue here (please do if you find any problem!).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/PyAr/fades/issues/new"&gt;https://github.com/PyAr/fades/issues/new&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;The project itself is in&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/PyAr/fades"&gt;https://github.com/PyAr/fades&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;It's very easy to run latest development version:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;git clone &lt;a class="reference external" href="https://github.com/PyAr/fades.git"&gt;https://github.com/PyAr/fades.git&lt;/a&gt;
+cd fades
+bin/fades&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Thanks in advance for your time!&lt;/p&gt;&lt;/div&gt;</description><category>fades</category><category>python</category><category>virtualenvs</category><guid>http://gilgamezh.me/en/posts/fades81_released/</guid><pubDate>Mon, 18 Feb 2019 13:49:10 GMT</pubDate></item><item><title>Fades 2.0</title><link>http://gilgamezh.me/en/posts/fades-20/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Fueron (creo) unas 2 semanas desde que salió el release 1.0 de Fades las que
 demoramos en sacar el 2.0 :). El ritmo estuvo muy bueno y sobre todo largas
 charlas de qué camino tomar.
 Cuándo salió la 1.0 Robert Collins &lt;a class="reference external" href="https://twitter.com/gilgamezh/status/571377065053851648"&gt;nos hizo algunos comentarios sobre xattr&lt;/a&gt;
@@ -19,4 +116,4 @@ módulo (ej: "import bs4 # fades.pypi beautifulsoup4 == 3.5")&lt;/li&gt;
 &lt;li&gt;Maneja paquetes a los que pip les cambia el nombre&lt;/li&gt;
 &lt;li&gt;Otros cambios y correcciones menores.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Mas info: &lt;a class="reference external" href="https://github.com/PyAr/fades/releases/tag/2.0"&gt;https://github.com/PyAr/fades/releases/tag/2.0&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>http://gilgamezh.me/en/posts/fades-20.html</guid><pubDate>Sat, 28 Feb 2015 15:25:16 GMT</pubDate></item></channel></rss>
+&lt;p&gt;Mas info: &lt;a class="reference external" href="https://github.com/PyAr/fades/releases/tag/2.0"&gt;https://github.com/PyAr/fades/releases/tag/2.0&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>http://gilgamezh.me/en/posts/fades-20/</guid><pubDate>Sat, 28 Feb 2015 15:25:16 GMT</pubDate></item></channel></rss>

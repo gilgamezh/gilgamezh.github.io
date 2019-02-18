@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Posts about how-to)</title><link>http://gilgamezh.me/</link><description></description><atom:link href="http://gilgamezh.me/en/categories/how-to.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sun, 09 Apr 2017 19:30:45 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Postgres non-durable options Docker container.</title><link>http://gilgamezh.me/en/posts/postgres-non-durable-options-docker-container.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Some weeks ago I was at &lt;a class="reference external" href="http://www.python.org.ar/wiki/PyCamp/2017/"&gt;Pycamp&lt;/a&gt; whit LeCoVi
+<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Posts about how-to)</title><link>http://gilgamezh.me/</link><description></description><atom:link href="http://gilgamezh.me/en/categories/how-to.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Mon, 18 Feb 2019 13:46:04 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Postgres non-durable options Docker container.</title><link>http://gilgamezh.me/en/posts/postgres-non-durable-options-docker-container/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Some weeks ago I was at &lt;a class="reference external" href="http://www.python.org.ar/wiki/PyCamp/2017/"&gt;Pycamp&lt;/a&gt; whit LeCoVi
 working on the Pyar website (check the link PyCamp is the best event ever!) and
 I showed him my configuration to speed-up django tests.
 Some days ago he asked me for the config. I think that it'is better to share it
@@ -52,7 +52,7 @@ environment:
   - POSTGRES_PASSWORD=xxxx
   - POSTGRES_NON_DURABLE_SETTINGS=1
 &lt;/pre&gt;
-&lt;p&gt;With these changes my tests are running a lot faster. 🚀🚀🚀&lt;/p&gt;&lt;/div&gt;</description><guid>http://gilgamezh.me/en/posts/postgres-non-durable-options-docker-container.html</guid><pubDate>Sun, 09 Apr 2017 18:55:48 GMT</pubDate></item><item><title>Compilar versión vieja de PHP para Archlinux</title><link>http://gilgamezh.me/en/posts/compilar-version-vieja-de-php-para-archlinux.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Archlinux siempre tiene la versión más nueva de todo, eso tiene muchas cosas
+&lt;p&gt;With these changes my tests are running a lot faster. 🚀🚀🚀&lt;/p&gt;&lt;/div&gt;</description><guid>http://gilgamezh.me/en/posts/postgres-non-durable-options-docker-container/</guid><pubDate>Sun, 09 Apr 2017 18:55:48 GMT</pubDate></item><item><title>Compilar versión vieja de PHP para Archlinux</title><link>http://gilgamezh.me/en/posts/compilar-version-vieja-de-php-para-archlinux/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Archlinux siempre tiene la versión más nueva de todo, eso tiene muchas cosas
 positivas.
 Algo que suele pasar es que tenemos que usar algo que está productivo y que
 tiene una versión &lt;em&gt;mucho&lt;/em&gt; más vieja que la instalada.
@@ -86,7 +86,7 @@ make install
 &lt;li&gt;&lt;p class="first"&gt;Si usamos Apache en httpd.conf hay que hacer un &lt;em&gt;Include&lt;/em&gt; de
 /etc/httpd/conf/extra/httpd-fastcgid.conf&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><guid>http://gilgamezh.me/en/posts/compilar-version-vieja-de-php-para-archlinux.html</guid><pubDate>Sat, 28 Feb 2015 15:17:52 GMT</pubDate></item><item><title>How to install Fisa-vim-cofig in Archlinux</title><link>http://gilgamezh.me/en/posts/how-to-install-fisa-vim-cofig-in-archlinux.html</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;img alt="/images/fisa-dev-config.png" src="http://gilgamezh.me/images/fisa-dev-config.png"&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><guid>http://gilgamezh.me/en/posts/compilar-version-vieja-de-php-para-archlinux/</guid><pubDate>Sat, 28 Feb 2015 15:17:52 GMT</pubDate></item><item><title>How to install Fisa-vim-cofig in Archlinux</title><link>http://gilgamezh.me/en/posts/how-to-install-fisa-vim-cofig-in-archlinux/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;img alt="/images/fisa-dev-config.png" src="http://gilgamezh.me/images/fisa-dev-config.png"&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://github.com/fisadev/fisa-vim-config/"&gt;Fisa-vim-config&lt;/a&gt;
 es una excelente configuración para Vim que recopila muchos
 plugins y los pone a funcionar de una manera muy simple.
@@ -110,4 +110,4 @@ Lo único que cambia es este punto de la guia de instalación en el repo oficial
 &lt;pre class="literal-block"&gt;
 sudo pacman -Sy gvim ctags git python2-pip
 sudo pip2 install dbgp vim-debug pep8 flake8 pyflakes isort
-&lt;/pre&gt;&lt;/div&gt;</description><guid>http://gilgamezh.me/en/posts/how-to-install-fisa-vim-cofig-in-archlinux.html</guid><pubDate>Sat, 15 Mar 2014 18:22:44 GMT</pubDate></item></channel></rss>
+&lt;/pre&gt;&lt;/div&gt;</description><guid>http://gilgamezh.me/en/posts/how-to-install-fisa-vim-cofig-in-archlinux/</guid><pubDate>Sat, 15 Mar 2014 18:22:44 GMT</pubDate></item></channel></rss>

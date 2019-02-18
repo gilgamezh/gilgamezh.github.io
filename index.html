@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="es">
+<html prefix="og: http://ogp.me/ns# " lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="description" content="Blog personal de Nicolás Demarchi.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>No Todo Es Mecánico</title>
 <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<link href="assets/css/rst.css" rel="stylesheet" type="text/css">
+<link href="assets/css/baguetteBox.min.css" rel="stylesheet" type="text/css">
+<link href="assets/css/rst_base.css" rel="stylesheet" type="text/css">
+<link href="assets/css/nikola_rst.css" rel="stylesheet" type="text/css">
 <link href="assets/css/code.css" rel="stylesheet" type="text/css">
-<link href="assets/css/colorbox.css" rel="stylesheet" type="text/css">
 <link href="assets/css/theme.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
-<link rel="alternate" type="application/rss+xml" title="RSS (en)" href="en/rss.xml">
-<link rel="alternate" type="application/rss+xml" title="RSS (es)" href="rss.xml">
-<link rel="canonical" href="http://gilgamezh.me/index.html">
-<link rel="next" href="index-4.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/postgres-non-durable-options-docker-container.html" type="text/html">
+<link rel="alternate" type="application/rss+xml" title="RSS (en)" hreflang="en" href="en/rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (es)" hreflang="es" href="rss.xml">
+<link rel="canonical" href="http://gilgamezh.me/">
+<link rel="next" href="index-5.html" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/fades81_released/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Ir al contenido principal</a>
@@ -81,16 +82,139 @@
             
 
     
+
+
+    
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/postgres-non-durable-options-docker-container.html" class="u-url">Postgres non-durable options Docker container.</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/fades81_released/" class="u-url">fades8.1_released</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 GiLgAmEzH
             </span></p>
-            <p class="dateline"><a href="posts/postgres-non-durable-options-docker-container.html" rel="bookmark"><time class="published dt-published" datetime="2017-04-09T15:55:48-03:00" title="2017-04-09 15:55">2017-04-09 15:55</time></a></p>
+            <p class="dateline">
+            <a href="posts/fades81_released/" rel="bookmark">
+            <time class="published dt-published" datetime="2019-02-18T10:49:10-03:00" itemprop="datePublished" title="2019-02-18 10:49">2019-02-18 10:49</time></a>
+            </p>
                 <p class="commentline">
         
-    <a href="posts/postgres-non-durable-options-docker-container.html#disqus_thread" data-disqus-identifier="cache/posts/postgres-non-durable-options-docker-container.html">Comments</a>
+    <a href="posts/fades81_released/#disqus_thread" data-disqus-identifier="cache/posts/fades81_released.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p>Hola a todas y todos,</p>
+<p>Estamos encantados de anunciar la liberación de fades 8.1.</p>
+<p>fades es un sistema que maneja automáticamente los virtualenvs en los
+casos que uno normalmente encuentra al escribir scripts y programas
+pequeños, e incluso ayuda a administrar proyectos grandes.</p>
+<p>Crea automáticamente un nuevo virtualenv (o reusa uno creado previamente)
+instalando las dependencias necesarias, y ejecutando el script
+dentro de ese virtualenv.</p>
+<p>Todo lo que necesitás hacer es ejecutar el script con fades (en lugar de
+Python) y también marcar las dependencias necesarias. Más detalles acá:</p>
+<p><a class="reference external" href="http://fades.rtfd.org/">http://fades.rtfd.org/</a></p>
+<p>¿Qué hay de nuevo en esta release?</p>
+<ul class="simple">
+<li>Ejecuta automaticamente scripts desde la web, soportando los pastebines más comunes</li>
+<li>Soporta múltiples (o inexistentes) archivos requirement.txt, los cuales también pueden estar anidados</li>
+<li>Evita revisar la disponibilidad en PyPI si no se indicaron dependencias</li>
+<li>Ofrece una opción para mostrar el path del virtualenv en el sistema</li>
+<li>Mejor indicación/ayuda cuando no se encuentra el script indicado o el ejecutable de la dependencia</li>
+<li>Trae mejoras en logs, urls de PyPI, documentación, soporte multiplataforma, y varias otras mejoras y correcciones menores</li>
+</ul>
+<p>Queremos darles muchas gracias a los siguientes colaboradores que ayudaron a mejorar a fades de distintas maneras para esta versión (en orden alfabético):</p>
+<ul class="simple">
+<li>Andrés Delfino - <a class="reference external" href="https://github.com/andresdelfino">https://github.com/andresdelfino</a>
+</li>
+<li>Iñaki Malerba - <a class="reference external" href="https://github.com/inakimalerba">https://github.com/inakimalerba</a>
+</li>
+<li>Martin Alderete - <a class="reference external" href="https://github.com/malderete">https://github.com/malderete</a>
+</li>
+</ul>
+<p>Para instalar y disfrutar fades:</p>
+<ul>
+<li>
+<p class="first">Si estás en Ubuntu o Debian, podés facilmente instalarlo así (aunque probablemente no obtengas la <em>última</em> versión:</p>
+<pre class="literal-block">
+sudo apt-get install fades
+</pre>
+</li>
+<li>
+<p class="first">Para debian/ubuntu que no sea lo último, acá hay un .deb (con su respectivo archivo fuente Debian):</p>
+<pre class="literal-block">
+http://ftp.debian.org/debian/pool/main/f/fades/fades_8.1-1_all.deb
+http://ftp.debian.org/debian/pool/main/f/fades/fades_8.1-1.dsc
+</pre>
+</li>
+<li>
+<p class="first">Instalarlo en Arch es muy simple:</p>
+<pre class="literal-block">
+yaourt -S fades
+</pre>
+</li>
+<li>
+<p class="first">En cualquier Linux si tenés el sistema Snap:</p>
+<pre class="literal-block">
+snap install fades
+</pre>
+</li>
+<li>
+<p class="first">Podés usar pip si querés:</p>
+<pre class="literal-block">
+pip3 install fades
+</pre>
+</li>
+<li>
+<p class="first">Siempre podés usar el tarball multiplataforma e instalarlo de la manera clásica:</p>
+<pre class="literal-block">
+wget http://ftp.debian.org/debian/pool/main/f/fades/fades_8.1.orig.tar.gz
+tar -xf fades_*.tar.gz
+cd fades-*
+sudo ./setup.py install
+</pre>
+</li>
+</ul>
+<p>Ayuda / preguntas:</p>
+<ul>
+<li>
+<p class="first">Podés hacer cualquier pregunta o mandar una recomendación o pedido en el grupo de Telegram:</p>
+<blockquote>
+<p><cite>https://t.me/fadesmagic</cite></p>
+</blockquote>
+</li>
+</ul>
+<p>...o en la lista de correo...</p>
+<p><a class="reference external" href="http://listas.python.org.ar/mailman/listinfo/fades">http://listas.python.org.ar/mailman/listinfo/fades</a></p>
+<p>...o en el canal de IRC #fades en Freenode.</p>
+<ul class="simple">
+<li>También podés abrir un issue acá (por favor hacelo si encontrás algún problema!):</li>
+</ul>
+<p><a class="reference external" href="https://github.com/PyAr/fades/issues/new">https://github.com/PyAr/fades/issues/new</a></p>
+<ul class="simple">
+<li>El proyecto en sí está en</li>
+</ul>
+<p><a class="reference external" href="https://github.com/PyAr/fades">https://github.com/PyAr/fades</a></p>
+<p>Es muy fácil ejecutar la última versión de desarrollo:</p>
+<p>git clone <a class="reference external" href="https://github.com/PyAr/fades.git">https://github.com/PyAr/fades.git</a>
+cd fades
+bin/fades</p>
+<p>Desde ya, muchas gracias por tu tiempo!</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/postgres-non-durable-options-docker-container/" class="u-url">Postgres non-durable options Docker container.</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                GiLgAmEzH
+            </span></p>
+            <p class="dateline">
+            <a href="posts/postgres-non-durable-options-docker-container/" rel="bookmark">
+            <time class="published dt-published" datetime="2017-04-09T15:55:48-03:00" itemprop="datePublished" title="2017-04-09 15:55">2017-04-09 15:55</time></a>
+            </p>
+                <p class="commentline">
+        
+    <a href="posts/postgres-non-durable-options-docker-container/#disqus_thread" data-disqus-identifier="cache/posts/postgres-non-durable-options-docker-container.html">Comments</a>
 
 
         </p>
@@ -153,15 +277,18 @@ environment:
 <p>With these changes my tests are running a lot faster. 🚀🚀🚀</p>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/regalo-estos-libros.html" class="u-url">Regalo estos libros</a></h1>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/regalo-estos-libros/" class="u-url">Regalo estos libros</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 GiLgAmEzH
             </span></p>
-            <p class="dateline"><a href="posts/regalo-estos-libros.html" rel="bookmark"><time class="published dt-published" datetime="2016-01-10T18:58:51-03:00" title="2016-01-10 18:58">2016-01-10 18:58</time></a></p>
+            <p class="dateline">
+            <a href="posts/regalo-estos-libros/" rel="bookmark">
+            <time class="published dt-published" datetime="2016-01-10T18:58:51-03:00" itemprop="datePublished" title="2016-01-10 18:58">2016-01-10 18:58</time></a>
+            </p>
                 <p class="commentline">
         
-    <a href="posts/regalo-estos-libros.html#disqus_thread" data-disqus-identifier="cache/posts/regalo-estos-libros.html">Comments</a>
+    <a href="posts/regalo-estos-libros/#disqus_thread" data-disqus-identifier="cache/posts/regalo-estos-libros.html">Comments</a>
 
 
         </p>
@@ -199,15 +326,18 @@ Si te interesa alguno escribime a mail at gilgamezh.me.</p>
 <p>ramen!</p>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/howto-stresstest-a-website-with-apache-benchmark.html" class="u-url">HowTo (stress)test a website with Apache Benchmark</a></h1>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/howto-stresstest-a-website-with-apache-benchmark/" class="u-url">HowTo (stress)test a website with Apache Benchmark</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 GiLgAmEzH
             </span></p>
-            <p class="dateline"><a href="posts/howto-stresstest-a-website-with-apache-benchmark.html" rel="bookmark"><time class="published dt-published" datetime="2015-10-31T11:18:22-03:00" title="2015-10-31 11:18">2015-10-31 11:18</time></a></p>
+            <p class="dateline">
+            <a href="posts/howto-stresstest-a-website-with-apache-benchmark/" rel="bookmark">
+            <time class="published dt-published" datetime="2015-10-31T11:18:22-03:00" itemprop="datePublished" title="2015-10-31 11:18">2015-10-31 11:18</time></a>
+            </p>
                 <p class="commentline">
         
-    <a href="posts/howto-stresstest-a-website-with-apache-benchmark.html#disqus_thread" data-disqus-identifier="cache/posts/howto-stresstest-a-website-with-apache-benchmark.html">Comments</a>
+    <a href="posts/howto-stresstest-a-website-with-apache-benchmark/#disqus_thread" data-disqus-identifier="cache/posts/howto-stresstest-a-website-with-apache-benchmark.html">Comments</a>
 
 
         </p>
@@ -224,18 +354,21 @@ de concurrencia/cantidad de requests y gráficar la salida.</p>
 <pre class="literal-block">
 ab -c 3 -n 100 -v 2 -g out1.tsv -H "Accept-Encoding: gzip,deflate"  http://python.org.ar/
 </pre>
-<p class="more"><a href="posts/howto-stresstest-a-website-with-apache-benchmark.html">Leer más…</a></p>
+<p class="more"><a href="posts/howto-stresstest-a-website-with-apache-benchmark/">Leer más…</a></p>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/como-usar-un-tunel-ssh-como-proxy-para-http.html" class="u-url">Cómo usar un tunel SSH como proxy para HTTP</a></h1>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/como-usar-un-tunel-ssh-como-proxy-para-http/" class="u-url">Cómo usar un tunel SSH como proxy para HTTP</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 GiLgAmEzH
             </span></p>
-            <p class="dateline"><a href="posts/como-usar-un-tunel-ssh-como-proxy-para-http.html" rel="bookmark"><time class="published dt-published" datetime="2015-06-01T21:17:59-03:00" title="2015-06-01 21:17">2015-06-01 21:17</time></a></p>
+            <p class="dateline">
+            <a href="posts/como-usar-un-tunel-ssh-como-proxy-para-http/" rel="bookmark">
+            <time class="published dt-published" datetime="2015-06-01T21:17:59-03:00" itemprop="datePublished" title="2015-06-01 21:17">2015-06-01 21:17</time></a>
+            </p>
                 <p class="commentline">
         
-    <a href="posts/como-usar-un-tunel-ssh-como-proxy-para-http.html#disqus_thread" data-disqus-identifier="cache/posts/como-usar-un-tunel-ssh-como-proxy-para-http.html">Comments</a>
+    <a href="posts/como-usar-un-tunel-ssh-como-proxy-para-http/#disqus_thread" data-disqus-identifier="cache/posts/como-usar-un-tunel-ssh-como-proxy-para-http.html">Comments</a>
 
 
         </p>
@@ -280,15 +413,18 @@ ssh -N -D 1917 mi_usuario_en_puente@puente.midominio.com
 ingresar a <a class="reference external" href="http://ifconfig.me">http://ifconfig.me</a> y validar la IP por la que estamos llegando.</p>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/incognitosis-y-la-pep8.html" class="u-url">Incognitosis y la PEP8</a></h1>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/incognitosis-y-la-pep8/" class="u-url">Incognitosis y la PEP8</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 GiLgAmEzH
             </span></p>
-            <p class="dateline"><a href="posts/incognitosis-y-la-pep8.html" rel="bookmark"><time class="published dt-published" datetime="2015-03-14T10:22:44-03:00" title="2015-03-14 10:22">2015-03-14 10:22</time></a></p>
+            <p class="dateline">
+            <a href="posts/incognitosis-y-la-pep8/" rel="bookmark">
+            <time class="published dt-published" datetime="2015-03-14T10:22:44-03:00" itemprop="datePublished" title="2015-03-14 10:22">2015-03-14 10:22</time></a>
+            </p>
                 <p class="commentline">
         
-    <a href="posts/incognitosis-y-la-pep8.html#disqus_thread" data-disqus-identifier="cache/posts/incognitosis-y-la-pep8.html">Comments</a>
+    <a href="posts/incognitosis-y-la-pep8/#disqus_thread" data-disqus-identifier="cache/posts/incognitosis-y-la-pep8.html">Comments</a>
 
 
         </p>
@@ -336,15 +472,18 @@ lectura es su respeto por la PEP8!!</p>
 es una de los pocos blogs que llevo años leyendo.</p>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/tu-propio-cliente-de-torrent-streaming-en-python.html" class="u-url">Tu propio cliente de Torrent streaming en Python</a></h1>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/tu-propio-cliente-de-torrent-streaming-en-python/" class="u-url">Tu propio cliente de Torrent streaming en Python</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 GiLgAmEzH
             </span></p>
-            <p class="dateline"><a href="posts/tu-propio-cliente-de-torrent-streaming-en-python.html" rel="bookmark"><time class="published dt-published" datetime="2015-03-09T10:44:28-03:00" title="2015-03-09 10:44">2015-03-09 10:44</time></a></p>
+            <p class="dateline">
+            <a href="posts/tu-propio-cliente-de-torrent-streaming-en-python/" rel="bookmark">
+            <time class="published dt-published" datetime="2015-03-09T10:44:28-03:00" itemprop="datePublished" title="2015-03-09 10:44">2015-03-09 10:44</time></a>
+            </p>
                 <p class="commentline">
         
-    <a href="posts/tu-propio-cliente-de-torrent-streaming-en-python.html#disqus_thread" data-disqus-identifier="cache/posts/tu-propio-cliente-de-torrent-streaming-en-python.html">Comments</a>
+    <a href="posts/tu-propio-cliente-de-torrent-streaming-en-python/#disqus_thread" data-disqus-identifier="cache/posts/tu-propio-cliente-de-torrent-streaming-en-python.html">Comments</a>
 
 
         </p>
@@ -356,20 +495,23 @@ si te gusta mirar series online, no tenés que dejar de probarlo!</p>
 <p>Con la experiencia inicial de Touchandgo armamos una charla para la PyConAr 2014.
 <a class="reference external" href="http://bit.ly/pyconar">Slides</a></p>
 <div class="youtube-video">
-<iframe width="425" height="344" src="https://www.youtube.com/embed/oMl1UiF_2Ss?rel=0&amp;hd=1&amp;wmode=transparent"></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/oMl1UiF_2Ss?rel=0&amp;wmode=transparent" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
 </div>
 <p>PD: Sí, me estoy poniendo al día lentamente con el blog! :D</p>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/dia-internacional-de-la-mujer-trabajadora.html" class="u-url">Día internacional de la Mujer Trabajadora</a></h1>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/dia-internacional-de-la-mujer-trabajadora/" class="u-url">Día internacional de la Mujer Trabajadora</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 GiLgAmEzH
             </span></p>
-            <p class="dateline"><a href="posts/dia-internacional-de-la-mujer-trabajadora.html" rel="bookmark"><time class="published dt-published" datetime="2015-03-08T10:21:49-03:00" title="2015-03-08 10:21">2015-03-08 10:21</time></a></p>
+            <p class="dateline">
+            <a href="posts/dia-internacional-de-la-mujer-trabajadora/" rel="bookmark">
+            <time class="published dt-published" datetime="2015-03-08T10:21:49-03:00" itemprop="datePublished" title="2015-03-08 10:21">2015-03-08 10:21</time></a>
+            </p>
                 <p class="commentline">
         
-    <a href="posts/dia-internacional-de-la-mujer-trabajadora.html#disqus_thread" data-disqus-identifier="cache/posts/dia-internacional-de-la-mujer-trabajadora.html">Comments</a>
+    <a href="posts/dia-internacional-de-la-mujer-trabajadora/#disqus_thread" data-disqus-identifier="cache/posts/dia-internacional-de-la-mujer-trabajadora.html">Comments</a>
 
 
         </p>
@@ -426,15 +568,18 @@ prodigiosa blasfemia.
 </div>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/fades-20.html" class="u-url">Fades 2.0</a></h1>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/fades-20/" class="u-url">Fades 2.0</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 GiLgAmEzH
             </span></p>
-            <p class="dateline"><a href="posts/fades-20.html" rel="bookmark"><time class="published dt-published" datetime="2015-02-28T12:25:16-03:00" title="2015-02-28 12:25">2015-02-28 12:25</time></a></p>
+            <p class="dateline">
+            <a href="posts/fades-20/" rel="bookmark">
+            <time class="published dt-published" datetime="2015-02-28T12:25:16-03:00" itemprop="datePublished" title="2015-02-28 12:25">2015-02-28 12:25</time></a>
+            </p>
                 <p class="commentline">
         
-    <a href="posts/fades-20.html#disqus_thread" data-disqus-identifier="cache/posts/fades-20.html">Comments</a>
+    <a href="posts/fades-20/#disqus_thread" data-disqus-identifier="cache/posts/fades-20.html">Comments</a>
 
 
         </p>
@@ -464,15 +609,18 @@ módulo (ej: "import bs4 # fades.pypi beautifulsoup4 == 3.5")</li>
 <p>Mas info: <a class="reference external" href="https://github.com/PyAr/fades/releases/tag/2.0">https://github.com/PyAr/fades/releases/tag/2.0</a></p>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/compilar-version-vieja-de-php-para-archlinux.html" class="u-url">Compilar versión vieja de PHP para Archlinux</a></h1>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/compilar-version-vieja-de-php-para-archlinux/" class="u-url">Compilar versión vieja de PHP para Archlinux</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 GiLgAmEzH
             </span></p>
-            <p class="dateline"><a href="posts/compilar-version-vieja-de-php-para-archlinux.html" rel="bookmark"><time class="published dt-published" datetime="2015-02-28T12:17:52-03:00" title="2015-02-28 12:17">2015-02-28 12:17</time></a></p>
+            <p class="dateline">
+            <a href="posts/compilar-version-vieja-de-php-para-archlinux/" rel="bookmark">
+            <time class="published dt-published" datetime="2015-02-28T12:17:52-03:00" itemprop="datePublished" title="2015-02-28 12:17">2015-02-28 12:17</time></a>
+            </p>
                 <p class="commentline">
         
-    <a href="posts/compilar-version-vieja-de-php-para-archlinux.html#disqus_thread" data-disqus-identifier="cache/posts/compilar-version-vieja-de-php-para-archlinux.html">Comments</a>
+    <a href="posts/compilar-version-vieja-de-php-para-archlinux/#disqus_thread" data-disqus-identifier="cache/posts/compilar-version-vieja-de-php-para-archlinux.html">Comments</a>
 
 
         </p>
@@ -522,44 +670,19 @@ make install
 </ul>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/hp-pavilion-dv5-1251nr.html" class="u-url">HP Pavilion dv5 1251nr</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                GiLgAmEzH
-            </span></p>
-            <p class="dateline"><a href="posts/hp-pavilion-dv5-1251nr.html" rel="bookmark"><time class="published dt-published" datetime="2015-02-28T12:14:01-03:00" title="2015-02-28 12:14">2015-02-28 12:14</time></a></p>
-                <p class="commentline">
-        
-    <a href="posts/hp-pavilion-dv5-1251nr.html#disqus_thread" data-disqus-identifier="cache/posts/hp-pavilion-dv5-1251nr.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <div>
-<p>En el último mes decidí cambiar la notebook y ahí ando evaluando modelos.
-Sacando cuentas me acordaba maso menos que la que tengo ahora tiene unos 5
-años. Lo que me parece una linda cantidad de tiempo para una notebook.</p>
-<p>Siempre me acordaba que yo había sacado una foto el día que la compré. Así que
-hoy la busqué y la pongo acá para no perderla.</p>
-<img alt="/images/paviliondv5.jpg" src="images/paviliondv5.jpg"><p>El CD de Ubuntu está ahí porque no dejé que windows arranque ni una sola vez
-en la maquina (tenia un windows vista). Arranqué con el Live CD,
-elimine toda partición e instalé. :)</p>
-</div>
-    </div>
     </article>
 </div>
 
         <nav class="postindexpager"><ul class="pager">
 <li class="next">
-                <a href="index-4.html" rel="next">Publicaciones anteriores</a>
+                <a href="index-5.html" rel="next">Publicaciones anteriores</a>
             </li>
         </ul></nav><script>var disqus_shortname="notodoesmecnico";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
 </div>
         <!--End of body content-->
 
         <footer id="footer">
-            Contents © 2017         <a href="mailto:mail@gilgamezh.me">GiLgAmEzH</a> - My Fingerprint: <a href="public.key">0712 8EB2 C626 08C5 69E1  8949 6DDF 6FA3 5EB9 26AB</a>  Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2019         <a href="mailto:mail@gilgamezh.me">GiLgAmEzH</a> - My Fingerprint: <a href="public.key">0712 8EB2 C626 08C5 69E1  8949 6DDF 6FA3 5EB9 26AB</a>  Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
 <img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a>
             
@@ -568,10 +691,16 @@ elimine toda partición e instalé. :)</p>
 </div>
 
 
-            <script src="assets/js/jquery.min.js"></script><script src="assets/js/bootstrap.min.js"></script><script src="assets/js/moment-with-locales.min.js"></script><script src="assets/js/fancydates.js"></script><script src="assets/js/jquery.colorbox-min.js"></script><script src="assets/js/colorbox-i18n/jquery.colorbox-es.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+            <script src="assets/js/jquery.min.js"></script><script src="assets/js/bootstrap.min.js"></script><script src="assets/js/baguetteBox.min.js"></script><script src="assets/js/moment-with-locales.min.js"></script><script src="assets/js/fancydates.min.js"></script><!-- fancy dates --><script>
     moment.locale("es");
     fancydates(0, "YYYY-MM-DD HH:mm");
     </script><!-- end fancy dates --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script><script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
