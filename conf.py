@@ -21,7 +21,7 @@ BLOG_AUTHOR = "GiLgAmEzH"  # (translatable)
 BLOG_TITLE = "No Todo Es Mec\u00e1nico"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link
-SITE_URL = "http://gilgamezh.me/"
+SITE_URL = "https://gilgamezh.me/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "http://gilgamezh.me/"
@@ -123,7 +123,7 @@ NAVIGATION_LINKS = {
         ("/archive.html", "Archivo"),
         ("/categories/index.html", "Etiquetas"),
         ("/rss.xml", "Canal RSS"),
-        ("/stories/resume/", "Resume"),
+        ("http://bit.ly/nicolas_demarchi_resume", "Resume"),
         ("http://www.flickr.com/photos/bolche/", "Fotos"),
         ('/random/', 'Random'),
     ),
@@ -132,7 +132,7 @@ NAVIGATION_LINKS = {
         ("/en/archive.html", "Archive"),
         ("/en/categories/index.html", "Tags"),
         ("/en/rss.xml", "RSS feed"),
-        ("/en/stories/resume/", "Resume"),
+        ("http://bit.ly/nicolas_demarchi_resume", "Resume"),
         ("http://www.flickr.com/photos/bolche/", "Pics"),
         ('/random/', 'Random'),
     ),
