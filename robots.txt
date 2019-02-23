@@ -1,4 +1,4 @@
-Sitemap: http://gilgamezh.me/sitemapindex.xml
+Sitemap: https://gilgamezh.me/sitemapindex.xml
 
 User-Agent: *
 Host: gilgamezh.me

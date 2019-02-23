@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Posts about webservers)</title><link>http://gilgamezh.me/</link><description></description><atom:link href="http://gilgamezh.me/en/categories/webservers.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 23 Feb 2019 15:18:49 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>HowTo (stress)test a website with Apache Benchmark</title><link>http://gilgamezh.me/en/posts/howto-stresstest-a-website-with-apache-benchmark/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Hoy por la mañana @reydelhumo queria probar un sitio que tiene en una raspy, yo
+<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Posts about webservers)</title><link>https://gilgamezh.me/</link><description></description><atom:link href="https://gilgamezh.me/en/categories/webservers.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 23 Feb 2019 15:33:11 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>HowTo (stress)test a website with Apache Benchmark</title><link>https://gilgamezh.me/en/posts/howto-stresstest-a-website-with-apache-benchmark/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Hoy por la mañana @reydelhumo queria probar un sitio que tiene en una raspy, yo
 le recomendé que use &lt;cite&gt;ab&lt;/cite&gt; para hacer algunas pruebas básicas de load.&lt;/p&gt;
 &lt;p&gt;Usar &lt;cite&gt;ab&lt;/cite&gt; es muy simple, pero es mucho más lindo poder hacer gráficos de los
 resultados, así que aproveché el momento para armar este post.&lt;/p&gt;
@@ -64,13 +64,13 @@ gnuplot gnuplot.template
 &lt;/pre&gt;
 &lt;p&gt;Y listo! tenemos nuestro gráfico.
 (sí hay que tener gnuplot instalado. en Arch el paquete se llama &lt;cite&gt;python-gnuplot&lt;/cite&gt;)&lt;/p&gt;
-&lt;img alt="/images/benchmark_python.org.ar.png" src="http://gilgamezh.me/images/benchmark_python.org.ar.png"&gt;
-&lt;p&gt;Por ejemplo la conclusión de esta prueba es que python.org.ar necesita un caché de frontend :)&lt;/p&gt;&lt;/div&gt;</description><guid>http://gilgamezh.me/en/posts/howto-stresstest-a-website-with-apache-benchmark/</guid><pubDate>Sat, 31 Oct 2015 14:18:22 GMT</pubDate></item><item><title>Instalar y configurar LAMP en Centos 6 PHP-FPM</title><link>http://gilgamezh.me/en/posts/instalar-y-configurar-lamp-en-centos-6-php-fpm/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Hace poquito tiempo estuve configurando un webserver desde cero así que
+&lt;img alt="/images/benchmark_python.org.ar.png" src="https://gilgamezh.me/images/benchmark_python.org.ar.png"&gt;
+&lt;p&gt;Por ejemplo la conclusión de esta prueba es que python.org.ar necesita un caché de frontend :)&lt;/p&gt;&lt;/div&gt;</description><guid>https://gilgamezh.me/en/posts/howto-stresstest-a-website-with-apache-benchmark/</guid><pubDate>Sat, 31 Oct 2015 14:18:22 GMT</pubDate></item><item><title>Instalar y configurar LAMP en Centos 6 PHP-FPM</title><link>https://gilgamezh.me/en/posts/instalar-y-configurar-lamp-en-centos-6-php-fpm/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Hace poquito tiempo estuve configurando un webserver desde cero así que
 aprovecho para armar una guia "paso a paso" de cómo instalar un Centos con
 LAMP (Linux,Apache,MySQL,PHP|Perl??|Python:) con algunas caracteristicas
 que me gusta usar. Me queda registro de la instalación y de paso comparto
 el how to.&lt;/p&gt;
-&lt;img alt="/images/lamp.png" src="http://gilgamezh.me/images/lamp.png"&gt;
+&lt;img alt="/images/lamp.png" src="https://gilgamezh.me/images/lamp.png"&gt;
 &lt;p&gt;En primer lugar dejo nota de algo que no quiero olvidarme. El servidor
 que instale era un IBM x3250 M4. Este server tiene el firmware UEFI y me hizo
 renegar bastante con 2 cosas  unas cuantas horas. Creo que el último server
@@ -127,4 +127,4 @@ Editar el archivo /etc/httpd/conf.d/fastcgi.conf para que quede de la siguiente 
 &lt;a name="rest_code_76a479510db34cfe8d50a1dd26f2e66d-13"&gt;&lt;/a&gt; &amp;lt;/IfModule&amp;gt;
 &lt;/pre&gt;&lt;p&gt;Done!
 Faltaría configurar los vhosts, etc pero eso es standard.&lt;/p&gt;
-&lt;/div&gt;&lt;/div&gt;</description><guid>http://gilgamezh.me/en/posts/instalar-y-configurar-lamp-en-centos-6-php-fpm/</guid><pubDate>Sun, 17 Nov 2013 21:06:00 GMT</pubDate></item></channel></rss>
+&lt;/div&gt;&lt;/div&gt;</description><guid>https://gilgamezh.me/en/posts/instalar-y-configurar-lamp-en-centos-6-php-fpm/</guid><pubDate>Sun, 17 Nov 2013 21:06:00 GMT</pubDate></item></channel></rss>

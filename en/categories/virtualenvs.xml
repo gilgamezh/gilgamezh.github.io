@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Posts about virtualenvs)</title><link>http://gilgamezh.me/</link><description></description><atom:link href="http://gilgamezh.me/en/categories/virtualenvs.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 23 Feb 2019 15:18:48 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>fades8.1_released</title><link>http://gilgamezh.me/en/posts/fades81_released/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;We're glad to announce the release of fades 8.1.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Posts about virtualenvs)</title><link>https://gilgamezh.me/</link><description></description><atom:link href="https://gilgamezh.me/en/categories/virtualenvs.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 23 Feb 2019 15:33:11 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>fades8.1_released</title><link>https://gilgamezh.me/en/posts/fades81_released/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;We're glad to announce the release of fades 8.1.&lt;/p&gt;
 &lt;p&gt;fades is a system that automatically handles the virtualenvs in the
 cases normally found when writing scripts and simple programs, and
 even helps to administer big projects.&lt;/p&gt;
@@ -96,4 +96,4 @@ bin/fades&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Thanks in advance for your time!&lt;/p&gt;&lt;/div&gt;</description><category>fades</category><category>python</category><category>virtualenvs</category><guid>http://gilgamezh.me/en/posts/fades81_released/</guid><pubDate>Mon, 18 Feb 2019 13:49:10 GMT</pubDate></item></channel></rss>
+&lt;p&gt;Thanks in advance for your time!&lt;/p&gt;&lt;/div&gt;</description><category>fades</category><category>python</category><category>virtualenvs</category><guid>https://gilgamezh.me/en/posts/fades81_released/</guid><pubDate>Mon, 18 Feb 2019 13:49:10 GMT</pubDate></item></channel></rss>
