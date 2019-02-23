@@ -123,7 +123,7 @@ NAVIGATION_LINKS = {
         ("/archive.html", "Archivo"),
         ("/categories/index.html", "Etiquetas"),
         ("/rss.xml", "Canal RSS"),
-        ("/stories/resume.html", "Resume"),
+        ("/stories/resume/", "Resume"),
         ("http://www.flickr.com/photos/bolche/", "Fotos"),
         ('/random/', 'Random'),
     ),
@@ -132,14 +132,14 @@ NAVIGATION_LINKS = {
         ("/en/archive.html", "Archive"),
         ("/en/categories/index.html", "Tags"),
         ("/en/rss.xml", "RSS feed"),
-        ("/en/stories/resume.html", "Resume"),
+        ("/en/stories/resume/", "Resume"),
         ("http://www.flickr.com/photos/bolche/", "Pics"),
         ('/random/', 'Random'),
     ),
 }
 
 # Name of the theme to use.
-THEME = "bootstrap3"
+THEME = "bootblog4"
 
 # Below this point, everything is optional
 
@@ -631,7 +631,7 @@ CONTENT_FOOTER_FORMATS = {
             "author": BLOG_AUTHOR,
             "date": time.gmtime().tm_year,
             "license": LICENSE,
-            "fingerprint": "<a href='public.key'>0712 8EB2 C626 08C5 69E1  8949 6DDF 6FA3 5EB9 26AB</a>"
+            "fingerprint": "<a href='https://gilgamezh.me/public.key'>0712 8EB2 C626 08C5 69E1  8949 6DDF 6FA3 5EB9 26AB</a>"
         }
     )
 }
