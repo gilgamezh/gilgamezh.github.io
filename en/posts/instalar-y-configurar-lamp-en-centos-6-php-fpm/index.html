@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns# " lang="en">
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Instalar y configurar LAMP en Centos 6 PHP-FPM | No Todo Es Mecánico</title>
 <link href="../../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link href="../../../assets/css/baguetteBox.min.css" rel="stylesheet" type="text/css">
-<link href="../../../assets/css/rst_base.css" rel="stylesheet" type="text/css">
-<link href="../../../assets/css/nikola_rst.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/rst.css" rel="stylesheet" type="text/css">
 <link href="../../../assets/css/code.css" rel="stylesheet" type="text/css">
 <link href="../../../assets/css/theme.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/bootblog.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
-<link rel="alternate" type="application/rss+xml" title="RSS (en)" hreflang="en" href="../../rss.xml">
-<link rel="alternate" type="application/rss+xml" title="RSS (es)" hreflang="es" href="../../../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (en)" href="../../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (es)" href="../../../rss.xml">
 <link rel="canonical" href="http://gilgamezh.me/en/posts/instalar-y-configurar-lamp-en-centos-6-php-fpm/">
 <!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="GiLgAmEzH">
 <link rel="prev" href="../cafe-tacvba-en-caba-29102013/" title="Café Tacvba en CABA. 29/10/2013" type="text/html">
@@ -39,68 +40,71 @@ LAMP (Linux,Apache,MySQL,PHP|Perl??|Python:) con algu'>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
 
-<!-- Menubar -->
-
-<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
-<!-- This keeps the margins nice -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+<!-- Header and menu bar -->
+<div class="container">
+      <header class="blog-header py-3"><div class="row nbb-header align-items-center">
+          <div class="col-md-3 col-xs-2 col-sm-2" style="width: auto;">
+            <button class="navbar-toggler navbar-light bg-light nbb-navbar-toggler" type="button" data-toggle="collapse" data-target=".bs-nav-collapsible" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="http://gilgamezh.me/en/">
-                <img src="../../../images/gilgamezh.png" alt="No Todo Es Mecánico" id="logo"><span id="blog-title">No Todo Es Mecánico</span>
-            </a>
+            <div class="collapse bs-nav-collapsible bootblog4-search-form-holder">
+                
+            </div>
         </div>
-<!-- /.navbar-header -->
-        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
-            <ul class="nav navbar-nav">
-<li>
-<a href="../../archive.html">Archive</a>
+          <div class="col-md-6 col-xs-10 col-sm-10 bootblog4-brand" style="width: auto;">
+            <a class="navbar-brand blog-header-logo text-dark" href="http://gilgamezh.me/en/">
+            <img src="../../../images/gilgamezh.png" alt="No Todo Es Mecánico" id="logo" class="d-inline-block align-top"><span id="blog-title">No Todo Es Mecánico</span>
+        </a>
+          </div>
+            <div class="col-md-3 justify-content-end align-items-center bs-nav-collapsible collapse flex-collapse bootblog4-right-nav">
+            <nav class="navbar navbar-light bg-white"><ul class="navbar-nav bootblog4-right-nav">
+<li class="nav-item"><a href="http://gilgamezh.me/" rel="alternate" hreflang="es" class="nav-link">Español</a></li>
+
+                    
+                    
+    
+    <li class="nav-item">
+    <a href="index.rst" id="sourcelink" class="nav-link">Source</a>
+    </li>
+
+
+                    
+            </ul></nav>
+</div>
+    </div>
+</header><nav class="navbar navbar-expand-md navbar-light bg-white static-top"><div class="collapse navbar-collapse bs-nav-collapsible" id="bs-navbar">
+            <ul class="navbar-nav nav-fill d-flex w-100">
+<li class="nav-item">
+<a href="../../archive.html" class="nav-link">Archive</a>
                 </li>
-<li>
-<a href="../../categories/index.html">Tags</a>
+<li class="nav-item">
+<a href="../../categories/index.html" class="nav-link">Tags</a>
                 </li>
-<li>
-<a href="../../rss.xml">RSS feed</a>
+<li class="nav-item">
+<a href="../../rss.xml" class="nav-link">RSS feed</a>
                 </li>
-<li>
-<a href="../../stories/resume.html">Resume</a>
+<li class="nav-item">
+<a href="../../stories/resume/" class="nav-link">Resume</a>
                 </li>
-<li>
-<a href="http://www.flickr.com/photos/bolche/">Pics</a>
+<li class="nav-item">
+<a href="http://www.flickr.com/photos/bolche/" class="nav-link">Pics</a>
                 </li>
-<li>
-<a href="../../../random/">Random</a>
+<li class="nav-item">
+<a href="../../../random/" class="nav-link">Random</a>
 
                 
             </li>
 </ul>
-<ul class="nav navbar-nav navbar-right">
-<li>
-            </li>
-<li><a href="http://gilgamezh.me/" rel="alternate" hreflang="es">Español</a></li>
-
-                
-                    
-    <li>
-    <a href="index.rst" id="sourcelink">Source</a>
-    </li>
-
-                
-            </ul>
 </div>
 <!-- /.navbar-collapse -->
-    </div>
-<!-- /.container -->
-</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+</nav>
+</div>
+
+<div class="container" id="content" role="main">
     <div class="body-content">
         <!--Body content-->
-        <div class="row">
-            
-            
+        
+        
 <article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Instalar y configurar LAMP en Centos 6 PHP-FPM</a></h1>
 
         <div class="metadata">
@@ -150,47 +154,47 @@ from /isolinux instead of /images/pxeboot."</blockquote>
 <div class="section" id="instalar-apache-mysql-y-php">
 <h2>Instalar apache, mysql y PHP</h2>
 <p>(usando el repo 'remi' que tiene versiones un poco más nuevas que el oficial.)</p>
-<pre class="code bash"><a name="rest_code_c94bbd72058e4b02bf94df8bf3548df5-1"></a>yum --enablerepo<span class="o">=</span>remi install httpd mysql mysql-server php php-common
-<a name="rest_code_c94bbd72058e4b02bf94df8bf3548df5-2"></a>yum --enablerepo<span class="o">=</span>remi install php-mysql php-gd php-mbstring php-mcrypt php-xml php-pecl-apc php-cli php-pear php-pdo
+<pre class="code bash"><a name="rest_code_f719a1d00ca246478798e928c50d2cba-1"></a>yum --enablerepo<span class="o">=</span>remi install httpd mysql mysql-server php php-common
+<a name="rest_code_f719a1d00ca246478798e928c50d2cba-2"></a>yum --enablerepo<span class="o">=</span>remi install php-mysql php-gd php-mbstring php-mcrypt php-xml php-pecl-apc php-cli php-pear php-pdo
 </pre>
-<pre class="code bash"><a name="rest_code_fdaaae2ba5114468944c7040f09f5796-1"></a>/usr/bin/mysqladmin -u root password <span class="s1">'algocomplejo'</span>
-<a name="rest_code_fdaaae2ba5114468944c7040f09f5796-2"></a>/usr/bin/mysql_secure_installation
+<pre class="code bash"><a name="rest_code_5e2372913f874a0c9740352af9a2792d-1"></a>/usr/bin/mysqladmin -u root password <span class="s1">'algocomplejo'</span>
+<a name="rest_code_5e2372913f874a0c9740352af9a2792d-2"></a>/usr/bin/mysql_secure_installation
 </pre>
 <p>Marcar los 2 servicios para que levanten al inicio</p>
-<pre class="code bash"><a name="rest_code_391e7c403b034efbb4f0c1db9063e13e-1"></a>chkconfig --levels <span class="m">235</span> httpd on
-<a name="rest_code_391e7c403b034efbb4f0c1db9063e13e-2"></a>chkconfig --levels <span class="m">235</span> mysqld on
+<pre class="code bash"><a name="rest_code_775e6167359a4490a6c5a142224732d3-1"></a>chkconfig --levels <span class="m">235</span> httpd on
+<a name="rest_code_775e6167359a4490a6c5a142224732d3-2"></a>chkconfig --levels <span class="m">235</span> mysqld on
 </pre>
 <p>Con esto ya tenemos todo funcionando. Para mejor performance voy a cambiar el manejador de php por PHP-FPM. Detalles en <a class="reference external" href="http://php-fpm.org/">http://php-fpm.org/</a></p>
-<pre class="code bash"><a name="rest_code_95a97d4e6eb1432f9be7e7e3e20b8e64-1"></a>yum --enablerepo<span class="o">=</span>remi install php-fpm
-<a name="rest_code_95a97d4e6eb1432f9be7e7e3e20b8e64-2"></a>chkconfig --levels <span class="m">235</span> php-fpm on
+<pre class="code bash"><a name="rest_code_d7f13173a36244d6a3328626f0173932-1"></a>yum --enablerepo<span class="o">=</span>remi install php-fpm
+<a name="rest_code_d7f13173a36244d6a3328626f0173932-2"></a>chkconfig --levels <span class="m">235</span> php-fpm on
 </pre>
 <p>Editar /etc/php-fpm.d/www.conf</p>
-<pre class="code bash"><a name="rest_code_0bdc6cc085df4fb68cebba5d848475fd-1"></a><span class="p">;</span><span class="nv">listen</span> <span class="o">=</span> <span class="m">127</span>.0.0.1:9000
-<a name="rest_code_0bdc6cc085df4fb68cebba5d848475fd-2"></a><span class="nv">listen</span> <span class="o">=</span> /tmp/php5-fpm.sock
-<a name="rest_code_0bdc6cc085df4fb68cebba5d848475fd-3"></a>pm.status_path <span class="o">=</span> /status
-<a name="rest_code_0bdc6cc085df4fb68cebba5d848475fd-4"></a>ping.path <span class="o">=</span> /ping
+<pre class="code bash"><a name="rest_code_712a9dac104c4d74acabac0cc0df8590-1"></a><span class="p">;</span><span class="nv">listen</span> <span class="o">=</span> <span class="m">127</span>.0.0.1:9000
+<a name="rest_code_712a9dac104c4d74acabac0cc0df8590-2"></a><span class="nv">listen</span> <span class="o">=</span> /tmp/php5-fpm.sock
+<a name="rest_code_712a9dac104c4d74acabac0cc0df8590-3"></a>pm.status_path <span class="o">=</span> /status
+<a name="rest_code_712a9dac104c4d74acabac0cc0df8590-4"></a>ping.path <span class="o">=</span> /ping
 </pre>
 <p>Luego hay que Instalar mod_fastcgi</p>
-<pre class="code bash"><a name="rest_code_e37f5951cdf04409afeeeedcce861fc2-1"></a>yum --enablerepo<span class="o">=</span>remi install mod_fastcgi
+<pre class="code bash"><a name="rest_code_1e890f52a1d24c64841669e58ed8aeee-1"></a>yum --enablerepo<span class="o">=</span>remi install mod_fastcgi
 </pre>
 <p>Deshabilitar mod_php</p>
-<pre class="code bash"><a name="rest_code_6f3e82f8744045e5a6cf56d10e468f78-1"></a>mv /etc/httpd/conf.d/php.conf php.conf.disable
+<pre class="code bash"><a name="rest_code_2a08382b337744efab8d0ace4372ea44-1"></a>mv /etc/httpd/conf.d/php.conf php.conf.disable
 </pre>
 <p>Para la config que sigue abajo hay que crear el directorio "/usr/lib/cgi-bin/".
 Editar el archivo /etc/httpd/conf.d/fastcgi.conf para que quede de la siguiente manera:</p>
-<pre class="code bash"><a name="rest_code_ae396be73617460f945209f47f6b6e56-1"></a>&lt;IfModule mod_fastcgi.c&gt;
-<a name="rest_code_ae396be73617460f945209f47f6b6e56-2"></a>      DirectoryIndex index.php index.html index.shtml index.cgi
-<a name="rest_code_ae396be73617460f945209f47f6b6e56-3"></a>      AddHandler php5-fcgi .php
-<a name="rest_code_ae396be73617460f945209f47f6b6e56-4"></a>      Action php5-fcgi /php5-fcgi
-<a name="rest_code_ae396be73617460f945209f47f6b6e56-5"></a>      Alias /php5-fcgi /usr/lib/cgi-bin/php5-fcgi
-<a name="rest_code_ae396be73617460f945209f47f6b6e56-6"></a>      FastCgiExternalServer /usr/lib/cgi-bin/php5-fcgi -socket /tmp/php5-fpm.sock -pass-header Authorization
-<a name="rest_code_ae396be73617460f945209f47f6b6e56-7"></a>
-<a name="rest_code_ae396be73617460f945209f47f6b6e56-8"></a>      <span class="c1"># For monitoring status with e.g. Munin</span>
-<a name="rest_code_ae396be73617460f945209f47f6b6e56-9"></a>      &lt;LocationMatch <span class="s2">"/(ping|status)"</span>&gt;
-<a name="rest_code_ae396be73617460f945209f47f6b6e56-10"></a>              SetHandler php5-fcgi-virt
-<a name="rest_code_ae396be73617460f945209f47f6b6e56-11"></a>              Action php5-fcgi-virt /php5-fcgi virtual
-<a name="rest_code_ae396be73617460f945209f47f6b6e56-12"></a>      &lt;/LocationMatch&gt;
-<a name="rest_code_ae396be73617460f945209f47f6b6e56-13"></a> &lt;/IfModule&gt;
+<pre class="code bash"><a name="rest_code_76a479510db34cfe8d50a1dd26f2e66d-1"></a>&lt;IfModule mod_fastcgi.c&gt;
+<a name="rest_code_76a479510db34cfe8d50a1dd26f2e66d-2"></a>      DirectoryIndex index.php index.html index.shtml index.cgi
+<a name="rest_code_76a479510db34cfe8d50a1dd26f2e66d-3"></a>      AddHandler php5-fcgi .php
+<a name="rest_code_76a479510db34cfe8d50a1dd26f2e66d-4"></a>      Action php5-fcgi /php5-fcgi
+<a name="rest_code_76a479510db34cfe8d50a1dd26f2e66d-5"></a>      Alias /php5-fcgi /usr/lib/cgi-bin/php5-fcgi
+<a name="rest_code_76a479510db34cfe8d50a1dd26f2e66d-6"></a>      FastCgiExternalServer /usr/lib/cgi-bin/php5-fcgi -socket /tmp/php5-fpm.sock -pass-header Authorization
+<a name="rest_code_76a479510db34cfe8d50a1dd26f2e66d-7"></a>
+<a name="rest_code_76a479510db34cfe8d50a1dd26f2e66d-8"></a>      <span class="c1"># For monitoring status with e.g. Munin</span>
+<a name="rest_code_76a479510db34cfe8d50a1dd26f2e66d-9"></a>      &lt;LocationMatch <span class="s2">"/(ping|status)"</span>&gt;
+<a name="rest_code_76a479510db34cfe8d50a1dd26f2e66d-10"></a>              SetHandler php5-fcgi-virt
+<a name="rest_code_76a479510db34cfe8d50a1dd26f2e66d-11"></a>              Action php5-fcgi-virt /php5-fcgi virtual
+<a name="rest_code_76a479510db34cfe8d50a1dd26f2e66d-12"></a>      &lt;/LocationMatch&gt;
+<a name="rest_code_76a479510db34cfe8d50a1dd26f2e66d-13"></a> &lt;/IfModule&gt;
 </pre>
 <p>Done!
 Faltaría configurar los vhosts, etc pero eso es standard.</p>
@@ -233,12 +237,8 @@ Faltaría configurar los vhosts, etc pero eso es standard.</p>
     <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
-        </section></article><script>var disqus_shortname="notodoesmecnico";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
-</div>
-        <!--End of body content-->
-
-        <footer id="footer">
-            Contents © 2019         <a href="mailto:mail@gilgamezh.me">GiLgAmEzH</a> - My Fingerprint: <a href="public.key">0712 8EB2 C626 08C5 69E1  8949 6DDF 6FA3 5EB9 26AB</a>  Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+        </section></article><script>var disqus_shortname="notodoesmecnico";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><!--End of body content--><footer id="footer">
+            Contents © 2019         <a href="mailto:mail@gilgamezh.me">GiLgAmEzH</a> - My Fingerprint: <a href="https://gilgamezh.me/public.key">0712 8EB2 C626 08C5 69E1  8949 6DDF 6FA3 5EB9 26AB</a>  Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
 <img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a>
             
@@ -247,10 +247,7 @@ Faltaría configurar los vhosts, etc pero eso es standard.</p>
 </div>
 
 
-            <script src="../../../assets/js/jquery.min.js"></script><script src="../../../assets/js/bootstrap.min.js"></script><script src="../../../assets/js/baguetteBox.min.js"></script><script src="../../../assets/js/moment-with-locales.min.js"></script><script src="../../../assets/js/fancydates.min.js"></script><!-- fancy dates --><script>
-    moment.locale("en");
-    fancydates(0, "YYYY-MM-DD HH:mm");
-    </script><!-- end fancy dates --><script>
+            <script src="../../../assets/js/jquery.min.js"></script><script src="../../../assets/js/popper.min.js"></script><script src="../../../assets/js/bootstrap.min.js"></script><script src="../../../assets/js/baguetteBox.min.js"></script><script>
     baguetteBox.run('div#content', {
         ignoreClass: 'islink',
         captions: function(element) {
