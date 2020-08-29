@@ -1,0 +1,6 @@
+"SongName","ArtistName","AlbumName"
+"I Know Its Over","The Smiths","The Queen Is Dead"
+"Modern Times Rock N Roll","Queen","Queen"
+"Your My Best Friend","Queen","Queen's Greatest Hits"
+"Im In Love With My Car","Queen","Queen's Greatest Hits"
+"Mamma","Queen","Queen"
