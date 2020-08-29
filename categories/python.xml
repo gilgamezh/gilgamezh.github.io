@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Publicaciones sobre python)</title><link>https://gilgamezh.me/</link><description></description><atom:link href="https://gilgamezh.me/categories/python.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><lastBuildDate>Sat, 23 Feb 2019 15:33:12 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>fades8.1_released</title><link>https://gilgamezh.me/posts/fades81_released/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Hola a todas y todos,&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Publicaciones sobre python)</title><link>https://gilgamezh.me/</link><description></description><atom:link href="https://gilgamezh.me/categories/python.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><lastBuildDate>Sat, 29 Aug 2020 09:18:40 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>fades8.1_released</title><link>https://gilgamezh.me/posts/fades81_released/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Hola a todas y todos,&lt;/p&gt;
 &lt;p&gt;Estamos encantados de anunciar la liberación de fades 8.1.&lt;/p&gt;
 &lt;p&gt;fades es un sistema que maneja automáticamente los virtualenvs en los
 casos que uno normalmente encuentra al escribir scripts y programas
@@ -12,59 +12,47 @@ Python) y también marcar las dependencias necesarias. Más detalles acá:&lt;/p
 &lt;p&gt;&lt;a class="reference external" href="http://fades.rtfd.org/"&gt;http://fades.rtfd.org/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;¿Qué hay de nuevo en esta release?&lt;/p&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;Ejecuta automaticamente scripts desde la web, soportando los pastebines más comunes&lt;/li&gt;
-&lt;li&gt;Soporta múltiples (o inexistentes) archivos requirement.txt, los cuales también pueden estar anidados&lt;/li&gt;
-&lt;li&gt;Evita revisar la disponibilidad en PyPI si no se indicaron dependencias&lt;/li&gt;
-&lt;li&gt;Ofrece una opción para mostrar el path del virtualenv en el sistema&lt;/li&gt;
-&lt;li&gt;Mejor indicación/ayuda cuando no se encuentra el script indicado o el ejecutable de la dependencia&lt;/li&gt;
-&lt;li&gt;Trae mejoras en logs, urls de PyPI, documentación, soporte multiplataforma, y varias otras mejoras y correcciones menores&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ejecuta automaticamente scripts desde la web, soportando los pastebines más comunes&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Soporta múltiples (o inexistentes) archivos requirement.txt, los cuales también pueden estar anidados&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Evita revisar la disponibilidad en PyPI si no se indicaron dependencias&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ofrece una opción para mostrar el path del virtualenv en el sistema&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Mejor indicación/ayuda cuando no se encuentra el script indicado o el ejecutable de la dependencia&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Trae mejoras en logs, urls de PyPI, documentación, soporte multiplataforma, y varias otras mejoras y correcciones menores&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Queremos darles muchas gracias a los siguientes colaboradores que ayudaron a mejorar a fades de distintas maneras para esta versión (en orden alfabético):&lt;/p&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;Andrés Delfino - &lt;a class="reference external" href="https://github.com/andresdelfino"&gt;https://github.com/andresdelfino&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Iñaki Malerba - &lt;a class="reference external" href="https://github.com/inakimalerba"&gt;https://github.com/inakimalerba&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Martin Alderete - &lt;a class="reference external" href="https://github.com/malderete"&gt;https://github.com/malderete&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Andrés Delfino - &lt;a class="reference external" href="https://github.com/andresdelfino"&gt;https://github.com/andresdelfino&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Iñaki Malerba - &lt;a class="reference external" href="https://github.com/inakimalerba"&gt;https://github.com/inakimalerba&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Martin Alderete - &lt;a class="reference external" href="https://github.com/malderete"&gt;https://github.com/malderete&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Para instalar y disfrutar fades:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;Si estás en Ubuntu o Debian, podés facilmente instalarlo así (aunque probablemente no obtengas la &lt;em&gt;última&lt;/em&gt; versión:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-sudo apt-get install fades
-&lt;/pre&gt;
+&lt;li&gt;&lt;p&gt;Si estás en Ubuntu o Debian, podés facilmente instalarlo así (aunque probablemente no obtengas la &lt;em&gt;última&lt;/em&gt; versión:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;sudo apt-get install fades&lt;/pre&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Para debian/ubuntu que no sea lo último, acá hay un .deb (con su respectivo archivo fuente Debian):&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-http://ftp.debian.org/debian/pool/main/f/fades/fades_8.1-1_all.deb
-http://ftp.debian.org/debian/pool/main/f/fades/fades_8.1-1.dsc
-&lt;/pre&gt;
+&lt;li&gt;&lt;p&gt;Para debian/ubuntu que no sea lo último, acá hay un .deb (con su respectivo archivo fuente Debian):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;http://ftp.debian.org/debian/pool/main/f/fades/fades_8.1-1_all.deb
+http://ftp.debian.org/debian/pool/main/f/fades/fades_8.1-1.dsc&lt;/pre&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Instalarlo en Arch es muy simple:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-yaourt -S fades
-&lt;/pre&gt;
+&lt;li&gt;&lt;p&gt;Instalarlo en Arch es muy simple:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;yaourt -S fades&lt;/pre&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;En cualquier Linux si tenés el sistema Snap:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-snap install fades
-&lt;/pre&gt;
+&lt;li&gt;&lt;p&gt;En cualquier Linux si tenés el sistema Snap:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;snap install fades&lt;/pre&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Podés usar pip si querés:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-pip3 install fades
-&lt;/pre&gt;
+&lt;li&gt;&lt;p&gt;Podés usar pip si querés:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;pip3 install fades&lt;/pre&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Siempre podés usar el tarball multiplataforma e instalarlo de la manera clásica:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-wget http://ftp.debian.org/debian/pool/main/f/fades/fades_8.1.orig.tar.gz
+&lt;li&gt;&lt;p&gt;Siempre podés usar el tarball multiplataforma e instalarlo de la manera clásica:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;wget http://ftp.debian.org/debian/pool/main/f/fades/fades_8.1.orig.tar.gz
 tar -xf fades_*.tar.gz
 cd fades-*
-sudo ./setup.py install
-&lt;/pre&gt;
+sudo ./setup.py install&lt;/pre&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Ayuda / preguntas:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;Podés hacer cualquier pregunta o mandar una recomendación o pedido en el grupo de Telegram:&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Podés hacer cualquier pregunta o mandar una recomendación o pedido en el grupo de Telegram:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;cite&gt;https://t.me/fadesmagic&lt;/cite&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -74,11 +62,11 @@ sudo ./setup.py install
 &lt;p&gt;&lt;a class="reference external" href="http://listas.python.org.ar/mailman/listinfo/fades"&gt;http://listas.python.org.ar/mailman/listinfo/fades&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;...o en el canal de IRC #fades en Freenode.&lt;/p&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;También podés abrir un issue acá (por favor hacelo si encontrás algún problema!):&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;También podés abrir un issue acá (por favor hacelo si encontrás algún problema!):&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://github.com/PyAr/fades/issues/new"&gt;https://github.com/PyAr/fades/issues/new&lt;/a&gt;&lt;/p&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;El proyecto en sí está en&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;El proyecto en sí está en&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://github.com/PyAr/fades"&gt;https://github.com/PyAr/fades&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Es muy fácil ejecutar la última versión de desarrollo:&lt;/p&gt;
@@ -92,15 +80,15 @@ columnas.
 Eso sí antes de dar un paso adelante confirmamos con la &lt;a class="reference external" href="https://www.python.org/dev/peps/pep-0008/#maximum-line-length"&gt;PEP8&lt;/a&gt;
 que se puede llevar hasta 100 caracteres, sin romper esta santa ¿ley?.&lt;/p&gt;
 &lt;blockquote&gt;
-Some teams strongly prefer a longer line length. For code maintained
+&lt;p&gt;Some teams strongly prefer a longer line length. For code maintained
 exclusively or primarily by a team that can reach agreement on this issue,
 it is okay to increase the nominal line length from 80 to 100 characters
 (effectively increasing the maximum length to 99 characters), provided
-that comments and docstrings are still wrapped at 72 characters.&lt;/blockquote&gt;
+that comments and docstrings are still wrapped at 72 characters.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;Así que ahí fuimos. Como yo tengo una linea que me marca ese límite esto fue lo
 que cambié en mi .vimrc&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-function! ConditionalLoad()
+&lt;pre class="literal-block"&gt;function! ConditionalLoad()
 highlight ColorColumn guibg=PaleTurquoise1
 if getcwd() =~ $HOME . "/code/fades/*"
     set colorcolumn=99
@@ -109,13 +97,13 @@ else
 endif
 endfunction
 autocmd BufRead *.py call ConditionalLoad()
-autocmd BufRead *.rst call ConditionalLoad()
-&lt;/pre&gt;
+autocmd BufRead *.rst call ConditionalLoad()&lt;/pre&gt;
 &lt;p&gt;El código de esa función es de Facundo.&lt;/p&gt;
 &lt;p&gt;El punto del cual tomé especial nota es que para los comentarios y docstrings
 la PEP8 recomienda mantenerse dentro de los 72 caracteres&lt;/p&gt;
 &lt;blockquote&gt;
-that comments and docstrings are still wrapped at 72 characters.&lt;/blockquote&gt;
+&lt;p&gt;that comments and docstrings are still wrapped at 72 characters.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;Hoy hice click en mi RSS sobre una nota de Incognitosis (a quién normalmente
 leo por RSS) y me llamó la atención el hermoso diseño del blog.
 Así que dejé &lt;a class="reference external" href="http://www.javipas.com/2015/03/13/usb-c-futuro-estandar/comment-page-1/#comment-87318"&gt;un comentario&lt;/a&gt;.
@@ -140,15 +128,15 @@ caché de virtualenvs en lugar de tener uno por cada script.
 De paso se arreglaron varios errores y se mejoraron muchas cosas.&lt;/p&gt;
 &lt;p&gt;¿Qué hay de nuevo en esta release?&lt;/p&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;Tiene un cache para virtualenvs creados en el sistema; mejora
-la reutilización y velocidad.&lt;/li&gt;
-&lt;li&gt;Como resultado del feature anterior, ya no guarda metadata por
-script (&lt;em&gt;en&lt;/em&gt; el script).&lt;/li&gt;
-&lt;li&gt;Permite indicar el nombre del projecto si es diferente al del
-módulo (ej: "import bs4 # fades.pypi beautifulsoup4 == 3.5")&lt;/li&gt;
-&lt;li&gt;Soporta requerimientos complejos de versión: (ej: "&amp;lt;2.6,&amp;gt;1.3,!=1.9")&lt;/li&gt;
-&lt;li&gt;Maneja paquetes a los que pip les cambia el nombre&lt;/li&gt;
-&lt;li&gt;Otros cambios y correcciones menores.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Tiene un cache para virtualenvs creados en el sistema; mejora
+la reutilización y velocidad.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Como resultado del feature anterior, ya no guarda metadata por
+script (&lt;em&gt;en&lt;/em&gt; el script).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Permite indicar el nombre del projecto si es diferente al del
+módulo (ej: "import bs4 # fades.pypi beautifulsoup4 == 3.5")&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Soporta requerimientos complejos de versión: (ej: "&amp;lt;2.6,&amp;gt;1.3,!=1.9")&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Maneja paquetes a los que pip les cambia el nombre&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Otros cambios y correcciones menores.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Mas info: &lt;a class="reference external" href="https://github.com/PyAr/fades/releases/tag/2.0"&gt;https://github.com/PyAr/fades/releases/tag/2.0&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>fades</category><category>proyectos</category><category>PyAr</category><category>python</category><category>virtualenv</category><guid>https://gilgamezh.me/posts/fades-20/</guid><pubDate>Sat, 28 Feb 2015 15:25:16 GMT</pubDate></item><item><title>fades: FAst DEpendencies for Scripts</title><link>https://gilgamezh.me/posts/fades-fast-dependencies-for-scripts/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;En el viaje a PyConAr 2014 fui y volví en auto con Facu Batista. En esas horas
 charlamos sin para un minuto, y entre cosa y cosa se nos ocurrió un proyectito
@@ -169,42 +157,35 @@ Python) y también marcar las dependencias necesarias. Más detalles acá:&lt;/p
 &lt;h2&gt;Para obtenerlo:&lt;/h2&gt;
 &lt;!-- TEASER_END --&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;Para debian/ubuntu hay un .deb acá:&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Para debian/ubuntu hay un .deb acá:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://taniquetil.com.ar/fades/fades-1.0.deb"&gt;http://taniquetil.com.ar/fades/fades-1.0.deb&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Instalarlo en Arch es muy simple:&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Instalarlo en Arch es muy simple:&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre class="literal-block"&gt;
-yaourt -S fades
-&lt;/pre&gt;
+&lt;pre class="literal-block"&gt;yaourt -S fades&lt;/pre&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;Podés usar pip si querés:&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Podés usar pip si querés:&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre class="literal-block"&gt;
-pip3 install fades
-&lt;/pre&gt;
+&lt;pre class="literal-block"&gt;pip3 install fades&lt;/pre&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;Siempre podés usar el tarball multiplataforma e instalarlo de la manera clásica:&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Siempre podés usar el tarball multiplataforma e instalarlo de la manera clásica:&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre class="literal-block"&gt;
-wget http://taniquetil.com.ar/fades/fades-1.0.tar.gz
+&lt;pre class="literal-block"&gt;wget http://taniquetil.com.ar/fades/fades-1.0.tar.gz
 tar -xf fades-1.0.tar.gz
 cd fades-1.0
-sudo ./setup.py install
-&lt;/pre&gt;
+sudo ./setup.py install&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div class="section" id="ayuda-preguntas"&gt;
 &lt;h2&gt;Ayuda / preguntas:&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;Podés hacer cualquier pregunta o mandar una recomendación o pedido en la lista de correo:&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Podés hacer cualquier pregunta o mandar una recomendación o pedido en la lista de correo:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://listas.python.org.ar/mailman/listinfo/fades"&gt;http://listas.python.org.ar/mailman/listinfo/fades&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;También podés abrir un issue acá (por favor hacelo si encontrás algún problema!):&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;También podés abrir un issue acá (por favor hacelo si encontrás algún problema!):&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://github.com/PyAr/fades/issues/new"&gt;https://github.com/PyAr/fades/issues/new&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -232,10 +213,8 @@ gvim en lugar de vim, pip2 en lugar de pip y tener en cuenta que el paquete
 exuberant-ctags es extra/xtags.
 Lo único que cambia es este punto de la guia de instalación en el repo oficial.&lt;/p&gt;
 &lt;p&gt;Dependencies:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-sudo pacman -Sy gvim ctags git python2-pip
-sudo pip2 install dbgp vim-debug pep8 flake8 pyflakes isort
-&lt;/pre&gt;&lt;/div&gt;</description><category>how-to</category><category>python</category><category>vim</category><guid>https://gilgamezh.me/posts/how-to-install-fisa-vim-cofig-in-archlinux/</guid><pubDate>Sat, 15 Mar 2014 18:22:44 GMT</pubDate></item><item><title>#python | Requests: HTTP for Humans</title><link>https://gilgamezh.me/posts/python-requests-http-for-humans/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;img alt="/images/requests-sidebar.png" src="https://gilgamezh.me/images/requests-sidebar.png"&gt;
+&lt;pre class="literal-block"&gt;sudo pacman -Sy gvim ctags git python2-pip
+sudo pip2 install dbgp vim-debug pep8 flake8 pyflakes isort&lt;/pre&gt;&lt;/div&gt;</description><category>how-to</category><category>python</category><category>vim</category><guid>https://gilgamezh.me/posts/how-to-install-fisa-vim-cofig-in-archlinux/</guid><pubDate>Sat, 15 Mar 2014 18:22:44 GMT</pubDate></item><item><title>#python | Requests: HTTP for Humans</title><link>https://gilgamezh.me/posts/python-requests-http-for-humans/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;img alt="/images/requests-sidebar.png" src="https://gilgamezh.me/images/requests-sidebar.png"&gt;
 &lt;p&gt;Buscando otra cosa me encontre con esta libreria que es una "abstracción"
 de urllib2. simple MUY SIMPLE!&lt;/p&gt;
 &lt;blockquote&gt;

@@ -13,8 +13,8 @@
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
-<link rel="alternate" type="application/rss+xml" title="RSS (en)" href="../../en/rss.xml">
-<link rel="alternate" type="application/rss+xml" title="RSS (es)" href="../../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (es)" hreflang="es" href="../../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (en)" hreflang="en" href="../../en/rss.xml">
 <link rel="canonical" href="https://gilgamezh.me/posts/archlinux-mueve-todos-los-binarios-a-usrbin-como-actualizar/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="GiLgAmEzH">
 <link rel="prev" href="../jw-player-510-rtmp-avoid-dropped-frames-transition/" title="JW Player 5.10 - RTMP - Avoid dropped frames transition" type="text/html">
@@ -24,9 +24,8 @@
 <meta property="og:url" content="https://gilgamezh.me/posts/archlinux-mueve-todos-los-binarios-a-usrbin-como-actualizar/">
 <meta property="og:description" content="Hace ya bastantes días que cualquier que intente actualizar su Archlinux se
 va a encontrar con  un error de este tipo:
-
 error: failed to commit transaction (conflicting files)
-filesystem: /bin exists ">
+filesystem: /bin exists i">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2013-08-24T17:32:23-03:00">
 <meta property="article:tag" content="archlinux">
@@ -51,13 +50,13 @@ filesystem: /bin exists ">
             </div>
         </div>
           <div class="col-md-6 col-xs-10 col-sm-10 bootblog4-brand" style="width: auto;">
-            <a class="navbar-brand blog-header-logo text-dark" href="https://gilgamezh.me/">
+            <a class="navbar-brand blog-header-logo text-dark" href="../../">
             <img src="../../images/gilgamezh.png" alt="No Todo Es Mecánico" id="logo" class="d-inline-block align-top"><span id="blog-title">No Todo Es Mecánico</span>
         </a>
           </div>
             <div class="col-md-3 justify-content-end align-items-center bs-nav-collapsible collapse flex-collapse bootblog4-right-nav">
             <nav class="navbar navbar-light bg-white"><ul class="navbar-nav bootblog4-right-nav">
-<li class="nav-item"><a href="https://gilgamezh.me/en/" rel="alternate" hreflang="en" class="nav-link">English</a></li>
+<li class="nav-item"><a href="../../en/" rel="alternate" hreflang="en" class="nav-link">English</a></li>
 
                     
                     
@@ -104,10 +103,11 @@ filesystem: /bin exists ">
         <!--Body content-->
         
         
+        
 <article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Archlinux mueve todos los binarios a /usr/bin. Cómo actualizar?</a></h1>
 
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
                     GiLgAmEzH
             </span></p>
             <p class="dateline">
@@ -116,7 +116,7 @@ filesystem: /bin exists ">
             </p>
                 <p class="commentline">
         
-    <a href="#disqus_thread" data-disqus-identifier="cache/posts/archlinux-mueve-todos-los-binarios-a-usrbin-como-actualizar.html">Comments</a>
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/archlinux-mueve-todos-los-binarios-a-usrbin-como-actualizar.html">Comentarios</a>
 
 
             
@@ -130,10 +130,8 @@ filesystem: /bin exists ">
     <div>
 <p>Hace ya bastantes días que cualquier que intente actualizar su Archlinux se
 va a encontrar con  un error de este tipo:</p>
-<pre class="literal-block">
-error: failed to commit transaction (conflicting files)
-filesystem: /bin exists in filesystem
-</pre>
+<pre class="literal-block">error: failed to commit transaction (conflicting files)
+filesystem: /bin exists in filesystem</pre>
 <p>Si son precavidos y están suscriptos a las listas de correo de Arch se
 enteraron con tiempo, de cualquier manera los pasos a seguir están detallados
 acá :<a class="reference external" href="https://www.archlinux.org/news/binaries-move-to-usrbin-requiring-update-intervention/">https://www.archlinux.org/news/binaries-move-to-usrbin-requiring-update-intervention/</a></p>
@@ -146,61 +144,62 @@ to put those files in /usr/bin. The list of packages that are not in a
 repo that need to be fixed can be generated using:</p>
 <p>$ pacman -Qqo /bin /sbin /usr/sbin | pacman -Qm -</p>
 </blockquote>
-<pre class="code bash"><a name="rest_code_eec2ca4f3ffd44f291a8b24a986bde75-1"></a>gilgamezh ~ $ pacman -Qqo /bin /sbin /usr/sbin <span class="p">|</span> pacman -Qm -
-<a name="rest_code_eec2ca4f3ffd44f291a8b24a986bde75-2"></a>foo2zjs <span class="m">20121110</span>-1
-<a name="rest_code_eec2ca4f3ffd44f291a8b24a986bde75-3"></a>grub <span class="m">0</span>.97-21
-<a name="rest_code_eec2ca4f3ffd44f291a8b24a986bde75-4"></a>foo2zjs <span class="m">20121110</span>-1
-<a name="rest_code_eec2ca4f3ffd44f291a8b24a986bde75-5"></a>grub <span class="m">0</span>.97-21
+<pre class="code bash"><a name="rest_code_e3e26d3cc13641aeabafbc1861a747be-1"></a>gilgamezh ~ $ pacman -Qqo /bin /sbin /usr/sbin <span class="p">|</span> pacman -Qm -
+<a name="rest_code_e3e26d3cc13641aeabafbc1861a747be-2"></a>foo2zjs <span class="m">20121110</span>-1
+<a name="rest_code_e3e26d3cc13641aeabafbc1861a747be-3"></a>grub <span class="m">0</span>.97-21
+<a name="rest_code_e3e26d3cc13641aeabafbc1861a747be-4"></a>foo2zjs <span class="m">20121110</span>-1
+<a name="rest_code_e3e26d3cc13641aeabafbc1861a747be-5"></a>grub <span class="m">0</span>.97-21
 </pre>
 <p>Encontre estos 2 paquetes, foo2zjs lo uso para mi impresora
 (hp laserjet 1005p) y bueno grub... tendré que actualizar a Grub2.</p>
 <p>Siguiendo los pasos de la wiki de arch:</p>
-<pre class="code bash"><a name="rest_code_cc674b14a6334762bc8654d029bb0147-1"></a>gilgamezh ~ $ sudo pacman -S grub-bios
-<a name="rest_code_cc674b14a6334762bc8654d029bb0147-2"></a><span class="o">[</span>sudo<span class="o">]</span> password <span class="k">for</span> gilgamezh:
-<a name="rest_code_cc674b14a6334762bc8654d029bb0147-3"></a>resolviendo dependencias...
-<a name="rest_code_cc674b14a6334762bc8654d029bb0147-4"></a>verificando conflictos...
-<a name="rest_code_cc674b14a6334762bc8654d029bb0147-5"></a>:: grub-common y grub están en conflicto. ¿Quitar grub? <span class="o">[</span>s/N<span class="o">]</span> s
-<a name="rest_code_cc674b14a6334762bc8654d029bb0147-6"></a>
-<a name="rest_code_cc674b14a6334762bc8654d029bb0147-7"></a>Paquetes <span class="o">(</span><span class="m">3</span><span class="o">)</span>: grub-0.97-21 <span class="o">[</span>quitando<span class="o">]</span>  grub-common-2.00-2  grub-bios-2.00-2
-<a name="rest_code_cc674b14a6334762bc8654d029bb0147-8"></a>
-<a name="rest_code_cc674b14a6334762bc8654d029bb0147-9"></a>Tamaño Total de Descarga:  <span class="m">4</span>,32 MiB
-<a name="rest_code_cc674b14a6334762bc8654d029bb0147-10"></a>Tamaño Total Instalado:    <span class="m">15</span>,08 MiB
-<a name="rest_code_cc674b14a6334762bc8654d029bb0147-11"></a>Tamaño neto a actualizar:  <span class="m">13</span>,04 MiB
-<a name="rest_code_cc674b14a6334762bc8654d029bb0147-12"></a>
-<a name="rest_code_cc674b14a6334762bc8654d029bb0147-13"></a>:: ¿Continuar con la instalación? <span class="o">[</span>S/n<span class="o">]</span> s
-<a name="rest_code_cc674b14a6334762bc8654d029bb0147-14"></a>:: Recuperando paquetes ...
-<a name="rest_code_cc674b14a6334762bc8654d029bb0147-15"></a>
-<a name="rest_code_cc674b14a6334762bc8654d029bb0147-16"></a>
-<a name="rest_code_cc674b14a6334762bc8654d029bb0147-17"></a><span class="c1"># modprobe dm-mod</span>
-<a name="rest_code_cc674b14a6334762bc8654d029bb0147-18"></a><span class="c1"># grub-install --target=i386-pc --recheck --debug --force /dev/sdaX</span>
-<a name="rest_code_cc674b14a6334762bc8654d029bb0147-19"></a><span class="c1"># chattr -i /boot/grub/i386-pc/core.img</span>
-<a name="rest_code_cc674b14a6334762bc8654d029bb0147-20"></a><span class="c1"># chattr +i /boot/grub/i386-pc/core.img</span>
+<pre class="code bash"><a name="rest_code_57feb87e6ac840b291049f25756062ad-1"></a>gilgamezh ~ $ sudo pacman -S grub-bios
+<a name="rest_code_57feb87e6ac840b291049f25756062ad-2"></a><span class="o">[</span>sudo<span class="o">]</span> password <span class="k">for</span> gilgamezh:
+<a name="rest_code_57feb87e6ac840b291049f25756062ad-3"></a>resolviendo dependencias...
+<a name="rest_code_57feb87e6ac840b291049f25756062ad-4"></a>verificando conflictos...
+<a name="rest_code_57feb87e6ac840b291049f25756062ad-5"></a>:: grub-common y grub están en conflicto. ¿Quitar grub? <span class="o">[</span>s/N<span class="o">]</span> s
+<a name="rest_code_57feb87e6ac840b291049f25756062ad-6"></a>
+<a name="rest_code_57feb87e6ac840b291049f25756062ad-7"></a>Paquetes <span class="o">(</span><span class="m">3</span><span class="o">)</span>: grub-0.97-21 <span class="o">[</span>quitando<span class="o">]</span>  grub-common-2.00-2  grub-bios-2.00-2
+<a name="rest_code_57feb87e6ac840b291049f25756062ad-8"></a>
+<a name="rest_code_57feb87e6ac840b291049f25756062ad-9"></a>Tamaño Total de Descarga:  <span class="m">4</span>,32 MiB
+<a name="rest_code_57feb87e6ac840b291049f25756062ad-10"></a>Tamaño Total Instalado:    <span class="m">15</span>,08 MiB
+<a name="rest_code_57feb87e6ac840b291049f25756062ad-11"></a>Tamaño neto a actualizar:  <span class="m">13</span>,04 MiB
+<a name="rest_code_57feb87e6ac840b291049f25756062ad-12"></a>
+<a name="rest_code_57feb87e6ac840b291049f25756062ad-13"></a>:: ¿Continuar con la instalación? <span class="o">[</span>S/n<span class="o">]</span> s
+<a name="rest_code_57feb87e6ac840b291049f25756062ad-14"></a>:: Recuperando paquetes ...
+<a name="rest_code_57feb87e6ac840b291049f25756062ad-15"></a>
+<a name="rest_code_57feb87e6ac840b291049f25756062ad-16"></a>
+<a name="rest_code_57feb87e6ac840b291049f25756062ad-17"></a><span class="c1"># modprobe dm-mod</span>
+<a name="rest_code_57feb87e6ac840b291049f25756062ad-18"></a><span class="c1"># grub-install --target=i386-pc --recheck --debug --force /dev/sdaX</span>
+<a name="rest_code_57feb87e6ac840b291049f25756062ad-19"></a><span class="c1"># chattr -i /boot/grub/i386-pc/core.img</span>
+<a name="rest_code_57feb87e6ac840b291049f25756062ad-20"></a><span class="c1"># chattr +i /boot/grub/i386-pc/core.img</span>
 </pre>
 <p><strong>OJO: /boot/grub/menu.lst se guarda como .pacnew hay que renombrarlo!</strong></p>
 <p>Después:</p>
-<pre class="code bash"><a name="rest_code_020eacb808e34784901c1949b09b7286-1"></a>gilgamezh ~ $ sudo grub-mkconfig -o /boot/grub/grub.cfg
-<a name="rest_code_020eacb808e34784901c1949b09b7286-2"></a>Generando grub.cfg...
-<a name="rest_code_020eacb808e34784901c1949b09b7286-3"></a>Encontrada imagen de linux: /boot/vmlinuz-linux
-<a name="rest_code_020eacb808e34784901c1949b09b7286-4"></a>Encontrada imagen de memoria inicial: /boot/initramfs-linux.img
-<a name="rest_code_020eacb808e34784901c1949b09b7286-5"></a>hecho
+<pre class="code bash"><a name="rest_code_e65978b69fa04a78bae4d2dc17785e19-1"></a>gilgamezh ~ $ sudo grub-mkconfig -o /boot/grub/grub.cfg
+<a name="rest_code_e65978b69fa04a78bae4d2dc17785e19-2"></a>Generando grub.cfg...
+<a name="rest_code_e65978b69fa04a78bae4d2dc17785e19-3"></a>Encontrada imagen de linux: /boot/vmlinuz-linux
+<a name="rest_code_e65978b69fa04a78bae4d2dc17785e19-4"></a>Encontrada imagen de memoria inicial: /boot/initramfs-linux.img
+<a name="rest_code_e65978b69fa04a78bae4d2dc17785e19-5"></a>hecho
 </pre>
 <p>(restart y con suerte todo funca bien)</p>
 <p>Siguiendo con la migración a /usr/bin</p>
 <blockquote>
-Also check packages installed from non-official repos using:
-$ paclist &lt;repo&gt; | awk ' { print $1 } ' | pacman -Ql - | grep ' /s?bin/| /usr/sbin/' ' } '</blockquote>
+<p>Also check packages installed from non-official repos using:
+$ paclist &lt;repo&gt; | awk ' { print $1 } ' | pacman -Ql - | grep ' /s?bin/| /usr/sbin/' ' } '</p>
+</blockquote>
 <p>Yo no uso repositorios "non-official"</p>
 <blockquote>
 <ol class="arabic simple" start="3">
-<li>If you have files in /bin, /sbin or /usr/sbin that are unowned by any package, you need to move them. Find a list using:</li>
+<li><p>If you have files in /bin, /sbin or /usr/sbin that are unowned by any package, you need to move them. Find a list using:</p></li>
 </ol>
 <p>$ find /bin /sbin /usr/sbin -exec pacman -Qo -- {} + &gt;/dev/null</p>
 </blockquote>
 <p>En mi caso no tuve resultados de este find.
 Después ejecute:</p>
-<pre class="code bash"><a name="rest_code_addc6d8703124c809b318a0d6b2a424e-1"></a><span class="c1"># pacman -Syu --ignore filesystem,bash</span>
-<a name="rest_code_addc6d8703124c809b318a0d6b2a424e-2"></a><span class="c1"># pacman -S bash</span>
-<a name="rest_code_addc6d8703124c809b318a0d6b2a424e-3"></a><span class="c1"># pacman -Su</span>
+<pre class="code bash"><a name="rest_code_b50d1731ae304fb9ad13f13b37de9c24-1"></a><span class="c1"># pacman -Syu --ignore filesystem,bash</span>
+<a name="rest_code_b50d1731ae304fb9ad13f13b37de9c24-2"></a><span class="c1"># pacman -S bash</span>
+<a name="rest_code_b50d1731ae304fb9ad13f13b37de9c24-3"></a><span class="c1"># pacman -Su</span>
 </pre>
 <p>Actualizó como 500 megas y todo 10 puntos :)</p>
 </div>
@@ -239,9 +238,10 @@ Después ejecute:</p>
 
 
         </section></article><script>var disqus_shortname="notodoesmecnico";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><!--End of body content--><footer id="footer">
-            Contents © 2019         <a href="mailto:mail@gilgamezh.me">GiLgAmEzH</a> - My Fingerprint: <a href="https://gilgamezh.me/public.key">0712 8EB2 C626 08C5 69E1  8949 6DDF 6FA3 5EB9 26AB</a>  Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2020         <a href="mailto:mail@gilgamezh.me">GiLgAmEzH</a> - My Fingerprint: <a href="https://gilgamezh.me/public.key">0712 8EB2 C626 08C5 69E1  8949 6DDF 6FA3 5EB9 26AB</a>  Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
 <img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a>
+            
             
         </footer>
 </div>

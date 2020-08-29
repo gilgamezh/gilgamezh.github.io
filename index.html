@@ -14,8 +14,8 @@
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
-<link rel="alternate" type="application/rss+xml" title="RSS (en)" href="en/rss.xml">
-<link rel="alternate" type="application/rss+xml" title="RSS (es)" href="rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (es)" hreflang="es" href="rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (en)" hreflang="en" href="en/rss.xml">
 <link rel="canonical" href="https://gilgamezh.me/">
 <link rel="next" href="index-5.html" type="text/html">
 <!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/fades81_released/" type="text/html">
@@ -35,13 +35,13 @@
             </div>
         </div>
           <div class="col-md-6 col-xs-10 col-sm-10 bootblog4-brand" style="width: auto;">
-            <a class="navbar-brand blog-header-logo text-dark" href="https://gilgamezh.me/">
+            <a class="navbar-brand blog-header-logo text-dark" href=".">
             <img src="images/gilgamezh.png" alt="No Todo Es Mecánico" id="logo" class="d-inline-block align-top"><span id="blog-title">No Todo Es Mecánico</span>
         </a>
           </div>
             <div class="col-md-3 justify-content-end align-items-center bs-nav-collapsible collapse flex-collapse bootblog4-right-nav">
             <nav class="navbar navbar-light bg-white"><ul class="navbar-nav bootblog4-right-nav">
-<li class="nav-item"><a href="https://gilgamezh.me/en/" rel="alternate" hreflang="en" class="nav-link">English</a></li>
+<li class="nav-item"><a href="en/" rel="alternate" hreflang="en" class="nav-link">English</a></li>
 
                     
                     
@@ -82,6 +82,7 @@
         <!--Body content-->
         
         
+        
     
         
 
@@ -99,7 +100,7 @@
             </p>
                         <p class="commentline">
         
-    <a href="posts/fades81_released/#disqus_thread" data-disqus-identifier="cache/posts/fades81_released.html">Comments</a>
+    <a href="posts/fades81_released/#disqus_thread" data-disqus-identifier="cache/posts/fades81_released.html">Comentarios</a>
 
 
                 </p>
@@ -119,69 +120,54 @@ Python) y también marcar las dependencias necesarias. Más detalles acá:</p>
 <p><a class="reference external" href="http://fades.rtfd.org/">http://fades.rtfd.org/</a></p>
 <p>¿Qué hay de nuevo en esta release?</p>
 <ul class="simple">
-<li>Ejecuta automaticamente scripts desde la web, soportando los pastebines más comunes</li>
-<li>Soporta múltiples (o inexistentes) archivos requirement.txt, los cuales también pueden estar anidados</li>
-<li>Evita revisar la disponibilidad en PyPI si no se indicaron dependencias</li>
-<li>Ofrece una opción para mostrar el path del virtualenv en el sistema</li>
-<li>Mejor indicación/ayuda cuando no se encuentra el script indicado o el ejecutable de la dependencia</li>
-<li>Trae mejoras en logs, urls de PyPI, documentación, soporte multiplataforma, y varias otras mejoras y correcciones menores</li>
+<li><p>Ejecuta automaticamente scripts desde la web, soportando los pastebines más comunes</p></li>
+<li><p>Soporta múltiples (o inexistentes) archivos requirement.txt, los cuales también pueden estar anidados</p></li>
+<li><p>Evita revisar la disponibilidad en PyPI si no se indicaron dependencias</p></li>
+<li><p>Ofrece una opción para mostrar el path del virtualenv en el sistema</p></li>
+<li><p>Mejor indicación/ayuda cuando no se encuentra el script indicado o el ejecutable de la dependencia</p></li>
+<li><p>Trae mejoras en logs, urls de PyPI, documentación, soporte multiplataforma, y varias otras mejoras y correcciones menores</p></li>
 </ul>
 <p>Queremos darles muchas gracias a los siguientes colaboradores que ayudaron a mejorar a fades de distintas maneras para esta versión (en orden alfabético):</p>
 <ul class="simple">
-<li>Andrés Delfino - <a class="reference external" href="https://github.com/andresdelfino">https://github.com/andresdelfino</a>
-</li>
-<li>Iñaki Malerba - <a class="reference external" href="https://github.com/inakimalerba">https://github.com/inakimalerba</a>
-</li>
-<li>Martin Alderete - <a class="reference external" href="https://github.com/malderete">https://github.com/malderete</a>
-</li>
+<li><p>Andrés Delfino - <a class="reference external" href="https://github.com/andresdelfino">https://github.com/andresdelfino</a></p></li>
+<li><p>Iñaki Malerba - <a class="reference external" href="https://github.com/inakimalerba">https://github.com/inakimalerba</a></p></li>
+<li><p>Martin Alderete - <a class="reference external" href="https://github.com/malderete">https://github.com/malderete</a></p></li>
 </ul>
 <p>Para instalar y disfrutar fades:</p>
 <ul>
 <li>
-<p class="first">Si estás en Ubuntu o Debian, podés facilmente instalarlo así (aunque probablemente no obtengas la <em>última</em> versión:</p>
-<pre class="literal-block">
-sudo apt-get install fades
-</pre>
+<p>Si estás en Ubuntu o Debian, podés facilmente instalarlo así (aunque probablemente no obtengas la <em>última</em> versión:</p>
+<pre class="literal-block">sudo apt-get install fades</pre>
 </li>
 <li>
-<p class="first">Para debian/ubuntu que no sea lo último, acá hay un .deb (con su respectivo archivo fuente Debian):</p>
-<pre class="literal-block">
-http://ftp.debian.org/debian/pool/main/f/fades/fades_8.1-1_all.deb
-http://ftp.debian.org/debian/pool/main/f/fades/fades_8.1-1.dsc
-</pre>
+<p>Para debian/ubuntu que no sea lo último, acá hay un .deb (con su respectivo archivo fuente Debian):</p>
+<pre class="literal-block">http://ftp.debian.org/debian/pool/main/f/fades/fades_8.1-1_all.deb
+http://ftp.debian.org/debian/pool/main/f/fades/fades_8.1-1.dsc</pre>
 </li>
 <li>
-<p class="first">Instalarlo en Arch es muy simple:</p>
-<pre class="literal-block">
-yaourt -S fades
-</pre>
+<p>Instalarlo en Arch es muy simple:</p>
+<pre class="literal-block">yaourt -S fades</pre>
 </li>
 <li>
-<p class="first">En cualquier Linux si tenés el sistema Snap:</p>
-<pre class="literal-block">
-snap install fades
-</pre>
+<p>En cualquier Linux si tenés el sistema Snap:</p>
+<pre class="literal-block">snap install fades</pre>
 </li>
 <li>
-<p class="first">Podés usar pip si querés:</p>
-<pre class="literal-block">
-pip3 install fades
-</pre>
+<p>Podés usar pip si querés:</p>
+<pre class="literal-block">pip3 install fades</pre>
 </li>
 <li>
-<p class="first">Siempre podés usar el tarball multiplataforma e instalarlo de la manera clásica:</p>
-<pre class="literal-block">
-wget http://ftp.debian.org/debian/pool/main/f/fades/fades_8.1.orig.tar.gz
+<p>Siempre podés usar el tarball multiplataforma e instalarlo de la manera clásica:</p>
+<pre class="literal-block">wget http://ftp.debian.org/debian/pool/main/f/fades/fades_8.1.orig.tar.gz
 tar -xf fades_*.tar.gz
 cd fades-*
-sudo ./setup.py install
-</pre>
+sudo ./setup.py install</pre>
 </li>
 </ul>
 <p>Ayuda / preguntas:</p>
 <ul>
 <li>
-<p class="first">Podés hacer cualquier pregunta o mandar una recomendación o pedido en el grupo de Telegram:</p>
+<p>Podés hacer cualquier pregunta o mandar una recomendación o pedido en el grupo de Telegram:</p>
 <blockquote>
 <p><cite>https://t.me/fadesmagic</cite></p>
 </blockquote>
@@ -191,11 +177,11 @@ sudo ./setup.py install
 <p><a class="reference external" href="http://listas.python.org.ar/mailman/listinfo/fades">http://listas.python.org.ar/mailman/listinfo/fades</a></p>
 <p>...o en el canal de IRC #fades en Freenode.</p>
 <ul class="simple">
-<li>También podés abrir un issue acá (por favor hacelo si encontrás algún problema!):</li>
+<li><p>También podés abrir un issue acá (por favor hacelo si encontrás algún problema!):</p></li>
 </ul>
 <p><a class="reference external" href="https://github.com/PyAr/fades/issues/new">https://github.com/PyAr/fades/issues/new</a></p>
 <ul class="simple">
-<li>El proyecto en sí está en</li>
+<li><p>El proyecto en sí está en</p></li>
 </ul>
 <p><a class="reference external" href="https://github.com/PyAr/fades">https://github.com/PyAr/fades</a></p>
 <p>Es muy fácil ejecutar la última versión de desarrollo:</p>
@@ -216,7 +202,7 @@ bin/fades</p>
             </p>
                         <p class="commentline">
         
-    <a href="posts/postgres-non-durable-options-docker-container/#disqus_thread" data-disqus-identifier="cache/posts/postgres-non-durable-options-docker-container.html">Comments</a>
+    <a href="posts/postgres-non-durable-options-docker-container/#disqus_thread" data-disqus-identifier="cache/posts/postgres-non-durable-options-docker-container.html">Comentarios</a>
 
 
                 </p>
@@ -235,29 +221,24 @@ configure postgres with its <a class="reference external" href="https://www.post
 <p>Here my recipe to do it.</p>
 <p>I'm using the <a class="reference external" href="https://hub.docker.com/_/postgres/">oficial Postgres Docker image</a>
 adding only some scripts:</p>
-<pre class="literal-block">
-FROM postgres:9.4.4
+<pre class="literal-block">FROM postgres:9.4.4
 MAINTAINER gilgamezh &lt;spam@gilgamezh.me&gt;
 
 COPY docker-entrypoint_db.sh /
 COPY non_durable.sh /
-ENTRYPOINT ["/docker-entrypoint_db.sh"]
-</pre>
+ENTRYPOINT ["/docker-entrypoint_db.sh"]</pre>
 <p>Here the content of docker-entrypoint_db.sh. I'm using an environment variable
 to enable or disable the non_durable settings:</p>
-<pre class="literal-block">
-#!/bin/bash
+<pre class="literal-block">#!/bin/bash
 
 if [ -v POSTGRES_NON_DURABLE_SETTINGS ]; then
     cp /non_durable.sh /docker-entrypoint-initdb.d/
 fi
 
 # run the default img entrypoint
-/bin/sh /docker-entrypoint.sh postgres
-</pre>
+/bin/sh /docker-entrypoint.sh postgres</pre>
 <p>And here the script to change the Postgres configuration:</p>
-<pre class="literal-block">
-#!/bin/bash
+<pre class="literal-block">#!/bin/bash
 
 # setting non-durable options
 # https://www.postgresql.org/docs/current/static/non-durability.html
@@ -267,15 +248,12 @@ echo "fsync = off" &gt;&gt; /var/lib/postgresql/data/postgresql.conf
 # no need to force WAL writes to disk on every commit.
 echo "synchronous_commit = off" &gt;&gt; /var/lib/postgresql/data/postgresql.conf
 # no need to guard against partial page writes.
-echo "full_page_writes = off" &gt;&gt; /var/lib/postgresql/data/postgresql.conf
-</pre>
+echo "full_page_writes = off" &gt;&gt; /var/lib/postgresql/data/postgresql.conf</pre>
 <p>Then in my docker-compose.yml file I'm setting the <cite>POSTGRES_NON_DURABLE_SETTINGS</cite>
 variable:</p>
-<pre class="literal-block">
-environment:
+<pre class="literal-block">environment:
   - POSTGRES_PASSWORD=xxxx
-  - POSTGRES_NON_DURABLE_SETTINGS=1
-</pre>
+  - POSTGRES_NON_DURABLE_SETTINGS=1</pre>
 <p>With these changes my tests are running a lot faster. 🚀🚀🚀</p>
 </div>
                 </div>
@@ -290,7 +268,7 @@ environment:
             </p>
                         <p class="commentline">
         
-    <a href="posts/regalo-estos-libros/#disqus_thread" data-disqus-identifier="cache/posts/regalo-estos-libros.html">Comments</a>
+    <a href="posts/regalo-estos-libros/#disqus_thread" data-disqus-identifier="cache/posts/regalo-estos-libros.html">Comentarios</a>
 
 
                 </p>
@@ -302,22 +280,22 @@ Tiré un montón de libros, tuve que darle rosca de lo lindo a la destructora de
 me divertí con diagramas de diseño, apuntes y cosas viejas y tengo un montón de libros para regalar.</p>
 <p><strong>OJO leer bien, son casi todos impresos en laser o fotocopias</strong></p>
 <ul class="simple">
-<li>Managing and Maintaining a MS Windows server 2003 environment.</li>
-<li>Administering a MS SQL Server 2000. (estos dos estoy pensando en tirarlos directamente)</li>
-<li>Access 2000 (para IBM y compatibles). Carlos Boqué. (que feo!!)</li>
-<li>Manual de administración de Windows 2000 server de Compumagazine.</li>
+<li><p>Managing and Maintaining a MS Windows server 2003 environment.</p></li>
+<li><p>Administering a MS SQL Server 2000. (estos dos estoy pensando en tirarlos directamente)</p></li>
+<li><p>Access 2000 (para IBM y compatibles). Carlos Boqué. (que feo!!)</p></li>
+<li><p>Manual de administración de Windows 2000 server de Compumagazine.</p></li>
 </ul>
 <p>Estos ya encontraron nuevo dueño:
 UPDATE: 17/2/2015</p>
 <ul class="simple">
-<li>Dictadura del diseño. Notas para estudiantes molestos. Carlos Carpintero.</li>
-<li>Thinking in java (fouth edition), Bruce Eckel. tomos 1 y 2 (enormes).</li>
-<li>Python para todos. Raúl González Duque.</li>
-<li>Object oriented Analysis and Desing with applications, third edition. Boch, jacobson, Rumbaugh.</li>
-<li>Probabilidad y estadística aplicadas a la ingenieria. Douglas Montgomery.</li>
-<li>Estructura y diseño de computadores. David A. Patterson, John L Hennessy.</li>
-<li>Métodos orientados a objetos: consideraciones prácticas. James Marin, James J Odell.</li>
-<li>Matemáticas Discretas, cuarta edición. Richard Johnsonbaugh.</li>
+<li><p>Dictadura del diseño. Notas para estudiantes molestos. Carlos Carpintero.</p></li>
+<li><p>Thinking in java (fouth edition), Bruce Eckel. tomos 1 y 2 (enormes).</p></li>
+<li><p>Python para todos. Raúl González Duque.</p></li>
+<li><p>Object oriented Analysis and Desing with applications, third edition. Boch, jacobson, Rumbaugh.</p></li>
+<li><p>Probabilidad y estadística aplicadas a la ingenieria. Douglas Montgomery.</p></li>
+<li><p>Estructura y diseño de computadores. David A. Patterson, John L Hennessy.</p></li>
+<li><p>Métodos orientados a objetos: consideraciones prácticas. James Marin, James J Odell.</p></li>
+<li><p>Matemáticas Discretas, cuarta edición. Richard Johnsonbaugh.</p></li>
 </ul>
 <p><strong>Creo que los de MS van a ir a la basura como corresponde ;)</strong></p>
 <p>Estoy a punto de directamente tirarlos. Pero tal vez alguno sirve y tal vez hay
@@ -339,7 +317,7 @@ Si te interesa alguno escribime a mail at gilgamezh.me.</p>
             </p>
                         <p class="commentline">
         
-    <a href="posts/howto-stresstest-a-website-with-apache-benchmark/#disqus_thread" data-disqus-identifier="cache/posts/howto-stresstest-a-website-with-apache-benchmark.html">Comments</a>
+    <a href="posts/howto-stresstest-a-website-with-apache-benchmark/#disqus_thread" data-disqus-identifier="cache/posts/howto-stresstest-a-website-with-apache-benchmark.html">Comentarios</a>
 
 
                 </p>
@@ -353,9 +331,7 @@ resultados, así que aproveché el momento para armar este post.</p>
 <p>El objetivo es poder hacer varios tests contra una URL usando diferentes valores
 de concurrencia/cantidad de requests y gráficar la salida.</p>
 <p>Primero hay que ejecutar las pruebas con <cite>ab</cite>:</p>
-<pre class="literal-block">
-ab -c 3 -n 100 -v 2 -g out1.tsv -H "Accept-Encoding: gzip,deflate"  http://python.org.ar/
-</pre>
+<pre class="literal-block">ab -c 3 -n 100 -v 2 -g out1.tsv -H "Accept-Encoding: gzip,deflate"  http://python.org.ar/</pre>
 <p class="more"><a href="posts/howto-stresstest-a-website-with-apache-benchmark/">Leer más…</a></p>
 </div>
                 </div>
@@ -370,7 +346,7 @@ ab -c 3 -n 100 -v 2 -g out1.tsv -H "Accept-Encoding: gzip,deflate"  http://pytho
             </p>
                         <p class="commentline">
         
-    <a href="posts/como-usar-un-tunel-ssh-como-proxy-para-http/#disqus_thread" data-disqus-identifier="cache/posts/como-usar-un-tunel-ssh-como-proxy-para-http.html">Comments</a>
+    <a href="posts/como-usar-un-tunel-ssh-como-proxy-para-http/#disqus_thread" data-disqus-identifier="cache/posts/como-usar-un-tunel-ssh-como-proxy-para-http.html">Comentarios</a>
 
 
                 </p>
@@ -392,13 +368,9 @@ está cerrado en mi red.</p>
 Entonces puedo hacer un tunel contra puente.midominio.com redireccionando el
 puerto 1982 de <em>mi maquina</em>  al 1982 de terminus.midominio.com utilizando
 puente.midominio.com como tunel.</p>
-<pre class="literal-block">
-1982[trantor]---SSH(((internet)))---&gt;[puente]---(((INTERNET)))--1982---&gt;[terminus]
-</pre>
+<pre class="literal-block">1982[trantor]---SSH(((internet)))---&gt;[puente]---(((INTERNET)))--1982---&gt;[terminus]</pre>
 <p>Para esto hay que ejecutar::</p>
-<pre class="literal-block">
-ssh -L 1982:terminus.midominio.com:1982 mi_usuario_en_puente@puente.midominio.com
-</pre>
+<pre class="literal-block">ssh -L 1982:terminus.midominio.com:1982 mi_usuario_en_puente@puente.midominio.com</pre>
 <p>Luego puedo conectarme al puerto 1982 de mi maquina (127.0.0.1:1982) y voy a
 estar accediendo a terminus.</p>
 <p>Ahora bien, usar esta manera para navegar por internet es muy molesto, ya que
@@ -407,9 +379,7 @@ Para poder sacar todo el tráfico de mi browser por tunel.midominio.com puedo
 crear un tunel 'especial' que usa el protocolo SOCKS, y luego configurar mi
 firefox para que lo utilice.</p>
 <p>Primero se genera el tunel:</p>
-<pre class="literal-block">
-ssh -N -D 1917 mi_usuario_en_puente@puente.midominio.com
-</pre>
+<pre class="literal-block">ssh -N -D 1917 mi_usuario_en_puente@puente.midominio.com</pre>
 <p>Luego en firefox se configura de la siguiente manera.</p>
 <img alt="/images/firefox_proxy.png" src="images/firefox_proxy.png"><p>Con eso ya podemos navegar con nuestro proxy. Una buena manera de validar es
 ingresar a <a class="reference external" href="http://ifconfig.me">http://ifconfig.me</a> y validar la IP por la que estamos llegando.</p>
@@ -426,7 +396,7 @@ ingresar a <a class="reference external" href="http://ifconfig.me">http://ifconf
             </p>
                         <p class="commentline">
         
-    <a href="posts/incognitosis-y-la-pep8/#disqus_thread" data-disqus-identifier="cache/posts/incognitosis-y-la-pep8.html">Comments</a>
+    <a href="posts/incognitosis-y-la-pep8/#disqus_thread" data-disqus-identifier="cache/posts/incognitosis-y-la-pep8.html">Comentarios</a>
 
 
                 </p>
@@ -440,15 +410,15 @@ columnas.
 Eso sí antes de dar un paso adelante confirmamos con la <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/#maximum-line-length">PEP8</a>
 que se puede llevar hasta 100 caracteres, sin romper esta santa ¿ley?.</p>
 <blockquote>
-Some teams strongly prefer a longer line length. For code maintained
+<p>Some teams strongly prefer a longer line length. For code maintained
 exclusively or primarily by a team that can reach agreement on this issue,
 it is okay to increase the nominal line length from 80 to 100 characters
 (effectively increasing the maximum length to 99 characters), provided
-that comments and docstrings are still wrapped at 72 characters.</blockquote>
+that comments and docstrings are still wrapped at 72 characters.</p>
+</blockquote>
 <p>Así que ahí fuimos. Como yo tengo una linea que me marca ese límite esto fue lo
 que cambié en mi .vimrc</p>
-<pre class="literal-block">
-function! ConditionalLoad()
+<pre class="literal-block">function! ConditionalLoad()
 highlight ColorColumn guibg=PaleTurquoise1
 if getcwd() =~ $HOME . "/code/fades/*"
     set colorcolumn=99
@@ -457,13 +427,13 @@ else
 endif
 endfunction
 autocmd BufRead *.py call ConditionalLoad()
-autocmd BufRead *.rst call ConditionalLoad()
-</pre>
+autocmd BufRead *.rst call ConditionalLoad()</pre>
 <p>El código de esa función es de Facundo.</p>
 <p>El punto del cual tomé especial nota es que para los comentarios y docstrings
 la PEP8 recomienda mantenerse dentro de los 72 caracteres</p>
 <blockquote>
-that comments and docstrings are still wrapped at 72 characters.</blockquote>
+<p>that comments and docstrings are still wrapped at 72 characters.</p>
+</blockquote>
 <p>Hoy hice click en mi RSS sobre una nota de Incognitosis (a quién normalmente
 leo por RSS) y me llamó la atención el hermoso diseño del blog.
 Así que dejé <a class="reference external" href="http://www.javipas.com/2015/03/13/usb-c-futuro-estandar/comment-page-1/#comment-87318">un comentario</a>.
@@ -485,7 +455,7 @@ es una de los pocos blogs que llevo años leyendo.</p>
             </p>
                         <p class="commentline">
         
-    <a href="posts/tu-propio-cliente-de-torrent-streaming-en-python/#disqus_thread" data-disqus-identifier="cache/posts/tu-propio-cliente-de-torrent-streaming-en-python.html">Comments</a>
+    <a href="posts/tu-propio-cliente-de-torrent-streaming-en-python/#disqus_thread" data-disqus-identifier="cache/posts/tu-propio-cliente-de-torrent-streaming-en-python.html">Comentarios</a>
 
 
                 </p>
@@ -513,7 +483,7 @@ si te gusta mirar series online, no tenés que dejar de probarlo!</p>
             </p>
                         <p class="commentline">
         
-    <a href="posts/dia-internacional-de-la-mujer-trabajadora/#disqus_thread" data-disqus-identifier="cache/posts/dia-internacional-de-la-mujer-trabajadora.html">Comments</a>
+    <a href="posts/dia-internacional-de-la-mujer-trabajadora/#disqus_thread" data-disqus-identifier="cache/posts/dia-internacional-de-la-mujer-trabajadora.html">Comentarios</a>
 
 
                 </p>
@@ -531,8 +501,7 @@ género.</p>
 </div>
 <div class="section" id="si-dios-fuera-una-mujer">
 <h2>Si Dios fuera una mujer</h2>
-<pre class="literal-block">
-¿Y si Dios fuera mujer?
+<pre class="literal-block">¿Y si Dios fuera mujer?
 pregunta Juan sin inmutarse,
 vaya, vaya si Dios fuera mujer
 es posible que agnósticos y ateos
@@ -565,8 +534,7 @@ si hasta siempre y desde siempre
 fueras una mujer
 qué lindo escándalo sería,
 qué venturosa, espléndida, imposible,
-prodigiosa blasfemia.
-</pre>
+prodigiosa blasfemia.</pre>
 </div>
 </div>
                 </div>
@@ -581,7 +549,7 @@ prodigiosa blasfemia.
             </p>
                         <p class="commentline">
         
-    <a href="posts/fades-20/#disqus_thread" data-disqus-identifier="cache/posts/fades-20.html">Comments</a>
+    <a href="posts/fades-20/#disqus_thread" data-disqus-identifier="cache/posts/fades-20.html">Comentarios</a>
 
 
                 </p>
@@ -598,15 +566,15 @@ caché de virtualenvs en lugar de tener uno por cada script.
 De paso se arreglaron varios errores y se mejoraron muchas cosas.</p>
 <p>¿Qué hay de nuevo en esta release?</p>
 <ul class="simple">
-<li>Tiene un cache para virtualenvs creados en el sistema; mejora
-la reutilización y velocidad.</li>
-<li>Como resultado del feature anterior, ya no guarda metadata por
-script (<em>en</em> el script).</li>
-<li>Permite indicar el nombre del projecto si es diferente al del
-módulo (ej: "import bs4 # fades.pypi beautifulsoup4 == 3.5")</li>
-<li>Soporta requerimientos complejos de versión: (ej: "&lt;2.6,&gt;1.3,!=1.9")</li>
-<li>Maneja paquetes a los que pip les cambia el nombre</li>
-<li>Otros cambios y correcciones menores.</li>
+<li><p>Tiene un cache para virtualenvs creados en el sistema; mejora
+la reutilización y velocidad.</p></li>
+<li><p>Como resultado del feature anterior, ya no guarda metadata por
+script (<em>en</em> el script).</p></li>
+<li><p>Permite indicar el nombre del projecto si es diferente al del
+módulo (ej: "import bs4 # fades.pypi beautifulsoup4 == 3.5")</p></li>
+<li><p>Soporta requerimientos complejos de versión: (ej: "&lt;2.6,&gt;1.3,!=1.9")</p></li>
+<li><p>Maneja paquetes a los que pip les cambia el nombre</p></li>
+<li><p>Otros cambios y correcciones menores.</p></li>
 </ul>
 <p>Mas info: <a class="reference external" href="https://github.com/PyAr/fades/releases/tag/2.0">https://github.com/PyAr/fades/releases/tag/2.0</a></p>
 </div>
@@ -622,7 +590,7 @@ módulo (ej: "import bs4 # fades.pypi beautifulsoup4 == 3.5")</li>
             </p>
                         <p class="commentline">
         
-    <a href="posts/compilar-version-vieja-de-php-para-archlinux/#disqus_thread" data-disqus-identifier="cache/posts/compilar-version-vieja-de-php-para-archlinux.html">Comments</a>
+    <a href="posts/compilar-version-vieja-de-php-para-archlinux/#disqus_thread" data-disqus-identifier="cache/posts/compilar-version-vieja-de-php-para-archlinux.html">Comentarios</a>
 
 
                 </p>
@@ -637,17 +605,12 @@ Hace poco tuve que laburar con un Drupal que estaba usando PHP 5.3 y no me
 quedó otra que compilarlo.
 Así que acá dejo los pasos de cómo hacerlo (básicamente la linea del configure).</p>
 <ul>
+<li><p>Descargar el source en /usr/local/src.</p></li>
+<li><p>Hacer un symlink en /usr/include/freetype2/freetype/freetype.h -&gt; ../freetype.h
+(sin esto da un error porque no encuentra freetype.h)</p></li>
 <li>
-<p class="first">Descargar el source en /usr/local/src.</p>
-</li>
-<li>
-<p class="first">Hacer un symlink en /usr/include/freetype2/freetype/freetype.h -&gt; ../freetype.h
-(sin esto da un error porque no encuentra freetype.h)</p>
-</li>
-<li>
-<p class="first">Ejecutar configure, make y make install:</p>
-<pre class="literal-block">
-./configure --enable-mbstring --with-mysql --with-mysqli --with-zlib \
+<p>Ejecutar configure, make y make install:</p>
+<pre class="literal-block">./configure --enable-mbstring --with-mysql --with-mysqli --with-zlib \
 --with-png-dir=/usr --with-jpeg-dir=/usr \
 --with-freetype-dir=/usr/include/freetype2/ --with-curl --with-gettext \
 --with-pdo-mysql --with-pdo-sqlite --with-bz2 \
@@ -656,19 +619,12 @@ Así que acá dejo los pasos de cómo hacerlo (básicamente la linea del configu
 --with-xpm-dir=/usr
 
 make
-make install
-</pre>
+make install</pre>
 </li>
-<li>
-<p class="first">Hacer un symlink de /usr/local/php-5.3.29 a /usr/local/php</p>
-</li>
-<li>
-<p class="first">Copiar el php.ini que tengamos a /usr/local/php/lib</p>
-</li>
-<li>
-<p class="first">Si usamos Apache en httpd.conf hay que hacer un <em>Include</em> de
-/etc/httpd/conf/extra/httpd-fastcgid.conf</p>
-</li>
+<li><p>Hacer un symlink de /usr/local/php-5.3.29 a /usr/local/php</p></li>
+<li><p>Copiar el php.ini que tengamos a /usr/local/php/lib</p></li>
+<li><p>Si usamos Apache en httpd.conf hay que hacer un <em>Include</em> de
+/etc/httpd/conf/extra/httpd-fastcgid.conf</p></li>
 </ul>
 </div>
                 </div>
@@ -679,9 +635,10 @@ make install
 <li class="next"><a href="index-5.html" rel="next">Publicaciones anteriores</a></li>
         </ul>
 <script>var disqus_shortname="notodoesmecnico";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><!--End of body content--><footer id="footer">
-            Contents © 2019         <a href="mailto:mail@gilgamezh.me">GiLgAmEzH</a> - My Fingerprint: <a href="https://gilgamezh.me/public.key">0712 8EB2 C626 08C5 69E1  8949 6DDF 6FA3 5EB9 26AB</a>  Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2020         <a href="mailto:mail@gilgamezh.me">GiLgAmEzH</a> - My Fingerprint: <a href="https://gilgamezh.me/public.key">0712 8EB2 C626 08C5 69E1  8949 6DDF 6FA3 5EB9 26AB</a>  Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
 <img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a>
+            
             
         </footer>
 </div>

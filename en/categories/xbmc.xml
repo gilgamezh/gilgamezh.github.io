@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Posts about xbmc)</title><link>https://gilgamezh.me/</link><description></description><atom:link href="https://gilgamezh.me/en/categories/xbmc.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 23 Feb 2019 15:33:12 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Tip para XBMC/Kodi en Archlinux | ARM</title><link>https://gilgamezh.me/en/posts/tip-para-xbmckodi-en-archlinux-arm/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;img alt="/images/raspy_kodi.jpg" src="https://gilgamezh.me/images/raspy_kodi.jpg"&gt;
+<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Posts about xbmc)</title><link>https://gilgamezh.me/</link><description></description><atom:link href="https://gilgamezh.me/en/categories/xbmc.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 29 Aug 2020 09:18:40 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Tip para XBMC/Kodi en Archlinux | ARM</title><link>https://gilgamezh.me/en/posts/tip-para-xbmckodi-en-archlinux-arm/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;img alt="/images/raspy_kodi.jpg" src="https://gilgamezh.me/images/raspy_kodi.jpg"&gt;
 &lt;p&gt;Hace rato que en la raspy deje de usar XBIAN porque le estaban agregando
 muchas cosas "automagicas" que no me interesaban.
 Así que instale un Archlinux ARM y le puse XBMC. Anda de lujo, pero hay
@@ -8,8 +8,7 @@ Ayer cambie la SD por una clase10 de 16GB y como tuve que reinstalar
 aprovecho para compartir las cosas que le cambio.&lt;/p&gt;
 &lt;p&gt;Básicamente hay que instalarlo con un &lt;em&gt;pacman -S xbmc&lt;/em&gt; y después hay que
 editar el archivo que está en /boot/config.txt y poner lo de abajo:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-#My overclocking
+&lt;pre class="literal-block"&gt;#My overclocking
 arm_freq=950
 core_freq=450
 sdram_freq=450
@@ -20,5 +19,4 @@ gpu_mem_512=128
 gpu_mem_256=100
 
 #Witout this the Youtube addon for XBMC/Kodi doesn't work
-start_x=1
-&lt;/pre&gt;&lt;/div&gt;</description><guid>https://gilgamezh.me/en/posts/tip-para-xbmckodi-en-archlinux-arm/</guid><pubDate>Sun, 26 Oct 2014 18:29:13 GMT</pubDate></item></channel></rss>
+start_x=1&lt;/pre&gt;&lt;/div&gt;</description><guid>https://gilgamezh.me/en/posts/tip-para-xbmckodi-en-archlinux-arm/</guid><pubDate>Sun, 26 Oct 2014 18:29:13 GMT</pubDate></item></channel></rss>

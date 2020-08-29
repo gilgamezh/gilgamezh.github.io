@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico</title><link>https://gilgamezh.me/</link><description>Blog personal de Nicolás Demarchi.</description><atom:link href="https://gilgamezh.me/en/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 23 Feb 2019 15:33:11 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>fades8.1_released</title><link>https://gilgamezh.me/en/posts/fades81_released/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;We're glad to announce the release of fades 8.1.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico</title><link>https://gilgamezh.me/</link><description>Blog personal de Nicolás Demarchi.</description><atom:link href="https://gilgamezh.me/en/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 29 Aug 2020 09:18:40 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>fades8.1_released</title><link>https://gilgamezh.me/en/posts/fades81_released/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;We're glad to announce the release of fades 8.1.&lt;/p&gt;
 &lt;p&gt;fades is a system that automatically handles the virtualenvs in the
 cases normally found when writing scripts and simple programs, and
 even helps to administer big projects.&lt;/p&gt;
@@ -9,66 +9,55 @@ your script inside that virtualenv.&lt;/p&gt;
 &lt;p&gt;You only need to execute the script with fades (instead of Python) and
 also mark the required dependencies. More details here:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;a class="reference external" href="http://fades.rtfd.org/"&gt;http://fades.rtfd.org/&lt;/a&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://fades.rtfd.org/"&gt;http://fades.rtfd.org/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;What's new in this release?&lt;/p&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;Automatically execute scripts from the web, supporting most common pastebins&lt;/li&gt;
-&lt;li&gt;Multiple (and missing) requirement.txt file support, which can now be nested&lt;/li&gt;
-&lt;li&gt;Avoid checking package availability if no PyPI dependencies indicated&lt;/li&gt;
-&lt;li&gt;Add an option to show the virtualenv path in the system&lt;/li&gt;
-&lt;li&gt;Better error/help on missing indicated script or executable from dependency&lt;/li&gt;
-&lt;li&gt;Improved logs, PyPI urls, documentation, multiplatform support, and several other small fixes/enhancements&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Automatically execute scripts from the web, supporting most common pastebins&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Multiple (and missing) requirement.txt file support, which can now be nested&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Avoid checking package availability if no PyPI dependencies indicated&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Add an option to show the virtualenv path in the system&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Better error/help on missing indicated script or executable from dependency&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Improved logs, PyPI urls, documentation, multiplatform support, and several other small fixes/enhancements&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;We want to say a big thank you to the following collaborators
 that helped to improve and enhance fades in different ways for this
 version (in alphabetical order):&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;Andrés Delfino - &lt;a class="reference external" href="https://github.com/andresdelfino"&gt;https://github.com/andresdelfino&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Iñaki Malerba - &lt;a class="reference external" href="https://github.com/inakimalerba"&gt;https://github.com/inakimalerba&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Martin Alderete - &lt;a class="reference external" href="https://github.com/malderete"&gt;https://github.com/malderete&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Andrés Delfino - &lt;a class="reference external" href="https://github.com/andresdelfino"&gt;https://github.com/andresdelfino&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Iñaki Malerba - &lt;a class="reference external" href="https://github.com/inakimalerba"&gt;https://github.com/inakimalerba&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Martin Alderete - &lt;a class="reference external" href="https://github.com/malderete"&gt;https://github.com/malderete&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;To install and enjoy fades...&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;If you are in Ubuntu or Debian, you can easily install like this (but probably won't get &lt;em&gt;latest&lt;/em&gt; fades:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-sudo apt-get install fades
-&lt;/pre&gt;
+&lt;li&gt;&lt;p&gt;If you are in Ubuntu or Debian, you can easily install like this (but probably won't get &lt;em&gt;latest&lt;/em&gt; fades:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;sudo apt-get install fades&lt;/pre&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;For not latest debian/ubuntu you have a .deb here (with its Debian source file):&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-http://ftp.debian.org/debian/pool/main/f/fades/fades_8.1-1_all.deb
-http://ftp.debian.org/debian/pool/main/f/fades/fades_8.1-1.dsc
-&lt;/pre&gt;
+&lt;li&gt;&lt;p&gt;For not latest debian/ubuntu you have a .deb here (with its Debian source file):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;http://ftp.debian.org/debian/pool/main/f/fades/fades_8.1-1_all.deb
+http://ftp.debian.org/debian/pool/main/f/fades/fades_8.1-1.dsc&lt;/pre&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Install it in Arch is very simple:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-yaourt -S fades
-&lt;/pre&gt;
+&lt;li&gt;&lt;p&gt;Install it in Arch is very simple:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;yaourt -S fades&lt;/pre&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;In any Linux if you have the Snap system:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-snap install fades
-&lt;/pre&gt;
+&lt;li&gt;&lt;p&gt;In any Linux if you have the Snap system:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;snap install fades&lt;/pre&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Using pip if you want:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-pip3 install fades
-&lt;/pre&gt;
+&lt;li&gt;&lt;p&gt;Using pip if you want:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;pip3 install fades&lt;/pre&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;You can always get the multiplatform tarball and install it in the old fashion way:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-wget http://ftp.debian.org/debian/pool/main/f/fades/fades_8.1.orig.tar.gz
+&lt;li&gt;&lt;p&gt;You can always get the multiplatform tarball and install it in the old fashion way:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;wget http://ftp.debian.org/debian/pool/main/f/fades/fades_8.1.orig.tar.gz
 tar -xf fades_*.tar.gz
 cd fades-*
-sudo ./setup.py install
-&lt;/pre&gt;
+sudo ./setup.py install&lt;/pre&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Help / questions:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;You can ask any question or send any recommendation or request
+&lt;li&gt;&lt;p&gt;You can ask any question or send any recommendation or request
 in the Telegram group:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://t.me/fadesmagic"&gt;https://t.me/fadesmagic&lt;/a&gt;&lt;/p&gt;
@@ -79,12 +68,12 @@ in the Telegram group:&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;...or in the #fades IRC channel (in Freenode).&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Also, you can open an issue here (please do if you find any problem!).&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Also, you can open an issue here (please do if you find any problem!).&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://github.com/PyAr/fades/issues/new"&gt;https://github.com/PyAr/fades/issues/new&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;The project itself is in&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;The project itself is in&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://github.com/PyAr/fades"&gt;https://github.com/PyAr/fades&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -108,29 +97,24 @@ configure postgres with its &lt;a class="reference external" href="https://www.p
 &lt;p&gt;Here my recipe to do it.&lt;/p&gt;
 &lt;p&gt;I'm using the &lt;a class="reference external" href="https://hub.docker.com/_/postgres/"&gt;oficial Postgres Docker image&lt;/a&gt;
 adding only some scripts:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-FROM postgres:9.4.4
+&lt;pre class="literal-block"&gt;FROM postgres:9.4.4
 MAINTAINER gilgamezh &amp;lt;spam@gilgamezh.me&amp;gt;
 
 COPY docker-entrypoint_db.sh /
 COPY non_durable.sh /
-ENTRYPOINT ["/docker-entrypoint_db.sh"]
-&lt;/pre&gt;
+ENTRYPOINT ["/docker-entrypoint_db.sh"]&lt;/pre&gt;
 &lt;p&gt;Here the content of docker-entrypoint_db.sh. I'm using an environment variable
 to enable or disable the non_durable settings:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-#!/bin/bash
+&lt;pre class="literal-block"&gt;#!/bin/bash
 
 if [ -v POSTGRES_NON_DURABLE_SETTINGS ]; then
     cp /non_durable.sh /docker-entrypoint-initdb.d/
 fi
 
 # run the default img entrypoint
-/bin/sh /docker-entrypoint.sh postgres
-&lt;/pre&gt;
+/bin/sh /docker-entrypoint.sh postgres&lt;/pre&gt;
 &lt;p&gt;And here the script to change the Postgres configuration:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-#!/bin/bash
+&lt;pre class="literal-block"&gt;#!/bin/bash
 
 # setting non-durable options
 # https://www.postgresql.org/docs/current/static/non-durability.html
@@ -140,36 +124,33 @@ echo "fsync = off" &amp;gt;&amp;gt; /var/lib/postgresql/data/postgresql.conf
 # no need to force WAL writes to disk on every commit.
 echo "synchronous_commit = off" &amp;gt;&amp;gt; /var/lib/postgresql/data/postgresql.conf
 # no need to guard against partial page writes.
-echo "full_page_writes = off" &amp;gt;&amp;gt; /var/lib/postgresql/data/postgresql.conf
-&lt;/pre&gt;
+echo "full_page_writes = off" &amp;gt;&amp;gt; /var/lib/postgresql/data/postgresql.conf&lt;/pre&gt;
 &lt;p&gt;Then in my docker-compose.yml file I'm setting the &lt;cite&gt;POSTGRES_NON_DURABLE_SETTINGS&lt;/cite&gt;
 variable:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-environment:
+&lt;pre class="literal-block"&gt;environment:
   - POSTGRES_PASSWORD=xxxx
-  - POSTGRES_NON_DURABLE_SETTINGS=1
-&lt;/pre&gt;
+  - POSTGRES_NON_DURABLE_SETTINGS=1&lt;/pre&gt;
 &lt;p&gt;With these changes my tests are running a lot faster. 🚀🚀🚀&lt;/p&gt;&lt;/div&gt;</description><guid>https://gilgamezh.me/en/posts/postgres-non-durable-options-docker-container/</guid><pubDate>Sun, 09 Apr 2017 18:55:48 GMT</pubDate></item><item><title>Regalo estos libros</title><link>https://gilgamezh.me/en/posts/regalo-estos-libros/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Hoy me puse a ordenar/tirar papeles. Esta vez le tocó a mis cosas de estudio.
 Tiré un montón de libros, tuve que darle rosca de lo lindo a la destructora de papel,
 me divertí con diagramas de diseño, apuntes y cosas viejas y tengo un montón de libros para regalar.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;OJO leer bien, son casi todos impresos en laser o fotocopias&lt;/strong&gt;&lt;/p&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;Managing and Maintaining a MS Windows server 2003 environment.&lt;/li&gt;
-&lt;li&gt;Administering a MS SQL Server 2000. (estos dos estoy pensando en tirarlos directamente)&lt;/li&gt;
-&lt;li&gt;Access 2000 (para IBM y compatibles). Carlos Boqué. (que feo!!)&lt;/li&gt;
-&lt;li&gt;Manual de administración de Windows 2000 server de Compumagazine.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Managing and Maintaining a MS Windows server 2003 environment.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Administering a MS SQL Server 2000. (estos dos estoy pensando en tirarlos directamente)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Access 2000 (para IBM y compatibles). Carlos Boqué. (que feo!!)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Manual de administración de Windows 2000 server de Compumagazine.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Estos ya encontraron nuevo dueño:
 UPDATE: 17/2/2015&lt;/p&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;Dictadura del diseño. Notas para estudiantes molestos. Carlos Carpintero.&lt;/li&gt;
-&lt;li&gt;Thinking in java (fouth edition), Bruce Eckel. tomos 1 y 2 (enormes).&lt;/li&gt;
-&lt;li&gt;Python para todos. Raúl González Duque.&lt;/li&gt;
-&lt;li&gt;Object oriented Analysis and Desing with applications, third edition. Boch, jacobson, Rumbaugh.&lt;/li&gt;
-&lt;li&gt;Probabilidad y estadística aplicadas a la ingenieria. Douglas Montgomery.&lt;/li&gt;
-&lt;li&gt;Estructura y diseño de computadores. David A. Patterson, John L Hennessy.&lt;/li&gt;
-&lt;li&gt;Métodos orientados a objetos: consideraciones prácticas. James Marin, James J Odell.&lt;/li&gt;
-&lt;li&gt;Matemáticas Discretas, cuarta edición. Richard Johnsonbaugh.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Dictadura del diseño. Notas para estudiantes molestos. Carlos Carpintero.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Thinking in java (fouth edition), Bruce Eckel. tomos 1 y 2 (enormes).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Python para todos. Raúl González Duque.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Object oriented Analysis and Desing with applications, third edition. Boch, jacobson, Rumbaugh.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Probabilidad y estadística aplicadas a la ingenieria. Douglas Montgomery.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Estructura y diseño de computadores. David A. Patterson, John L Hennessy.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Métodos orientados a objetos: consideraciones prácticas. James Marin, James J Odell.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Matemáticas Discretas, cuarta edición. Richard Johnsonbaugh.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Creo que los de MS van a ir a la basura como corresponde ;)&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Estoy a punto de directamente tirarlos. Pero tal vez alguno sirve y tal vez hay
@@ -184,31 +165,26 @@ resultados, así que aproveché el momento para armar este post.&lt;/p&gt;
 &lt;p&gt;El objetivo es poder hacer varios tests contra una URL usando diferentes valores
 de concurrencia/cantidad de requests y gráficar la salida.&lt;/p&gt;
 &lt;p&gt;Primero hay que ejecutar las pruebas con &lt;cite&gt;ab&lt;/cite&gt;:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-ab -c 3 -n 100 -v 2 -g out1.tsv -H "Accept-Encoding: gzip,deflate"  http://python.org.ar/
-&lt;/pre&gt;
+&lt;pre class="literal-block"&gt;ab -c 3 -n 100 -v 2 -g out1.tsv -H "Accept-Encoding: gzip,deflate"  http://python.org.ar/&lt;/pre&gt;
 &lt;!-- TEASER_END --&gt;
 &lt;p&gt;Esa configuración significa:&lt;/p&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;&lt;cite&gt;-c 3&lt;/cite&gt;:  concurrencia 3&lt;/li&gt;
-&lt;li&gt;&lt;cite&gt;-n 15&lt;/cite&gt;:  15 request&lt;/li&gt;
-&lt;li&gt;&lt;cite&gt;-v 2&lt;/cite&gt;: verbose (muestra los headers)&lt;/li&gt;
-&lt;li&gt;&lt;cite&gt;-g out1.tsv&lt;/cite&gt;: salida para gnuplot&lt;/li&gt;
-&lt;li&gt;&lt;cite&gt;-H -H "Accept-Encoding: gzip,deflate"&lt;/cite&gt; Hacer requests con gzip (igual que cualquier browser)&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;-c 3&lt;/cite&gt;:  concurrencia 3&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;-n 15&lt;/cite&gt;:  15 request&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;-v 2&lt;/cite&gt;: verbose (muestra los headers)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;-g out1.tsv&lt;/cite&gt;: salida para gnuplot&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;-H -H "Accept-Encoding: gzip,deflate"&lt;/cite&gt; Hacer requests con gzip (igual que cualquier browser)&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;La idea es repetir N veces la prueba con los mismos parametros renombrando outN.tsv.&lt;/p&gt;
 &lt;p&gt;Yo ejecuté tres pruebas:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-/tmp  ll out*.tsv
+&lt;pre class="literal-block"&gt;/tmp  ll out*.tsv
 -rw-r--r-- 1 gilgamezh users 4934 Oct 31 11:26 out1.tsv
 -rw-r--r-- 1 gilgamezh users 4930 Oct 31 11:26 out2.tsv
--rw-r--r-- 1 gilgamezh users 4936 Oct 31 11:27 out3.tsv
-&lt;/pre&gt;
+-rw-r--r-- 1 gilgamezh users 4936 Oct 31 11:27 out3.tsv&lt;/pre&gt;
 &lt;p&gt;Cada una nos da una resumen con una salida, pero mucho mejor ver un gráfico.
 Con gnuplot es muy simple.&lt;/p&gt;
 &lt;p&gt;Yo uso un template que edito cada vez:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-# output as png image
+&lt;pre class="literal-block"&gt;# output as png image
 set terminal png
 
 # save file to "benchmark.png"
@@ -232,14 +208,11 @@ set ylabel "Response Time (ms)"
 # plot data from bench1.tsv,bench2.tsv and bench3.tsv using column 10 with smooth sbezier lines
 plot "out1.tsv" using 10 smooth sbezier with lines title "Benchmark 1:", \
      "out2.tsv" using 10 smooth sbezier with lines title "Benchmark 2:", \
-     "out3.tsv" using 10 smooth sbezier with lines title "Benchmark 3:"
-&lt;/pre&gt;
+     "out3.tsv" using 10 smooth sbezier with lines title "Benchmark 3:"&lt;/pre&gt;
 &lt;p&gt;Es un poco precario porque hay que editarlo a mano con el nombre de los .tsv.
 Algún día me voy a tomar el tiempo de automatizar todo. ;)&lt;/p&gt;
 &lt;p&gt;lo guardo como &lt;cite&gt;gnuplot.template&lt;/cite&gt; y ejecuto:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-gnuplot gnuplot.template
-&lt;/pre&gt;
+&lt;pre class="literal-block"&gt;gnuplot gnuplot.template&lt;/pre&gt;
 &lt;p&gt;Y listo! tenemos nuestro gráfico.
 (sí hay que tener gnuplot instalado. en Arch el paquete se llama &lt;cite&gt;python-gnuplot&lt;/cite&gt;)&lt;/p&gt;
 &lt;img alt="/images/benchmark_python.org.ar.png" src="https://gilgamezh.me/images/benchmark_python.org.ar.png"&gt;
@@ -258,13 +231,9 @@ está cerrado en mi red.&lt;/p&gt;
 Entonces puedo hacer un tunel contra puente.midominio.com redireccionando el
 puerto 1982 de &lt;em&gt;mi maquina&lt;/em&gt;  al 1982 de terminus.midominio.com utilizando
 puente.midominio.com como tunel.&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-1982[trantor]---SSH(((internet)))---&amp;gt;[puente]---(((INTERNET)))--1982---&amp;gt;[terminus]
-&lt;/pre&gt;
+&lt;pre class="literal-block"&gt;1982[trantor]---SSH(((internet)))---&amp;gt;[puente]---(((INTERNET)))--1982---&amp;gt;[terminus]&lt;/pre&gt;
 &lt;p&gt;Para esto hay que ejecutar::&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-ssh -L 1982:terminus.midominio.com:1982 mi_usuario_en_puente@puente.midominio.com
-&lt;/pre&gt;
+&lt;pre class="literal-block"&gt;ssh -L 1982:terminus.midominio.com:1982 mi_usuario_en_puente@puente.midominio.com&lt;/pre&gt;
 &lt;p&gt;Luego puedo conectarme al puerto 1982 de mi maquina (127.0.0.1:1982) y voy a
 estar accediendo a terminus.&lt;/p&gt;
 &lt;p&gt;Ahora bien, usar esta manera para navegar por internet es muy molesto, ya que
@@ -273,9 +242,7 @@ Para poder sacar todo el tráfico de mi browser por tunel.midominio.com puedo
 crear un tunel 'especial' que usa el protocolo SOCKS, y luego configurar mi
 firefox para que lo utilice.&lt;/p&gt;
 &lt;p&gt;Primero se genera el tunel:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-ssh -N -D 1917 mi_usuario_en_puente@puente.midominio.com
-&lt;/pre&gt;
+&lt;pre class="literal-block"&gt;ssh -N -D 1917 mi_usuario_en_puente@puente.midominio.com&lt;/pre&gt;
 &lt;p&gt;Luego en firefox se configura de la siguiente manera.&lt;/p&gt;
 &lt;img alt="/images/firefox_proxy.png" src="https://gilgamezh.me/images/firefox_proxy.png"&gt;
 &lt;p&gt;Con eso ya podemos navegar con nuestro proxy. Una buena manera de validar es
@@ -286,15 +253,15 @@ columnas.
 Eso sí antes de dar un paso adelante confirmamos con la &lt;a class="reference external" href="https://www.python.org/dev/peps/pep-0008/#maximum-line-length"&gt;PEP8&lt;/a&gt;
 que se puede llevar hasta 100 caracteres, sin romper esta santa ¿ley?.&lt;/p&gt;
 &lt;blockquote&gt;
-Some teams strongly prefer a longer line length. For code maintained
+&lt;p&gt;Some teams strongly prefer a longer line length. For code maintained
 exclusively or primarily by a team that can reach agreement on this issue,
 it is okay to increase the nominal line length from 80 to 100 characters
 (effectively increasing the maximum length to 99 characters), provided
-that comments and docstrings are still wrapped at 72 characters.&lt;/blockquote&gt;
+that comments and docstrings are still wrapped at 72 characters.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;Así que ahí fuimos. Como yo tengo una linea que me marca ese límite esto fue lo
 que cambié en mi .vimrc&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-function! ConditionalLoad()
+&lt;pre class="literal-block"&gt;function! ConditionalLoad()
 highlight ColorColumn guibg=PaleTurquoise1
 if getcwd() =~ $HOME . "/code/fades/*"
     set colorcolumn=99
@@ -303,13 +270,13 @@ else
 endif
 endfunction
 autocmd BufRead *.py call ConditionalLoad()
-autocmd BufRead *.rst call ConditionalLoad()
-&lt;/pre&gt;
+autocmd BufRead *.rst call ConditionalLoad()&lt;/pre&gt;
 &lt;p&gt;El código de esa función es de Facundo.&lt;/p&gt;
 &lt;p&gt;El punto del cual tomé especial nota es que para los comentarios y docstrings
 la PEP8 recomienda mantenerse dentro de los 72 caracteres&lt;/p&gt;
 &lt;blockquote&gt;
-that comments and docstrings are still wrapped at 72 characters.&lt;/blockquote&gt;
+&lt;p&gt;that comments and docstrings are still wrapped at 72 characters.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;Hoy hice click en mi RSS sobre una nota de Incognitosis (a quién normalmente
 leo por RSS) y me llamó la atención el hermoso diseño del blog.
 Así que dejé &lt;a class="reference external" href="http://www.javipas.com/2015/03/13/usb-c-futuro-estandar/comment-page-1/#comment-87318"&gt;un comentario&lt;/a&gt;.
@@ -334,8 +301,7 @@ género.&lt;/p&gt;
 &lt;/iframe&gt;
 &lt;/div&gt;&lt;div class="section" id="si-dios-fuera-una-mujer"&gt;
 &lt;h2&gt;Si Dios fuera una mujer&lt;/h2&gt;
-&lt;pre class="literal-block"&gt;
-¿Y si Dios fuera mujer?
+&lt;pre class="literal-block"&gt;¿Y si Dios fuera mujer?
 pregunta Juan sin inmutarse,
 vaya, vaya si Dios fuera mujer
 es posible que agnósticos y ateos
@@ -368,8 +334,7 @@ si hasta siempre y desde siempre
 fueras una mujer
 qué lindo escándalo sería,
 qué venturosa, espléndida, imposible,
-prodigiosa blasfemia.
-&lt;/pre&gt;
+prodigiosa blasfemia.&lt;/pre&gt;
 &lt;/div&gt;&lt;/div&gt;</description><guid>https://gilgamezh.me/en/posts/dia-internacional-de-la-mujer-trabajadora/</guid><pubDate>Sun, 08 Mar 2015 13:21:49 GMT</pubDate></item><item><title>Fades 2.0</title><link>https://gilgamezh.me/en/posts/fades-20/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Fueron (creo) unas 2 semanas desde que salió el release 1.0 de Fades las que
 demoramos en sacar el 2.0 :). El ritmo estuvo muy bueno y sobre todo largas
 charlas de qué camino tomar.
@@ -380,15 +345,15 @@ caché de virtualenvs en lugar de tener uno por cada script.
 De paso se arreglaron varios errores y se mejoraron muchas cosas.&lt;/p&gt;
 &lt;p&gt;¿Qué hay de nuevo en esta release?&lt;/p&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;Tiene un cache para virtualenvs creados en el sistema; mejora
-la reutilización y velocidad.&lt;/li&gt;
-&lt;li&gt;Como resultado del feature anterior, ya no guarda metadata por
-script (&lt;em&gt;en&lt;/em&gt; el script).&lt;/li&gt;
-&lt;li&gt;Permite indicar el nombre del projecto si es diferente al del
-módulo (ej: "import bs4 # fades.pypi beautifulsoup4 == 3.5")&lt;/li&gt;
-&lt;li&gt;Soporta requerimientos complejos de versión: (ej: "&amp;lt;2.6,&amp;gt;1.3,!=1.9")&lt;/li&gt;
-&lt;li&gt;Maneja paquetes a los que pip les cambia el nombre&lt;/li&gt;
-&lt;li&gt;Otros cambios y correcciones menores.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Tiene un cache para virtualenvs creados en el sistema; mejora
+la reutilización y velocidad.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Como resultado del feature anterior, ya no guarda metadata por
+script (&lt;em&gt;en&lt;/em&gt; el script).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Permite indicar el nombre del projecto si es diferente al del
+módulo (ej: "import bs4 # fades.pypi beautifulsoup4 == 3.5")&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Soporta requerimientos complejos de versión: (ej: "&amp;lt;2.6,&amp;gt;1.3,!=1.9")&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Maneja paquetes a los que pip les cambia el nombre&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Otros cambios y correcciones menores.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Mas info: &lt;a class="reference external" href="https://github.com/PyAr/fades/releases/tag/2.0"&gt;https://github.com/PyAr/fades/releases/tag/2.0&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>https://gilgamezh.me/en/posts/fades-20/</guid><pubDate>Sat, 28 Feb 2015 15:25:16 GMT</pubDate></item><item><title>Compilar versión vieja de PHP para Archlinux</title><link>https://gilgamezh.me/en/posts/compilar-version-vieja-de-php-para-archlinux/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Archlinux siempre tiene la versión más nueva de todo, eso tiene muchas cosas
 positivas.
@@ -398,14 +363,11 @@ Hace poco tuve que laburar con un Drupal que estaba usando PHP 5.3 y no me
 quedó otra que compilarlo.
 Así que acá dejo los pasos de cómo hacerlo (básicamente la linea del configure).&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;Descargar el source en /usr/local/src.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Hacer un symlink en /usr/include/freetype2/freetype/freetype.h -&amp;gt; ../freetype.h
-(sin esto da un error porque no encuentra freetype.h)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Ejecutar configure, make y make install:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-./configure --enable-mbstring --with-mysql --with-mysqli --with-zlib \
+&lt;li&gt;&lt;p&gt;Descargar el source en /usr/local/src.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Hacer un symlink en /usr/include/freetype2/freetype/freetype.h -&amp;gt; ../freetype.h
+(sin esto da un error porque no encuentra freetype.h)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ejecutar configure, make y make install:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;./configure --enable-mbstring --with-mysql --with-mysqli --with-zlib \
 --with-png-dir=/usr --with-jpeg-dir=/usr \
 --with-freetype-dir=/usr/include/freetype2/ --with-curl --with-gettext \
 --with-pdo-mysql --with-pdo-sqlite --with-bz2 \
@@ -414,14 +376,10 @@ Así que acá dejo los pasos de cómo hacerlo (básicamente la linea del configu
 --with-xpm-dir=/usr
 
 make
-make install
-&lt;/pre&gt;
+make install&lt;/pre&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Hacer un symlink de /usr/local/php-5.3.29 a /usr/local/php&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Copiar el php.ini que tengamos a /usr/local/php/lib&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Si usamos Apache en httpd.conf hay que hacer un &lt;em&gt;Include&lt;/em&gt; de
-/etc/httpd/conf/extra/httpd-fastcgid.conf&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Hacer un symlink de /usr/local/php-5.3.29 a /usr/local/php&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Copiar el php.ini que tengamos a /usr/local/php/lib&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Si usamos Apache en httpd.conf hay que hacer un &lt;em&gt;Include&lt;/em&gt; de
+/etc/httpd/conf/extra/httpd-fastcgid.conf&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/div&gt;</description><guid>https://gilgamezh.me/en/posts/compilar-version-vieja-de-php-para-archlinux/</guid><pubDate>Sat, 28 Feb 2015 15:17:52 GMT</pubDate></item></channel></rss>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Publicaciones sobre how-to)</title><link>https://gilgamezh.me/</link><description></description><atom:link href="https://gilgamezh.me/categories/how-to.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><lastBuildDate>Sat, 23 Feb 2019 15:33:12 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Postgres non-durable options Docker container.</title><link>https://gilgamezh.me/posts/postgres-non-durable-options-docker-container/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Some weeks ago I was at &lt;a class="reference external" href="http://www.python.org.ar/wiki/PyCamp/2017/"&gt;Pycamp&lt;/a&gt; whit LeCoVi
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Publicaciones sobre how-to)</title><link>https://gilgamezh.me/</link><description></description><atom:link href="https://gilgamezh.me/categories/how-to.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><lastBuildDate>Sat, 29 Aug 2020 09:18:40 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Postgres non-durable options Docker container.</title><link>https://gilgamezh.me/posts/postgres-non-durable-options-docker-container/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Some weeks ago I was at &lt;a class="reference external" href="http://www.python.org.ar/wiki/PyCamp/2017/"&gt;Pycamp&lt;/a&gt; whit LeCoVi
 working on the Pyar website (check the link PyCamp is the best event ever!) and
 I showed him my configuration to speed-up django tests.
 Some days ago he asked me for the config. I think that it'is better to share it
@@ -11,29 +11,24 @@ configure postgres with its &lt;a class="reference external" href="https://www.p
 &lt;p&gt;Here my recipe to do it.&lt;/p&gt;
 &lt;p&gt;I'm using the &lt;a class="reference external" href="https://hub.docker.com/_/postgres/"&gt;oficial Postgres Docker image&lt;/a&gt;
 adding only some scripts:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-FROM postgres:9.4.4
+&lt;pre class="literal-block"&gt;FROM postgres:9.4.4
 MAINTAINER gilgamezh &amp;lt;spam@gilgamezh.me&amp;gt;
 
 COPY docker-entrypoint_db.sh /
 COPY non_durable.sh /
-ENTRYPOINT ["/docker-entrypoint_db.sh"]
-&lt;/pre&gt;
+ENTRYPOINT ["/docker-entrypoint_db.sh"]&lt;/pre&gt;
 &lt;p&gt;Here the content of docker-entrypoint_db.sh. I'm using an environment variable
 to enable or disable the non_durable settings:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-#!/bin/bash
+&lt;pre class="literal-block"&gt;#!/bin/bash
 
 if [ -v POSTGRES_NON_DURABLE_SETTINGS ]; then
     cp /non_durable.sh /docker-entrypoint-initdb.d/
 fi
 
 # run the default img entrypoint
-/bin/sh /docker-entrypoint.sh postgres
-&lt;/pre&gt;
+/bin/sh /docker-entrypoint.sh postgres&lt;/pre&gt;
 &lt;p&gt;And here the script to change the Postgres configuration:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-#!/bin/bash
+&lt;pre class="literal-block"&gt;#!/bin/bash
 
 # setting non-durable options
 # https://www.postgresql.org/docs/current/static/non-durability.html
@@ -43,15 +38,12 @@ echo "fsync = off" &amp;gt;&amp;gt; /var/lib/postgresql/data/postgresql.conf
 # no need to force WAL writes to disk on every commit.
 echo "synchronous_commit = off" &amp;gt;&amp;gt; /var/lib/postgresql/data/postgresql.conf
 # no need to guard against partial page writes.
-echo "full_page_writes = off" &amp;gt;&amp;gt; /var/lib/postgresql/data/postgresql.conf
-&lt;/pre&gt;
+echo "full_page_writes = off" &amp;gt;&amp;gt; /var/lib/postgresql/data/postgresql.conf&lt;/pre&gt;
 &lt;p&gt;Then in my docker-compose.yml file I'm setting the &lt;cite&gt;POSTGRES_NON_DURABLE_SETTINGS&lt;/cite&gt;
 variable:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-environment:
+&lt;pre class="literal-block"&gt;environment:
   - POSTGRES_PASSWORD=xxxx
-  - POSTGRES_NON_DURABLE_SETTINGS=1
-&lt;/pre&gt;
+  - POSTGRES_NON_DURABLE_SETTINGS=1&lt;/pre&gt;
 &lt;p&gt;With these changes my tests are running a lot faster. 🚀🚀🚀&lt;/p&gt;&lt;/div&gt;</description><category>docker</category><category>how-to</category><category>postgres</category><guid>https://gilgamezh.me/posts/postgres-non-durable-options-docker-container/</guid><pubDate>Sun, 09 Apr 2017 18:55:48 GMT</pubDate></item><item><title>Compilar versión vieja de PHP para Archlinux</title><link>https://gilgamezh.me/posts/compilar-version-vieja-de-php-para-archlinux/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Archlinux siempre tiene la versión más nueva de todo, eso tiene muchas cosas
 positivas.
 Algo que suele pasar es que tenemos que usar algo que está productivo y que
@@ -60,14 +52,11 @@ Hace poco tuve que laburar con un Drupal que estaba usando PHP 5.3 y no me
 quedó otra que compilarlo.
 Así que acá dejo los pasos de cómo hacerlo (básicamente la linea del configure).&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;Descargar el source en /usr/local/src.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Hacer un symlink en /usr/include/freetype2/freetype/freetype.h -&amp;gt; ../freetype.h
-(sin esto da un error porque no encuentra freetype.h)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Ejecutar configure, make y make install:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-./configure --enable-mbstring --with-mysql --with-mysqli --with-zlib \
+&lt;li&gt;&lt;p&gt;Descargar el source en /usr/local/src.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Hacer un symlink en /usr/include/freetype2/freetype/freetype.h -&amp;gt; ../freetype.h
+(sin esto da un error porque no encuentra freetype.h)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ejecutar configure, make y make install:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;./configure --enable-mbstring --with-mysql --with-mysqli --with-zlib \
 --with-png-dir=/usr --with-jpeg-dir=/usr \
 --with-freetype-dir=/usr/include/freetype2/ --with-curl --with-gettext \
 --with-pdo-mysql --with-pdo-sqlite --with-bz2 \
@@ -76,16 +65,12 @@ Así que acá dejo los pasos de cómo hacerlo (básicamente la linea del configu
 --with-xpm-dir=/usr
 
 make
-make install
-&lt;/pre&gt;
+make install&lt;/pre&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Hacer un symlink de /usr/local/php-5.3.29 a /usr/local/php&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Copiar el php.ini que tengamos a /usr/local/php/lib&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Si usamos Apache en httpd.conf hay que hacer un &lt;em&gt;Include&lt;/em&gt; de
-/etc/httpd/conf/extra/httpd-fastcgid.conf&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Hacer un symlink de /usr/local/php-5.3.29 a /usr/local/php&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Copiar el php.ini que tengamos a /usr/local/php/lib&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Si usamos Apache en httpd.conf hay que hacer un &lt;em&gt;Include&lt;/em&gt; de
+/etc/httpd/conf/extra/httpd-fastcgid.conf&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/div&gt;</description><category>archlinux</category><category>how-to</category><category>PHP</category><guid>https://gilgamezh.me/posts/compilar-version-vieja-de-php-para-archlinux/</guid><pubDate>Sat, 28 Feb 2015 15:17:52 GMT</pubDate></item><item><title>How to install Fisa-vim-cofig in Archlinux</title><link>https://gilgamezh.me/posts/how-to-install-fisa-vim-cofig-in-archlinux/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;img alt="/images/fisa-dev-config.png" src="https://gilgamezh.me/images/fisa-dev-config.png"&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://github.com/fisadev/fisa-vim-config/"&gt;Fisa-vim-config&lt;/a&gt;
 es una excelente configuración para Vim que recopila muchos
@@ -107,7 +92,5 @@ gvim en lugar de vim, pip2 en lugar de pip y tener en cuenta que el paquete
 exuberant-ctags es extra/xtags.
 Lo único que cambia es este punto de la guia de instalación en el repo oficial.&lt;/p&gt;
 &lt;p&gt;Dependencies:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-sudo pacman -Sy gvim ctags git python2-pip
-sudo pip2 install dbgp vim-debug pep8 flake8 pyflakes isort
-&lt;/pre&gt;&lt;/div&gt;</description><category>how-to</category><category>python</category><category>vim</category><guid>https://gilgamezh.me/posts/how-to-install-fisa-vim-cofig-in-archlinux/</guid><pubDate>Sat, 15 Mar 2014 18:22:44 GMT</pubDate></item></channel></rss>
+&lt;pre class="literal-block"&gt;sudo pacman -Sy gvim ctags git python2-pip
+sudo pip2 install dbgp vim-debug pep8 flake8 pyflakes isort&lt;/pre&gt;&lt;/div&gt;</description><category>how-to</category><category>python</category><category>vim</category><guid>https://gilgamezh.me/posts/how-to-install-fisa-vim-cofig-in-archlinux/</guid><pubDate>Sat, 15 Mar 2014 18:22:44 GMT</pubDate></item></channel></rss>

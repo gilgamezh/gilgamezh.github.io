@@ -35,7 +35,7 @@
  </url>
  <url>
   <loc>https://gilgamezh.me/archive.html</loc>
-  <lastmod>2019-02-23T15:33:00Z</lastmod>
+  <lastmod>2020-08-29T09:18:00Z</lastmod>
  </url>
  <url>
   <loc>https://gilgamezh.me/categories/</loc>
@@ -359,7 +359,7 @@
  </url>
  <url>
   <loc>https://gilgamezh.me/en/archive.html</loc>
-  <lastmod>2019-02-23T15:33:00Z</lastmod>
+  <lastmod>2020-08-29T09:18:00Z</lastmod>
  </url>
  <url>
   <loc>https://gilgamezh.me/en/categories/</loc>
@@ -655,23 +655,23 @@
  </url>
  <url>
   <loc>https://gilgamezh.me/en/index-1.html</loc>
-  <lastmod>2019-02-23T15:33:00Z</lastmod>
+  <lastmod>2020-08-29T09:18:00Z</lastmod>
  </url>
  <url>
   <loc>https://gilgamezh.me/en/index-2.html</loc>
-  <lastmod>2019-02-23T15:33:00Z</lastmod>
+  <lastmod>2020-08-29T09:18:00Z</lastmod>
  </url>
  <url>
   <loc>https://gilgamezh.me/en/index-3.html</loc>
-  <lastmod>2019-02-23T15:33:00Z</lastmod>
+  <lastmod>2020-08-29T09:18:00Z</lastmod>
  </url>
  <url>
   <loc>https://gilgamezh.me/en/index-4.html</loc>
-  <lastmod>2019-02-23T15:33:00Z</lastmod>
+  <lastmod>2020-08-29T09:18:00Z</lastmod>
  </url>
  <url>
   <loc>https://gilgamezh.me/en/index-5.html</loc>
-  <lastmod>2019-02-23T15:33:00Z</lastmod>
+  <lastmod>2020-08-29T09:18:00Z</lastmod>
  </url>
  <url>
   <loc>https://gilgamezh.me/en/posts/30-anos-de-gnu/</loc>
@@ -929,29 +929,24 @@
   <xhtml:link rel="alternate" hreflang="es" href="https://gilgamezh.me/posts/vim-syntax-highlighting-for-varnish-vcl-files/" />
  </url>
  <url>
-  <loc>https://gilgamezh.me/en/stories/resume/</loc>
-  <lastmod>2019-02-23T15:14:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="es" href="https://gilgamezh.me/stories/resume/" />
- </url>
- <url>
   <loc>https://gilgamezh.me/index-1.html</loc>
-  <lastmod>2019-02-23T15:33:00Z</lastmod>
+  <lastmod>2020-08-29T09:18:00Z</lastmod>
  </url>
  <url>
   <loc>https://gilgamezh.me/index-2.html</loc>
-  <lastmod>2019-02-23T15:33:00Z</lastmod>
+  <lastmod>2020-08-29T09:18:00Z</lastmod>
  </url>
  <url>
   <loc>https://gilgamezh.me/index-3.html</loc>
-  <lastmod>2019-02-23T15:33:00Z</lastmod>
+  <lastmod>2020-08-29T09:18:00Z</lastmod>
  </url>
  <url>
   <loc>https://gilgamezh.me/index-4.html</loc>
-  <lastmod>2019-02-23T15:33:00Z</lastmod>
+  <lastmod>2020-08-29T09:18:00Z</lastmod>
  </url>
  <url>
   <loc>https://gilgamezh.me/index-5.html</loc>
-  <lastmod>2019-02-23T15:33:00Z</lastmod>
+  <lastmod>2020-08-29T09:18:00Z</lastmod>
  </url>
  <url>
   <loc>https://gilgamezh.me/posts/30-anos-de-gnu/</loc>
@@ -1162,10 +1157,5 @@
  <url>
   <loc>https://gilgamezh.me/random/</loc>
   <lastmod>2019-02-23T15:14:00Z</lastmod>
- </url>
- <url>
-  <loc>https://gilgamezh.me/stories/resume/</loc>
-  <lastmod>2019-02-23T15:14:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="https://gilgamezh.me/en/stories/resume/" />
  </url>
 </urlset>

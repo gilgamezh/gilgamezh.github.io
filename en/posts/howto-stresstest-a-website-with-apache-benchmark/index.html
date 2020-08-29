@@ -14,8 +14,8 @@
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
-<link rel="alternate" type="application/rss+xml" title="RSS (en)" href="../../rss.xml">
-<link rel="alternate" type="application/rss+xml" title="RSS (es)" href="../../../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (en)" hreflang="en" href="../../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (es)" hreflang="es" href="../../../rss.xml">
 <link rel="canonical" href="https://gilgamezh.me/en/posts/howto-stresstest-a-website-with-apache-benchmark/">
 <!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="GiLgAmEzH">
 <link rel="prev" href="../como-usar-un-tunel-ssh-como-proxy-para-http/" title="Cómo usar un tunel SSH como proxy para HTTP" type="text/html">
@@ -49,13 +49,13 @@
             </div>
         </div>
           <div class="col-md-6 col-xs-10 col-sm-10 bootblog4-brand" style="width: auto;">
-            <a class="navbar-brand blog-header-logo text-dark" href="https://gilgamezh.me/en/">
+            <a class="navbar-brand blog-header-logo text-dark" href="../../">
             <img src="../../../images/gilgamezh.png" alt="No Todo Es Mecánico" id="logo" class="d-inline-block align-top"><span id="blog-title">No Todo Es Mecánico</span>
         </a>
           </div>
             <div class="col-md-3 justify-content-end align-items-center bs-nav-collapsible collapse flex-collapse bootblog4-right-nav">
             <nav class="navbar navbar-light bg-white"><ul class="navbar-nav bootblog4-right-nav">
-<li class="nav-item"><a href="https://gilgamezh.me/" rel="alternate" hreflang="es" class="nav-link">Español</a></li>
+<li class="nav-item"><a href="../../../" rel="alternate" hreflang="es" class="nav-link">Español</a></li>
 
                     
                     
@@ -102,10 +102,11 @@
         <!--Body content-->
         
         
+        
 <article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">HowTo (stress)test a website with Apache Benchmark</a></h1>
 
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
                     GiLgAmEzH
             </span></p>
             <p class="dateline">
@@ -133,36 +134,26 @@ resultados, así que aproveché el momento para armar este post.</p>
 <p>El objetivo es poder hacer varios tests contra una URL usando diferentes valores
 de concurrencia/cantidad de requests y gráficar la salida.</p>
 <p>Primero hay que ejecutar las pruebas con <cite>ab</cite>:</p>
-<pre class="literal-block">
-ab -c 3 -n 100 -v 2 -g out1.tsv -H "Accept-Encoding: gzip,deflate"  http://python.org.ar/
-</pre>
+<pre class="literal-block">ab -c 3 -n 100 -v 2 -g out1.tsv -H "Accept-Encoding: gzip,deflate"  http://python.org.ar/</pre>
 <!-- TEASER_END -->
 <p>Esa configuración significa:</p>
 <ul class="simple">
-<li>
-<cite>-c 3</cite>:  concurrencia 3</li>
-<li>
-<cite>-n 15</cite>:  15 request</li>
-<li>
-<cite>-v 2</cite>: verbose (muestra los headers)</li>
-<li>
-<cite>-g out1.tsv</cite>: salida para gnuplot</li>
-<li>
-<cite>-H -H "Accept-Encoding: gzip,deflate"</cite> Hacer requests con gzip (igual que cualquier browser)</li>
+<li><p><cite>-c 3</cite>:  concurrencia 3</p></li>
+<li><p><cite>-n 15</cite>:  15 request</p></li>
+<li><p><cite>-v 2</cite>: verbose (muestra los headers)</p></li>
+<li><p><cite>-g out1.tsv</cite>: salida para gnuplot</p></li>
+<li><p><cite>-H -H "Accept-Encoding: gzip,deflate"</cite> Hacer requests con gzip (igual que cualquier browser)</p></li>
 </ul>
 <p>La idea es repetir N veces la prueba con los mismos parametros renombrando outN.tsv.</p>
 <p>Yo ejecuté tres pruebas:</p>
-<pre class="literal-block">
-/tmp  ll out*.tsv
+<pre class="literal-block">/tmp  ll out*.tsv
 -rw-r--r-- 1 gilgamezh users 4934 Oct 31 11:26 out1.tsv
 -rw-r--r-- 1 gilgamezh users 4930 Oct 31 11:26 out2.tsv
--rw-r--r-- 1 gilgamezh users 4936 Oct 31 11:27 out3.tsv
-</pre>
+-rw-r--r-- 1 gilgamezh users 4936 Oct 31 11:27 out3.tsv</pre>
 <p>Cada una nos da una resumen con una salida, pero mucho mejor ver un gráfico.
 Con gnuplot es muy simple.</p>
 <p>Yo uso un template que edito cada vez:</p>
-<pre class="literal-block">
-# output as png image
+<pre class="literal-block"># output as png image
 set terminal png
 
 # save file to "benchmark.png"
@@ -186,14 +177,11 @@ set ylabel "Response Time (ms)"
 # plot data from bench1.tsv,bench2.tsv and bench3.tsv using column 10 with smooth sbezier lines
 plot "out1.tsv" using 10 smooth sbezier with lines title "Benchmark 1:", \
      "out2.tsv" using 10 smooth sbezier with lines title "Benchmark 2:", \
-     "out3.tsv" using 10 smooth sbezier with lines title "Benchmark 3:"
-</pre>
+     "out3.tsv" using 10 smooth sbezier with lines title "Benchmark 3:"</pre>
 <p>Es un poco precario porque hay que editarlo a mano con el nombre de los .tsv.
 Algún día me voy a tomar el tiempo de automatizar todo. ;)</p>
 <p>lo guardo como <cite>gnuplot.template</cite> y ejecuto:</p>
-<pre class="literal-block">
-gnuplot gnuplot.template
-</pre>
+<pre class="literal-block">gnuplot gnuplot.template</pre>
 <p>Y listo! tenemos nuestro gráfico.
 (sí hay que tener gnuplot instalado. en Arch el paquete se llama <cite>python-gnuplot</cite>)</p>
 <img alt="/images/benchmark_python.org.ar.png" src="../../../images/benchmark_python.org.ar.png"><p>Por ejemplo la conclusión de esta prueba es que python.org.ar necesita un caché de frontend :)</p>
@@ -234,9 +222,10 @@ gnuplot gnuplot.template
 
 
         </section></article><script>var disqus_shortname="notodoesmecnico";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><!--End of body content--><footer id="footer">
-            Contents © 2019         <a href="mailto:mail@gilgamezh.me">GiLgAmEzH</a> - My Fingerprint: <a href="https://gilgamezh.me/public.key">0712 8EB2 C626 08C5 69E1  8949 6DDF 6FA3 5EB9 26AB</a>  Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2020         <a href="mailto:mail@gilgamezh.me">GiLgAmEzH</a> - My Fingerprint: <a href="https://gilgamezh.me/public.key">0712 8EB2 C626 08C5 69E1  8949 6DDF 6FA3 5EB9 26AB</a>  Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
 <img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a>
+            
             
         </footer>
 </div>

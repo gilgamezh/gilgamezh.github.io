@@ -13,8 +13,8 @@
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
-<link rel="alternate" type="application/rss+xml" title="RSS (en)" href="../../en/rss.xml">
-<link rel="alternate" type="application/rss+xml" title="RSS (es)" href="../../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (es)" hreflang="es" href="../../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (en)" hreflang="en" href="../../en/rss.xml">
 <link rel="canonical" href="https://gilgamezh.me/posts/tmux-tip/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="GiLgAmEzH">
 <link rel="prev" href="../oferta-laboral-ing-de-aplicaciones-devops/" title="Oferta laboral - Ing de Aplicaciones | DevOps" type="text/html">
@@ -50,13 +50,13 @@ proyectos/tareas. ( es muy muy útil cuando ante al'>
             </div>
         </div>
           <div class="col-md-6 col-xs-10 col-sm-10 bootblog4-brand" style="width: auto;">
-            <a class="navbar-brand blog-header-logo text-dark" href="https://gilgamezh.me/">
+            <a class="navbar-brand blog-header-logo text-dark" href="../../">
             <img src="../../images/gilgamezh.png" alt="No Todo Es Mecánico" id="logo" class="d-inline-block align-top"><span id="blog-title">No Todo Es Mecánico</span>
         </a>
           </div>
             <div class="col-md-3 justify-content-end align-items-center bs-nav-collapsible collapse flex-collapse bootblog4-right-nav">
             <nav class="navbar navbar-light bg-white"><ul class="navbar-nav bootblog4-right-nav">
-<li class="nav-item"><a href="https://gilgamezh.me/en/" rel="alternate" hreflang="en" class="nav-link">English</a></li>
+<li class="nav-item"><a href="../../en/" rel="alternate" hreflang="en" class="nav-link">English</a></li>
 
                     
                     
@@ -103,10 +103,11 @@ proyectos/tareas. ( es muy muy útil cuando ante al'>
         <!--Body content-->
         
         
+        
 <article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Tmux tip</a></h1>
 
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
                     GiLgAmEzH
             </span></p>
             <p class="dateline">
@@ -115,7 +116,7 @@ proyectos/tareas. ( es muy muy útil cuando ante al'>
             </p>
                 <p class="commentline">
         
-    <a href="#disqus_thread" data-disqus-identifier="cache/posts/tmux-tip.html">Comments</a>
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/tmux-tip.html">Comentarios</a>
 
 
             
@@ -137,26 +138,22 @@ utilizo son irssi y vim. Hacer funcionar tmux,irssi y vim juntos
 que resolví algunos problemas entre ellos.</p>
 <p>Los problemas que tenía eran los siguientes:</p>
 <ul class="simple">
-<li>tmux no funciona con 256 colores con la configuración standard.</li>
-<li>Vim se ve muy feo sin 256 colores.</li>
-<li>Cuando seteaba TERM=xterm-256color irssi dejaba de funcionar bien (no funciona el "auto-scroll" con las lineas nuevas)</li>
-<li>Al conectarme a algún servidor por ssh vi/vim se quejaban de mi variable $TERM. (E558: Terminal entry not found in terminfo 'screen-256color' not known. Available builtin terminals are:.... )</li>
+<li><p>tmux no funciona con 256 colores con la configuración standard.</p></li>
+<li><p>Vim se ve muy feo sin 256 colores.</p></li>
+<li><p>Cuando seteaba TERM=xterm-256color irssi dejaba de funcionar bien (no funciona el "auto-scroll" con las lineas nuevas)</p></li>
+<li><p>Al conectarme a algún servidor por ssh vi/vim se quejaban de mi variable $TERM. (E558: Terminal entry not found in terminfo 'screen-256color' not known. Available builtin terminals are:.... )</p></li>
 </ul>
 <p>La solución es muy simple, pero creo que vale la pena el tip porque tuve
 que probar varias configuraciones diferentes.</p>
 <p>En mi .zshrc (es lo mismo para .bashrc) puse:</p>
-<pre class="literal-block">
-# for tmux colors
+<pre class="literal-block"># for tmux colors
 export TERM=screen-256color
 # and it is to avoid remote host problems with $TERM
-alias ssh='TERM=xterm ssh'
-</pre>
+alias ssh='TERM=xterm ssh'</pre>
 <p>En .tmux.conf únicamente esto:</p>
-<pre class="literal-block">
-# set 256 colors
+<pre class="literal-block"># set 256 colors
 set -g default-terminal "screen-256color"
-set -g terminal-overrides 'xterm:colors=256'
-</pre>
+set -g terminal-overrides 'xterm:colors=256'</pre>
 </div>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
@@ -194,9 +191,10 @@ set -g terminal-overrides 'xterm:colors=256'
 
 
         </section></article><script>var disqus_shortname="notodoesmecnico";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><!--End of body content--><footer id="footer">
-            Contents © 2019         <a href="mailto:mail@gilgamezh.me">GiLgAmEzH</a> - My Fingerprint: <a href="https://gilgamezh.me/public.key">0712 8EB2 C626 08C5 69E1  8949 6DDF 6FA3 5EB9 26AB</a>  Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2020         <a href="mailto:mail@gilgamezh.me">GiLgAmEzH</a> - My Fingerprint: <a href="https://gilgamezh.me/public.key">0712 8EB2 C626 08C5 69E1  8949 6DDF 6FA3 5EB9 26AB</a>  Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
 <img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a>
+            
             
         </footer>
 </div>

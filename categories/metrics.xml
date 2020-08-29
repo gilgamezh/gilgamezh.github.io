@@ -1,36 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Publicaciones sobre metrics)</title><link>https://gilgamezh.me/</link><description></description><atom:link href="https://gilgamezh.me/categories/metrics.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><lastBuildDate>Sat, 23 Feb 2019 15:33:12 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>HowTo (stress)test a website with Apache Benchmark</title><link>https://gilgamezh.me/posts/howto-stresstest-a-website-with-apache-benchmark/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Hoy por la mañana @reydelhumo queria probar un sitio que tiene en una raspy, yo
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Publicaciones sobre metrics)</title><link>https://gilgamezh.me/</link><description></description><atom:link href="https://gilgamezh.me/categories/metrics.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><lastBuildDate>Sat, 29 Aug 2020 09:18:40 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>HowTo (stress)test a website with Apache Benchmark</title><link>https://gilgamezh.me/posts/howto-stresstest-a-website-with-apache-benchmark/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Hoy por la mañana @reydelhumo queria probar un sitio que tiene en una raspy, yo
 le recomendé que use &lt;cite&gt;ab&lt;/cite&gt; para hacer algunas pruebas básicas de load.&lt;/p&gt;
 &lt;p&gt;Usar &lt;cite&gt;ab&lt;/cite&gt; es muy simple, pero es mucho más lindo poder hacer gráficos de los
 resultados, así que aproveché el momento para armar este post.&lt;/p&gt;
 &lt;p&gt;El objetivo es poder hacer varios tests contra una URL usando diferentes valores
 de concurrencia/cantidad de requests y gráficar la salida.&lt;/p&gt;
 &lt;p&gt;Primero hay que ejecutar las pruebas con &lt;cite&gt;ab&lt;/cite&gt;:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-ab -c 3 -n 100 -v 2 -g out1.tsv -H "Accept-Encoding: gzip,deflate"  http://python.org.ar/
-&lt;/pre&gt;
+&lt;pre class="literal-block"&gt;ab -c 3 -n 100 -v 2 -g out1.tsv -H "Accept-Encoding: gzip,deflate"  http://python.org.ar/&lt;/pre&gt;
 &lt;!-- TEASER_END --&gt;
 &lt;p&gt;Esa configuración significa:&lt;/p&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;&lt;cite&gt;-c 3&lt;/cite&gt;:  concurrencia 3&lt;/li&gt;
-&lt;li&gt;&lt;cite&gt;-n 15&lt;/cite&gt;:  15 request&lt;/li&gt;
-&lt;li&gt;&lt;cite&gt;-v 2&lt;/cite&gt;: verbose (muestra los headers)&lt;/li&gt;
-&lt;li&gt;&lt;cite&gt;-g out1.tsv&lt;/cite&gt;: salida para gnuplot&lt;/li&gt;
-&lt;li&gt;&lt;cite&gt;-H -H "Accept-Encoding: gzip,deflate"&lt;/cite&gt; Hacer requests con gzip (igual que cualquier browser)&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;-c 3&lt;/cite&gt;:  concurrencia 3&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;-n 15&lt;/cite&gt;:  15 request&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;-v 2&lt;/cite&gt;: verbose (muestra los headers)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;-g out1.tsv&lt;/cite&gt;: salida para gnuplot&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;-H -H "Accept-Encoding: gzip,deflate"&lt;/cite&gt; Hacer requests con gzip (igual que cualquier browser)&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;La idea es repetir N veces la prueba con los mismos parametros renombrando outN.tsv.&lt;/p&gt;
 &lt;p&gt;Yo ejecuté tres pruebas:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-/tmp  ll out*.tsv
+&lt;pre class="literal-block"&gt;/tmp  ll out*.tsv
 -rw-r--r-- 1 gilgamezh users 4934 Oct 31 11:26 out1.tsv
 -rw-r--r-- 1 gilgamezh users 4930 Oct 31 11:26 out2.tsv
--rw-r--r-- 1 gilgamezh users 4936 Oct 31 11:27 out3.tsv
-&lt;/pre&gt;
+-rw-r--r-- 1 gilgamezh users 4936 Oct 31 11:27 out3.tsv&lt;/pre&gt;
 &lt;p&gt;Cada una nos da una resumen con una salida, pero mucho mejor ver un gráfico.
 Con gnuplot es muy simple.&lt;/p&gt;
 &lt;p&gt;Yo uso un template que edito cada vez:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-# output as png image
+&lt;pre class="literal-block"&gt;# output as png image
 set terminal png
 
 # save file to "benchmark.png"
@@ -54,14 +49,11 @@ set ylabel "Response Time (ms)"
 # plot data from bench1.tsv,bench2.tsv and bench3.tsv using column 10 with smooth sbezier lines
 plot "out1.tsv" using 10 smooth sbezier with lines title "Benchmark 1:", \
      "out2.tsv" using 10 smooth sbezier with lines title "Benchmark 2:", \
-     "out3.tsv" using 10 smooth sbezier with lines title "Benchmark 3:"
-&lt;/pre&gt;
+     "out3.tsv" using 10 smooth sbezier with lines title "Benchmark 3:"&lt;/pre&gt;
 &lt;p&gt;Es un poco precario porque hay que editarlo a mano con el nombre de los .tsv.
 Algún día me voy a tomar el tiempo de automatizar todo. ;)&lt;/p&gt;
 &lt;p&gt;lo guardo como &lt;cite&gt;gnuplot.template&lt;/cite&gt; y ejecuto:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-gnuplot gnuplot.template
-&lt;/pre&gt;
+&lt;pre class="literal-block"&gt;gnuplot gnuplot.template&lt;/pre&gt;
 &lt;p&gt;Y listo! tenemos nuestro gráfico.
 (sí hay que tener gnuplot instalado. en Arch el paquete se llama &lt;cite&gt;python-gnuplot&lt;/cite&gt;)&lt;/p&gt;
 &lt;img alt="/images/benchmark_python.org.ar.png" src="https://gilgamezh.me/images/benchmark_python.org.ar.png"&gt;

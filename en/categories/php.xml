@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Posts about PHP)</title><link>https://gilgamezh.me/</link><description></description><atom:link href="https://gilgamezh.me/en/categories/php.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 23 Feb 2019 15:33:12 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Compilar versión vieja de PHP para Archlinux</title><link>https://gilgamezh.me/en/posts/compilar-version-vieja-de-php-para-archlinux/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Archlinux siempre tiene la versión más nueva de todo, eso tiene muchas cosas
+<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Posts about PHP)</title><link>https://gilgamezh.me/</link><description></description><atom:link href="https://gilgamezh.me/en/categories/php.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 29 Aug 2020 09:18:40 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Compilar versión vieja de PHP para Archlinux</title><link>https://gilgamezh.me/en/posts/compilar-version-vieja-de-php-para-archlinux/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Archlinux siempre tiene la versión más nueva de todo, eso tiene muchas cosas
 positivas.
 Algo que suele pasar es que tenemos que usar algo que está productivo y que
 tiene una versión &lt;em&gt;mucho&lt;/em&gt; más vieja que la instalada.
@@ -7,14 +7,11 @@ Hace poco tuve que laburar con un Drupal que estaba usando PHP 5.3 y no me
 quedó otra que compilarlo.
 Así que acá dejo los pasos de cómo hacerlo (básicamente la linea del configure).&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;Descargar el source en /usr/local/src.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Hacer un symlink en /usr/include/freetype2/freetype/freetype.h -&amp;gt; ../freetype.h
-(sin esto da un error porque no encuentra freetype.h)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Ejecutar configure, make y make install:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-./configure --enable-mbstring --with-mysql --with-mysqli --with-zlib \
+&lt;li&gt;&lt;p&gt;Descargar el source en /usr/local/src.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Hacer un symlink en /usr/include/freetype2/freetype/freetype.h -&amp;gt; ../freetype.h
+(sin esto da un error porque no encuentra freetype.h)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ejecutar configure, make y make install:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;./configure --enable-mbstring --with-mysql --with-mysqli --with-zlib \
 --with-png-dir=/usr --with-jpeg-dir=/usr \
 --with-freetype-dir=/usr/include/freetype2/ --with-curl --with-gettext \
 --with-pdo-mysql --with-pdo-sqlite --with-bz2 \
@@ -23,14 +20,10 @@ Así que acá dejo los pasos de cómo hacerlo (básicamente la linea del configu
 --with-xpm-dir=/usr
 
 make
-make install
-&lt;/pre&gt;
+make install&lt;/pre&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Hacer un symlink de /usr/local/php-5.3.29 a /usr/local/php&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Copiar el php.ini que tengamos a /usr/local/php/lib&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Si usamos Apache en httpd.conf hay que hacer un &lt;em&gt;Include&lt;/em&gt; de
-/etc/httpd/conf/extra/httpd-fastcgid.conf&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Hacer un symlink de /usr/local/php-5.3.29 a /usr/local/php&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Copiar el php.ini que tengamos a /usr/local/php/lib&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Si usamos Apache en httpd.conf hay que hacer un &lt;em&gt;Include&lt;/em&gt; de
+/etc/httpd/conf/extra/httpd-fastcgid.conf&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/div&gt;</description><guid>https://gilgamezh.me/en/posts/compilar-version-vieja-de-php-para-archlinux/</guid><pubDate>Sat, 28 Feb 2015 15:17:52 GMT</pubDate></item></channel></rss>

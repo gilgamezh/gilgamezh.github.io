@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Publicaciones sobre old_blog)</title><link>https://gilgamezh.me/</link><description></description><atom:link href="https://gilgamezh.me/categories/old_blog.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><lastBuildDate>Sat, 23 Feb 2019 15:33:12 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Receta de Apple Crumble + Timelapse con Mencoder</title><link>https://gilgamezh.me/posts/receta-de-apple-crumble-%2B-timelapse-con-mencoder/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Copiada de acá pero es tal cual lo hace mi flia.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Publicaciones sobre old_blog)</title><link>https://gilgamezh.me/</link><description></description><atom:link href="https://gilgamezh.me/categories/old_blog.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><lastBuildDate>Sat, 29 Aug 2020 09:18:41 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Receta de Apple Crumble + Timelapse con Mencoder</title><link>https://gilgamezh.me/posts/receta-de-apple-crumble-%2B-timelapse-con-mencoder/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Copiada de acá pero es tal cual lo hace mi flia.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://recetasamericanas.com/2012/01/19/crujiente-de-manzana-apple-crisp"&gt;http://recetasamericanas.com/2012/01/19/crujiente-de-manzana-apple-crisp&lt;/a&gt;&lt;/p&gt;
 &lt;div class="section" id="ingredientes"&gt;
 &lt;h2&gt;Ingredientes:&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;ul class="simple"&gt;
-&lt;li&gt;6 manzanas grandes&lt;/li&gt;
-&lt;li&gt;200 g (1 taza) de azúcar&lt;/li&gt;
-&lt;li&gt;90 g (3/4 taza) de harina&lt;/li&gt;
-&lt;li&gt;180 g (1/3 taza) manteca (a temperatura de ambiente)&lt;/li&gt;
-&lt;li&gt;60 ml (1/4 taza) de agua&lt;/li&gt;
-&lt;li&gt;5 ml (1 cucharita) de canela&lt;/li&gt;
-&lt;li&gt;2,5 ml (1/2 cucharita) de sal&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;6 manzanas grandes&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;200 g (1 taza) de azúcar&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;90 g (3/4 taza) de harina&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;180 g (1/3 taza) manteca (a temperatura de ambiente)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;60 ml (1/4 taza) de agua&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;5 ml (1 cucharita) de canela&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;2,5 ml (1/2 cucharita) de sal&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 &lt;!-- TEASER_END --&gt;
@@ -24,17 +24,14 @@
 &lt;h2&gt;De paso saque fotos mientras lo hice y después arme un timelapse con Mencoder.&lt;/h2&gt;
 &lt;p&gt;Pasos:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p class="first"&gt;enviar a un archivo los nombres de todas las imágenes:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-ls -1tr &amp;gt; files.txt
-&lt;/pre&gt;
+&lt;li&gt;&lt;p&gt;enviar a un archivo los nombres de todas las imágenes:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;ls -1tr &amp;gt; files.txt&lt;/pre&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;Encodear con Mencoder:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-mencoder -nosound -ovc lavc -lavcopts vcodec=mpeg4 -o test_4fps.avi \
--mf type=jpeg:fps=4 mf://@files.txt
-&lt;/pre&gt;
+&lt;li&gt;&lt;p&gt;Encodear con Mencoder:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;mencoder -nosound -ovc lavc -lavcopts vcodec=mpeg4 -o test_4fps.avi \
+-mf type=jpeg:fps=4 mf://@files.txt&lt;/pre&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;(use 4FPS para 50 imágenes, esto lo hice a ojo)&lt;/p&gt;
-&lt;a data-flickr-embed="true" href="https://www.flickr.com/photos/bolche/9063385970/" title="appleCrumble by b0lchevique ✪, on Flickr"&gt;&lt;img src="https://farm8.staticflickr.com/7430/9063385970_5eb9deb903_b.jpg" width="1024" height="679" alt="appleCrumble"&gt;&lt;/a&gt;&lt;script async src="https://embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/div&gt;&lt;/div&gt;</description><category>comida</category><category>food</category><category>mencoder</category><category>old_blog</category><category>personal</category><guid>https://gilgamezh.me/posts/receta-de-apple-crumble-%2B-timelapse-con-mencoder/</guid><pubDate>Mon, 17 Jun 2013 00:35:01 GMT</pubDate></item></channel></rss>
+&lt;div style="top: 0; left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"&gt;
+				&lt;iframe style="width: 100%; height: 100%; position: absolute;" src="https://embedr.flickr.com/photos/9063385970" width="1024" height="679" frameborder="0" allow="autoplay; fullscreen" allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>comida</category><category>food</category><category>mencoder</category><category>old_blog</category><category>personal</category><guid>https://gilgamezh.me/posts/receta-de-apple-crumble-%2B-timelapse-con-mencoder/</guid><pubDate>Mon, 17 Jun 2013 00:35:01 GMT</pubDate></item></channel></rss>
