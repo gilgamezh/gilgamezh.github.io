@@ -114,7 +114,7 @@
             <time class="published dt-published" datetime="2015-10-31T11:18:22-03:00" itemprop="datePublished" title="2015-10-31 11:18">2015-10-31 11:18</time></a>
             </p>
                 <p class="commentline">
-        
+    
     <a href="#disqus_thread" data-disqus-identifier="cache/posts/howto-stresstest-a-website-with-apache-benchmark.html">Comments</a>
 
 
@@ -126,8 +126,7 @@
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div>
-<p>Hoy por la mañana @reydelhumo queria probar un sitio que tiene en una raspy, yo
+    <p>Hoy por la mañana @reydelhumo queria probar un sitio que tiene en una raspy, yo
 le recomendé que use <cite>ab</cite> para hacer algunas pruebas básicas de load.</p>
 <p>Usar <cite>ab</cite> es muy simple, pero es mucho más lindo poder hacer gráficos de los
 resultados, así que aproveché el momento para armar este post.</p>
@@ -185,7 +184,6 @@ Algún día me voy a tomar el tiempo de automatizar todo. ;)</p>
 <p>Y listo! tenemos nuestro gráfico.
 (sí hay que tener gnuplot instalado. en Arch el paquete se llama <cite>python-gnuplot</cite>)</p>
 <img alt="/images/benchmark_python.org.ar.png" src="../../../images/benchmark_python.org.ar.png"><p>Por ejemplo la conclusión de esta prueba es que python.org.ar necesita un caché de frontend :)</p>
-</div>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
 <li><a class="tag p-category" href="../../categories/devops/" rel="tag">devops</a></li>
@@ -201,7 +199,7 @@ Algún día me voy a tomar el tiempo de automatizar todo. ;)</p>
             </li>
         </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
         
-        
+    
         <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="notodoesmecnico",
@@ -222,7 +220,7 @@ Algún día me voy a tomar el tiempo de automatizar todo. ;)</p>
 
 
         </section></article><script>var disqus_shortname="notodoesmecnico";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><!--End of body content--><footer id="footer">
-            Contents © 2020         <a href="mailto:mail@gilgamezh.me">GiLgAmEzH</a> - My Fingerprint: <a href="https://gilgamezh.me/public.key">0712 8EB2 C626 08C5 69E1  8949 6DDF 6FA3 5EB9 26AB</a>  Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2023         <a href="mailto:mail@gilgamezh.me">GiLgAmEzH</a> - My Fingerprint: <a href="https://gilgamezh.me/public.key">0712 8EB2 C626 08C5 69E1  8949 6DDF 6FA3 5EB9 26AB</a>  Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
 <img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a>
             
@@ -235,9 +233,7 @@ Algún día me voy a tomar el tiempo de automatizar todo. ;)</p>
             <script src="../../../assets/js/jquery.min.js"></script><script src="../../../assets/js/popper.min.js"></script><script src="../../../assets/js/bootstrap.min.js"></script><script src="../../../assets/js/baguetteBox.min.js"></script><script>
     baguetteBox.run('div#content', {
         ignoreClass: 'islink',
-        captions: function(element) {
-            return element.getElementsByTagName('img')[0].alt;
-    }});
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
     </script><script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

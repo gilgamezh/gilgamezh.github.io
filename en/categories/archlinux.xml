@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Posts about archlinux)</title><link>https://gilgamezh.me/</link><description></description><atom:link href="https://gilgamezh.me/en/categories/archlinux.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 29 Aug 2020 09:18:40 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Compilar versión vieja de PHP para Archlinux</title><link>https://gilgamezh.me/en/posts/compilar-version-vieja-de-php-para-archlinux/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Archlinux siempre tiene la versión más nueva de todo, eso tiene muchas cosas
+<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Posts about archlinux)</title><link>https://gilgamezh.me/</link><description></description><atom:link href="https://gilgamezh.me/en/categories/archlinux.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Mon, 27 Feb 2023 19:40:27 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Compilar versión vieja de PHP para Archlinux</title><link>https://gilgamezh.me/en/posts/compilar-version-vieja-de-php-para-archlinux/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;p&gt;Archlinux siempre tiene la versión más nueva de todo, eso tiene muchas cosas
 positivas.
 Algo que suele pasar es que tenemos que usar algo que está productivo y que
 tiene una versión &lt;em&gt;mucho&lt;/em&gt; más vieja que la instalada.
@@ -26,7 +26,7 @@ make install&lt;/pre&gt;
 &lt;li&gt;&lt;p&gt;Copiar el php.ini que tengamos a /usr/local/php/lib&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Si usamos Apache en httpd.conf hay que hacer un &lt;em&gt;Include&lt;/em&gt; de
 /etc/httpd/conf/extra/httpd-fastcgid.conf&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><guid>https://gilgamezh.me/en/posts/compilar-version-vieja-de-php-para-archlinux/</guid><pubDate>Sat, 28 Feb 2015 15:17:52 GMT</pubDate></item><item><title>Tip para XBMC/Kodi en Archlinux | ARM</title><link>https://gilgamezh.me/en/posts/tip-para-xbmckodi-en-archlinux-arm/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;img alt="/images/raspy_kodi.jpg" src="https://gilgamezh.me/images/raspy_kodi.jpg"&gt;
+&lt;/ul&gt;</description><guid>https://gilgamezh.me/en/posts/compilar-version-vieja-de-php-para-archlinux/</guid><pubDate>Sat, 28 Feb 2015 15:17:52 GMT</pubDate></item><item><title>Tip para XBMC/Kodi en Archlinux | ARM</title><link>https://gilgamezh.me/en/posts/tip-para-xbmckodi-en-archlinux-arm/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;img alt="/images/raspy_kodi.jpg" src="https://gilgamezh.me/images/raspy_kodi.jpg"&gt;
 &lt;p&gt;Hace rato que en la raspy deje de usar XBIAN porque le estaban agregando
 muchas cosas "automagicas" que no me interesaban.
 Así que instale un Archlinux ARM y le puse XBMC. Anda de lujo, pero hay
@@ -46,7 +46,7 @@ gpu_mem_512=128
 gpu_mem_256=100
 
 #Witout this the Youtube addon for XBMC/Kodi doesn't work
-start_x=1&lt;/pre&gt;&lt;/div&gt;</description><guid>https://gilgamezh.me/en/posts/tip-para-xbmckodi-en-archlinux-arm/</guid><pubDate>Sun, 26 Oct 2014 18:29:13 GMT</pubDate></item><item><title>Copiar archivos a un celular con Android 4 desde linux</title><link>https://gilgamezh.me/en/posts/copiar-archivos-a-un-celular-con-android-4-desde-linux/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;img alt="/images/evil-google.jpg" src="https://gilgamezh.me/images/evil-google.jpg"&gt;
+start_x=1&lt;/pre&gt;</description><guid>https://gilgamezh.me/en/posts/tip-para-xbmckodi-en-archlinux-arm/</guid><pubDate>Sun, 26 Oct 2014 18:29:13 GMT</pubDate></item><item><title>Copiar archivos a un celular con Android 4 desde linux</title><link>https://gilgamezh.me/en/posts/copiar-archivos-a-un-celular-con-android-4-desde-linux/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;img alt="/images/evil-google.jpg" src="https://gilgamezh.me/images/evil-google.jpg"&gt;
 &lt;p&gt;Hace unos días cambie mi celu por uno con Android 4. Hace unos minutos lo
 conecte a la compu para copiarle música y me entero de que no se puede montar
 como hice hasta hoy con cualquier otro android.
@@ -54,7 +54,7 @@ Resulta que los muchachos de Google decidieron migrar a un protocolo MTP...&lt;/
 &lt;p&gt;En fin después de unas buenas $&amp;amp;$^&amp;amp;@#^$&amp;amp;#PUTAMADREGOOGLEYLADETUHERMANA$^%^&amp;amp;$###$%%
 hice busqueda rápida en la wiki de Arch --&amp;gt; &lt;a class="reference external" href="https://wiki.archlinux.org/index.php/Mtp"&gt;https://wiki.archlinux.org/index.php/Mtp&lt;/a&gt;
 y encontré jmtpfs que funcionó perfecto. (mtpfs no andaba bien)&lt;/p&gt;
-&lt;p&gt;&lt;a class="reference external" href="http://research.jacquette.com/jmtpfs-exchanging-files-between-android-devices-and-linux/"&gt;http://research.jacquette.com/jmtpfs-exchanging-files-between-android-devices-and-linux/&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>https://gilgamezh.me/en/posts/copiar-archivos-a-un-celular-con-android-4-desde-linux/</guid><pubDate>Thu, 31 Oct 2013 03:38:10 GMT</pubDate></item><item><title>Archlinux mueve todos los binarios a /usr/bin. Cómo actualizar?</title><link>https://gilgamezh.me/en/posts/archlinux-mueve-todos-los-binarios-a-usrbin-como-actualizar/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Hace ya bastantes días que cualquier que intente actualizar su Archlinux se
+&lt;p&gt;&lt;a class="reference external" href="http://research.jacquette.com/jmtpfs-exchanging-files-between-android-devices-and-linux/"&gt;http://research.jacquette.com/jmtpfs-exchanging-files-between-android-devices-and-linux/&lt;/a&gt;&lt;/p&gt;</description><guid>https://gilgamezh.me/en/posts/copiar-archivos-a-un-celular-con-android-4-desde-linux/</guid><pubDate>Thu, 31 Oct 2013 03:38:10 GMT</pubDate></item><item><title>Archlinux mueve todos los binarios a /usr/bin. Cómo actualizar?</title><link>https://gilgamezh.me/en/posts/archlinux-mueve-todos-los-binarios-a-usrbin-como-actualizar/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;p&gt;Hace ya bastantes días que cualquier que intente actualizar su Archlinux se
 va a encontrar con  un error de este tipo:&lt;/p&gt;
 &lt;pre class="literal-block"&gt;error: failed to commit transaction (conflicting files)
 filesystem: /bin exists in filesystem&lt;/pre&gt;
@@ -123,4 +123,4 @@ Después ejecute:&lt;/p&gt;
 &lt;pre class="code bash"&gt;&lt;a name="rest_code_b50d1731ae304fb9ad13f13b37de9c24-1"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# pacman -Syu --ignore filesystem,bash&lt;/span&gt;
 &lt;a name="rest_code_b50d1731ae304fb9ad13f13b37de9c24-2"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# pacman -S bash&lt;/span&gt;
 &lt;a name="rest_code_b50d1731ae304fb9ad13f13b37de9c24-3"&gt;&lt;/a&gt;&lt;span class="c1"&gt;# pacman -Su&lt;/span&gt;
-&lt;/pre&gt;&lt;p&gt;Actualizó como 500 megas y todo 10 puntos :)&lt;/p&gt;&lt;/div&gt;</description><guid>https://gilgamezh.me/en/posts/archlinux-mueve-todos-los-binarios-a-usrbin-como-actualizar/</guid><pubDate>Sat, 24 Aug 2013 20:32:23 GMT</pubDate></item></channel></rss>
+&lt;/pre&gt;&lt;p&gt;Actualizó como 500 megas y todo 10 puntos :)&lt;/p&gt;</description><guid>https://gilgamezh.me/en/posts/archlinux-mueve-todos-los-binarios-a-usrbin-como-actualizar/</guid><pubDate>Sat, 24 Aug 2013 20:32:23 GMT</pubDate></item></channel></rss>

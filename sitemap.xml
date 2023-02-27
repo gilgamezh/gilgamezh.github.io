@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://gilgamezh.me/</loc>
-  <lastmod>2020-08-29T09:20:00Z</lastmod>
+  <lastmod>2023-02-27T19:53:00Z</lastmod>
  </url>
  <url>
   <loc>https://gilgamezh.me/2013/</loc>
@@ -34,12 +34,16 @@
   <lastmod>2019-02-23T15:14:00Z</lastmod>
  </url>
  <url>
+  <loc>https://gilgamezh.me/2023/</loc>
+  <lastmod>2023-02-27T19:53:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://gilgamezh.me/archive.html</loc>
-  <lastmod>2020-08-29T09:18:00Z</lastmod>
+  <lastmod>2023-02-27T19:53:00Z</lastmod>
  </url>
  <url>
   <loc>https://gilgamezh.me/categories/</loc>
-  <lastmod>2019-02-23T15:14:00Z</lastmod>
+  <lastmod>2023-02-27T19:53:00Z</lastmod>
  </url>
  <url>
   <loc>https://gilgamezh.me/categories/analytics/</loc>
@@ -190,6 +194,10 @@
   <lastmod>2019-02-23T15:14:00Z</lastmod>
  </url>
  <url>
+  <loc>https://gilgamezh.me/categories/netherlands/</loc>
+  <lastmod>2023-02-27T19:53:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://gilgamezh.me/categories/nikola/</loc>
   <lastmod>2019-02-23T15:14:00Z</lastmod>
  </url>
@@ -331,7 +339,7 @@
  </url>
  <url>
   <loc>https://gilgamezh.me/en/</loc>
-  <lastmod>2019-02-23T15:14:00Z</lastmod>
+  <lastmod>2023-02-27T19:53:00Z</lastmod>
  </url>
  <url>
   <loc>https://gilgamezh.me/en/2013/</loc>
@@ -358,12 +366,16 @@
   <lastmod>2019-02-23T15:14:00Z</lastmod>
  </url>
  <url>
+  <loc>https://gilgamezh.me/en/2023/</loc>
+  <lastmod>2023-02-27T19:53:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://gilgamezh.me/en/archive.html</loc>
-  <lastmod>2020-08-29T09:18:00Z</lastmod>
+  <lastmod>2023-02-27T19:53:00Z</lastmod>
  </url>
  <url>
   <loc>https://gilgamezh.me/en/categories/</loc>
-  <lastmod>2019-02-23T15:14:00Z</lastmod>
+  <lastmod>2023-02-27T19:53:00Z</lastmod>
  </url>
  <url>
   <loc>https://gilgamezh.me/en/categories/analytics/</loc>
@@ -514,6 +526,10 @@
   <lastmod>2019-02-23T15:14:00Z</lastmod>
  </url>
  <url>
+  <loc>https://gilgamezh.me/en/categories/netherlands/</loc>
+  <lastmod>2023-02-27T19:53:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://gilgamezh.me/en/categories/nikola/</loc>
   <lastmod>2019-02-23T15:14:00Z</lastmod>
  </url>
@@ -655,23 +671,23 @@
  </url>
  <url>
   <loc>https://gilgamezh.me/en/index-1.html</loc>
-  <lastmod>2020-08-29T09:18:00Z</lastmod>
+  <lastmod>2023-02-27T19:40:00Z</lastmod>
  </url>
  <url>
   <loc>https://gilgamezh.me/en/index-2.html</loc>
-  <lastmod>2020-08-29T09:18:00Z</lastmod>
+  <lastmod>2023-02-27T19:40:00Z</lastmod>
  </url>
  <url>
   <loc>https://gilgamezh.me/en/index-3.html</loc>
-  <lastmod>2020-08-29T09:18:00Z</lastmod>
+  <lastmod>2023-02-27T19:40:00Z</lastmod>
  </url>
  <url>
   <loc>https://gilgamezh.me/en/index-4.html</loc>
-  <lastmod>2020-08-29T09:18:00Z</lastmod>
+  <lastmod>2023-02-27T19:40:00Z</lastmod>
  </url>
  <url>
   <loc>https://gilgamezh.me/en/index-5.html</loc>
-  <lastmod>2020-08-29T09:18:00Z</lastmod>
+  <lastmod>2023-02-27T19:53:00Z</lastmod>
  </url>
  <url>
   <loc>https://gilgamezh.me/en/posts/30-anos-de-gnu/</loc>
@@ -777,6 +793,11 @@
   <loc>https://gilgamezh.me/en/posts/freedombox/</loc>
   <lastmod>2019-02-23T15:14:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="es" href="https://gilgamezh.me/posts/freedombox/" />
+ </url>
+ <url>
+  <loc>https://gilgamezh.me/en/posts/groesbeek/</loc>
+  <lastmod>2023-02-27T19:53:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="es" href="https://gilgamezh.me/posts/groesbeek/" />
  </url>
  <url>
   <loc>https://gilgamezh.me/en/posts/hierarchy-of-devops-needs/</loc>
@@ -942,23 +963,23 @@
  </url>
  <url>
   <loc>https://gilgamezh.me/index-1.html</loc>
-  <lastmod>2020-08-29T09:18:00Z</lastmod>
+  <lastmod>2023-02-27T19:40:00Z</lastmod>
  </url>
  <url>
   <loc>https://gilgamezh.me/index-2.html</loc>
-  <lastmod>2020-08-29T09:18:00Z</lastmod>
+  <lastmod>2023-02-27T19:40:00Z</lastmod>
  </url>
  <url>
   <loc>https://gilgamezh.me/index-3.html</loc>
-  <lastmod>2020-08-29T09:18:00Z</lastmod>
+  <lastmod>2023-02-27T19:40:00Z</lastmod>
  </url>
  <url>
   <loc>https://gilgamezh.me/index-4.html</loc>
-  <lastmod>2020-08-29T09:18:00Z</lastmod>
+  <lastmod>2023-02-27T19:40:00Z</lastmod>
  </url>
  <url>
   <loc>https://gilgamezh.me/index-5.html</loc>
-  <lastmod>2020-08-29T09:18:00Z</lastmod>
+  <lastmod>2023-02-27T19:53:00Z</lastmod>
  </url>
  <url>
   <loc>https://gilgamezh.me/posts/30-anos-de-gnu/</loc>
@@ -1045,6 +1066,10 @@
  <url>
   <loc>https://gilgamezh.me/posts/freedombox/</loc>
   <lastmod>2019-02-23T15:14:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://gilgamezh.me/posts/groesbeek/</loc>
+  <lastmod>2023-02-27T19:53:00Z</lastmod>
  </url>
  <url>
   <loc>https://gilgamezh.me/posts/hierarchy-of-devops-needs/</loc>
