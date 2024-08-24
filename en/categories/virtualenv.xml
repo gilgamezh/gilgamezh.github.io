@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Posts about virtualenv)</title><link>https://gilgamezh.me/</link><description></description><atom:link href="https://gilgamezh.me/en/categories/virtualenv.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 24 Aug 2024 09:08:42 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Fades 2.0</title><link>https://gilgamezh.me/en/posts/fades-20/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;p&gt;Fueron (creo) unas 2 semanas desde que salió el release 1.0 de Fades las que
+<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Posts about virtualenv)</title><link>https://gilgamezh.me/</link><description></description><atom:link href="https://gilgamezh.me/en/categories/virtualenv.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:mail@gilgamezh.me"&gt;GiLgAmEzH&lt;/a&gt; 
+&lt;p xmlns:cc="http://creativecommons.org/ns#"&gt;
+    This work is licensed under
+    &lt;a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1"
+       target="_blank"
+       rel="license noopener noreferrer"
+       style="display:inline-block;"&gt;
+        CC BY-NC-SA 4.0
+        &lt;img
+            style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+            src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"
+            alt=""
+        &gt;
+        &lt;img
+            style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+            src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"
+            alt=""
+        &gt;
+        &lt;img
+            style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+            src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"
+            alt=""
+        &gt;
+        &lt;img
+            style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+            src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"
+            alt=""
+        &gt;
+    &lt;/a&gt;
+&lt;/p&gt;
+</copyright><lastBuildDate>Sat, 24 Aug 2024 10:26:03 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Fades 2.0</title><link>https://gilgamezh.me/en/posts/fades-20/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;p&gt;Fueron (creo) unas 2 semanas desde que salió el release 1.0 de Fades las que
 demoramos en sacar el 2.0 :). El ritmo estuvo muy bueno y sobre todo largas
 charlas de qué camino tomar.
 Cuándo salió la 1.0 Robert Collins &lt;a class="reference external" href="https://twitter.com/gilgamezh/status/571377065053851648"&gt;nos hizo algunos comentarios sobre xattr&lt;/a&gt;
@@ -19,7 +49,7 @@ módulo (ej: "import bs4 # fades.pypi beautifulsoup4 == 3.5")&lt;/p&gt;&lt;/li&g
 &lt;li&gt;&lt;p&gt;Maneja paquetes a los que pip les cambia el nombre&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Otros cambios y correcciones menores.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Mas info: &lt;a class="reference external" href="https://github.com/PyAr/fades/releases/tag/2.0"&gt;https://github.com/PyAr/fades/releases/tag/2.0&lt;/a&gt;&lt;/p&gt;</description><guid>https://gilgamezh.me/en/posts/fades-20/</guid><pubDate>Sat, 28 Feb 2015 15:25:16 GMT</pubDate></item><item><title>fades: FAst DEpendencies for Scripts</title><link>https://gilgamezh.me/en/posts/fades-fast-dependencies-for-scripts/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;p&gt;I traveled on Facu Batista's car to PyConAr 2014. We chatted a lot on this
+&lt;p&gt;Mas info: &lt;a class="reference external" href="https://github.com/PyAr/fades/releases/tag/2.0"&gt;https://github.com/PyAr/fades/releases/tag/2.0&lt;/a&gt;&lt;/p&gt;</description><guid>https://gilgamezh.me/en/posts/fades-20/</guid><pubDate>Sat, 28 Feb 2015 15:25:16 GMT</pubDate></item><item><title>fades: FAst DEpendencies for Scripts</title><link>https://gilgamezh.me/en/posts/fades-fast-dependencies-for-scripts/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;I traveled on Facu Batista's car to PyConAr 2014. We chatted a lot on this
 Buenos Aires-Rafaela trip and we had the idea of building a tool named
 &lt;strong&gt;fades&lt;/strong&gt; to automate virtualenv dependencies.&lt;/p&gt;
 &lt;p&gt;Last week we released the 1.0 version! Here the press release.&lt;/p&gt;
@@ -36,41 +66,4 @@ also mark the required dependencies. More details here:&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://github.com/PyAr/fades/"&gt;https://github.com/PyAr/fades/&lt;/a&gt;&lt;/p&gt;
 &lt;section id="to-get-it"&gt;
 &lt;h2&gt;To get it:&lt;/h2&gt;
-&lt;!-- TEASER_END --&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;For debian/ubuntu you have a .deb here:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a class="reference external" href="http://taniquetil.com.ar/fades/fades-1.0.deb"&gt;http://taniquetil.com.ar/fades/fades-1.0.deb&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Install it in Arch is very simple:&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class="literal-block"&gt;yaourt -S fades&lt;/pre&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;p&gt;Using pip if you want:&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class="literal-block"&gt;pip3 install fades&lt;/pre&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;p&gt;You can always get the multiplatform tarball and install it in the old fashion way:&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class="literal-block"&gt;wget http://taniquetil.com.ar/fades/fades-1.0.tar.gz
-tar -xf fades-1.0.tar.gz
-cd fades-1.0
-sudo ./setup.py install&lt;/pre&gt;
-&lt;/section&gt;
-&lt;section id="help-questions"&gt;
-&lt;h2&gt;Help / questions:&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;You can ask any question or send any recommendation or request to the mailing list.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a class="reference external" href="http://listas.python.org.ar/mailman/listinfo/fades"&gt;http://listas.python.org.ar/mailman/listinfo/fades&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Also, you can open an issue here (please do if you find any problem!).&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://github.com/PyAr/fades/issues/new"&gt;https://github.com/PyAr/fades/issues/new&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Thanks in advance for your time!&lt;/p&gt;
-&lt;/section&gt;</description><category>proyectos</category><category>PyAr</category><category>python</category><category>virtualenv</category><guid>https://gilgamezh.me/en/posts/fades-fast-dependencies-for-scripts/</guid><pubDate>Sun, 22 Feb 2015 20:14:05 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="https://gilgamezh.me/en/posts/fades-fast-dependencies-for-scripts/"&gt;Read more…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/section&gt;&lt;/div&gt;</description><category>proyectos</category><category>PyAr</category><category>python</category><category>virtualenv</category><guid>https://gilgamezh.me/en/posts/fades-fast-dependencies-for-scripts/</guid><pubDate>Sun, 22 Feb 2015 20:14:05 GMT</pubDate></item></channel></rss>

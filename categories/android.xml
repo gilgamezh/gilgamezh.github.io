@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Publicaciones sobre android)</title><link>https://gilgamezh.me/</link><description></description><atom:link href="https://gilgamezh.me/categories/android.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><lastBuildDate>Sat, 24 Aug 2024 09:08:44 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Rootear Galaxy s3 Mini y cualquier otro android</title><link>https://gilgamezh.me/posts/rootear-galaxy-s3-mini-y-cualquier-otro-android/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;p&gt;No solo supers tienen los chinos, tambien hacen lindas apps para android.
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Publicaciones sobre android)</title><link>https://gilgamezh.me/</link><description></description><atom:link href="https://gilgamezh.me/categories/android.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><copyright>Contents © 2024 &lt;a href="mailto:mail@gilgamezh.me"&gt;GiLgAmEzH&lt;/a&gt; 
+&lt;p xmlns:cc="http://creativecommons.org/ns#"&gt;
+    This work is licensed under
+    &lt;a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1"
+       target="_blank"
+       rel="license noopener noreferrer"
+       style="display:inline-block;"&gt;
+        CC BY-NC-SA 4.0
+        &lt;img
+            style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+            src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"
+            alt=""
+        &gt;
+        &lt;img
+            style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+            src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"
+            alt=""
+        &gt;
+        &lt;img
+            style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+            src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"
+            alt=""
+        &gt;
+        &lt;img
+            style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+            src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"
+            alt=""
+        &gt;
+    &lt;/a&gt;
+&lt;/p&gt;
+</copyright><lastBuildDate>Sat, 24 Aug 2024 10:26:04 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Rootear Galaxy s3 Mini y cualquier otro android</title><link>https://gilgamezh.me/posts/rootear-galaxy-s3-mini-y-cualquier-otro-android/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;p&gt;No solo supers tienen los chinos, tambien hacen lindas apps para android.
 Con esta podes rootear tu S3 Mini (y pareciera que casi cualqiuer android).&lt;/p&gt;
 &lt;p&gt;Con mi celu funcionó.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://www.mgyun.com/en/GetVRoot"&gt;http://www.mgyun.com/en/GetVRoot&lt;/a&gt;&lt;/p&gt;</description><category>android</category><guid>https://gilgamezh.me/posts/rootear-galaxy-s3-mini-y-cualquier-otro-android/</guid><pubDate>Sat, 08 Feb 2014 15:37:16 GMT</pubDate></item><item><title>Copiar archivos a un celular con Android 4 desde linux</title><link>https://gilgamezh.me/posts/copiar-archivos-a-un-celular-con-android-4-desde-linux/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;img alt="/images/evil-google.jpg" src="https://gilgamezh.me/images/evil-google.jpg"&gt;

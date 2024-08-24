@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Posts about python)</title><link>https://gilgamezh.me/</link><description></description><atom:link href="https://gilgamezh.me/en/categories/python.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 24 Aug 2024 09:08:44 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>fades8.1_released</title><link>https://gilgamezh.me/en/posts/fades81_released/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;p&gt;We're glad to announce the release of fades 8.1.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Posts about python)</title><link>https://gilgamezh.me/</link><description></description><atom:link href="https://gilgamezh.me/en/categories/python.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:mail@gilgamezh.me"&gt;GiLgAmEzH&lt;/a&gt; 
+&lt;p xmlns:cc="http://creativecommons.org/ns#"&gt;
+    This work is licensed under
+    &lt;a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1"
+       target="_blank"
+       rel="license noopener noreferrer"
+       style="display:inline-block;"&gt;
+        CC BY-NC-SA 4.0
+        &lt;img
+            style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+            src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"
+            alt=""
+        &gt;
+        &lt;img
+            style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+            src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"
+            alt=""
+        &gt;
+        &lt;img
+            style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+            src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"
+            alt=""
+        &gt;
+        &lt;img
+            style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+            src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"
+            alt=""
+        &gt;
+    &lt;/a&gt;
+&lt;/p&gt;
+</copyright><lastBuildDate>Sat, 24 Aug 2024 10:26:03 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>fades8.1_released</title><link>https://gilgamezh.me/en/posts/fades81_released/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;p&gt;We're glad to announce the release of fades 8.1.&lt;/p&gt;
 &lt;p&gt;fades is a system that automatically handles the virtualenvs in the
 cases normally found when writing scripts and simple programs, and
 even helps to administer big projects.&lt;/p&gt;
@@ -150,7 +180,7 @@ módulo (ej: "import bs4 # fades.pypi beautifulsoup4 == 3.5")&lt;/p&gt;&lt;/li&g
 &lt;li&gt;&lt;p&gt;Maneja paquetes a los que pip les cambia el nombre&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Otros cambios y correcciones menores.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Mas info: &lt;a class="reference external" href="https://github.com/PyAr/fades/releases/tag/2.0"&gt;https://github.com/PyAr/fades/releases/tag/2.0&lt;/a&gt;&lt;/p&gt;</description><guid>https://gilgamezh.me/en/posts/fades-20/</guid><pubDate>Sat, 28 Feb 2015 15:25:16 GMT</pubDate></item><item><title>fades: FAst DEpendencies for Scripts</title><link>https://gilgamezh.me/en/posts/fades-fast-dependencies-for-scripts/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;p&gt;I traveled on Facu Batista's car to PyConAr 2014. We chatted a lot on this
+&lt;p&gt;Mas info: &lt;a class="reference external" href="https://github.com/PyAr/fades/releases/tag/2.0"&gt;https://github.com/PyAr/fades/releases/tag/2.0&lt;/a&gt;&lt;/p&gt;</description><guid>https://gilgamezh.me/en/posts/fades-20/</guid><pubDate>Sat, 28 Feb 2015 15:25:16 GMT</pubDate></item><item><title>fades: FAst DEpendencies for Scripts</title><link>https://gilgamezh.me/en/posts/fades-fast-dependencies-for-scripts/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;I traveled on Facu Batista's car to PyConAr 2014. We chatted a lot on this
 Buenos Aires-Rafaela trip and we had the idea of building a tool named
 &lt;strong&gt;fades&lt;/strong&gt; to automate virtualenv dependencies.&lt;/p&gt;
 &lt;p&gt;Last week we released the 1.0 version! Here the press release.&lt;/p&gt;
@@ -167,66 +197,13 @@ also mark the required dependencies. More details here:&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://github.com/PyAr/fades/"&gt;https://github.com/PyAr/fades/&lt;/a&gt;&lt;/p&gt;
 &lt;section id="to-get-it"&gt;
 &lt;h2&gt;To get it:&lt;/h2&gt;
-&lt;!-- TEASER_END --&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;For debian/ubuntu you have a .deb here:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a class="reference external" href="http://taniquetil.com.ar/fades/fades-1.0.deb"&gt;http://taniquetil.com.ar/fades/fades-1.0.deb&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Install it in Arch is very simple:&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class="literal-block"&gt;yaourt -S fades&lt;/pre&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;p&gt;Using pip if you want:&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class="literal-block"&gt;pip3 install fades&lt;/pre&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;p&gt;You can always get the multiplatform tarball and install it in the old fashion way:&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class="literal-block"&gt;wget http://taniquetil.com.ar/fades/fades-1.0.tar.gz
-tar -xf fades-1.0.tar.gz
-cd fades-1.0
-sudo ./setup.py install&lt;/pre&gt;
-&lt;/section&gt;
-&lt;section id="help-questions"&gt;
-&lt;h2&gt;Help / questions:&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;You can ask any question or send any recommendation or request to the mailing list.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a class="reference external" href="http://listas.python.org.ar/mailman/listinfo/fades"&gt;http://listas.python.org.ar/mailman/listinfo/fades&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Also, you can open an issue here (please do if you find any problem!).&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://github.com/PyAr/fades/issues/new"&gt;https://github.com/PyAr/fades/issues/new&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Thanks in advance for your time!&lt;/p&gt;
-&lt;/section&gt;</description><category>proyectos</category><category>PyAr</category><category>python</category><category>virtualenv</category><guid>https://gilgamezh.me/en/posts/fades-fast-dependencies-for-scripts/</guid><pubDate>Sun, 22 Feb 2015 20:14:05 GMT</pubDate></item><item><title>How to install Fisa-vim-cofig in Archlinux</title><link>https://gilgamezh.me/en/posts/how-to-install-fisa-vim-cofig-in-archlinux/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;img alt="/images/fisa-dev-config.png" src="https://gilgamezh.me/images/fisa-dev-config.png"&gt;
+&lt;p&gt;&lt;a href="https://gilgamezh.me/en/posts/fades-fast-dependencies-for-scripts/"&gt;Read more…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/section&gt;&lt;/div&gt;</description><category>proyectos</category><category>PyAr</category><category>python</category><category>virtualenv</category><guid>https://gilgamezh.me/en/posts/fades-fast-dependencies-for-scripts/</guid><pubDate>Sun, 22 Feb 2015 20:14:05 GMT</pubDate></item><item><title>How to install Fisa-vim-cofig in Archlinux</title><link>https://gilgamezh.me/en/posts/how-to-install-fisa-vim-cofig-in-archlinux/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;img alt="/images/fisa-dev-config.png" src="https://gilgamezh.me/images/fisa-dev-config.png"&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://github.com/fisadev/fisa-vim-config/"&gt;Fisa-vim-config&lt;/a&gt;
 es una excelente configuración para Vim que recopila muchos
 plugins y los pone a funcionar de una manera muy simple.
 Esta desarrollada por @fisadev. Agradecimientos para él por permitir
 tener un vim con esteroides muy útil para developers n00bs como yo :).&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-&lt;p&gt;No pude hacerlo funcionar en  mi Archlinux de una sola vez. Primero que
-nada encontre que Vim en arch no está compilado con Python, por lo que hay
-que instalar gVim (que reemplaza el vim por default por uno compilado con python.&lt;/p&gt;
-&lt;p&gt;Luego de instalar gVim seguía sin funcionar, lo abandone hasta que ayer
-leí una mail en la lista de pyar con un problema similar al mio y la solución
-era tan simple!! Resulta que gVim está compilado con python-2.7 y en Arch
-python3 es el default. Por lo tanto hay que utilizar pip2 para instalar
-todas las dependencias!!
-(acá el hilo con la consulta de Matuvarela &lt;a class="reference external" href="http://listas.python.org.ar/pipermail/pyar/2014-March/028366.html"&gt;http://listas.python.org.ar/pipermail/pyar/2014-March/028366.html&lt;/a&gt; )&lt;/p&gt;
-&lt;p&gt;En resumen, si querés tener fisa-vim-dev funcionando en Arch tenes que usar
-gvim en lugar de vim, pip2 en lugar de pip y tener en cuenta que el paquete
-exuberant-ctags es extra/xtags.
-Lo único que cambia es este punto de la guia de instalación en el repo oficial.&lt;/p&gt;
-&lt;p&gt;Dependencies:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;sudo pacman -Sy gvim ctags git python2-pip
-sudo pip2 install dbgp vim-debug pep8 flake8 pyflakes isort&lt;/pre&gt;</description><guid>https://gilgamezh.me/en/posts/how-to-install-fisa-vim-cofig-in-archlinux/</guid><pubDate>Sat, 15 Mar 2014 18:22:44 GMT</pubDate></item><item><title>#python | Requests: HTTP for Humans</title><link>https://gilgamezh.me/en/posts/python-requests-http-for-humans/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;img alt="/images/requests-sidebar.png" src="https://gilgamezh.me/images/requests-sidebar.png"&gt;
+&lt;p&gt;&lt;a href="https://gilgamezh.me/en/posts/how-to-install-fisa-vim-cofig-in-archlinux/"&gt;Read more…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><guid>https://gilgamezh.me/en/posts/how-to-install-fisa-vim-cofig-in-archlinux/</guid><pubDate>Sat, 15 Mar 2014 18:22:44 GMT</pubDate></item><item><title>#python | Requests: HTTP for Humans</title><link>https://gilgamezh.me/en/posts/python-requests-http-for-humans/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;img alt="/images/requests-sidebar.png" src="https://gilgamezh.me/images/requests-sidebar.png"&gt;
 &lt;p&gt;Buscando otra cosa me encontre con esta libreria que es una "abstracción"
 de urllib2. simple MUY SIMPLE!&lt;/p&gt;
 &lt;blockquote&gt;

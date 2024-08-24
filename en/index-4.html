@@ -33,6 +33,12 @@
             </button>
             <div class="collapse bs-nav-collapsible bootblog4-search-form-holder">
                 
+<!-- DuckDuckGo custom search -->
+<form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="https://gilgamezh.me/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
             </div>
         </div>
           <div class="col-md-6 col-xs-10 col-sm-10 bootblog4-brand" style="width: auto;">
@@ -60,9 +66,6 @@
                 </li>
 <li class="nav-item">
 <a href="rss.xml" class="nav-link">RSS feed</a>
-                </li>
-<li class="nav-item">
-<a href="http://bit.ly/nicolas_demarchi_resume" class="nav-link">Resume</a>
                 </li>
 <li class="nav-item">
 <a href="http://www.flickr.com/photos/bolche/" class="nav-link">Pics</a>
@@ -106,9 +109,8 @@
 
                 </p>
 </div>
-            </header><div class="p-summary entry-summary">
-                    <div>
-<p>I traveled on Facu Batista's car to PyConAr 2014. We chatted a lot on this
+            </header><div class="e-content entry-content">
+                    <p>I traveled on Facu Batista's car to PyConAr 2014. We chatted a lot on this
 Buenos Aires-Rafaela trip and we had the idea of building a tool named
 <strong>fades</strong> to automate virtualenv dependencies.</p>
 <p>Last week we released the 1.0 version! Here the press release.</p>
@@ -124,9 +126,46 @@ dependencies, and execute your script inside that virtualenv.</p>
 also mark the required dependencies. More details here:</p>
 <p><a class="reference external" href="https://github.com/PyAr/fades/">https://github.com/PyAr/fades/</a></p>
 <section id="to-get-it"><h2>To get it:</h2>
-<p class="more"><a href="posts/fades-fast-dependencies-for-scripts/">Read more…</a></p></section>
+<!-- TEASER_END -->
+<ul>
+<li>
+<p>For debian/ubuntu you have a .deb here:</p>
+<blockquote>
+<p><a class="reference external" href="http://taniquetil.com.ar/fades/fades-1.0.deb">http://taniquetil.com.ar/fades/fades-1.0.deb</a></p>
+</blockquote>
+</li>
+<li><p>Install it in Arch is very simple:</p></li>
+</ul>
+<pre class="literal-block">yaourt -S fades</pre>
+<ul class="simple">
+<li><p>Using pip if you want:</p></li>
+</ul>
+<pre class="literal-block">pip3 install fades</pre>
+<ul class="simple">
+<li><p>You can always get the multiplatform tarball and install it in the old fashion way:</p></li>
+</ul>
+<pre class="literal-block">wget http://taniquetil.com.ar/fades/fades-1.0.tar.gz
+tar -xf fades-1.0.tar.gz
+cd fades-1.0
+sudo ./setup.py install</pre>
+</section><section id="help-questions"><h2>Help / questions:</h2>
+<ul>
+<li>
+<p>You can ask any question or send any recommendation or request to the mailing list.</p>
+<blockquote>
+<p><a class="reference external" href="http://listas.python.org.ar/mailman/listinfo/fades">http://listas.python.org.ar/mailman/listinfo/fades</a></p>
+</blockquote>
+</li>
+<li>
+<p>Also, you can open an issue here (please do if you find any problem!).</p>
+<blockquote>
+<p><a class="reference external" href="https://github.com/PyAr/fades/issues/new">https://github.com/PyAr/fades/issues/new</a></p>
+</blockquote>
+</li>
+</ul>
+<p>Thanks in advance for your time!</p>
+</section>
 </div>
-                </div>
             </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/migrando-el-blog-a-nikola/" class="u-url">Migrando el blog a Nikola</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
@@ -143,7 +182,7 @@ also mark the required dependencies. More details here:</p>
 
                 </p>
 </div>
-            </header><div class="p-summary entry-summary">
+            </header><div class="e-content entry-content">
                     <p>Hace mucho tiempo que vengo dando vueltas y dejando para más adelante migrar
 mi blog a <a class="reference external" href="http://getnikola.com/">Nikola</a>.</p>
 <p>Nikola es un generador de sitios/blogs estáticos. Funciona con Python y aprovecho
@@ -178,7 +217,7 @@ una versión en este idioma. Correcciones y consejos bienvenidos! :)</p>
 
                 </p>
 </div>
-            </header><div class="p-summary entry-summary">
+            </header><div class="e-content entry-content">
                     <img alt="/images/cyanogenmod-logo.jpg" src="../images/cyanogenmod-logo.jpg"><p>Con los pasos detallados en el link pude instalar ClockworkMod Recovery y
 flashear  mi celu con Cyanogenmod. Anda joya :D</p>
 <p><a class="reference external" href="http://paguilar.org/?p=329">Cyanogenmod in a Samsung Galaxy S3 mini using Linux</a></p>
@@ -203,7 +242,7 @@ Hay que bajarlo de <a class="reference external" href="http://novafusion.pl/down
 
                 </p>
 </div>
-            </header><div class="p-summary entry-summary">
+            </header><div class="e-content entry-content">
                     <img alt="/images/raspy_kodi.jpg" src="../images/raspy_kodi.jpg"><p>Hace rato que en la raspy deje de usar XBIAN porque le estaban agregando
 muchas cosas "automagicas" que no me interesaban.
 Así que instale un Archlinux ARM y le puse XBMC. Anda de lujo, pero hay
@@ -241,7 +280,7 @@ start_x=1</pre>
 
                 </p>
 </div>
-            </header><div class="p-summary entry-summary">
+            </header><div class="e-content entry-content">
                     <p>Hace poco tiempo que tmux es mi "manejador" (?) de terminales por defecto
 junto con tmuxp. Tmuxp me permite tener templates (un yaml) para diferentes
 proyectos/tareas. ( es muy muy útil cuando ante alguna situación de emergencia
@@ -285,7 +324,7 @@ set -g terminal-overrides 'xterm:colors=256'</pre>
 
                 </p>
 </div>
-            </header><div class="p-summary entry-summary">
+            </header><div class="e-content entry-content">
                     <p>En mi trabajo están buscando un "ing de aplicaciones". El nombre no dice
 mucho, pero como es el mismo puesto en el que yo trabajo puedo dar
 información al que le interese. Basicamente la busqueda está orientada a un
@@ -334,15 +373,29 @@ el puesto pueden mandarme mail a "cmd (at) gilgamezh (dot) com"</p>
 
                 </p>
 </div>
-            </header><div class="p-summary entry-summary">
-                    <div>
-<img alt="/images/fisa-dev-config.png" src="../images/fisa-dev-config.png"><p><a class="reference external" href="https://github.com/fisadev/fisa-vim-config/">Fisa-vim-config</a>
+            </header><div class="e-content entry-content">
+                    <img alt="/images/fisa-dev-config.png" src="../images/fisa-dev-config.png"><p><a class="reference external" href="https://github.com/fisadev/fisa-vim-config/">Fisa-vim-config</a>
 es una excelente configuración para Vim que recopila muchos
 plugins y los pone a funcionar de una manera muy simple.
 Esta desarrollada por @fisadev. Agradecimientos para él por permitir
 tener un vim con esteroides muy útil para developers n00bs como yo :).</p>
-<p class="more"><a href="posts/how-to-install-fisa-vim-cofig-in-archlinux/">Read more…</a></p>
-</div>
+<!-- TEASER_END -->
+<p>No pude hacerlo funcionar en  mi Archlinux de una sola vez. Primero que
+nada encontre que Vim en arch no está compilado con Python, por lo que hay
+que instalar gVim (que reemplaza el vim por default por uno compilado con python.</p>
+<p>Luego de instalar gVim seguía sin funcionar, lo abandone hasta que ayer
+leí una mail en la lista de pyar con un problema similar al mio y la solución
+era tan simple!! Resulta que gVim está compilado con python-2.7 y en Arch
+python3 es el default. Por lo tanto hay que utilizar pip2 para instalar
+todas las dependencias!!
+(acá el hilo con la consulta de Matuvarela <a class="reference external" href="http://listas.python.org.ar/pipermail/pyar/2014-March/028366.html">http://listas.python.org.ar/pipermail/pyar/2014-March/028366.html</a> )</p>
+<p>En resumen, si querés tener fisa-vim-dev funcionando en Arch tenes que usar
+gvim en lugar de vim, pip2 en lugar de pip y tener en cuenta que el paquete
+exuberant-ctags es extra/xtags.
+Lo único que cambia es este punto de la guia de instalación en el repo oficial.</p>
+<p>Dependencies:</p>
+<pre class="literal-block">sudo pacman -Sy gvim ctags git python2-pip
+sudo pip2 install dbgp vim-debug pep8 flake8 pyflakes isort</pre>
                 </div>
             </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/rootear-galaxy-s3-mini-y-cualquier-otro-android/" class="u-url">Rootear Galaxy s3 Mini y cualquier otro android</a></h1>
                 <div class="metadata">
@@ -360,7 +413,7 @@ tener un vim con esteroides muy útil para developers n00bs como yo :).</p>
 
                 </p>
 </div>
-            </header><div class="p-summary entry-summary">
+            </header><div class="e-content entry-content">
                     <p>No solo supers tienen los chinos, tambien hacen lindas apps para android.
 Con esta podes rootear tu S3 Mini (y pareciera que casi cualqiuer android).</p>
 <p>Con mi celu funcionó.</p>
@@ -382,7 +435,7 @@ Con esta podes rootear tu S3 Mini (y pareciera que casi cualqiuer android).</p>
 
                 </p>
 </div>
-            </header><div class="p-summary entry-summary">
+            </header><div class="e-content entry-content">
                     <p>Linda pirámide de necesidades de DevOps :D</p>
 <img alt="/images/devops_hierarchy.png" src="../images/devops_hierarchy.png">
 </div>
@@ -402,7 +455,7 @@ Con esta podes rootear tu S3 Mini (y pareciera que casi cualqiuer android).</p>
 
                 </p>
 </div>
-            </header><div class="p-summary entry-summary">
+            </header><div class="e-content entry-content">
                     <p>Un registro 'homemade' de una linda noche.</p>
 <div style="top: 0; left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
 				<iframe style="width: 100%; height: 100%; position: absolute;" src="https://embedr.flickr.com/photos/10908750685" width="1024" height="576" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
@@ -415,10 +468,53 @@ Con esta podes rootear tu S3 Mini (y pareciera que casi cualqiuer android).</p>
 <li class="previous"><a href="index-5.html" rel="prev">Newer posts</a></li>
             <li class="next"><a href="index-3.html" rel="next">Older posts</a></li>
         </ul>
-<script>var disqus_shortname="notodoesmecnico";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><!--End of body content--><footer id="footer">
-            Contents © 2024         <a href="mailto:mail@gilgamezh.me">GiLgAmEzH</a> - My Fingerprint: <a href="https://gilgamezh.me/public.key">0712 8EB2 C626 08C5 69E1  8949 6DDF 6FA3 5EB9 26AB</a>  Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
-<img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a>
+<script>var disqus_shortname="notodoesmecnico";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><!--End of body content--><footer id="footer"><div class="container mt-5">
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 mb-3">
+            <div class="p-3 border rounded bg-light">
+                <a href="mailto:mail@gilgamezh.me">GiLgAmEzH</a>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-3">
+            <div class="p-3 border rounded bg-light">
+                My Fingerprint: <a href="https://gilgamezh.me/public.key">0712 8EB2 C626 08C5 69E1  8949 6DDF 6FA3 5EB9 26AB</a>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-3">
+            <div class="p-3 border rounded bg-light">
+                Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-3">
+            <div class="p-3 border rounded bg-light">
+                
+<p xmlns:cc="http://creativecommons.org/ns#">
+    This work is licensed under
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">
+        CC BY-NC-SA 4.0
+        <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a>
+</p>
+
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-3">
+            <div class="p-3 border rounded bg-light">
+                <a rel="me" href="https://fosstodon.org/@gilgamezh">Follow me on Mastodon</a>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-3">
+            <div class="p-3 border rounded bg-light">
+                <a href="https://www.linkedin.com/in/nicolasdemarchi/" target="_blank">Connect with me on LinkedIn</a>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-3">
+            <div class="p-3 border rounded bg-light">
+                <a href="https://github.com/gilgamezh" target="_blank">Check out my code on GitHub</a>
+            </div>
+        </div>
+    </div>
+</div>
+
             
             
         </footer>
@@ -430,15 +526,6 @@ Con esta podes rootear tu S3 Mini (y pareciera que casi cualqiuer android).</p>
     baguetteBox.run('div#content', {
         ignoreClass: 'islink',
         captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
-    </script><script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-3147526-9', 'auto');
-  ga('send', 'pageview');
-
-</script>
+    </script>
 </body>
 </html>

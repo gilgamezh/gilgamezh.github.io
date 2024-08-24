@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Publicaciones sobre how-to)</title><link>https://gilgamezh.me/</link><description></description><atom:link href="https://gilgamezh.me/categories/how-to.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><lastBuildDate>Sat, 24 Aug 2024 09:08:43 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Postgres non-durable options Docker container.</title><link>https://gilgamezh.me/posts/postgres-non-durable-options-docker-container/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;p&gt;Some weeks ago I was at &lt;a class="reference external" href="http://www.python.org.ar/wiki/PyCamp/2017/"&gt;Pycamp&lt;/a&gt; whit LeCoVi
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Publicaciones sobre how-to)</title><link>https://gilgamezh.me/</link><description></description><atom:link href="https://gilgamezh.me/categories/how-to.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><copyright>Contents © 2024 &lt;a href="mailto:mail@gilgamezh.me"&gt;GiLgAmEzH&lt;/a&gt; 
+&lt;p xmlns:cc="http://creativecommons.org/ns#"&gt;
+    This work is licensed under
+    &lt;a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1"
+       target="_blank"
+       rel="license noopener noreferrer"
+       style="display:inline-block;"&gt;
+        CC BY-NC-SA 4.0
+        &lt;img
+            style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+            src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"
+            alt=""
+        &gt;
+        &lt;img
+            style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+            src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"
+            alt=""
+        &gt;
+        &lt;img
+            style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+            src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"
+            alt=""
+        &gt;
+        &lt;img
+            style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+            src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"
+            alt=""
+        &gt;
+    &lt;/a&gt;
+&lt;/p&gt;
+</copyright><lastBuildDate>Sat, 24 Aug 2024 10:26:03 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Postgres non-durable options Docker container.</title><link>https://gilgamezh.me/posts/postgres-non-durable-options-docker-container/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;p&gt;Some weeks ago I was at &lt;a class="reference external" href="http://www.python.org.ar/wiki/PyCamp/2017/"&gt;Pycamp&lt;/a&gt; whit LeCoVi
 working on the Pyar website (check the link PyCamp is the best event ever!) and
 I showed him my configuration to speed-up django tests.
 Some days ago he asked me for the config. I think that it'is better to share it
@@ -71,26 +101,10 @@ make install&lt;/pre&gt;
 &lt;li&gt;&lt;p&gt;Copiar el php.ini que tengamos a /usr/local/php/lib&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Si usamos Apache en httpd.conf hay que hacer un &lt;em&gt;Include&lt;/em&gt; de
 /etc/httpd/conf/extra/httpd-fastcgid.conf&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><category>archlinux</category><category>how-to</category><category>PHP</category><guid>https://gilgamezh.me/posts/compilar-version-vieja-de-php-para-archlinux/</guid><pubDate>Sat, 28 Feb 2015 15:17:52 GMT</pubDate></item><item><title>How to install Fisa-vim-cofig in Archlinux</title><link>https://gilgamezh.me/posts/how-to-install-fisa-vim-cofig-in-archlinux/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;img alt="/images/fisa-dev-config.png" src="https://gilgamezh.me/images/fisa-dev-config.png"&gt;
+&lt;/ul&gt;</description><category>archlinux</category><category>how-to</category><category>PHP</category><guid>https://gilgamezh.me/posts/compilar-version-vieja-de-php-para-archlinux/</guid><pubDate>Sat, 28 Feb 2015 15:17:52 GMT</pubDate></item><item><title>How to install Fisa-vim-cofig in Archlinux</title><link>https://gilgamezh.me/posts/how-to-install-fisa-vim-cofig-in-archlinux/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;img alt="/images/fisa-dev-config.png" src="https://gilgamezh.me/images/fisa-dev-config.png"&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://github.com/fisadev/fisa-vim-config/"&gt;Fisa-vim-config&lt;/a&gt;
 es una excelente configuración para Vim que recopila muchos
 plugins y los pone a funcionar de una manera muy simple.
 Esta desarrollada por @fisadev. Agradecimientos para él por permitir
 tener un vim con esteroides muy útil para developers n00bs como yo :).&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-&lt;p&gt;No pude hacerlo funcionar en  mi Archlinux de una sola vez. Primero que
-nada encontre que Vim en arch no está compilado con Python, por lo que hay
-que instalar gVim (que reemplaza el vim por default por uno compilado con python.&lt;/p&gt;
-&lt;p&gt;Luego de instalar gVim seguía sin funcionar, lo abandone hasta que ayer
-leí una mail en la lista de pyar con un problema similar al mio y la solución
-era tan simple!! Resulta que gVim está compilado con python-2.7 y en Arch
-python3 es el default. Por lo tanto hay que utilizar pip2 para instalar
-todas las dependencias!!
-(acá el hilo con la consulta de Matuvarela &lt;a class="reference external" href="http://listas.python.org.ar/pipermail/pyar/2014-March/028366.html"&gt;http://listas.python.org.ar/pipermail/pyar/2014-March/028366.html&lt;/a&gt; )&lt;/p&gt;
-&lt;p&gt;En resumen, si querés tener fisa-vim-dev funcionando en Arch tenes que usar
-gvim en lugar de vim, pip2 en lugar de pip y tener en cuenta que el paquete
-exuberant-ctags es extra/xtags.
-Lo único que cambia es este punto de la guia de instalación en el repo oficial.&lt;/p&gt;
-&lt;p&gt;Dependencies:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;sudo pacman -Sy gvim ctags git python2-pip
-sudo pip2 install dbgp vim-debug pep8 flake8 pyflakes isort&lt;/pre&gt;</description><category>how-to</category><category>python</category><category>vim</category><guid>https://gilgamezh.me/posts/how-to-install-fisa-vim-cofig-in-archlinux/</guid><pubDate>Sat, 15 Mar 2014 18:22:44 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="https://gilgamezh.me/posts/how-to-install-fisa-vim-cofig-in-archlinux/"&gt;Leer más…&lt;/a&gt; (quedan 1 minutos de lectura)&lt;/p&gt;&lt;/div&gt;</description><category>how-to</category><category>python</category><category>vim</category><guid>https://gilgamezh.me/posts/how-to-install-fisa-vim-cofig-in-archlinux/</guid><pubDate>Sat, 15 Mar 2014 18:22:44 GMT</pubDate></item></channel></rss>

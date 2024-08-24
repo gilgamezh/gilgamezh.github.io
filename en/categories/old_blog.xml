@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Posts about old_blog)</title><link>https://gilgamezh.me/</link><description></description><atom:link href="https://gilgamezh.me/en/categories/old_blog.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 24 Aug 2024 09:08:43 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Receta de Apple Crumble + Timelapse con Mencoder</title><link>https://gilgamezh.me/en/posts/receta-de-apple-crumble-%2B-timelapse-con-mencoder/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;p&gt;Copiada de acá pero es tal cual lo hace mi flia.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Posts about old_blog)</title><link>https://gilgamezh.me/</link><description></description><atom:link href="https://gilgamezh.me/en/categories/old_blog.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2024 &lt;a href="mailto:mail@gilgamezh.me"&gt;GiLgAmEzH&lt;/a&gt; 
+&lt;p xmlns:cc="http://creativecommons.org/ns#"&gt;
+    This work is licensed under
+    &lt;a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1"
+       target="_blank"
+       rel="license noopener noreferrer"
+       style="display:inline-block;"&gt;
+        CC BY-NC-SA 4.0
+        &lt;img
+            style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+            src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"
+            alt=""
+        &gt;
+        &lt;img
+            style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+            src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"
+            alt=""
+        &gt;
+        &lt;img
+            style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+            src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"
+            alt=""
+        &gt;
+        &lt;img
+            style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+            src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"
+            alt=""
+        &gt;
+    &lt;/a&gt;
+&lt;/p&gt;
+</copyright><lastBuildDate>Sat, 24 Aug 2024 10:26:02 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Receta de Apple Crumble + Timelapse con Mencoder</title><link>https://gilgamezh.me/en/posts/receta-de-apple-crumble-%2B-timelapse-con-mencoder/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;div&gt;&lt;p&gt;Copiada de acá pero es tal cual lo hace mi flia.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://recetasamericanas.com/2012/01/19/crujiente-de-manzana-apple-crisp"&gt;http://recetasamericanas.com/2012/01/19/crujiente-de-manzana-apple-crisp&lt;/a&gt;&lt;/p&gt;
 &lt;section id="ingredientes"&gt;
 &lt;h2&gt;Ingredientes:&lt;/h2&gt;
@@ -14,24 +44,4 @@
 &lt;li&gt;&lt;p&gt;2,5 ml (1/2 cucharita) de sal&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-&lt;!-- TEASER_END --&gt;
-&lt;/section&gt;
-&lt;section id="receta"&gt;
-&lt;h2&gt;Receta:&lt;/h2&gt;
-&lt;p&gt;Precalienta el horno a 180°C (350°F) Pela las manzanas y córtalas en trozos medianos. Unos 10 trozos por manzana es lo normal. (Si son trozos demasiado pequeños pierden textura y se convierte en puré… y son demasiado grandes quedan duros y secos.) Coloca los trozos en una bandeja del horno (20×20). Verte la agua encima de una manera uniforme, seguida por la canela y la sal. En un bol pequeño mezcla la harina y azúcar. Añade la mantequilla y  machaca con un tenedor hasta que quedé más o menos hecho una pasta pero con muchas migas también. Distribuye la mezcla por encima de las manzanas. Hornea por unos 40 minutos, hasta que las manzanas se estén caramelizando y esté totalmente dorada encima.&lt;/p&gt;
-&lt;/section&gt;
-&lt;section id="de-paso-saque-fotos-mientras-lo-hice-y-despues-arme-un-timelapse-con-mencoder"&gt;
-&lt;h2&gt;De paso saque fotos mientras lo hice y después arme un timelapse con Mencoder.&lt;/h2&gt;
-&lt;p&gt;Pasos:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;enviar a un archivo los nombres de todas las imágenes:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;ls -1tr &amp;gt; files.txt&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Encodear con Mencoder:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;mencoder -nosound -ovc lavc -lavcopts vcodec=mpeg4 -o test_4fps.avi \
--mf type=jpeg:fps=4 mf://@files.txt&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;(use 4FPS para 50 imágenes, esto lo hice a ojo)&lt;/p&gt;
-&lt;div style="top: 0; left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"&gt;
-				&lt;iframe style="width: 100%; height: 100%; position: absolute;" src="https://embedr.flickr.com/photos/9063385970" width="1024" height="679" frameborder="0" allow="autoplay; fullscreen" allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/section&gt;</description><guid>https://gilgamezh.me/en/posts/receta-de-apple-crumble-%2B-timelapse-con-mencoder/</guid><pubDate>Mon, 17 Jun 2013 00:35:01 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="https://gilgamezh.me/en/posts/receta-de-apple-crumble-%2B-timelapse-con-mencoder/"&gt;Read more…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/section&gt;&lt;/div&gt;</description><guid>https://gilgamezh.me/en/posts/receta-de-apple-crumble-%2B-timelapse-con-mencoder/</guid><pubDate>Mon, 17 Jun 2013 00:35:01 GMT</pubDate></item></channel></rss>

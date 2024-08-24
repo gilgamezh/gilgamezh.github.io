@@ -32,6 +32,12 @@
             </button>
             <div class="collapse bs-nav-collapsible bootblog4-search-form-holder">
                 
+<!-- DuckDuckGo custom search -->
+<form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="https://gilgamezh.me/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
             </div>
         </div>
           <div class="col-md-6 col-xs-10 col-sm-10 bootblog4-brand" style="width: auto;">
@@ -59,9 +65,6 @@
                 </li>
 <li class="nav-item">
 <a href="rss.xml" class="nav-link">RSS feed</a>
-                </li>
-<li class="nav-item">
-<a href="http://bit.ly/nicolas_demarchi_resume" class="nav-link">Resume</a>
                 </li>
 <li class="nav-item">
 <a href="http://www.flickr.com/photos/bolche/" class="nav-link">Pics</a>
@@ -105,7 +108,7 @@
 
                 </p>
 </div>
-            </header><div class="p-summary entry-summary">
+            </header><div class="e-content entry-content">
                     <p>Just testing if this thing still works. Had a pretty nice weekend and I really liked how this picture has a level horizon.</p>
 <img alt="/images/Groesbeek.jpg" src="../images/Groesbeek.jpg">
 </div>
@@ -125,7 +128,7 @@
 
                 </p>
 </div>
-            </header><div class="p-summary entry-summary">
+            </header><div class="e-content entry-content">
                     <p>We're glad to announce the release of fades 8.1.</p>
 <p>fades is a system that automatically handles the virtualenvs in the
 cases normally found when writing scripts and simple programs, and
@@ -239,7 +242,7 @@ bin/fades</p>
 
                 </p>
 </div>
-            </header><div class="p-summary entry-summary">
+            </header><div class="e-content entry-content">
                     <p>Some weeks ago I was at <a class="reference external" href="http://www.python.org.ar/wiki/PyCamp/2017/">Pycamp</a> whit LeCoVi
 working on the Pyar website (check the link PyCamp is the best event ever!) and
 I showed him my configuration to speed-up django tests.
@@ -303,7 +306,7 @@ variable:</p>
 
                 </p>
 </div>
-            </header><div class="p-summary entry-summary">
+            </header><div class="e-content entry-content">
                     <p>Hoy me puse a ordenar/tirar papeles. Esta vez le tocó a mis cosas de estudio.
 Tiré un montón de libros, tuve que darle rosca de lo lindo a la destructora de papel,
 me divertí con diagramas de diseño, apuntes y cosas viejas y tengo un montón de libros para regalar.</p>
@@ -350,9 +353,8 @@ Si te interesa alguno escribime a mail at gilgamezh.me.</p>
 
                 </p>
 </div>
-            </header><div class="p-summary entry-summary">
-                    <div>
-<p>Hoy por la mañana @reydelhumo queria probar un sitio que tiene en una raspy, yo
+            </header><div class="e-content entry-content">
+                    <p>Hoy por la mañana @reydelhumo queria probar un sitio que tiene en una raspy, yo
 le recomendé que use <cite>ab</cite> para hacer algunas pruebas básicas de load.</p>
 <p>Usar <cite>ab</cite> es muy simple, pero es mucho más lindo poder hacer gráficos de los
 resultados, así que aproveché el momento para armar este post.</p>
@@ -360,8 +362,56 @@ resultados, así que aproveché el momento para armar este post.</p>
 de concurrencia/cantidad de requests y gráficar la salida.</p>
 <p>Primero hay que ejecutar las pruebas con <cite>ab</cite>:</p>
 <pre class="literal-block">ab -c 3 -n 100 -v 2 -g out1.tsv -H "Accept-Encoding: gzip,deflate"  http://python.org.ar/</pre>
-<p class="more"><a href="posts/howto-stresstest-a-website-with-apache-benchmark/">Read more…</a></p>
-</div>
+<!-- TEASER_END -->
+<p>Esa configuración significa:</p>
+<ul class="simple">
+<li><p><cite>-c 3</cite>:  concurrencia 3</p></li>
+<li><p><cite>-n 15</cite>:  15 request</p></li>
+<li><p><cite>-v 2</cite>: verbose (muestra los headers)</p></li>
+<li><p><cite>-g out1.tsv</cite>: salida para gnuplot</p></li>
+<li><p><cite>-H -H "Accept-Encoding: gzip,deflate"</cite> Hacer requests con gzip (igual que cualquier browser)</p></li>
+</ul>
+<p>La idea es repetir N veces la prueba con los mismos parametros renombrando outN.tsv.</p>
+<p>Yo ejecuté tres pruebas:</p>
+<pre class="literal-block">/tmp  ll out*.tsv
+-rw-r--r-- 1 gilgamezh users 4934 Oct 31 11:26 out1.tsv
+-rw-r--r-- 1 gilgamezh users 4930 Oct 31 11:26 out2.tsv
+-rw-r--r-- 1 gilgamezh users 4936 Oct 31 11:27 out3.tsv</pre>
+<p>Cada una nos da una resumen con una salida, pero mucho mejor ver un gráfico.
+Con gnuplot es muy simple.</p>
+<p>Yo uso un template que edito cada vez:</p>
+<pre class="literal-block"># output as png image
+set terminal png
+
+# save file to "benchmark.png"
+set output "benchmark_python.org.ar.png"
+
+# graph title
+set title "Benchmark en python.org.ar"
+
+# aspect ratio for image size
+set size 1,1
+
+# enable grid on y-axis
+set grid y
+
+# x-axis label
+set xlabel "Request"
+
+# y-axis label
+set ylabel "Response Time (ms)"
+
+# plot data from bench1.tsv,bench2.tsv and bench3.tsv using column 10 with smooth sbezier lines
+plot "out1.tsv" using 10 smooth sbezier with lines title "Benchmark 1:", \
+     "out2.tsv" using 10 smooth sbezier with lines title "Benchmark 2:", \
+     "out3.tsv" using 10 smooth sbezier with lines title "Benchmark 3:"</pre>
+<p>Es un poco precario porque hay que editarlo a mano con el nombre de los .tsv.
+Algún día me voy a tomar el tiempo de automatizar todo. ;)</p>
+<p>lo guardo como <cite>gnuplot.template</cite> y ejecuto:</p>
+<pre class="literal-block">gnuplot gnuplot.template</pre>
+<p>Y listo! tenemos nuestro gráfico.
+(sí hay que tener gnuplot instalado. en Arch el paquete se llama <cite>python-gnuplot</cite>)</p>
+<img alt="/images/benchmark_python.org.ar.png" src="../images/benchmark_python.org.ar.png"><p>Por ejemplo la conclusión de esta prueba es que python.org.ar necesita un caché de frontend :)</p>
                 </div>
             </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/como-usar-un-tunel-ssh-como-proxy-para-http/" class="u-url">Cómo usar un tunel SSH como proxy para HTTP</a></h1>
                 <div class="metadata">
@@ -379,7 +429,7 @@ de concurrencia/cantidad de requests y gráficar la salida.</p>
 
                 </p>
 </div>
-            </header><div class="p-summary entry-summary">
+            </header><div class="e-content entry-content">
                     <p>Es muy común estar en un lugar donde tenemos problemas o limitaciones para
 navegar por internet y que necesitemos una alternativa.
 Sea por un proxy que bloquea cosas, un DNS que resuelve mal o porque no
@@ -427,7 +477,7 @@ ingresar a <a class="reference external" href="http://ifconfig.me">http://ifconf
 
                 </p>
 </div>
-            </header><div class="p-summary entry-summary">
+            </header><div class="e-content entry-content">
                     <p>Hace un tiempo trabajando con <a class="reference external" href="https://github.com/PyAr/fades">fades</a> Facu me propuso
 "estirar" el "Maximum Line Length" para probar si resultaba un poco más cómodo.
 A mi me pareció perfecto ya que entiendo que deben quedar muy pocas terminales de 80
@@ -484,7 +534,7 @@ es una de los pocos blogs que llevo años leyendo.</p>
 
                 </p>
 </div>
-            </header><div class="p-summary entry-summary">
+            </header><div class="e-content entry-content">
                     <p>Con @felipelerena estamos laburando en <a class="reference external" href="https://github.com/touchandgo-devs/touchandgo">Touchandgo</a>,
 si te gusta mirar series online, no tenés que dejar de probarlo!</p>
 <p>Con la experiencia inicial de Touchandgo armamos una charla para la PyConAr 2014.
@@ -510,7 +560,7 @@ si te gusta mirar series online, no tenés que dejar de probarlo!</p>
 
                 </p>
 </div>
-            </header><div class="p-summary entry-summary">
+            </header><div class="e-content entry-content">
                     <p>El 8 de marzo se festeja justamente lo que dice el titulo de este post.
 no es el día de las Legrand, las thatcher, las Alfano, etc.
 Es un buen momento también para recordar que no es únicamente una cuestión de
@@ -573,7 +623,7 @@ prodigiosa blasfemia.</pre>
 
                 </p>
 </div>
-            </header><div class="p-summary entry-summary">
+            </header><div class="e-content entry-content">
                     <p>Fueron (creo) unas 2 semanas desde que salió el release 1.0 de Fades las que
 demoramos en sacar el 2.0 :). El ritmo estuvo muy bueno y sobre todo largas
 charlas de qué camino tomar.
@@ -602,10 +652,53 @@ módulo (ej: "import bs4 # fades.pypi beautifulsoup4 == 3.5")</p></li>
         <ul class="pager postindexpager clearfix">
 <li class="next"><a href="index-5.html" rel="next">Older posts</a></li>
         </ul>
-<script>var disqus_shortname="notodoesmecnico";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><!--End of body content--><footer id="footer">
-            Contents © 2024         <a href="mailto:mail@gilgamezh.me">GiLgAmEzH</a> - My Fingerprint: <a href="https://gilgamezh.me/public.key">0712 8EB2 C626 08C5 69E1  8949 6DDF 6FA3 5EB9 26AB</a>  Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
-<img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a>
+<script>var disqus_shortname="notodoesmecnico";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><!--End of body content--><footer id="footer"><div class="container mt-5">
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 mb-3">
+            <div class="p-3 border rounded bg-light">
+                <a href="mailto:mail@gilgamezh.me">GiLgAmEzH</a>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-3">
+            <div class="p-3 border rounded bg-light">
+                My Fingerprint: <a href="https://gilgamezh.me/public.key">0712 8EB2 C626 08C5 69E1  8949 6DDF 6FA3 5EB9 26AB</a>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-3">
+            <div class="p-3 border rounded bg-light">
+                Powered by <a href="http://getnikola.com" rel="nofollow">Nikola</a>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-3">
+            <div class="p-3 border rounded bg-light">
+                
+<p xmlns:cc="http://creativecommons.org/ns#">
+    This work is licensed under
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">
+        CC BY-NC-SA 4.0
+        <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a>
+</p>
+
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-3">
+            <div class="p-3 border rounded bg-light">
+                <a rel="me" href="https://fosstodon.org/@gilgamezh">Follow me on Mastodon</a>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-3">
+            <div class="p-3 border rounded bg-light">
+                <a href="https://www.linkedin.com/in/nicolasdemarchi/" target="_blank">Connect with me on LinkedIn</a>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-3">
+            <div class="p-3 border rounded bg-light">
+                <a href="https://github.com/gilgamezh" target="_blank">Check out my code on GitHub</a>
+            </div>
+        </div>
+    </div>
+</div>
+
             
             
         </footer>
@@ -617,15 +710,6 @@ módulo (ej: "import bs4 # fades.pypi beautifulsoup4 == 3.5")</p></li>
     baguetteBox.run('div#content', {
         ignoreClass: 'islink',
         captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
-    </script><script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-3147526-9', 'auto');
-  ga('send', 'pageview');
-
-</script>
+    </script>
 </body>
 </html>
