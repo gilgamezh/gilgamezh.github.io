@@ -29,7 +29,10 @@
         &gt;
     &lt;/a&gt;
 &lt;/p&gt;
-</copyright><lastBuildDate>Sat, 24 Aug 2024 10:26:03 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Nobody reads your blog</title><link>https://gilgamezh.me/posts/groesbeek/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;p&gt;Just testing if this thing still works. Had a pretty nice weekend and I really liked how this picture has a level horizon.&lt;/p&gt;
+</copyright><lastBuildDate>Sat, 24 Aug 2024 10:50:49 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Un Viaje al Pasado: PythonBytes y su Mención a Fades</title><link>https://gilgamezh.me/posts/un-viaje-al-pasado-pythonbytes-y-su-mencion-a-fades/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;p&gt;Quería compartir con ustedes un pequeño momento que aún me saca una sonrisa. El 6 de julio de 2017, los genios de &lt;a class="reference external" href="https://pythonbytes.fm/episodes/show/33/you-should-build-an-alexa-skill"&gt;PythonBytes&lt;/a&gt; (que, por cierto, es mi podcast favorito de Python—en serio, si todavía no lo escuchás, &lt;a class="reference external" href="https://pythonbytes.fm/"&gt;hacelo ya&lt;/a&gt;) le dieron una mención especial a una librería de Python que me es muy querida: &lt;strong&gt;Fades&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Para los que no la conocen, &lt;a class="reference external" href="https://github.com/PyCQA/fades"&gt;Fades&lt;/a&gt; (que significa &lt;strong&gt;FAst DEpendencies for Scripts&lt;/strong&gt;) es una herramienta que se encarga automáticamente de las dependencias de Python para tus scripts, así podés concentrarte en escribir código sin preocuparte por la configuración. Es un proyecto en el que participo como mantenedor, y ver que lo mencionaran en una plataforma tan popular fue un gran momento para mí.&lt;/p&gt;
+&lt;p&gt;El episodio en cuestión es el &lt;a class="reference external" href="https://pythonbytes.fm/episodes/show/33/you-should-build-an-alexa-skill"&gt;Episodio 33: You Should Build an Alexa Skill&lt;/a&gt;, donde cubren un montón de cosas interesantes sobre Python. Pero la mención a Fades... ¡ese fue el toque de gracia para mí!&lt;/p&gt;
+&lt;p&gt;Si sos un Pythonista buscando hacer más fácil el desarrollo de scripts, te recomiendo que pruebes Fades. Y si te gusta estar al tanto de las novedades de Python, suscribite a PythonBytes—te aseguro que no te vas a arrepentir.&lt;/p&gt;</description><guid>https://gilgamezh.me/posts/un-viaje-al-pasado-pythonbytes-y-su-mencion-a-fades/</guid><pubDate>Sat, 24 Aug 2024 10:47:04 GMT</pubDate></item><item><title>Nobody reads your blog</title><link>https://gilgamezh.me/posts/groesbeek/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;p&gt;Just testing if this thing still works. Had a pretty nice weekend and I really liked how this picture has a level horizon.&lt;/p&gt;
 &lt;img alt="/images/Groesbeek.jpg" src="https://gilgamezh.me/images/Groesbeek.jpg"&gt;</description><category>fotos</category><category>netherlands</category><category>pics</category><guid>https://gilgamezh.me/posts/groesbeek/</guid><pubDate>Mon, 27 Feb 2023 19:46:21 GMT</pubDate></item><item><title>fades8.1_released</title><link>https://gilgamezh.me/posts/fades81_released/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;p&gt;Hola a todas y todos,&lt;/p&gt;
 &lt;p&gt;Estamos encantados de anunciar la liberación de fades 8.1.&lt;/p&gt;
 &lt;p&gt;fades es un sistema que maneja automáticamente los virtualenvs en los
@@ -304,24 +307,4 @@ fueras una mujer
 qué lindo escándalo sería,
 qué venturosa, espléndida, imposible,
 prodigiosa blasfemia.&lt;/pre&gt;
-&lt;/section&gt;</description><category>/me</category><guid>https://gilgamezh.me/posts/dia-internacional-de-la-mujer-trabajadora/</guid><pubDate>Sun, 08 Mar 2015 13:21:49 GMT</pubDate></item><item><title>Fades 2.0</title><link>https://gilgamezh.me/posts/fades-20/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;p&gt;Fueron (creo) unas 2 semanas desde que salió el release 1.0 de Fades las que
-demoramos en sacar el 2.0 :). El ritmo estuvo muy bueno y sobre todo largas
-charlas de qué camino tomar.
-Cuándo salió la 1.0 Robert Collins &lt;a class="reference external" href="https://twitter.com/gilgamezh/status/571377065053851648"&gt;nos hizo algunos comentarios sobre xattr&lt;/a&gt;
-, y después de una &lt;a class="reference external" href="https://github.com/PyAr/fades/issues/29"&gt;linda charla via IRC&lt;/a&gt;
-fades empezó a hacer honor a la primer palabra de su sigla para mutar a una
-caché de virtualenvs en lugar de tener uno por cada script.
-De paso se arreglaron varios errores y se mejoraron muchas cosas.&lt;/p&gt;
-&lt;p&gt;¿Qué hay de nuevo en esta release?&lt;/p&gt;
-&lt;ul class="simple"&gt;
-&lt;li&gt;&lt;p&gt;Tiene un cache para virtualenvs creados en el sistema; mejora
-la reutilización y velocidad.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Como resultado del feature anterior, ya no guarda metadata por
-script (&lt;em&gt;en&lt;/em&gt; el script).&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Permite indicar el nombre del projecto si es diferente al del
-módulo (ej: "import bs4 # fades.pypi beautifulsoup4 == 3.5")&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Soporta requerimientos complejos de versión: (ej: "&amp;lt;2.6,&amp;gt;1.3,!=1.9")&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Maneja paquetes a los que pip les cambia el nombre&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Otros cambios y correcciones menores.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Mas info: &lt;a class="reference external" href="https://github.com/PyAr/fades/releases/tag/2.0"&gt;https://github.com/PyAr/fades/releases/tag/2.0&lt;/a&gt;&lt;/p&gt;</description><category>fades</category><category>proyectos</category><category>PyAr</category><category>python</category><category>virtualenv</category><guid>https://gilgamezh.me/posts/fades-20/</guid><pubDate>Sat, 28 Feb 2015 15:25:16 GMT</pubDate></item></channel></rss>
+&lt;/section&gt;</description><category>/me</category><guid>https://gilgamezh.me/posts/dia-internacional-de-la-mujer-trabajadora/</guid><pubDate>Sun, 08 Mar 2015 13:21:49 GMT</pubDate></item></channel></rss>

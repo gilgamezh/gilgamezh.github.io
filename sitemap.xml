@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://gilgamezh.me/</loc>
-  <lastmod>2023-02-27T19:53:00Z</lastmod>
+  <lastmod>2024-08-24T10:50:00Z</lastmod>
  </url>
  <url>
   <loc>https://gilgamezh.me/2013/</loc>
@@ -38,8 +38,12 @@
   <lastmod>2023-02-27T19:53:00Z</lastmod>
  </url>
  <url>
+  <loc>https://gilgamezh.me/2024/</loc>
+  <lastmod>2024-08-24T10:50:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://gilgamezh.me/archive.html</loc>
-  <lastmod>2024-08-24T10:25:00Z</lastmod>
+  <lastmod>2024-08-24T10:50:00Z</lastmod>
  </url>
  <url>
   <loc>https://gilgamezh.me/categories/</loc>
@@ -339,7 +343,7 @@
  </url>
  <url>
   <loc>https://gilgamezh.me/en/</loc>
-  <lastmod>2023-02-27T19:53:00Z</lastmod>
+  <lastmod>2024-08-24T10:50:00Z</lastmod>
  </url>
  <url>
   <loc>https://gilgamezh.me/en/2013/</loc>
@@ -370,8 +374,12 @@
   <lastmod>2023-02-27T19:53:00Z</lastmod>
  </url>
  <url>
+  <loc>https://gilgamezh.me/en/2024/</loc>
+  <lastmod>2024-08-24T10:50:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://gilgamezh.me/en/archive.html</loc>
-  <lastmod>2024-08-24T10:25:00Z</lastmod>
+  <lastmod>2024-08-24T10:50:00Z</lastmod>
  </url>
  <url>
   <loc>https://gilgamezh.me/en/categories/</loc>
@@ -687,7 +695,7 @@
  </url>
  <url>
   <loc>https://gilgamezh.me/en/index-5.html</loc>
-  <lastmod>2024-08-24T10:26:00Z</lastmod>
+  <lastmod>2024-08-24T10:50:00Z</lastmod>
  </url>
  <url>
   <loc>https://gilgamezh.me/en/posts/30-anos-de-gnu/</loc>
@@ -945,6 +953,11 @@
   <xhtml:link rel="alternate" hreflang="es" href="https://gilgamezh.me/posts/tutorial-de-apps-en-kivy-python/" />
  </url>
  <url>
+  <loc>https://gilgamezh.me/en/posts/un-viaje-al-pasado-pythonbytes-y-su-mencion-a-fades/</loc>
+  <lastmod>2024-08-24T10:50:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="es" href="https://gilgamezh.me/posts/un-viaje-al-pasado-pythonbytes-y-su-mencion-a-fades/" />
+ </url>
+ <url>
   <loc>https://gilgamezh.me/en/posts/vim-syntax-highlighting-for-varnish-vcl-files/</loc>
   <lastmod>2019-02-23T15:14:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="es" href="https://gilgamezh.me/posts/vim-syntax-highlighting-for-varnish-vcl-files/" />
@@ -979,7 +992,7 @@
  </url>
  <url>
   <loc>https://gilgamezh.me/index-5.html</loc>
-  <lastmod>2024-08-24T10:26:00Z</lastmod>
+  <lastmod>2024-08-24T10:50:00Z</lastmod>
  </url>
  <url>
   <loc>https://gilgamezh.me/posts/30-anos-de-gnu/</loc>
@@ -1186,6 +1199,11 @@
  <url>
   <loc>https://gilgamezh.me/posts/tutorial-de-apps-en-kivy-python/</loc>
   <lastmod>2019-02-23T15:14:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://gilgamezh.me/posts/un-viaje-al-pasado-pythonbytes-y-su-mencion-a-fades/</loc>
+  <lastmod>2024-08-24T10:50:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://gilgamezh.me/en/posts/un-viaje-al-pasado-pythonbytes-y-su-mencion-a-fades/" />
  </url>
  <url>
   <loc>https://gilgamezh.me/posts/vim-syntax-highlighting-for-varnish-vcl-files/</loc>
