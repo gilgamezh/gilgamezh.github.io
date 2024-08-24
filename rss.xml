@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico</title><link>https://gilgamezh.me/</link><description>Blog personal de Nicolás Demarchi.</description><atom:link href="https://gilgamezh.me/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><lastBuildDate>Mon, 27 Feb 2023 19:55:53 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Nobody reads your blog</title><link>https://gilgamezh.me/posts/groesbeek/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;p&gt;Just testing if this thing still works. Had a pretty nice weekend and I really liked how this picture has a level horizon.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico</title><link>https://gilgamezh.me/</link><description>Blog personal de Nicolás Demarchi.</description><atom:link href="https://gilgamezh.me/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><lastBuildDate>Sat, 24 Aug 2024 09:08:44 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Nobody reads your blog</title><link>https://gilgamezh.me/posts/groesbeek/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;p&gt;Just testing if this thing still works. Had a pretty nice weekend and I really liked how this picture has a level horizon.&lt;/p&gt;
 &lt;img alt="/images/Groesbeek.jpg" src="https://gilgamezh.me/images/Groesbeek.jpg"&gt;</description><category>fotos</category><category>netherlands</category><category>pics</category><guid>https://gilgamezh.me/posts/groesbeek/</guid><pubDate>Mon, 27 Feb 2023 19:46:21 GMT</pubDate></item><item><title>fades8.1_released</title><link>https://gilgamezh.me/posts/fades81_released/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;p&gt;Hola a todas y todos,&lt;/p&gt;
 &lt;p&gt;Estamos encantados de anunciar la liberación de fades 8.1.&lt;/p&gt;
 &lt;p&gt;fades es un sistema que maneja automáticamente los virtualenvs en los
@@ -288,7 +288,7 @@ género.&lt;/p&gt;
 &lt;div class="soundcloud-player"&gt;
 &lt;iframe width="600" height="160" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http://api.soundcloud.com/tracks/106599387"&gt;
 &lt;/iframe&gt;
-&lt;/div&gt;&lt;div class="section" id="si-dios-fuera-una-mujer"&gt;
+&lt;/div&gt;&lt;section id="si-dios-fuera-una-mujer"&gt;
 &lt;h2&gt;Si Dios fuera una mujer&lt;/h2&gt;
 &lt;pre class="literal-block"&gt;¿Y si Dios fuera mujer?
 pregunta Juan sin inmutarse,
@@ -324,7 +324,7 @@ fueras una mujer
 qué lindo escándalo sería,
 qué venturosa, espléndida, imposible,
 prodigiosa blasfemia.&lt;/pre&gt;
-&lt;/div&gt;</description><category>/me</category><guid>https://gilgamezh.me/posts/dia-internacional-de-la-mujer-trabajadora/</guid><pubDate>Sun, 08 Mar 2015 13:21:49 GMT</pubDate></item><item><title>Fades 2.0</title><link>https://gilgamezh.me/posts/fades-20/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;p&gt;Fueron (creo) unas 2 semanas desde que salió el release 1.0 de Fades las que
+&lt;/section&gt;</description><category>/me</category><guid>https://gilgamezh.me/posts/dia-internacional-de-la-mujer-trabajadora/</guid><pubDate>Sun, 08 Mar 2015 13:21:49 GMT</pubDate></item><item><title>Fades 2.0</title><link>https://gilgamezh.me/posts/fades-20/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;p&gt;Fueron (creo) unas 2 semanas desde que salió el release 1.0 de Fades las que
 demoramos en sacar el 2.0 :). El ritmo estuvo muy bueno y sobre todo largas
 charlas de qué camino tomar.
 Cuándo salió la 1.0 Robert Collins &lt;a class="reference external" href="https://twitter.com/gilgamezh/status/571377065053851648"&gt;nos hizo algunos comentarios sobre xattr&lt;/a&gt;

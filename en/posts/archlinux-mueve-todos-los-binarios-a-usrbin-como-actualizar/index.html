@@ -143,44 +143,44 @@ to put those files in /usr/bin. The list of packages that are not in a
 repo that need to be fixed can be generated using:</p>
 <p>$ pacman -Qqo /bin /sbin /usr/sbin | pacman -Qm -</p>
 </blockquote>
-<pre class="code bash"><a name="rest_code_e3e26d3cc13641aeabafbc1861a747be-1"></a>gilgamezh ~ $ pacman -Qqo /bin /sbin /usr/sbin <span class="p">|</span> pacman -Qm -
-<a name="rest_code_e3e26d3cc13641aeabafbc1861a747be-2"></a>foo2zjs <span class="m">20121110</span>-1
-<a name="rest_code_e3e26d3cc13641aeabafbc1861a747be-3"></a>grub <span class="m">0</span>.97-21
-<a name="rest_code_e3e26d3cc13641aeabafbc1861a747be-4"></a>foo2zjs <span class="m">20121110</span>-1
-<a name="rest_code_e3e26d3cc13641aeabafbc1861a747be-5"></a>grub <span class="m">0</span>.97-21
-</pre>
+<div class="code"><pre class="code bash"><a id="rest_code_cd01937ee1354084938f0a9bab4f441b-1" name="rest_code_cd01937ee1354084938f0a9bab4f441b-1" href="#rest_code_cd01937ee1354084938f0a9bab4f441b-1"></a>gilgamezh<span class="w"> </span>~<span class="w"> </span>$<span class="w"> </span>pacman<span class="w"> </span>-Qqo<span class="w"> </span>/bin<span class="w"> </span>/sbin<span class="w"> </span>/usr/sbin<span class="w"> </span><span class="p">|</span><span class="w"> </span>pacman<span class="w"> </span>-Qm<span class="w"> </span>-
+<a id="rest_code_cd01937ee1354084938f0a9bab4f441b-2" name="rest_code_cd01937ee1354084938f0a9bab4f441b-2" href="#rest_code_cd01937ee1354084938f0a9bab4f441b-2"></a>foo2zjs<span class="w"> </span><span class="m">20121110</span>-1
+<a id="rest_code_cd01937ee1354084938f0a9bab4f441b-3" name="rest_code_cd01937ee1354084938f0a9bab4f441b-3" href="#rest_code_cd01937ee1354084938f0a9bab4f441b-3"></a>grub<span class="w"> </span><span class="m">0</span>.97-21
+<a id="rest_code_cd01937ee1354084938f0a9bab4f441b-4" name="rest_code_cd01937ee1354084938f0a9bab4f441b-4" href="#rest_code_cd01937ee1354084938f0a9bab4f441b-4"></a>foo2zjs<span class="w"> </span><span class="m">20121110</span>-1
+<a id="rest_code_cd01937ee1354084938f0a9bab4f441b-5" name="rest_code_cd01937ee1354084938f0a9bab4f441b-5" href="#rest_code_cd01937ee1354084938f0a9bab4f441b-5"></a>grub<span class="w"> </span><span class="m">0</span>.97-21
+</pre></div>
 <p>Encontre estos 2 paquetes, foo2zjs lo uso para mi impresora
 (hp laserjet 1005p) y bueno grub... tendré que actualizar a Grub2.</p>
 <p>Siguiendo los pasos de la wiki de arch:</p>
-<pre class="code bash"><a name="rest_code_57feb87e6ac840b291049f25756062ad-1"></a>gilgamezh ~ $ sudo pacman -S grub-bios
-<a name="rest_code_57feb87e6ac840b291049f25756062ad-2"></a><span class="o">[</span>sudo<span class="o">]</span> password <span class="k">for</span> gilgamezh:
-<a name="rest_code_57feb87e6ac840b291049f25756062ad-3"></a>resolviendo dependencias...
-<a name="rest_code_57feb87e6ac840b291049f25756062ad-4"></a>verificando conflictos...
-<a name="rest_code_57feb87e6ac840b291049f25756062ad-5"></a>:: grub-common y grub están en conflicto. ¿Quitar grub? <span class="o">[</span>s/N<span class="o">]</span> s
-<a name="rest_code_57feb87e6ac840b291049f25756062ad-6"></a>
-<a name="rest_code_57feb87e6ac840b291049f25756062ad-7"></a>Paquetes <span class="o">(</span><span class="m">3</span><span class="o">)</span>: grub-0.97-21 <span class="o">[</span>quitando<span class="o">]</span>  grub-common-2.00-2  grub-bios-2.00-2
-<a name="rest_code_57feb87e6ac840b291049f25756062ad-8"></a>
-<a name="rest_code_57feb87e6ac840b291049f25756062ad-9"></a>Tamaño Total de Descarga:  <span class="m">4</span>,32 MiB
-<a name="rest_code_57feb87e6ac840b291049f25756062ad-10"></a>Tamaño Total Instalado:    <span class="m">15</span>,08 MiB
-<a name="rest_code_57feb87e6ac840b291049f25756062ad-11"></a>Tamaño neto a actualizar:  <span class="m">13</span>,04 MiB
-<a name="rest_code_57feb87e6ac840b291049f25756062ad-12"></a>
-<a name="rest_code_57feb87e6ac840b291049f25756062ad-13"></a>:: ¿Continuar con la instalación? <span class="o">[</span>S/n<span class="o">]</span> s
-<a name="rest_code_57feb87e6ac840b291049f25756062ad-14"></a>:: Recuperando paquetes ...
-<a name="rest_code_57feb87e6ac840b291049f25756062ad-15"></a>
-<a name="rest_code_57feb87e6ac840b291049f25756062ad-16"></a>
-<a name="rest_code_57feb87e6ac840b291049f25756062ad-17"></a><span class="c1"># modprobe dm-mod</span>
-<a name="rest_code_57feb87e6ac840b291049f25756062ad-18"></a><span class="c1"># grub-install --target=i386-pc --recheck --debug --force /dev/sdaX</span>
-<a name="rest_code_57feb87e6ac840b291049f25756062ad-19"></a><span class="c1"># chattr -i /boot/grub/i386-pc/core.img</span>
-<a name="rest_code_57feb87e6ac840b291049f25756062ad-20"></a><span class="c1"># chattr +i /boot/grub/i386-pc/core.img</span>
-</pre>
+<div class="code"><pre class="code bash"><a id="rest_code_864199c4b8624fe091af46c8db0a80e2-1" name="rest_code_864199c4b8624fe091af46c8db0a80e2-1" href="#rest_code_864199c4b8624fe091af46c8db0a80e2-1"></a>gilgamezh<span class="w"> </span>~<span class="w"> </span>$<span class="w"> </span>sudo<span class="w"> </span>pacman<span class="w"> </span>-S<span class="w"> </span>grub-bios
+<a id="rest_code_864199c4b8624fe091af46c8db0a80e2-2" name="rest_code_864199c4b8624fe091af46c8db0a80e2-2" href="#rest_code_864199c4b8624fe091af46c8db0a80e2-2"></a><span class="o">[</span>sudo<span class="o">]</span><span class="w"> </span>password<span class="w"> </span><span class="k">for</span><span class="w"> </span>gilgamezh:
+<a id="rest_code_864199c4b8624fe091af46c8db0a80e2-3" name="rest_code_864199c4b8624fe091af46c8db0a80e2-3" href="#rest_code_864199c4b8624fe091af46c8db0a80e2-3"></a>resolviendo<span class="w"> </span>dependencias...
+<a id="rest_code_864199c4b8624fe091af46c8db0a80e2-4" name="rest_code_864199c4b8624fe091af46c8db0a80e2-4" href="#rest_code_864199c4b8624fe091af46c8db0a80e2-4"></a>verificando<span class="w"> </span>conflictos...
+<a id="rest_code_864199c4b8624fe091af46c8db0a80e2-5" name="rest_code_864199c4b8624fe091af46c8db0a80e2-5" href="#rest_code_864199c4b8624fe091af46c8db0a80e2-5"></a>::<span class="w"> </span>grub-common<span class="w"> </span>y<span class="w"> </span>grub<span class="w"> </span>están<span class="w"> </span>en<span class="w"> </span>conflicto.<span class="w"> </span>¿Quitar<span class="w"> </span>grub?<span class="w"> </span><span class="o">[</span>s/N<span class="o">]</span><span class="w"> </span>s
+<a id="rest_code_864199c4b8624fe091af46c8db0a80e2-6" name="rest_code_864199c4b8624fe091af46c8db0a80e2-6" href="#rest_code_864199c4b8624fe091af46c8db0a80e2-6"></a>
+<a id="rest_code_864199c4b8624fe091af46c8db0a80e2-7" name="rest_code_864199c4b8624fe091af46c8db0a80e2-7" href="#rest_code_864199c4b8624fe091af46c8db0a80e2-7"></a>Paquetes<span class="w"> </span><span class="o">(</span><span class="m">3</span><span class="o">)</span>:<span class="w"> </span>grub-0.97-21<span class="w"> </span><span class="o">[</span>quitando<span class="o">]</span><span class="w">  </span>grub-common-2.00-2<span class="w">  </span>grub-bios-2.00-2
+<a id="rest_code_864199c4b8624fe091af46c8db0a80e2-8" name="rest_code_864199c4b8624fe091af46c8db0a80e2-8" href="#rest_code_864199c4b8624fe091af46c8db0a80e2-8"></a>
+<a id="rest_code_864199c4b8624fe091af46c8db0a80e2-9" name="rest_code_864199c4b8624fe091af46c8db0a80e2-9" href="#rest_code_864199c4b8624fe091af46c8db0a80e2-9"></a>Tamaño<span class="w"> </span>Total<span class="w"> </span>de<span class="w"> </span>Descarga:<span class="w">  </span><span class="m">4</span>,32<span class="w"> </span>MiB
+<a id="rest_code_864199c4b8624fe091af46c8db0a80e2-10" name="rest_code_864199c4b8624fe091af46c8db0a80e2-10" href="#rest_code_864199c4b8624fe091af46c8db0a80e2-10"></a>Tamaño<span class="w"> </span>Total<span class="w"> </span>Instalado:<span class="w">    </span><span class="m">15</span>,08<span class="w"> </span>MiB
+<a id="rest_code_864199c4b8624fe091af46c8db0a80e2-11" name="rest_code_864199c4b8624fe091af46c8db0a80e2-11" href="#rest_code_864199c4b8624fe091af46c8db0a80e2-11"></a>Tamaño<span class="w"> </span>neto<span class="w"> </span>a<span class="w"> </span>actualizar:<span class="w">  </span><span class="m">13</span>,04<span class="w"> </span>MiB
+<a id="rest_code_864199c4b8624fe091af46c8db0a80e2-12" name="rest_code_864199c4b8624fe091af46c8db0a80e2-12" href="#rest_code_864199c4b8624fe091af46c8db0a80e2-12"></a>
+<a id="rest_code_864199c4b8624fe091af46c8db0a80e2-13" name="rest_code_864199c4b8624fe091af46c8db0a80e2-13" href="#rest_code_864199c4b8624fe091af46c8db0a80e2-13"></a>::<span class="w"> </span>¿Continuar<span class="w"> </span>con<span class="w"> </span>la<span class="w"> </span>instalación?<span class="w"> </span><span class="o">[</span>S/n<span class="o">]</span><span class="w"> </span>s
+<a id="rest_code_864199c4b8624fe091af46c8db0a80e2-14" name="rest_code_864199c4b8624fe091af46c8db0a80e2-14" href="#rest_code_864199c4b8624fe091af46c8db0a80e2-14"></a>::<span class="w"> </span>Recuperando<span class="w"> </span>paquetes<span class="w"> </span>...
+<a id="rest_code_864199c4b8624fe091af46c8db0a80e2-15" name="rest_code_864199c4b8624fe091af46c8db0a80e2-15" href="#rest_code_864199c4b8624fe091af46c8db0a80e2-15"></a>
+<a id="rest_code_864199c4b8624fe091af46c8db0a80e2-16" name="rest_code_864199c4b8624fe091af46c8db0a80e2-16" href="#rest_code_864199c4b8624fe091af46c8db0a80e2-16"></a>
+<a id="rest_code_864199c4b8624fe091af46c8db0a80e2-17" name="rest_code_864199c4b8624fe091af46c8db0a80e2-17" href="#rest_code_864199c4b8624fe091af46c8db0a80e2-17"></a><span class="c1"># modprobe dm-mod</span>
+<a id="rest_code_864199c4b8624fe091af46c8db0a80e2-18" name="rest_code_864199c4b8624fe091af46c8db0a80e2-18" href="#rest_code_864199c4b8624fe091af46c8db0a80e2-18"></a><span class="c1"># grub-install --target=i386-pc --recheck --debug --force /dev/sdaX</span>
+<a id="rest_code_864199c4b8624fe091af46c8db0a80e2-19" name="rest_code_864199c4b8624fe091af46c8db0a80e2-19" href="#rest_code_864199c4b8624fe091af46c8db0a80e2-19"></a><span class="c1"># chattr -i /boot/grub/i386-pc/core.img</span>
+<a id="rest_code_864199c4b8624fe091af46c8db0a80e2-20" name="rest_code_864199c4b8624fe091af46c8db0a80e2-20" href="#rest_code_864199c4b8624fe091af46c8db0a80e2-20"></a><span class="c1"># chattr +i /boot/grub/i386-pc/core.img</span>
+</pre></div>
 <p><strong>OJO: /boot/grub/menu.lst se guarda como .pacnew hay que renombrarlo!</strong></p>
 <p>Después:</p>
-<pre class="code bash"><a name="rest_code_e65978b69fa04a78bae4d2dc17785e19-1"></a>gilgamezh ~ $ sudo grub-mkconfig -o /boot/grub/grub.cfg
-<a name="rest_code_e65978b69fa04a78bae4d2dc17785e19-2"></a>Generando grub.cfg...
-<a name="rest_code_e65978b69fa04a78bae4d2dc17785e19-3"></a>Encontrada imagen de linux: /boot/vmlinuz-linux
-<a name="rest_code_e65978b69fa04a78bae4d2dc17785e19-4"></a>Encontrada imagen de memoria inicial: /boot/initramfs-linux.img
-<a name="rest_code_e65978b69fa04a78bae4d2dc17785e19-5"></a>hecho
-</pre>
+<div class="code"><pre class="code bash"><a id="rest_code_b5f2042369924c2282bb2d28f02c66d3-1" name="rest_code_b5f2042369924c2282bb2d28f02c66d3-1" href="#rest_code_b5f2042369924c2282bb2d28f02c66d3-1"></a>gilgamezh<span class="w"> </span>~<span class="w"> </span>$<span class="w"> </span>sudo<span class="w"> </span>grub-mkconfig<span class="w"> </span>-o<span class="w"> </span>/boot/grub/grub.cfg
+<a id="rest_code_b5f2042369924c2282bb2d28f02c66d3-2" name="rest_code_b5f2042369924c2282bb2d28f02c66d3-2" href="#rest_code_b5f2042369924c2282bb2d28f02c66d3-2"></a>Generando<span class="w"> </span>grub.cfg...
+<a id="rest_code_b5f2042369924c2282bb2d28f02c66d3-3" name="rest_code_b5f2042369924c2282bb2d28f02c66d3-3" href="#rest_code_b5f2042369924c2282bb2d28f02c66d3-3"></a>Encontrada<span class="w"> </span>imagen<span class="w"> </span>de<span class="w"> </span>linux:<span class="w"> </span>/boot/vmlinuz-linux
+<a id="rest_code_b5f2042369924c2282bb2d28f02c66d3-4" name="rest_code_b5f2042369924c2282bb2d28f02c66d3-4" href="#rest_code_b5f2042369924c2282bb2d28f02c66d3-4"></a>Encontrada<span class="w"> </span>imagen<span class="w"> </span>de<span class="w"> </span>memoria<span class="w"> </span>inicial:<span class="w"> </span>/boot/initramfs-linux.img
+<a id="rest_code_b5f2042369924c2282bb2d28f02c66d3-5" name="rest_code_b5f2042369924c2282bb2d28f02c66d3-5" href="#rest_code_b5f2042369924c2282bb2d28f02c66d3-5"></a>hecho
+</pre></div>
 <p>(restart y con suerte todo funca bien)</p>
 <p>Siguiendo con la migración a /usr/bin</p>
 <blockquote>
@@ -196,10 +196,10 @@ $ paclist &lt;repo&gt; | awk ' { print $1 } ' | pacman -Ql - | grep ' /s?bin/| /
 </blockquote>
 <p>En mi caso no tuve resultados de este find.
 Después ejecute:</p>
-<pre class="code bash"><a name="rest_code_b50d1731ae304fb9ad13f13b37de9c24-1"></a><span class="c1"># pacman -Syu --ignore filesystem,bash</span>
-<a name="rest_code_b50d1731ae304fb9ad13f13b37de9c24-2"></a><span class="c1"># pacman -S bash</span>
-<a name="rest_code_b50d1731ae304fb9ad13f13b37de9c24-3"></a><span class="c1"># pacman -Su</span>
-</pre>
+<div class="code"><pre class="code bash"><a id="rest_code_a969c9a9ae774ba7978d289fcde1cf4d-1" name="rest_code_a969c9a9ae774ba7978d289fcde1cf4d-1" href="#rest_code_a969c9a9ae774ba7978d289fcde1cf4d-1"></a><span class="c1"># pacman -Syu --ignore filesystem,bash</span>
+<a id="rest_code_a969c9a9ae774ba7978d289fcde1cf4d-2" name="rest_code_a969c9a9ae774ba7978d289fcde1cf4d-2" href="#rest_code_a969c9a9ae774ba7978d289fcde1cf4d-2"></a><span class="c1"># pacman -S bash</span>
+<a id="rest_code_a969c9a9ae774ba7978d289fcde1cf4d-3" name="rest_code_a969c9a9ae774ba7978d289fcde1cf4d-3" href="#rest_code_a969c9a9ae774ba7978d289fcde1cf4d-3"></a><span class="c1"># pacman -Su</span>
+</pre></div>
 <p>Actualizó como 500 megas y todo 10 puntos :)</p>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
@@ -236,7 +236,7 @@ Después ejecute:</p>
 
 
         </section></article><script>var disqus_shortname="notodoesmecnico";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><!--End of body content--><footer id="footer">
-            Contents © 2023         <a href="mailto:mail@gilgamezh.me">GiLgAmEzH</a> - My Fingerprint: <a href="https://gilgamezh.me/public.key">0712 8EB2 C626 08C5 69E1  8949 6DDF 6FA3 5EB9 26AB</a>  Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2024         <a href="mailto:mail@gilgamezh.me">GiLgAmEzH</a> - My Fingerprint: <a href="https://gilgamezh.me/public.key">0712 8EB2 C626 08C5 69E1  8949 6DDF 6FA3 5EB9 26AB</a>  Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
 <img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a>
             

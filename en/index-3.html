@@ -130,55 +130,54 @@ Para solucionarlo utilice el workaround del primer comentario.</p>
 from /isolinux instead of /images/pxeboot."</p>
 </blockquote>
 <p>SALVADOR!</p>
-<div class="section" id="instalar-apache-mysql-y-php">
-<h2>Instalar apache, mysql y PHP</h2>
+<section id="instalar-apache-mysql-y-php"><h2>Instalar apache, mysql y PHP</h2>
 <p>(usando el repo 'remi' que tiene versiones un poco más nuevas que el oficial.)</p>
-<pre class="code bash"><a name="rest_code_d6a31c3fc8d14ed7995c044eed7b8f02-1"></a>yum --enablerepo<span class="o">=</span>remi install httpd mysql mysql-server php php-common
-<a name="rest_code_d6a31c3fc8d14ed7995c044eed7b8f02-2"></a>yum --enablerepo<span class="o">=</span>remi install php-mysql php-gd php-mbstring php-mcrypt php-xml php-pecl-apc php-cli php-pear php-pdo
-</pre>
-<pre class="code bash"><a name="rest_code_45f77d38733348e587e5195257ba749b-1"></a>/usr/bin/mysqladmin -u root password <span class="s1">'algocomplejo'</span>
-<a name="rest_code_45f77d38733348e587e5195257ba749b-2"></a>/usr/bin/mysql_secure_installation
-</pre>
+<div class="code"><pre class="code bash"><a id="rest_code_843d98cb02174ff88ef46e138b0c5e8c-1" name="rest_code_843d98cb02174ff88ef46e138b0c5e8c-1" href="posts/instalar-y-configurar-lamp-en-centos-6-php-fpm/#rest_code_843d98cb02174ff88ef46e138b0c5e8c-1"></a>yum<span class="w"> </span>--enablerepo<span class="o">=</span>remi<span class="w"> </span>install<span class="w"> </span>httpd<span class="w"> </span>mysql<span class="w"> </span>mysql-server<span class="w"> </span>php<span class="w"> </span>php-common
+<a id="rest_code_843d98cb02174ff88ef46e138b0c5e8c-2" name="rest_code_843d98cb02174ff88ef46e138b0c5e8c-2" href="posts/instalar-y-configurar-lamp-en-centos-6-php-fpm/#rest_code_843d98cb02174ff88ef46e138b0c5e8c-2"></a>yum<span class="w"> </span>--enablerepo<span class="o">=</span>remi<span class="w"> </span>install<span class="w"> </span>php-mysql<span class="w"> </span>php-gd<span class="w"> </span>php-mbstring<span class="w"> </span>php-mcrypt<span class="w"> </span>php-xml<span class="w"> </span>php-pecl-apc<span class="w"> </span>php-cli<span class="w"> </span>php-pear<span class="w"> </span>php-pdo
+</pre></div>
+<div class="code"><pre class="code bash"><a id="rest_code_a265f736d150429bbfc41f139c563e94-1" name="rest_code_a265f736d150429bbfc41f139c563e94-1" href="posts/instalar-y-configurar-lamp-en-centos-6-php-fpm/#rest_code_a265f736d150429bbfc41f139c563e94-1"></a>/usr/bin/mysqladmin<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>password<span class="w"> </span><span class="s1">'algocomplejo'</span>
+<a id="rest_code_a265f736d150429bbfc41f139c563e94-2" name="rest_code_a265f736d150429bbfc41f139c563e94-2" href="posts/instalar-y-configurar-lamp-en-centos-6-php-fpm/#rest_code_a265f736d150429bbfc41f139c563e94-2"></a>/usr/bin/mysql_secure_installation
+</pre></div>
 <p>Marcar los 2 servicios para que levanten al inicio</p>
-<pre class="code bash"><a name="rest_code_abe0a0494771485ca0c6dea7987e9c8b-1"></a>chkconfig --levels <span class="m">235</span> httpd on
-<a name="rest_code_abe0a0494771485ca0c6dea7987e9c8b-2"></a>chkconfig --levels <span class="m">235</span> mysqld on
-</pre>
+<div class="code"><pre class="code bash"><a id="rest_code_872d7b756a61428fb7e5fe430c3939b1-1" name="rest_code_872d7b756a61428fb7e5fe430c3939b1-1" href="posts/instalar-y-configurar-lamp-en-centos-6-php-fpm/#rest_code_872d7b756a61428fb7e5fe430c3939b1-1"></a>chkconfig<span class="w"> </span>--levels<span class="w"> </span><span class="m">235</span><span class="w"> </span>httpd<span class="w"> </span>on
+<a id="rest_code_872d7b756a61428fb7e5fe430c3939b1-2" name="rest_code_872d7b756a61428fb7e5fe430c3939b1-2" href="posts/instalar-y-configurar-lamp-en-centos-6-php-fpm/#rest_code_872d7b756a61428fb7e5fe430c3939b1-2"></a>chkconfig<span class="w"> </span>--levels<span class="w"> </span><span class="m">235</span><span class="w"> </span>mysqld<span class="w"> </span>on
+</pre></div>
 <p>Con esto ya tenemos todo funcionando. Para mejor performance voy a cambiar el manejador de php por PHP-FPM. Detalles en <a class="reference external" href="http://php-fpm.org/">http://php-fpm.org/</a></p>
-<pre class="code bash"><a name="rest_code_b475ebd177654d0faa024817260e8117-1"></a>yum --enablerepo<span class="o">=</span>remi install php-fpm
-<a name="rest_code_b475ebd177654d0faa024817260e8117-2"></a>chkconfig --levels <span class="m">235</span> php-fpm on
-</pre>
+<div class="code"><pre class="code bash"><a id="rest_code_a8c9742a150b4c0caa2f60fa88274318-1" name="rest_code_a8c9742a150b4c0caa2f60fa88274318-1" href="posts/instalar-y-configurar-lamp-en-centos-6-php-fpm/#rest_code_a8c9742a150b4c0caa2f60fa88274318-1"></a>yum<span class="w"> </span>--enablerepo<span class="o">=</span>remi<span class="w"> </span>install<span class="w"> </span>php-fpm
+<a id="rest_code_a8c9742a150b4c0caa2f60fa88274318-2" name="rest_code_a8c9742a150b4c0caa2f60fa88274318-2" href="posts/instalar-y-configurar-lamp-en-centos-6-php-fpm/#rest_code_a8c9742a150b4c0caa2f60fa88274318-2"></a>chkconfig<span class="w"> </span>--levels<span class="w"> </span><span class="m">235</span><span class="w"> </span>php-fpm<span class="w"> </span>on
+</pre></div>
 <p>Editar /etc/php-fpm.d/www.conf</p>
-<pre class="code bash"><a name="rest_code_aad47f63d8284336a47bf6ea4d63ec48-1"></a><span class="p">;</span><span class="nv">listen</span> <span class="o">=</span> <span class="m">127</span>.0.0.1:9000
-<a name="rest_code_aad47f63d8284336a47bf6ea4d63ec48-2"></a><span class="nv">listen</span> <span class="o">=</span> /tmp/php5-fpm.sock
-<a name="rest_code_aad47f63d8284336a47bf6ea4d63ec48-3"></a>pm.status_path <span class="o">=</span> /status
-<a name="rest_code_aad47f63d8284336a47bf6ea4d63ec48-4"></a>ping.path <span class="o">=</span> /ping
-</pre>
+<div class="code"><pre class="code bash"><a id="rest_code_714cdc4ee6d44b92bb5e7d4e1640afda-1" name="rest_code_714cdc4ee6d44b92bb5e7d4e1640afda-1" href="posts/instalar-y-configurar-lamp-en-centos-6-php-fpm/#rest_code_714cdc4ee6d44b92bb5e7d4e1640afda-1"></a><span class="p">;</span><span class="nv">listen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">127</span>.0.0.1:9000
+<a id="rest_code_714cdc4ee6d44b92bb5e7d4e1640afda-2" name="rest_code_714cdc4ee6d44b92bb5e7d4e1640afda-2" href="posts/instalar-y-configurar-lamp-en-centos-6-php-fpm/#rest_code_714cdc4ee6d44b92bb5e7d4e1640afda-2"></a><span class="nv">listen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/tmp/php5-fpm.sock
+<a id="rest_code_714cdc4ee6d44b92bb5e7d4e1640afda-3" name="rest_code_714cdc4ee6d44b92bb5e7d4e1640afda-3" href="posts/instalar-y-configurar-lamp-en-centos-6-php-fpm/#rest_code_714cdc4ee6d44b92bb5e7d4e1640afda-3"></a>pm.status_path<span class="w"> </span><span class="o">=</span><span class="w"> </span>/status
+<a id="rest_code_714cdc4ee6d44b92bb5e7d4e1640afda-4" name="rest_code_714cdc4ee6d44b92bb5e7d4e1640afda-4" href="posts/instalar-y-configurar-lamp-en-centos-6-php-fpm/#rest_code_714cdc4ee6d44b92bb5e7d4e1640afda-4"></a>ping.path<span class="w"> </span><span class="o">=</span><span class="w"> </span>/ping
+</pre></div>
 <p>Luego hay que Instalar mod_fastcgi</p>
-<pre class="code bash"><a name="rest_code_31b4a1e0e51844c6a60212bb89fa8c26-1"></a>yum --enablerepo<span class="o">=</span>remi install mod_fastcgi
-</pre>
+<div class="code"><pre class="code bash"><a id="rest_code_ebde29584862460aa26e863699dcb4c5-1" name="rest_code_ebde29584862460aa26e863699dcb4c5-1" href="posts/instalar-y-configurar-lamp-en-centos-6-php-fpm/#rest_code_ebde29584862460aa26e863699dcb4c5-1"></a>yum<span class="w"> </span>--enablerepo<span class="o">=</span>remi<span class="w"> </span>install<span class="w"> </span>mod_fastcgi
+</pre></div>
 <p>Deshabilitar mod_php</p>
-<pre class="code bash"><a name="rest_code_73750a04dac540618b33e519284fc290-1"></a>mv /etc/httpd/conf.d/php.conf php.conf.disable
-</pre>
+<div class="code"><pre class="code bash"><a id="rest_code_018bc860eecb4139b4913d2827bf7b8d-1" name="rest_code_018bc860eecb4139b4913d2827bf7b8d-1" href="posts/instalar-y-configurar-lamp-en-centos-6-php-fpm/#rest_code_018bc860eecb4139b4913d2827bf7b8d-1"></a>mv<span class="w"> </span>/etc/httpd/conf.d/php.conf<span class="w"> </span>php.conf.disable
+</pre></div>
 <p>Para la config que sigue abajo hay que crear el directorio "/usr/lib/cgi-bin/".
 Editar el archivo /etc/httpd/conf.d/fastcgi.conf para que quede de la siguiente manera:</p>
-<pre class="code bash"><a name="rest_code_36f0e75cec0d4fa2b5deee678b28dd57-1"></a>&lt;IfModule mod_fastcgi.c&gt;
-<a name="rest_code_36f0e75cec0d4fa2b5deee678b28dd57-2"></a>      DirectoryIndex index.php index.html index.shtml index.cgi
-<a name="rest_code_36f0e75cec0d4fa2b5deee678b28dd57-3"></a>      AddHandler php5-fcgi .php
-<a name="rest_code_36f0e75cec0d4fa2b5deee678b28dd57-4"></a>      Action php5-fcgi /php5-fcgi
-<a name="rest_code_36f0e75cec0d4fa2b5deee678b28dd57-5"></a>      Alias /php5-fcgi /usr/lib/cgi-bin/php5-fcgi
-<a name="rest_code_36f0e75cec0d4fa2b5deee678b28dd57-6"></a>      FastCgiExternalServer /usr/lib/cgi-bin/php5-fcgi -socket /tmp/php5-fpm.sock -pass-header Authorization
-<a name="rest_code_36f0e75cec0d4fa2b5deee678b28dd57-7"></a>
-<a name="rest_code_36f0e75cec0d4fa2b5deee678b28dd57-8"></a>      <span class="c1"># For monitoring status with e.g. Munin</span>
-<a name="rest_code_36f0e75cec0d4fa2b5deee678b28dd57-9"></a>      &lt;LocationMatch <span class="s2">"/(ping|status)"</span>&gt;
-<a name="rest_code_36f0e75cec0d4fa2b5deee678b28dd57-10"></a>              SetHandler php5-fcgi-virt
-<a name="rest_code_36f0e75cec0d4fa2b5deee678b28dd57-11"></a>              Action php5-fcgi-virt /php5-fcgi virtual
-<a name="rest_code_36f0e75cec0d4fa2b5deee678b28dd57-12"></a>      &lt;/LocationMatch&gt;
-<a name="rest_code_36f0e75cec0d4fa2b5deee678b28dd57-13"></a> &lt;/IfModule&gt;
-</pre>
+<div class="code"><pre class="code bash"><a id="rest_code_3b2fcf39887940b086a18ba04c853382-1" name="rest_code_3b2fcf39887940b086a18ba04c853382-1" href="posts/instalar-y-configurar-lamp-en-centos-6-php-fpm/#rest_code_3b2fcf39887940b086a18ba04c853382-1"></a>&lt;IfModule<span class="w"> </span>mod_fastcgi.c&gt;
+<a id="rest_code_3b2fcf39887940b086a18ba04c853382-2" name="rest_code_3b2fcf39887940b086a18ba04c853382-2" href="posts/instalar-y-configurar-lamp-en-centos-6-php-fpm/#rest_code_3b2fcf39887940b086a18ba04c853382-2"></a><span class="w">      </span>DirectoryIndex<span class="w"> </span>index.php<span class="w"> </span>index.html<span class="w"> </span>index.shtml<span class="w"> </span>index.cgi
+<a id="rest_code_3b2fcf39887940b086a18ba04c853382-3" name="rest_code_3b2fcf39887940b086a18ba04c853382-3" href="posts/instalar-y-configurar-lamp-en-centos-6-php-fpm/#rest_code_3b2fcf39887940b086a18ba04c853382-3"></a><span class="w">      </span>AddHandler<span class="w"> </span>php5-fcgi<span class="w"> </span>.php
+<a id="rest_code_3b2fcf39887940b086a18ba04c853382-4" name="rest_code_3b2fcf39887940b086a18ba04c853382-4" href="posts/instalar-y-configurar-lamp-en-centos-6-php-fpm/#rest_code_3b2fcf39887940b086a18ba04c853382-4"></a><span class="w">      </span>Action<span class="w"> </span>php5-fcgi<span class="w"> </span>/php5-fcgi
+<a id="rest_code_3b2fcf39887940b086a18ba04c853382-5" name="rest_code_3b2fcf39887940b086a18ba04c853382-5" href="posts/instalar-y-configurar-lamp-en-centos-6-php-fpm/#rest_code_3b2fcf39887940b086a18ba04c853382-5"></a><span class="w">      </span>Alias<span class="w"> </span>/php5-fcgi<span class="w"> </span>/usr/lib/cgi-bin/php5-fcgi
+<a id="rest_code_3b2fcf39887940b086a18ba04c853382-6" name="rest_code_3b2fcf39887940b086a18ba04c853382-6" href="posts/instalar-y-configurar-lamp-en-centos-6-php-fpm/#rest_code_3b2fcf39887940b086a18ba04c853382-6"></a><span class="w">      </span>FastCgiExternalServer<span class="w"> </span>/usr/lib/cgi-bin/php5-fcgi<span class="w"> </span>-socket<span class="w"> </span>/tmp/php5-fpm.sock<span class="w"> </span>-pass-header<span class="w"> </span>Authorization
+<a id="rest_code_3b2fcf39887940b086a18ba04c853382-7" name="rest_code_3b2fcf39887940b086a18ba04c853382-7" href="posts/instalar-y-configurar-lamp-en-centos-6-php-fpm/#rest_code_3b2fcf39887940b086a18ba04c853382-7"></a>
+<a id="rest_code_3b2fcf39887940b086a18ba04c853382-8" name="rest_code_3b2fcf39887940b086a18ba04c853382-8" href="posts/instalar-y-configurar-lamp-en-centos-6-php-fpm/#rest_code_3b2fcf39887940b086a18ba04c853382-8"></a><span class="w">      </span><span class="c1"># For monitoring status with e.g. Munin</span>
+<a id="rest_code_3b2fcf39887940b086a18ba04c853382-9" name="rest_code_3b2fcf39887940b086a18ba04c853382-9" href="posts/instalar-y-configurar-lamp-en-centos-6-php-fpm/#rest_code_3b2fcf39887940b086a18ba04c853382-9"></a><span class="w">      </span>&lt;LocationMatch<span class="w"> </span><span class="s2">"/(ping|status)"</span>&gt;
+<a id="rest_code_3b2fcf39887940b086a18ba04c853382-10" name="rest_code_3b2fcf39887940b086a18ba04c853382-10" href="posts/instalar-y-configurar-lamp-en-centos-6-php-fpm/#rest_code_3b2fcf39887940b086a18ba04c853382-10"></a><span class="w">              </span>SetHandler<span class="w"> </span>php5-fcgi-virt
+<a id="rest_code_3b2fcf39887940b086a18ba04c853382-11" name="rest_code_3b2fcf39887940b086a18ba04c853382-11" href="posts/instalar-y-configurar-lamp-en-centos-6-php-fpm/#rest_code_3b2fcf39887940b086a18ba04c853382-11"></a><span class="w">              </span>Action<span class="w"> </span>php5-fcgi-virt<span class="w"> </span>/php5-fcgi<span class="w"> </span>virtual
+<a id="rest_code_3b2fcf39887940b086a18ba04c853382-12" name="rest_code_3b2fcf39887940b086a18ba04c853382-12" href="posts/instalar-y-configurar-lamp-en-centos-6-php-fpm/#rest_code_3b2fcf39887940b086a18ba04c853382-12"></a><span class="w">      </span>&lt;/LocationMatch&gt;
+<a id="rest_code_3b2fcf39887940b086a18ba04c853382-13" name="rest_code_3b2fcf39887940b086a18ba04c853382-13" href="posts/instalar-y-configurar-lamp-en-centos-6-php-fpm/#rest_code_3b2fcf39887940b086a18ba04c853382-13"></a><span class="w"> </span>&lt;/IfModule&gt;
+</pre></div>
 <p>Done!
 Faltaría configurar los vhosts, etc pero eso es standard.</p>
+</section>
 </div>
-                </div>
             </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/cafe-tacvba-en-caba-29102013/" class="u-url">Café Tacvba en CABA. 29/10/2013</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
@@ -389,7 +388,7 @@ me pareció muy interesante para tenerlo a mano en los ratos libres.</p>
             <li class="next"><a href="index-2.html" rel="next">Older posts</a></li>
         </ul>
 <script>var disqus_shortname="notodoesmecnico";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><!--End of body content--><footer id="footer">
-            Contents © 2023         <a href="mailto:mail@gilgamezh.me">GiLgAmEzH</a> - My Fingerprint: <a href="https://gilgamezh.me/public.key">0712 8EB2 C626 08C5 69E1  8949 6DDF 6FA3 5EB9 26AB</a>  Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2024         <a href="mailto:mail@gilgamezh.me">GiLgAmEzH</a> - My Fingerprint: <a href="https://gilgamezh.me/public.key">0712 8EB2 C626 08C5 69E1  8949 6DDF 6FA3 5EB9 26AB</a>  Powered by         <a href="http://getnikola.com" rel="nofollow">Nikola</a>         
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/">
 <img alt="Creative Commons License BY-NC-SA" style="border-width:0; margin-bottom:12px;" src="http://i.creativecommons.org/l/by-nc-sa/2.5/ar/88x31.png"></a>
             

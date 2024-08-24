@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Posts about python)</title><link>https://gilgamezh.me/</link><description></description><atom:link href="https://gilgamezh.me/en/categories/python.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Mon, 27 Feb 2023 19:40:28 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>fades8.1_released</title><link>https://gilgamezh.me/en/posts/fades81_released/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;p&gt;We're glad to announce the release of fades 8.1.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Posts about python)</title><link>https://gilgamezh.me/</link><description></description><atom:link href="https://gilgamezh.me/en/categories/python.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><lastBuildDate>Sat, 24 Aug 2024 09:08:44 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>fades8.1_released</title><link>https://gilgamezh.me/en/posts/fades81_released/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;p&gt;We're glad to announce the release of fades 8.1.&lt;/p&gt;
 &lt;p&gt;fades is a system that automatically handles the virtualenvs in the
 cases normally found when writing scripts and simple programs, and
 even helps to administer big projects.&lt;/p&gt;
@@ -165,7 +165,7 @@ dependencies, and execute your script inside that virtualenv.&lt;/p&gt;
 &lt;p&gt;You only need to execute the script with fades (instead of Python) and
 also mark the required dependencies. More details here:&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://github.com/PyAr/fades/"&gt;https://github.com/PyAr/fades/&lt;/a&gt;&lt;/p&gt;
-&lt;div class="section" id="to-get-it"&gt;
+&lt;section id="to-get-it"&gt;
 &lt;h2&gt;To get it:&lt;/h2&gt;
 &lt;!-- TEASER_END --&gt;
 &lt;ul&gt;
@@ -188,8 +188,8 @@ also mark the required dependencies. More details here:&lt;/p&gt;
 tar -xf fades-1.0.tar.gz
 cd fades-1.0
 sudo ./setup.py install&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class="section" id="help-questions"&gt;
+&lt;/section&gt;
+&lt;section id="help-questions"&gt;
 &lt;h2&gt;Help / questions:&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;You can ask any question or send any recommendation or request to the mailing list.&lt;/p&gt;
@@ -204,7 +204,7 @@ sudo ./setup.py install&lt;/pre&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Thanks in advance for your time!&lt;/p&gt;
-&lt;/div&gt;</description><category>proyectos</category><category>PyAr</category><category>python</category><category>virtualenv</category><guid>https://gilgamezh.me/en/posts/fades-fast-dependencies-for-scripts/</guid><pubDate>Sun, 22 Feb 2015 20:14:05 GMT</pubDate></item><item><title>How to install Fisa-vim-cofig in Archlinux</title><link>https://gilgamezh.me/en/posts/how-to-install-fisa-vim-cofig-in-archlinux/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;img alt="/images/fisa-dev-config.png" src="https://gilgamezh.me/images/fisa-dev-config.png"&gt;
+&lt;/section&gt;</description><category>proyectos</category><category>PyAr</category><category>python</category><category>virtualenv</category><guid>https://gilgamezh.me/en/posts/fades-fast-dependencies-for-scripts/</guid><pubDate>Sun, 22 Feb 2015 20:14:05 GMT</pubDate></item><item><title>How to install Fisa-vim-cofig in Archlinux</title><link>https://gilgamezh.me/en/posts/how-to-install-fisa-vim-cofig-in-archlinux/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;img alt="/images/fisa-dev-config.png" src="https://gilgamezh.me/images/fisa-dev-config.png"&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://github.com/fisadev/fisa-vim-config/"&gt;Fisa-vim-config&lt;/a&gt;
 es una excelente configuración para Vim que recopila muchos
 plugins y los pone a funcionar de una manera muy simple.
@@ -238,6 +238,12 @@ time — and a different web. It requires an enormous amount of work
 &lt;p&gt;Things shouldn’t be this way. Not in Python.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://docs.python-requests.org/en/latest/index.html"&gt;http://docs.python-requests.org/en/latest/index.html&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;</description><guid>https://gilgamezh.me/en/posts/python-requests-http-for-humans/</guid><pubDate>Tue, 17 Sep 2013 21:41:56 GMT</pubDate></item><item><title>Tutorial de Apps en Kivy #python</title><link>https://gilgamezh.me/en/posts/tutorial-de-apps-en-kivy-python/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;img alt="/images/kivy.png" src="https://gilgamezh.me/images/kivy.png"&gt;
+&lt;aside class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: WARNING/2 (&lt;span class="docutils literal"&gt;&amp;lt;string&amp;gt;&lt;/span&gt;, line 1)&lt;/p&gt;
+&lt;p&gt;Cannot scale image!
+  Could not get size from "/images/kivy.png":
+  [Errno 2] No such file or directory: '/images/kivy.png'&lt;/p&gt;
+&lt;/aside&gt;
 &lt;p&gt;Hoy estuve toda la tarde entretenido con estos tutos muy didacticos sobre Kivy
 un lenguaje para hacer interfaces gráficas con Python.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://archlinux.me/dusty/2013/06/29/creating-an-application-in-kivy-part-3/"&gt;http://archlinux.me/dusty/2013/06/29/creating-an-application-in-kivy-part-3/&lt;/a&gt;&lt;/p&gt;</description><guid>https://gilgamezh.me/en/posts/tutorial-de-apps-en-kivy-python/</guid><pubDate>Sat, 29 Jun 2013 22:55:18 GMT</pubDate></item><item><title>Excelente benchmark de webservers para Python (WSGI)</title><link>https://gilgamezh.me/en/posts/excelente-benchmark-de-webservers-para-python-wsgi/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;img alt="/images/benchpython.png" src="https://gilgamezh.me/images/benchpython.png"&gt;

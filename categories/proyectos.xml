@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Publicaciones sobre proyectos)</title><link>https://gilgamezh.me/</link><description></description><atom:link href="https://gilgamezh.me/categories/proyectos.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><lastBuildDate>Mon, 27 Feb 2023 19:40:27 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Fades 2.0</title><link>https://gilgamezh.me/posts/fades-20/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;p&gt;Fueron (creo) unas 2 semanas desde que salió el release 1.0 de Fades las que
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Publicaciones sobre proyectos)</title><link>https://gilgamezh.me/</link><description></description><atom:link href="https://gilgamezh.me/categories/proyectos.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><lastBuildDate>Sat, 24 Aug 2024 09:08:42 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Fades 2.0</title><link>https://gilgamezh.me/posts/fades-20/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;p&gt;Fueron (creo) unas 2 semanas desde que salió el release 1.0 de Fades las que
 demoramos en sacar el 2.0 :). El ritmo estuvo muy bueno y sobre todo largas
 charlas de qué camino tomar.
 Cuándo salió la 1.0 Robert Collins &lt;a class="reference external" href="https://twitter.com/gilgamezh/status/571377065053851648"&gt;nos hizo algunos comentarios sobre xattr&lt;/a&gt;
@@ -34,7 +34,7 @@ y ejecutando el script dentro de ese virtualenv.&lt;/p&gt;
 &lt;p&gt;Todo lo que necesitás hacer es ejecutar el script con fades (en lugar de
 Python) y también marcar las dependencias necesarias. Más detalles acá:&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://github.com/PyAr/fades/"&gt;https://github.com/PyAr/fades/&lt;/a&gt;&lt;/p&gt;
-&lt;div class="section" id="para-obtenerlo"&gt;
+&lt;section id="para-obtenerlo"&gt;
 &lt;h2&gt;Para obtenerlo:&lt;/h2&gt;
 &lt;!-- TEASER_END --&gt;
 &lt;ul&gt;
@@ -57,8 +57,8 @@ Python) y también marcar las dependencias necesarias. Más detalles acá:&lt;/p
 tar -xf fades-1.0.tar.gz
 cd fades-1.0
 sudo ./setup.py install&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div class="section" id="ayuda-preguntas"&gt;
+&lt;/section&gt;
+&lt;section id="ayuda-preguntas"&gt;
 &lt;h2&gt;Ayuda / preguntas:&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Podés hacer cualquier pregunta o mandar una recomendación o pedido en la lista de correo:&lt;/p&gt;
@@ -73,4 +73,4 @@ sudo ./setup.py install&lt;/pre&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Desde ya, muchas gracias por tu tiempo!&lt;/p&gt;
-&lt;/div&gt;</description><category>proyectos</category><category>PyAr</category><category>python</category><category>virtualenv</category><guid>https://gilgamezh.me/posts/fades-fast-dependencies-for-scripts/</guid><pubDate>Sun, 22 Feb 2015 20:14:05 GMT</pubDate></item></channel></rss>
+&lt;/section&gt;</description><category>proyectos</category><category>PyAr</category><category>python</category><category>virtualenv</category><guid>https://gilgamezh.me/posts/fades-fast-dependencies-for-scripts/</guid><pubDate>Sun, 22 Feb 2015 20:14:05 GMT</pubDate></item></channel></rss>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Publicaciones sobre personal)</title><link>https://gilgamezh.me/</link><description></description><atom:link href="https://gilgamezh.me/categories/personal.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><lastBuildDate>Mon, 27 Feb 2023 19:40:27 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Migrando el blog a Nikola</title><link>https://gilgamezh.me/posts/migrando-el-blog-a-nikola/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;p&gt;Hace mucho tiempo que vengo dando vueltas y dejando para más adelante migrar
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>No Todo Es Mecánico (Publicaciones sobre personal)</title><link>https://gilgamezh.me/</link><description></description><atom:link href="https://gilgamezh.me/categories/personal.xml" rel="self" type="application/rss+xml"></atom:link><language>es</language><lastBuildDate>Sat, 24 Aug 2024 09:08:44 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Migrando el blog a Nikola</title><link>https://gilgamezh.me/posts/migrando-el-blog-a-nikola/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;p&gt;Hace mucho tiempo que vengo dando vueltas y dejando para más adelante migrar
 mi blog a &lt;a class="reference external" href="http://getnikola.com/"&gt;Nikola&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Nikola es un generador de sitios/blogs estáticos. Funciona con Python y aprovecho
 para dar las gracias a &lt;a class="reference external" href="http://ralsina.me"&gt;ralsina&lt;/a&gt; y a toda la comunidad
@@ -17,7 +17,7 @@ una versión en este idioma. Correcciones y consejos bienvenidos! :)&lt;/p&gt;
 &lt;p&gt;Así que hoy queda productivo! :D&lt;/p&gt;
 &lt;p&gt;Ramen!&lt;/p&gt;</description><category>nikola</category><category>personal</category><guid>https://gilgamezh.me/posts/migrando-el-blog-a-nikola/</guid><pubDate>Sun, 22 Feb 2015 20:04:05 GMT</pubDate></item><item><title>Domingo :)</title><link>https://gilgamezh.me/posts/domingo/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;a href="https://live.staticflickr.com/7331/9647227089_3df38d5eb2_b.jpg" title="Domingo :)"&gt;&lt;img alt="Domingo :)" src="https://live.staticflickr.com/7331/9647227089_3df38d5eb2_b.jpg"&gt;&lt;/a&gt;&lt;p&gt;&lt;strong&gt;En la reserva ecologica de CABA&lt;/strong&gt;&lt;/p&gt;</description><category>flickr</category><category>fotos</category><category>personal</category><guid>https://gilgamezh.me/posts/domingo/</guid><pubDate>Sun, 01 Sep 2013 22:29:25 GMT</pubDate></item><item><title>Receta de Apple Crumble + Timelapse con Mencoder</title><link>https://gilgamezh.me/posts/receta-de-apple-crumble-%2B-timelapse-con-mencoder/</link><dc:creator>GiLgAmEzH</dc:creator><description>&lt;p&gt;Copiada de acá pero es tal cual lo hace mi flia.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://recetasamericanas.com/2012/01/19/crujiente-de-manzana-apple-crisp"&gt;http://recetasamericanas.com/2012/01/19/crujiente-de-manzana-apple-crisp&lt;/a&gt;&lt;/p&gt;
-&lt;div class="section" id="ingredientes"&gt;
+&lt;section id="ingredientes"&gt;
 &lt;h2&gt;Ingredientes:&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;ul class="simple"&gt;
@@ -31,12 +31,12 @@ una versión en este idioma. Correcciones y consejos bienvenidos! :)&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 &lt;!-- TEASER_END --&gt;
-&lt;/div&gt;
-&lt;div class="section" id="receta"&gt;
+&lt;/section&gt;
+&lt;section id="receta"&gt;
 &lt;h2&gt;Receta:&lt;/h2&gt;
 &lt;p&gt;Precalienta el horno a 180°C (350°F) Pela las manzanas y córtalas en trozos medianos. Unos 10 trozos por manzana es lo normal. (Si son trozos demasiado pequeños pierden textura y se convierte en puré… y son demasiado grandes quedan duros y secos.) Coloca los trozos en una bandeja del horno (20×20). Verte la agua encima de una manera uniforme, seguida por la canela y la sal. En un bol pequeño mezcla la harina y azúcar. Añade la mantequilla y  machaca con un tenedor hasta que quedé más o menos hecho una pasta pero con muchas migas también. Distribuye la mezcla por encima de las manzanas. Hornea por unos 40 minutos, hasta que las manzanas se estén caramelizando y esté totalmente dorada encima.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="de-paso-saque-fotos-mientras-lo-hice-y-despues-arme-un-timelapse-con-mencoder"&gt;
+&lt;/section&gt;
+&lt;section id="de-paso-saque-fotos-mientras-lo-hice-y-despues-arme-un-timelapse-con-mencoder"&gt;
 &lt;h2&gt;De paso saque fotos mientras lo hice y después arme un timelapse con Mencoder.&lt;/h2&gt;
 &lt;p&gt;Pasos:&lt;/p&gt;
 &lt;ul&gt;
@@ -50,4 +50,4 @@ una versión en este idioma. Correcciones y consejos bienvenidos! :)&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;(use 4FPS para 50 imágenes, esto lo hice a ojo)&lt;/p&gt;
 &lt;div style="top: 0; left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"&gt;
-				&lt;iframe style="width: 100%; height: 100%; position: absolute;" src="https://embedr.flickr.com/photos/9063385970" width="1024" height="679" frameborder="0" allow="autoplay; fullscreen" allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/div&gt;</description><category>comida</category><category>food</category><category>mencoder</category><category>old_blog</category><category>personal</category><guid>https://gilgamezh.me/posts/receta-de-apple-crumble-%2B-timelapse-con-mencoder/</guid><pubDate>Mon, 17 Jun 2013 00:35:01 GMT</pubDate></item></channel></rss>
+				&lt;iframe style="width: 100%; height: 100%; position: absolute;" src="https://embedr.flickr.com/photos/9063385970" width="1024" height="679" frameborder="0" allow="autoplay; fullscreen" allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/section&gt;</description><category>comida</category><category>food</category><category>mencoder</category><category>old_blog</category><category>personal</category><guid>https://gilgamezh.me/posts/receta-de-apple-crumble-%2B-timelapse-con-mencoder/</guid><pubDate>Mon, 17 Jun 2013 00:35:01 GMT</pubDate></item></channel></rss>
