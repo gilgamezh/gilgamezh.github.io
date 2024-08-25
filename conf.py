@@ -682,7 +682,7 @@ REDIRECTIONS = []
 # in a `nikola deploy` command as you like.
 DEPLOY_COMMANDS = {
     'default': [
-        'rdiff-backup output ~/Dropbox/blog/',
+        "rdiff-backup --new --api-version 201 backup output ~/Dropbox/blog",
 
     ]
 }
